@@ -25,10 +25,16 @@ export default function HomePage() {
         <span className="text-xl font-bold tracking-tight">
           gmat<span className="text-brand">.fun</span>
         </span>
-        <nav className="hidden sm:flex gap-6 text-sm font-medium text-ink/70">
+        <nav className="hidden sm:flex gap-6 text-sm font-medium text-ink/70 items-center">
           <a href="#tests">Tests</a>
           <a href="#chat">AI Tutor</a>
           <a href="#blog">Blog</a>
+          <Link
+            href="/auth"
+            className="rounded-xl2 border border-ink/10 px-4 py-2 text-ink"
+          >
+            Log in
+          </Link>
         </nav>
       </header>
 

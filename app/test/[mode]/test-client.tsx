@@ -2,11 +2,8 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { createBrowserSupabase } from "@/lib/supabase";
 import type { Question } from "@/lib/types";
-
-// DEMO_USER_ID is a placeholder until auth (Supabase Auth) is wired in —
-// swap for the real signed-in user id once login exists.
-const DEMO_USER_ID = "00000000-0000-0000-0000-000000000000";
 
 export default function TestPage({
   mode,
@@ -25,6 +22,7 @@ export default function TestPage({
   } | null>(null);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [startedAt, setStartedAt] = useState<number>(Date.now());
 
   const QUESTIONS_PER_TEST = mode === "topic" ? 10 : mode === "sectional" ? 20 : 40;
@@ -35,6 +33,11 @@ export default function TestPage({
     setSelected(null);
     const res = await fetch(`/api/test/next-question?attemptId=${id}`);
     const data = await res.json();
+    if (!res.ok) {
+      setLoadError(data.error || "Couldn't load the next question.");
+      setLoading(false);
+      return;
+    }
     setQuestion(data.question);
     setStartedAt(Date.now());
     setLoading(false);
@@ -45,16 +48,33 @@ export default function TestPage({
 
   useEffect(() => {
     async function start() {
+      const supabase = createBrowserSupabase();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) {
+        router.replace(`/auth?next=${encodeURIComponent(`/test/${mode}`)}`);
+        return;
+      }
+
       const res = await fetch("/api/test/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userId: DEMO_USER_ID,
+          userId: user.id,
           mode,
           section: mode === "full-length" ? undefined : "quant",
         }),
       });
       const data = await res.json();
+
+      if (!res.ok || !data.attempt) {
+        setLoadError(data.error || "Couldn't start the test. Please try again.");
+        setLoading(false);
+        return;
+      }
+
       setAttemptId(data.attempt.id);
       loadNextQuestion(data.attempt.id);
     }
@@ -92,6 +112,20 @@ export default function TestPage({
       return;
     }
     loadNextQuestion(attemptId);
+  }
+
+  if (loadError) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-3 px-6 text-center">
+        <p className="text-danger font-medium">{loadError}</p>
+        <button
+          onClick={() => router.push("/")}
+          className="text-brand font-semibold text-sm"
+        >
+          Back home
+        </button>
+      </div>
+    );
   }
 
   if (loading || !question) {
