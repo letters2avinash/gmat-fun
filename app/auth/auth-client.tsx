@@ -30,12 +30,15 @@ export default function AuthPage() {
         });
         if (signUpError) throw signUpError;
 
-        // Supabase Auth may require email confirmation before a session
-        // exists — only create the profile row once we actually have a user.
+        // Create the profile row via a server route (service role key) —
+        // when "Confirm email" is on, signUp doesn't grant a session yet,
+        // so the browser client isn't authenticated and a direct insert
+        // would be rejected by the "own profile" RLS policy.
         if (data.user) {
-          await supabase.from("profiles").upsert({
-            id: data.user.id,
-            full_name: fullName || null,
+          await fetch("/api/profile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: data.user.id, fullName }),
           });
         }
 
@@ -48,10 +51,19 @@ export default function AuthPage() {
           return;
         }
       } else {
-        const { error: signInError } = await supabase.auth.signInWithPassword(
-          { email, password }
-        );
+        const { data, error: signInError } =
+          await supabase.auth.signInWithPassword({ email, password });
         if (signInError) throw signInError;
+
+        // Safety net: ensures a profile row exists even for accounts
+        // created before this fix, or if the signup-time call failed.
+        if (data.user) {
+          await fetch("/api/profile", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: data.user.id }),
+          });
+        }
       }
 
       router.push(next);
