@@ -1,0 +1,76 @@
+import Link from "next/link";
+
+const MODES = [
+  {
+    key: "topic",
+    title: "Topic-wise",
+    blurb: "Drill one skill at a time — adaptive within the topic.",
+  },
+  {
+    key: "sectional",
+    title: "Sectional",
+    blurb: "Full Quant, Verbal, or Data Insights section, timed and adaptive.",
+  },
+  {
+    key: "full-length",
+    title: "Full-length",
+    blurb: "Complete GMAT Focus simulation across all three sections.",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen flex flex-col">
+      <header className="px-6 py-5 flex items-center justify-between max-w-5xl mx-auto w-full">
+        <span className="text-xl font-bold tracking-tight">
+          gmat<span className="text-brand">.fun</span>
+        </span>
+        <nav className="hidden sm:flex gap-6 text-sm font-medium text-ink/70">
+          <a href="#tests">Tests</a>
+          <a href="#chat">AI Tutor</a>
+          <a href="#blog">Blog</a>
+        </nav>
+      </header>
+
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-3xl mx-auto">
+        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+          GMAT prep that adapts to <span className="text-brand">you</span>.
+        </h1>
+        <p className="mt-5 text-lg text-ink/70 max-w-xl">
+          Adaptive tests, an AI tutor for every question, and support for the
+          entire admissions journey — from SOPs to score reports. Built to
+          feel effortless on your phone.
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <Link
+            href="/test/full-length"
+            className="rounded-xl2 bg-brand text-white px-7 py-3.5 font-semibold shadow-lg shadow-brand/20 active:scale-[0.98] transition"
+          >
+            Start a free test
+          </Link>
+          <a
+            href="#tests"
+            className="rounded-xl2 bg-white border border-ink/10 px-7 py-3.5 font-semibold text-ink active:scale-[0.98] transition"
+          >
+            See test modes
+          </a>
+        </div>
+      </section>
+
+      <section id="tests" className="px-6 pb-20 max-w-5xl mx-auto w-full">
+        <div className="grid gap-4 sm:grid-cols-3">
+          {MODES.map((m) => (
+            <Link
+              key={m.key}
+              href={`/test/${m.key}`}
+              className="rounded-xl2 bg-white border border-ink/10 p-6 hover:border-brand/40 hover:shadow-md transition"
+            >
+              <h3 className="font-bold text-lg">{m.title}</h3>
+              <p className="mt-2 text-sm text-ink/60">{m.blurb}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
