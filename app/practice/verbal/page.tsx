@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase";
 import QuantVerbalPractice from "@/components/test/QuantVerbalPractice";
 
-// Verbal question types available for topic practice. Reading
-// Comprehension will slot in here once its content is loaded.
+// Verbal question types available for topic practice.
 const QUESTION_TYPES: { key: string; label: string }[] = [
   { key: "critical_reasoning", label: "Critical Reasoning" },
+  { key: "reading_comprehension", label: "Reading Comprehension" },
 ];
 
 export default function VerbalPracticePage() {
