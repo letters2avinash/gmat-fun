@@ -1,5 +1,6 @@
 import Link from "next/link";
-import HeaderNav from "@/components/HeaderNav";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const MODES = [
   {
@@ -28,15 +29,31 @@ const MODES = [
   },
 ];
 
+const HUB_LINKS = [
+  {
+    key: "learn",
+    title: "Learn",
+    href: "/learn",
+    blurb: "A structured lesson path for Quant, Verbal, and Data Insights — tracked against your real attempts.",
+  },
+  {
+    key: "blog",
+    title: "Blog",
+    href: "/blog",
+    blurb: "Strategy, score-improvement stories, and admissions insight from our team and guest writers.",
+  },
+  {
+    key: "forum",
+    title: "Forum",
+    href: "/forum",
+    blurb: "Ask questions, compare timelines, and swap strategy with other test-takers.",
+  },
+];
+
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col">
-      <header className="px-6 py-5 flex items-center justify-between max-w-5xl mx-auto w-full">
-        <span className="text-xl font-bold tracking-tight">
-          gmat<span className="text-brand">.fun</span>
-        </span>
-        <HeaderNav />
-      </header>
+      <SiteHeader />
 
       <section className="flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
@@ -63,7 +80,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="tests" className="px-6 pb-20 max-w-5xl mx-auto w-full">
+      <section id="tests" className="px-6 pb-16 max-w-5xl mx-auto w-full">
+        <h2 className="text-sm font-bold uppercase tracking-wide text-ink/40 mb-4">
+          Practice &amp; tests
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {MODES.map((m) => (
             <Link
@@ -77,6 +97,26 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <section className="px-6 pb-20 max-w-5xl mx-auto w-full">
+        <h2 className="text-sm font-bold uppercase tracking-wide text-ink/40 mb-4">
+          Beyond the test
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {HUB_LINKS.map((h) => (
+            <Link
+              key={h.key}
+              href={h.href}
+              className="rounded-xl2 bg-brand-light/60 border border-brand/10 p-6 hover:border-brand/40 hover:shadow-md transition"
+            >
+              <h3 className="font-bold text-lg text-brand-dark">{h.title}</h3>
+              <p className="mt-2 text-sm text-ink/60">{h.blurb}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <SiteFooter />
     </main>
   );
 }

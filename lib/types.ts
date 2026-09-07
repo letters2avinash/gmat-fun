@@ -118,3 +118,38 @@ export interface Profile {
   academic_history: AcademicEntry[];
   work_experience: WorkEntry[];
 }
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author_name: string;
+  cover_emoji: string;
+  published_at: string;
+}
+
+export interface ForumCategory {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+}
+
+export interface ForumThread {
+  id: string;
+  category_id: string;
+  author_name: string;
+  title: string;
+  body: string;
+  created_at: string;
+}
+
+export interface ForumPost {
+  id: string;
+  thread_id: string;
+  author_name: string;
+  body: string;
+  created_at: string;
+}

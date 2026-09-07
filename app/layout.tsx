@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "gmat.fun — Adaptive GMAT Prep",
+  title: "GMAT PREP — Adaptive GMAT Prep",
   description:
     "Adaptive GMAT tests, an AI tutor for every section, and everything you need for the full admissions process — built for your phone and your laptop.",
 };

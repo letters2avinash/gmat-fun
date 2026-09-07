@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import type { ReviewResponse, TestAttempt } from "@/lib/types";
 
 interface DiReviewRow {
@@ -44,8 +46,11 @@ export default function ResultsClient({ attemptId }: { attemptId: string }) {
 
   if (!attempt) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-ink/50">Scoring your test…</p>
+      <div className="min-h-screen flex flex-col">
+        <SiteHeader />
+        <div className="flex-1 flex items-center justify-center">
+          <p className="text-ink/50">Scoring your test…</p>
+        </div>
       </div>
     );
   }
@@ -55,7 +60,9 @@ export default function ResultsClient({ attemptId }: { attemptId: string }) {
   const headlineLabel = isFullLength ? "Total Score (205–805)" : "Scaled score (60–90)";
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-16">
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <div className="flex-1 flex flex-col items-center px-6 py-16">
       <div className="max-w-2xl w-full text-center">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand">Test complete</p>
         <p className="mt-3 text-6xl font-extrabold">{headline}</p>
@@ -145,6 +152,8 @@ export default function ResultsClient({ attemptId }: { attemptId: string }) {
           </div>
         </div>
       )}
+      </div>
+      <SiteFooter />
     </div>
   );
 }

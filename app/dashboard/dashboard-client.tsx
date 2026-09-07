@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase";
 import type { Profile } from "@/lib/types";
+import SiteFooter from "@/components/SiteFooter";
 import ProfileTab from "./ProfileTab";
 import AttemptsTab from "./AttemptsTab";
 import AnalyticsTab from "./AnalyticsTab";
@@ -77,39 +77,39 @@ export default function DashboardClient() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <header className="px-6 py-5 flex items-center justify-between max-w-5xl mx-auto w-full">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          gmat<span className="text-brand">.fun</span>
-        </Link>
+    <div className="min-h-screen flex flex-col">
+      <header className="sticky top-0 z-30 bg-canvas/90 backdrop-blur border-b border-ink/5 px-6 py-4 flex items-center justify-between max-w-5xl mx-auto w-full">
+        <span className="text-xl font-extrabold tracking-tight">
+          GMAT <span className="text-brand">PREP</span>
+        </span>
         <div className="flex items-center gap-4 text-sm">
           <span className="hidden sm:inline text-ink/60">{email}</span>
           <button
             onClick={handleLogout}
-            className="rounded-xl2 border border-ink/10 px-4 py-2 text-ink font-medium"
+            className="rounded-xl2 border border-ink/10 px-4 py-2 text-ink font-medium hover:bg-ink/5 transition"
           >
             Log out
           </button>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto w-full px-6 pb-20">
-        <h1 className="text-2xl font-bold mt-2 mb-6">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-6 pb-20">
+        <h1 className="text-2xl font-bold mt-6 mb-6">
           {profile.full_name
             ? `Welcome back, ${profile.full_name.split(" ")[0]}`
             : "Your dashboard"}
         </h1>
 
-        <div className="flex gap-2 border-b border-ink/10 mb-8 overflow-x-auto">
+        <div className="flex gap-2 mb-8 overflow-x-auto">
           {TABS.map((t) => (
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
               className={
-                "px-4 py-2.5 text-sm font-semibold whitespace-nowrap border-b-2 -mb-px transition " +
+                "rounded-xl2 px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition " +
                 (tab === t.key
-                  ? "border-brand text-brand"
-                  : "border-transparent text-ink/50 hover:text-ink")
+                  ? "bg-brand text-white shadow-sm"
+                  : "bg-white border border-ink/10 text-ink/60 hover:text-ink hover:border-ink/20")
               }
             >
               {t.label}
@@ -130,6 +130,8 @@ export default function DashboardClient() {
         {tab === "analytics" && <AnalyticsTab userId={userId} />}
         {tab === "support" && <SupportTab />}
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

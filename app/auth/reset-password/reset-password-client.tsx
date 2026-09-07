@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function ResetPasswordPage() {
   const router = useRouter();
@@ -64,13 +66,12 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <div className="flex-1 flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <span className="text-xl font-bold tracking-tight">
-            gmat<span className="text-brand">.fun</span>
-          </span>
-          <h1 className="mt-4 text-2xl font-bold">Set a new password</h1>
+          <h1 className="text-2xl font-bold">Set a new password</h1>
           <p className="mt-1 text-sm text-ink/60">
             {done
               ? "Password updated. Redirecting…"
@@ -117,6 +118,8 @@ export default function ResetPasswordPage() {
           </form>
         )}
       </div>
+      </div>
+      <SiteFooter />
     </div>
   );
 }

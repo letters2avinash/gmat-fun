@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function AuthPage() {
   const router = useRouter();
@@ -109,13 +111,12 @@ export default function AuthPage() {
       : "Log in to continue your prep.";
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <div className="flex-1 flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <span className="text-xl font-bold tracking-tight">
-            gmat<span className="text-brand">.fun</span>
-          </span>
-          <h1 className="mt-4 text-2xl font-bold">{title}</h1>
+          <h1 className="text-2xl font-bold">{title}</h1>
           <p className="mt-1 text-sm text-ink/60">{subtitle}</p>
         </div>
 
@@ -213,6 +214,8 @@ export default function AuthPage() {
           )}
         </p>
       </div>
+      </div>
+      <SiteFooter />
     </div>
   );
 }

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import type { DiAttempt } from "@/lib/types";
 
 interface ReviewRow {
@@ -39,7 +41,9 @@ export default function DiResultsClient({ attemptId }: { attemptId: string }) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-16">
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <div className="flex-1 flex flex-col items-center px-6 py-16">
       <div className="max-w-2xl w-full text-center">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand">Set complete</p>
         <p className="mt-3 text-6xl font-extrabold">{attempt.scaled_score}</p>
@@ -91,6 +95,8 @@ export default function DiResultsClient({ attemptId }: { attemptId: string }) {
           </div>
         </div>
       )}
+      </div>
+      <SiteFooter />
     </div>
   );
 }

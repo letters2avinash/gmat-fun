@@ -182,3 +182,60 @@ create policy "own di responses" on di_attempt_responses
       and di_attempts.user_id = auth.uid()
     )
   );
+
+-- ---------- Blog + Forum (migrations/004_blog_forum.sql) ----------
+create table if not exists blog_posts (
+  id uuid primary key default uuid_generate_v4(),
+  slug text unique not null,
+  title text not null,
+  excerpt text not null,
+  content text not null,
+  author_name text not null default 'GMAT PREP Team',
+  cover_emoji text not null default '📈',
+  published boolean not null default true,
+  published_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+alter table blog_posts enable row level security;
+drop policy if exists "public can read published posts" on blog_posts;
+create policy "public can read published posts" on blog_posts for select using (published = true);
+
+create table if not exists forum_categories (
+  id uuid primary key default uuid_generate_v4(),
+  slug text unique not null,
+  name text not null,
+  description text not null default '',
+  sort_order int not null default 0
+);
+alter table forum_categories enable row level security;
+drop policy if exists "public can read categories" on forum_categories;
+create policy "public can read categories" on forum_categories for select using (true);
+
+create table if not exists forum_threads (
+  id uuid primary key default uuid_generate_v4(),
+  category_id uuid not null references forum_categories(id) on delete cascade,
+  author_id uuid not null references auth.users(id) on delete cascade,
+  author_name text not null default 'Member',
+  title text not null,
+  body text not null,
+  created_at timestamptz not null default now()
+);
+alter table forum_threads enable row level security;
+drop policy if exists "public can read threads" on forum_threads;
+create policy "public can read threads" on forum_threads for select using (true);
+drop policy if exists "authenticated users can create threads" on forum_threads;
+create policy "authenticated users can create threads" on forum_threads for insert with check (auth.uid() = author_id);
+
+create table if not exists forum_posts (
+  id uuid primary key default uuid_generate_v4(),
+  thread_id uuid not null references forum_threads(id) on delete cascade,
+  author_id uuid not null references auth.users(id) on delete cascade,
+  author_name text not null default 'Member',
+  body text not null,
+  created_at timestamptz not null default now()
+);
+alter table forum_posts enable row level security;
+drop policy if exists "public can read posts" on forum_posts;
+create policy "public can read posts" on forum_posts for select using (true);
+drop policy if exists "authenticated users can create posts" on forum_posts;
+create policy "authenticated users can create posts" on forum_posts for insert with check (auth.uid() = author_id);
