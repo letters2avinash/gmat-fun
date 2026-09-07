@@ -4,17 +4,26 @@ const MODES = [
   {
     key: "topic",
     title: "Topic-wise",
+    href: "/test/topic",
     blurb: "Drill one skill at a time — adaptive within the topic.",
   },
   {
     key: "sectional",
     title: "Sectional",
-    blurb: "Full Quant, Verbal, or Data Insights section, timed and adaptive.",
+    href: "/test/sectional",
+    blurb: "Full Quant or Verbal section, timed and adaptive.",
   },
   {
     key: "full-length",
     title: "Full-length",
-    blurb: "Complete GMAT Focus simulation across all three sections.",
+    href: "/test/full-length",
+    blurb: "Complete GMAT Focus simulation across Quant and Verbal.",
+  },
+  {
+    key: "data-insights",
+    title: "Data Insights",
+    href: "/practice/data-insights",
+    blurb: "Two-Part Analysis, Multi-Source Reasoning, Table Analysis, Graphics Interpretation.",
   },
 ];
 
@@ -64,11 +73,11 @@ export default function HomePage() {
       </section>
 
       <section id="tests" className="px-6 pb-20 max-w-5xl mx-auto w-full">
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {MODES.map((m) => (
             <Link
               key={m.key}
-              href={`/test/${m.key}`}
+              href={m.href}
               className="rounded-xl2 bg-white border border-ink/10 p-6 hover:border-brand/40 hover:shadow-md transition"
             >
               <h3 className="font-bold text-lg">{m.title}</h3>

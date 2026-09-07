@@ -23,3 +23,27 @@ export interface TestAttempt {
   current_difficulty: number;
   score: number | null;
 }
+
+// ---- Data Insights ----------------------------------------------------
+// DI content doesn't fit the single-question/single-choice `questions`
+// model above (multi-part answers, tables, charts) — it lives in its own
+// `di_items` table and gets its own practice flow. See lib/di.ts.
+
+export type DiType =
+  | "two_part_analysis"
+  | "multi_source_reasoning"
+  | "table_analysis"
+  | "graphics_interpretation";
+
+export type DiCategory = "math" | "non-math";
+
+export interface DiAttempt {
+  id: string;
+  user_id: string;
+  di_type: DiType | "mixed";
+  category: DiCategory | "mixed";
+  status: "in_progress" | "completed" | "abandoned";
+  total: number;
+  correct: number;
+  score: number | null;
+}
