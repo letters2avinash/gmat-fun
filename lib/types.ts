@@ -88,3 +88,33 @@ export interface DiAttempt {
   flagged: string[];
   edits_used: number;
 }
+
+// ---- Dashboard: profile, contact & history --------------------------
+
+export interface AcademicEntry {
+  degree: string;
+  field: string;
+  institution: string;
+  start_year: string;
+  end_year: string;
+}
+
+export interface WorkEntry {
+  title: string;
+  company: string;
+  industry: string;
+  start_year: string;
+  end_year: string;
+  is_current: boolean;
+}
+
+export interface Profile {
+  id: string;
+  full_name: string | null;
+  target_score: number | null;
+  target_test_date: string | null;
+  phone: string | null;
+  phone_verified: boolean;
+  academic_history: AcademicEntry[];
+  work_experience: WorkEntry[];
+}

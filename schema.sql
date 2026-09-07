@@ -8,6 +8,11 @@ create table if not exists profiles (
   full_name text,
   target_score int,
   target_test_date date,
+  phone text,
+  phone_verified boolean not null default false,
+  academic_history jsonb not null default '[]'::jsonb,
+  work_experience jsonb not null default '[]'::jsonb,
+  updated_at timestamptz not null default now(),
   created_at timestamptz not null default now()
 );
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeaderNav from "@/components/HeaderNav";
 
 const MODES = [
   {
@@ -34,15 +35,7 @@ export default function HomePage() {
         <span className="text-xl font-bold tracking-tight">
           gmat<span className="text-brand">.fun</span>
         </span>
-        <nav className="flex gap-4 sm:gap-6 text-sm font-medium text-ink/70 items-center">
-          <a href="#tests" className="hidden sm:inline">Tests</a>
-          <Link
-            href="/auth"
-            className="rounded-xl2 border border-ink/10 px-4 py-2 text-ink"
-          >
-            Log in
-          </Link>
-        </nav>
+        <HeaderNav />
       </header>
 
       <section className="flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-3xl mx-auto">
