@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase";
 import type { Profile } from "@/lib/types";
+import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ProfileTab from "./ProfileTab";
 import AttemptsTab from "./AttemptsTab";
@@ -54,13 +55,6 @@ export default function DashboardClient() {
     });
   }, [router]);
 
-  async function handleLogout() {
-    const supabase = createBrowserSupabase();
-    await supabase.auth.signOut();
-    router.push("/");
-    router.refresh();
-  }
-
   if (loading || !userId || !profile) {
     return (
       <div className="min-h-screen flex items-center justify-center text-ink/60 text-sm">
@@ -78,27 +72,17 @@ export default function DashboardClient() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-30 bg-canvas/90 backdrop-blur border-b border-ink/5 px-6 py-4 flex items-center justify-between max-w-5xl mx-auto w-full">
-        <span className="text-xl font-extrabold tracking-tight">
-          GMAT <span className="text-brand">PREP</span>
-        </span>
-        <div className="flex items-center gap-4 text-sm">
-          <span className="hidden sm:inline text-ink/60">{email}</span>
-          <button
-            onClick={handleLogout}
-            className="rounded-xl2 border border-ink/10 px-4 py-2 text-ink font-medium hover:bg-ink/5 transition"
-          >
-            Log out
-          </button>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 pb-20">
-        <h1 className="text-2xl font-bold mt-6 mb-6">
+        <div className="flex items-center justify-between mt-6 mb-6 gap-4">
+        <h1 className="text-2xl font-bold">
           {profile.full_name
             ? `Welcome back, ${profile.full_name.split(" ")[0]}`
             : "Your dashboard"}
         </h1>
+        <span className="hidden sm:inline text-sm text-ink/40">{email}</span>
+        </div>
 
         <div className="flex gap-2 mb-8 overflow-x-auto">
           {TABS.map((t) => (
