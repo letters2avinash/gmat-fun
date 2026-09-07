@@ -40,9 +40,28 @@ create table if not exists test_attempts (
   mode text not null check (mode in ('topic', 'sectional', 'full-length')),
   section text,                 -- required for topic/sectional, null for full-length
   topic text,                   -- required for topic mode only
+  question_type text,           -- optional narrower filter within a section, e.g. 'critical_reasoning'
   status text not null default 'in_progress' check (status in ('in_progress', 'completed', 'abandoned')),
   current_difficulty smallint not null default 3,
-  score numeric,
+
+  -- GMAT Focus-style adaptive scoring state — see lib/scoring.ts.
+  current_theta numeric not null default 0,       -- topic/sectional (single-section) attempts
+  quant_theta numeric not null default 0,          -- full-length quant module
+  verbal_theta numeric not null default 0,         -- full-length verbal module
+  quant_answered int not null default 0,
+  verbal_answered int not null default 0,
+  quant_score smallint,                            -- 60-90 scaled score
+  verbal_score smallint,                            -- 60-90 scaled score
+  di_score smallint,                                -- 60-90 scaled score, pulled from linked di_attempts
+  total_score smallint,                             -- 205-805, full-length only
+  current_section text,                             -- full-length: which module is active
+  di_attempt_id uuid,                               -- full-length: linked di_attempts row for the DI module
+  flagged jsonb not null default '[]'::jsonb,        -- question ids flagged for end-of-module review
+  quant_edits_used int not null default 0,
+  verbal_edits_used int not null default 0,
+  di_edits_used int not null default 0,
+
+  score numeric,                -- legacy single-section score, kept for backward compat
   started_at timestamptz not null default now(),
   completed_at timestamptz
 );
@@ -117,10 +136,20 @@ create table if not exists di_attempts (
   status text not null default 'in_progress' check (status in ('in_progress', 'completed', 'abandoned')),
   total int not null default 0,
   correct int not null default 0,
-  score numeric,                            -- percentage, set on finish
+  score numeric,                            -- legacy percentage score, set on finish
+
+  -- GMAT Focus-style adaptive scoring state — see lib/scoring.ts.
+  current_theta numeric not null default 0,
+  scaled_score smallint,                     -- 60-90 GMAT Focus-style Data Insights score
+  parent_test_attempt_id uuid references test_attempts(id) on delete cascade, -- set when this is a full-length test's DI module
+  flagged jsonb not null default '[]'::jsonb,
+  edits_used int not null default 0,
+
   started_at timestamptz not null default now(),
   completed_at timestamptz
 );
+
+create index if not exists idx_di_attempts_parent on di_attempts(parent_test_attempt_id);
 
 create table if not exists di_attempt_responses (
   id uuid primary key default uuid_generate_v4(),

@@ -13,18 +13,53 @@ export interface Question {
   explanation: string | null;
 }
 
+// A question as returned mid-test — never carries the answer key.
+export type SafeQuestion = Omit<Question, "correct_choice" | "explanation">;
+
 export interface TestAttempt {
   id: string;
   user_id: string;
   mode: Mode;
   section: Section | null;
   topic: string | null;
+  question_type: string | null;
   status: "in_progress" | "completed" | "abandoned";
   current_difficulty: number;
-  score: number | null;
+
+  // GMAT Focus-style adaptive scoring state — see lib/scoring.ts.
+  current_theta: number; // used by topic/sectional (single-section) attempts
+  quant_theta: number; // used by full-length's quant module
+  verbal_theta: number; // used by full-length's verbal module
+  quant_answered: number;
+  verbal_answered: number;
+  quant_score: number | null; // 60-90 scaled score
+  verbal_score: number | null; // 60-90 scaled score
+  di_score: number | null; // 60-90 scaled score (pulled from the linked di_attempts row)
+  total_score: number | null; // 205-805, full-length only
+  current_section: Section | null; // full-length: which module is active
+  di_attempt_id: string | null; // full-length: linked di_attempts row for the DI module
+  flagged: string[]; // question ids flagged for end-of-module review
+  quant_edits_used: number;
+  verbal_edits_used: number;
+  di_edits_used: number;
+
+  score: number | null; // legacy single-section score, kept for backward compat
 }
 
-// ---- Data Insights ----------------------------------------------------
+export interface ReviewResponse {
+  questionId: string;
+  section: Section;
+  topic: string;
+  prompt: string;
+  choices: { key: string; text: string }[];
+  selectedChoice: string | null;
+  correctChoice: string;
+  isCorrect: boolean;
+  explanation: string | null;
+  flagged: boolean;
+}
+
+// ---- Data Insights ------------------------------------------------------
 // DI content doesn't fit the single-question/single-choice `questions`
 // model above (multi-part answers, tables, charts) — it lives in its own
 // `di_items` table and gets its own practice flow. See lib/di.ts.
@@ -45,5 +80,11 @@ export interface DiAttempt {
   status: "in_progress" | "completed" | "abandoned";
   total: number;
   correct: number;
-  score: number | null;
+  score: number | null; // legacy percentage score
+
+  current_theta: number;
+  scaled_score: number | null; // 60-90 GMAT Focus-style Data Insights score
+  parent_test_attempt_id: string | null; // set when this is the DI module of a full-length test
+  flagged: string[];
+  edits_used: number;
 }

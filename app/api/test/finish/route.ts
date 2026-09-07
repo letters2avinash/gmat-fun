@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabase } from "@/lib/supabase";
-import { estimateScore } from "@/lib/adaptive";
+import { sectionScoreFromTheta, totalScoreFromSections } from "@/lib/scoring";
 
 // POST /api/test/finish  body: { attemptId }
+//
+// topic/sectional: scores the single section from its ability estimate.
+// full-length: quant_score/verbal_score were already set by module-finish
+// and di_score by /api/di/finish (which propagates onto the parent row) —
+// this just combines them into the real 205-805 Total Score.
 export async function POST(req: NextRequest) {
   const { attemptId } = await req.json();
   if (!attemptId) {
@@ -10,26 +15,38 @@ export async function POST(req: NextRequest) {
   }
 
   const supabase = createServerSupabase();
+  const { data: attempt, error } = await supabase
+    .from("test_attempts")
+    .select("*")
+    .eq("id", attemptId)
+    .single();
 
-  const { data: responses, error } = await supabase
-    .from("attempt_responses")
-    .select("difficulty_at_time, is_correct")
-    .eq("attempt_id", attemptId);
-
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error || !attempt) {
+    return NextResponse.json({ error: error?.message ?? "not found" }, { status: 404 });
   }
 
-  const score = estimateScore(
-    (responses ?? []).map((r) => ({
-      difficulty: r.difficulty_at_time,
-      correct: r.is_correct,
-    }))
-  );
+  const update: Record<string, unknown> = {
+    status: "completed",
+    completed_at: new Date().toISOString(),
+  };
 
-  const { data: attempt, error: updateError } = await supabase
+  if (attempt.mode === "full-length") {
+    const sectionScores = [attempt.quant_score, attempt.verbal_score, attempt.di_score].filter(
+      (s): s is number => typeof s === "number"
+    );
+    update.total_score = totalScoreFromSections(sectionScores);
+    update.score = update.total_score;
+  } else {
+    const sectionScore = sectionScoreFromTheta(attempt.current_theta);
+    if (attempt.section === "quant") update.quant_score = sectionScore;
+    if (attempt.section === "verbal") update.verbal_score = sectionScore;
+    if (attempt.section === "data_insights") update.di_score = sectionScore;
+    update.score = sectionScore;
+  }
+
+  const { data: updated, error: updateError } = await supabase
     .from("test_attempts")
-    .update({ status: "completed", score, completed_at: new Date().toISOString() })
+    .update(update)
     .eq("id", attemptId)
     .select()
     .single();
@@ -38,5 +55,5 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: updateError.message }, { status: 500 });
   }
 
-  return NextResponse.json({ attempt });
+  return NextResponse.json({ attempt: updated });
 }

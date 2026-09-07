@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabase } from "@/lib/supabase";
+import { startingTheta } from "@/lib/scoring";
 import type { DiCategory, DiType } from "@/lib/types";
 
 // POST /api/di/start
@@ -26,6 +27,7 @@ export async function POST(req: NextRequest) {
       status: "in_progress",
       total: 0,
       correct: 0,
+      current_theta: startingTheta(),
     })
     .select()
     .single();

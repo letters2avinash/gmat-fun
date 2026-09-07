@@ -5,19 +5,19 @@ const MODES = [
     key: "topic",
     title: "Topic-wise",
     href: "/test/topic",
-    blurb: "Drill one skill at a time — adaptive within the topic.",
+    blurb: "Drill one topic at a time — Quant, Verbal (Critical Reasoning), or Data Insights.",
   },
   {
     key: "sectional",
     title: "Sectional",
     href: "/test/sectional",
-    blurb: "Full Quant or Verbal section, timed and adaptive.",
+    blurb: "One full timed, adaptive section — Quant, Verbal, or Data Insights.",
   },
   {
     key: "full-length",
     title: "Full-length",
     href: "/test/full-length",
-    blurb: "Complete GMAT Focus simulation across Quant and Verbal.",
+    blurb: "The real GMAT Focus simulation — Quant, Verbal, and Data Insights, scored 205–805.",
   },
   {
     key: "data-insights",
