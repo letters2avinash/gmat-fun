@@ -15,3 +15,6 @@
 *.log
 npm-debug.log*
 *.tsbuildinfo
+
+# JetBrains IDE config
+.idea/
