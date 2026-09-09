@@ -30,7 +30,7 @@ export default function Gi({
       <p className="text-sm text-ink/70 mb-3">{data.intro_text}</p>
 
       <div className="rounded-xl2 bg-white border border-ink/10 p-4 mb-6">
-        <Chart type={data.chart_type} data={data.chart} />
+        <Chart data={data.chart} />
       </div>
 
       <div className="flex flex-col gap-5">

@@ -1,9 +1,8 @@
 /**
- * Data Insights content lives in `di_items.raw` exactly as it was authored —
- * a flat record whose fields differ per `di_type`, with several fields
- * holding JSON-encoded strings (arrays/objects) rather than parsed JSON,
- * because that's the shape the source generator produced. This module is
- * the only place that understands that raw shape.
+ * Data Insights content lives in `di_items.raw` exactly as it was authored
+ * by the 2026-09 content batch — a nested JSON record whose shape differs
+ * per `di_type`. This module is the only place that understands that raw
+ * shape.
  *
  * Two jobs, kept strictly separate:
  *  - `toSafeDiItem`  strips every correct-answer field out of a raw row so
@@ -17,16 +16,136 @@ import type { DiType } from "./types";
 
 type RawDi = Record<string, any>;
 
-function parseJson<T>(value: unknown, fallback: T): T {
-  if (typeof value !== "string") return (value as T) ?? fallback;
-  try {
-    return JSON.parse(value) as T;
-  } catch {
-    return fallback;
-  }
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// ---------------------------------------------------------------------
+// Chart data (Graphics Interpretation) — passed straight through from
+// `raw.chart`, unchanged. None of these fields carry an answer, so no
+// stripping is needed; only typed here for the renderer's benefit.
+// ---------------------------------------------------------------------
+
+export interface AxisSpec {
+  label: string;
+  min: number;
+  max: number;
+  major: number;
+  minor?: number;
+  tolerance?: number;
 }
 
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+export interface BarChart {
+  type: "bar";
+  categories: string[];
+  values: number[];
+  axes: { y: AxisSpec };
+  value_labels?: boolean;
+}
+export interface LineChart {
+  type: "line";
+  x: string[];
+  series: { name: string; values: number[] }[];
+  axes: { y: AxisSpec };
+  value_labels?: boolean;
+}
+export interface MultiLineChart {
+  type: "multi_line";
+  x: string[];
+  x_label?: string;
+  series: { name: string; values: number[] }[];
+  axes: { y: AxisSpec };
+  value_labels?: boolean;
+}
+export interface ScatterChart {
+  type: "scatter";
+  points: { label: string; x: number; y: number; group?: string }[];
+  axes: { x: AxisSpec; y: AxisSpec };
+}
+export interface Venn2Chart {
+  type: "venn2";
+  total: number;
+  regions: { only_a: number; only_b: number; both: number; neither: number };
+  labels: [string, string];
+  exact?: boolean;
+}
+export interface Venn3Chart {
+  type: "venn3";
+  labels: [string, string, string];
+  regions: { a: number; b: number; c: number; ab: number; ac: number; bc: number; abc: number };
+  exact?: boolean;
+}
+export interface RangeBandChart {
+  type: "range_band";
+  bands: { label: string; low: number; high: number }[];
+  axes: { y: AxisSpec };
+}
+export interface StackedBarChart {
+  type: "stacked_bar";
+  categories: string[];
+  bands: string[];
+  values: { label: string; parts: number[] }[];
+  axes: { y: AxisSpec };
+  value_labels?: boolean;
+}
+export interface GroupedBarChart {
+  type: "grouped_bar";
+  categories: string[];
+  series: { name: string; values: number[] }[];
+  axes: { y: AxisSpec };
+  value_labels?: boolean;
+}
+export interface DualAxisChart {
+  type: "dual_axis";
+  x: string[];
+  series: { name: string; values: number[]; axis: "left" | "right"; unit?: string }[];
+  axes: { y_left: AxisSpec; y_right: AxisSpec };
+  unit_mismatch?: boolean;
+}
+export interface PictographChart {
+  type: "pictograph";
+  unit_value: number;
+  unit_label: string;
+  rows: { label: string; symbols: number; value: number }[];
+}
+export interface FlowchartChart {
+  type: "flowchart";
+  start: Record<string, number>;
+  variable: string;
+  add_if_odd: number;
+  add_if_even: number;
+  threshold: number;
+  branching: boolean;
+  trace: { pass_no: number; n: number; value: number }[];
+}
+export interface ConflictGraphChart {
+  type: "conflict_graph";
+  directed: false;
+  nodes: { name: string; x: number; y: number }[];
+  edges: { a: string; b: string }[];
+  chromatic_number?: number;
+}
+export interface DirectedNetworkChart {
+  type: "directed_network";
+  directed: true;
+  nodes: { name: string; x: number; y: number }[];
+  edges: { from: string; to: string }[];
+  source?: string;
+}
+
+export type ChartData =
+  | BarChart
+  | LineChart
+  | MultiLineChart
+  | ScatterChart
+  | Venn2Chart
+  | Venn3Chart
+  | RangeBandChart
+  | StackedBarChart
+  | GroupedBarChart
+  | DualAxisChart
+  | PictographChart
+  | FlowchartChart
+  | ConflictGraphChart
+  | DirectedNetworkChart;
 
 // ---------------------------------------------------------------------
 // Safe (question-only) shapes sent to the client
@@ -41,7 +160,7 @@ export interface SafeTpa {
 }
 
 export type SafeMsrSubQuestion =
-  | { type: "yesno_grid"; stem: string; rows: { label: string }[] }
+  | { type: "yesno_grid"; stem: string; rows: { label: string }[]; trueLabel: string; falseLabel: string }
   | { type: "mcq"; stem: string; options: string[] };
 
 export interface SafeMsr {
@@ -51,7 +170,7 @@ export interface SafeMsr {
     | { name: string; kind: "text"; content: string[] }
     | { name: string; kind: "table"; columns: string[]; rows: string[][] }
   )[];
-  questions: { key: "q1" | "q2" | "q3"; q: SafeMsrSubQuestion }[];
+  questions: { key: string; q: SafeMsrSubQuestion }[];
 }
 
 export interface SafeTableAnalysis {
@@ -60,40 +179,18 @@ export interface SafeTableAnalysis {
   table_columns: string[];
   table_rows: string[][];
   statements: {
-    key: "a" | "b" | "c";
+    key: string;
     sentence: string;
     options: { key: string; text: string }[];
   }[];
 }
 
-export type ChartData =
-  | { kind: "xy"; labels: string[]; values: number[]; value_name: string }
-  | {
-      kind: "scatter";
-      labels: string[];
-      x_name: string;
-      x: number[];
-      y_name: string;
-      y: number[];
-    }
-  | {
-      kind: "venn";
-      set_a_name: string;
-      set_b_name: string;
-      only_a: number;
-      only_b: number;
-      both: number;
-      neither: number;
-      total: number;
-    };
-
 export interface SafeGi {
   di_type: "graphics_interpretation";
   intro_text: string;
-  chart_type: "bar" | "line" | "pie" | "scatter" | "venn";
   chart: ChartData;
   statements: {
-    key: "a" | "b";
+    key: string;
     sentence: string;
     options: { key: string; text: string }[];
   }[];
@@ -119,8 +216,8 @@ export type MsrSubmission = Record<
   string,
   boolean[] | string // yesno_grid -> per-row booleans, mcq -> letter
 >;
-export type TableAnalysisSubmission = Record<string, string>; // a/b/c -> letter
-export type GiSubmission = Record<string, string>; // a/b -> letter
+export type TableAnalysisSubmission = Record<string, string>; // stmt key -> option key
+export type GiSubmission = Record<string, string>; // stmt key -> letter
 
 export type DiSubmission =
   | { di_type: "two_part_analysis"; answer: TpaSubmission }
@@ -137,139 +234,94 @@ export interface DiGradeResult {
 // Parsing raw -> safe
 // ---------------------------------------------------------------------
 
-function letterOptions(values: string[]): string[] {
-  return values;
-}
-
 function toSafeTpa(raw: RawDi): SafeTpa {
   return {
     di_type: "two_part_analysis",
     prompt: raw.prompt,
-    col1_label: raw.col1_label,
-    col2_label: raw.col2_label,
-    options: letterOptions(parseJson<string[]>(raw.options, [])),
+    col1_label: raw.col1_header,
+    col2_label: raw.col2_header,
+    options: raw.options ?? [],
   };
 }
 
-function toSafeMsr(raw: RawDi): SafeMsr {
-  const tabs = parseJson<any[]>(raw.tabs, []).map((t) =>
-    t.kind === "table"
-      ? { name: t.name, kind: "table" as const, columns: t.columns, rows: t.rows }
-      : { name: t.name, kind: "text" as const, content: t.content }
-  );
-
-  const questions: SafeMsr["questions"] = [];
-  for (const n of [1, 2, 3] as const) {
-    const type = raw[`q${n}_type`];
-    if (!type) continue;
-    const key = `q${n}` as const;
-    if (type === "yesno_grid") {
-      const rows = parseJson<{ label: string; answer: boolean }[]>(
-        raw[`q${n}_rows`],
-        []
-      );
-      questions.push({
-        key,
-        q: {
-          type: "yesno_grid",
-          stem: raw[`q${n}_stem`],
-          rows: rows.map((r) => ({ label: r.label })),
-        },
-      });
-    } else if (type === "mcq") {
-      questions.push({
-        key,
-        q: {
-          type: "mcq",
-          stem: raw[`q${n}_stem`],
-          options: parseJson<string[]>(raw[`q${n}_options`], []),
-        },
-      });
+function toSafeMsrTabs(raw: RawDi): SafeMsr["tabs"] {
+  return (raw.tabs ?? []).map((t: any) => {
+    if (t.kind === "table") {
+      const content = t.content ?? {};
+      return {
+        name: t.name,
+        kind: "table" as const,
+        columns: (content.columns ?? []).map((c: any) => c.name),
+        rows: (content.rows ?? []).map((r: any[]) => r.map((cell) => String(cell))),
+      };
     }
-  }
+    return { name: t.name, kind: "text" as const, content: t.content ?? [] };
+  });
+}
+
+function toSafeMsr(raw: RawDi): SafeMsr {
+  const questions: SafeMsr["questions"] = (raw.questions ?? []).map((q: any, i: number) => {
+    const key = `q${i + 1}`;
+    if (q.format === "grid") {
+      const labels = q.labels ?? ["Yes", "No"];
+      return {
+        key,
+        q: {
+          type: "yesno_grid" as const,
+          stem: q.prompt,
+          rows: (q.rows ?? []).map((r: any) => ({ label: r.text })),
+          trueLabel: labels[0],
+          falseLabel: labels[1],
+        },
+      };
+    }
+    return {
+      key,
+      q: { type: "mcq" as const, stem: q.prompt, options: q.options ?? [] },
+    };
+  });
 
   return {
     di_type: "multi_source_reasoning",
-    intro_text: raw.intro_text,
-    tabs,
+    intro_text: raw.intro,
+    tabs: toSafeMsrTabs(raw),
     questions,
   };
 }
 
 function toSafeTableAnalysis(raw: RawDi): SafeTableAnalysis {
-  const statements: SafeTableAnalysis["statements"] = [];
-  for (const letter of ["a", "b", "c"] as const) {
-    const sentence = raw[`prompt_${letter}_sentence`];
-    if (!sentence) continue;
-    const options = parseJson<[string, string][]>(
-      raw[`prompt_${letter}_options`],
-      []
-    );
-    statements.push({
-      key: letter,
-      sentence,
-      options: options.map(([key, text]) => ({ key, text })),
-    });
-  }
+  const table = raw.table ?? {};
+  const gridLabels: [string, string] = raw.grid_labels ?? ["True", "False"];
+  const options = [
+    { key: "0", text: gridLabels[0] },
+    { key: "1", text: gridLabels[1] },
+  ];
+  const statements = (raw.statements ?? []).map((s: any, i: number) => ({
+    key: String.fromCharCode(97 + i), // a, b, c, ...
+    sentence: s.text,
+    options,
+  }));
 
   return {
     di_type: "table_analysis",
-    intro_text: raw.intro_text,
-    table_columns: parseJson<string[]>(raw.table_columns, []),
-    table_rows: parseJson<string[][]>(raw.table_rows, []),
+    intro_text: raw.intro,
+    table_columns: (table.columns ?? []).map((c: any) => c.name),
+    table_rows: (table.rows ?? []).map((r: any[]) => r.map((cell) => String(cell))),
     statements,
   };
 }
 
 function toSafeGi(raw: RawDi): SafeGi {
-  const rawChart = parseJson<any>(raw.chart_data, {});
-  let chart: ChartData;
-  if (raw.chart_type === "scatter") {
-    chart = {
-      kind: "scatter",
-      labels: rawChart.labels,
-      x_name: rawChart.x_name,
-      x: rawChart.x,
-      y_name: rawChart.y_name,
-      y: rawChart.y,
-    };
-  } else if (raw.chart_type === "venn") {
-    chart = {
-      kind: "venn",
-      set_a_name: rawChart.set_a_name,
-      set_b_name: rawChart.set_b_name,
-      only_a: rawChart.only_a,
-      only_b: rawChart.only_b,
-      both: rawChart.both,
-      neither: rawChart.neither,
-      total: rawChart.total,
-    };
-  } else {
-    chart = {
-      kind: "xy",
-      labels: rawChart.labels,
-      values: rawChart.values,
-      value_name: rawChart.value_name,
-    };
-  }
-
-  const statements: SafeGi["statements"] = [];
-  for (const letter of ["a", "b"] as const) {
-    const sentence = raw[`statement_${letter}_sentence`];
-    if (!sentence) continue;
-    const options = parseJson<string[]>(raw[`statement_${letter}_options`], []);
-    statements.push({
-      key: letter,
-      sentence,
-      options: options.map((text, i) => ({ key: LETTERS[i], text })),
-    });
-  }
+  const statements = (raw.statements ?? []).map((s: any, i: number) => ({
+    key: String.fromCharCode(97 + i), // a, b
+    sentence: s.text,
+    options: (s.options ?? []).map((text: string, j: number) => ({ key: LETTERS[j], text })),
+  }));
 
   return {
     di_type: "graphics_interpretation",
-    intro_text: raw.intro_text,
-    chart_type: raw.chart_type,
-    chart,
+    intro_text: raw.intro,
+    chart: raw.chart as ChartData,
     statements,
   };
 }
@@ -313,19 +365,21 @@ export function toSafeDiItem(row: {
 // ---------------------------------------------------------------------
 
 function gradeTpa(raw: RawDi, answer: TpaSubmission): DiGradeResult {
-  const options = parseJson<string[]>(raw.options, []);
-  const col1Correct = raw.col1_correct_letter;
-  const col2Correct = raw.col2_correct_letter;
+  const options: string[] = raw.options ?? [];
+  const col1Idx = raw.col1_answer_index;
+  const col2Idx = raw.col2_answer_index;
+  const col1Correct = LETTERS[col1Idx];
+  const col2Correct = LETTERS[col2Idx];
   const parts = [
     {
       key: "col1",
       isCorrect: answer.col1 === col1Correct,
-      correctAnswer: `${col1Correct}. ${options[LETTERS.indexOf(col1Correct)] ?? raw.col1_correct_text}`,
+      correctAnswer: `${col1Correct}. ${options[col1Idx]}`,
     },
     {
       key: "col2",
       isCorrect: answer.col2 === col2Correct,
-      correctAnswer: `${col2Correct}. ${options[LETTERS.indexOf(col2Correct)] ?? raw.col2_correct_text}`,
+      correctAnswer: `${col2Correct}. ${options[col2Idx]}`,
     },
   ];
   return { isCorrect: parts.every((p) => p.isCorrect), parts };
@@ -333,75 +387,61 @@ function gradeTpa(raw: RawDi, answer: TpaSubmission): DiGradeResult {
 
 function gradeMsr(raw: RawDi, answer: MsrSubmission): DiGradeResult {
   const parts: DiGradeResult["parts"] = [];
-  for (const n of [1, 2, 3] as const) {
-    const type = raw[`q${n}_type`];
-    if (!type) continue;
-    const key = `q${n}`;
-    if (type === "yesno_grid") {
-      const rows = parseJson<{ label: string; answer: boolean }[]>(
-        raw[`q${n}_rows`],
-        []
-      );
+  (raw.questions ?? []).forEach((q: any, i: number) => {
+    const key = `q${i + 1}`;
+    if (q.format === "grid") {
+      const labels = q.labels ?? ["Yes", "No"];
+      const rows = q.rows ?? [];
       const submitted = (answer[key] as boolean[]) ?? [];
-      const isCorrect = rows.every((r, i) => submitted[i] === r.answer);
+      const isCorrect = rows.every((r: any, idx: number) => submitted[idx] === r.answer);
       parts.push({
         key,
         isCorrect,
-        correctAnswer: rows
-          .map((r) => (r.answer ? "Yes" : "No"))
-          .join(" / "),
+        correctAnswer: rows.map((r: any) => (r.answer ? labels[0] : labels[1])).join(" / "),
       });
-    } else if (type === "mcq") {
-      const correctLetter = raw[`q${n}_correct_letter`];
+    } else {
+      const options: string[] = q.options ?? [];
+      const correctLetter = LETTERS[q.correct_index];
       parts.push({
         key,
         isCorrect: answer[key] === correctLetter,
-        correctAnswer: `${correctLetter}. ${raw[`q${n}_correct_text`]}`,
+        correctAnswer: `${correctLetter}. ${options[q.correct_index]}`,
       });
     }
-  }
+  });
   return { isCorrect: parts.every((p) => p.isCorrect), parts };
 }
 
-function gradeTableAnalysis(
-  raw: RawDi,
-  answer: TableAnalysisSubmission
-): DiGradeResult {
+function gradeTableAnalysis(raw: RawDi, answer: TableAnalysisSubmission): DiGradeResult {
+  const gridLabels: [string, string] = raw.grid_labels ?? ["True", "False"];
   const parts: DiGradeResult["parts"] = [];
-  for (const letter of ["a", "b", "c"] as const) {
-    const sentence = raw[`prompt_${letter}_sentence`];
-    if (!sentence) continue;
-    const correctLetter = raw[`prompt_${letter}_correct_letter`];
+  (raw.statements ?? []).forEach((s: any, i: number) => {
+    const key = String.fromCharCode(97 + i);
+    const correctKey = s.answer ? "0" : "1";
     parts.push({
-      key: letter,
-      isCorrect: answer[letter] === correctLetter,
-      correctAnswer: `${correctLetter}. ${raw[`prompt_${letter}_correct_text`]}`,
+      key,
+      isCorrect: answer[key] === correctKey,
+      correctAnswer: `${correctKey}. ${s.answer ? gridLabels[0] : gridLabels[1]}`,
     });
-  }
+  });
   return { isCorrect: parts.every((p) => p.isCorrect), parts };
 }
 
 function gradeGi(raw: RawDi, answer: GiSubmission): DiGradeResult {
   const parts: DiGradeResult["parts"] = [];
-  for (const letter of ["a", "b"] as const) {
-    const sentence = raw[`statement_${letter}_sentence`];
-    if (!sentence) continue;
-    const options = parseJson<string[]>(raw[`statement_${letter}_options`], []);
-    const correctLetter = raw[`statement_${letter}_correct_letter`];
+  (raw.statements ?? []).forEach((s: any, i: number) => {
+    const key = String.fromCharCode(97 + i);
+    const correctLetter = s.correct_letter;
     parts.push({
-      key: letter,
-      isCorrect: answer[letter] === correctLetter,
-      correctAnswer: `${correctLetter}. ${raw[`statement_${letter}_correct_text`] ?? options[LETTERS.indexOf(correctLetter)]}`,
+      key,
+      isCorrect: answer[key] === correctLetter,
+      correctAnswer: `${correctLetter}. ${s.correct_text ?? ""}`,
     });
-  }
+  });
   return { isCorrect: parts.every((p) => p.isCorrect), parts };
 }
 
-export function gradeDiItem(
-  diType: DiType,
-  raw: RawDi,
-  submission: DiSubmission
-): DiGradeResult {
+export function gradeDiItem(diType: DiType, raw: RawDi, submission: DiSubmission): DiGradeResult {
   switch (diType) {
     case "two_part_analysis":
       return gradeTpa(raw, submission.answer as TpaSubmission);

@@ -130,7 +130,7 @@ export default function Msr({
                                   : "border-ink/10 text-ink/60",
                               ].join(" ")}
                             >
-                              {val ? "Yes" : "No"}
+                              {val ? q.trueLabel : q.falseLabel}
                             </button>
                           ))}
                         </div>
