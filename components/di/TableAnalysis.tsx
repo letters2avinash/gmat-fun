@@ -1,6 +1,15 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import type { SafeTableAnalysis, TableAnalysisSubmission, DiGradeResult } from "@/lib/di";
+
+type SortDir = "asc" | "desc";
+
+function parseCell(cell: string): number | string {
+  const cleaned = cell.replace(/[,$%]/g, "").trim();
+  if (cleaned !== "" && !isNaN(Number(cleaned))) return Number(cleaned);
+  return cell.toLowerCase();
+}
 
 export default function TableAnalysisQuestion({
   data,
@@ -16,11 +25,40 @@ export default function TableAnalysisQuestion({
   disabled: boolean;
 }) {
   const sel = submission ?? {};
+  const [sortCol, setSortCol] = useState<number | null>(null);
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
 
   function setChoice(key: string, letter: string) {
     if (disabled) return;
     onChange({ ...sel, [key]: letter });
   }
+
+  function toggleSort(colIndex: number) {
+    if (sortCol === colIndex) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortCol(colIndex);
+      setSortDir("asc");
+    }
+  }
+
+  const sortedRows = useMemo(() => {
+    if (sortCol === null) return data.table_rows;
+    const withIndex = data.table_rows.map((row, i) => ({ row, i }));
+    withIndex.sort((a, b) => {
+      const av = parseCell(a.row[sortCol] ?? "");
+      const bv = parseCell(b.row[sortCol] ?? "");
+      let cmp: number;
+      if (typeof av === "number" && typeof bv === "number") {
+        cmp = av - bv;
+      } else {
+        cmp = String(av).localeCompare(String(bv));
+      }
+      if (cmp === 0) cmp = a.i - b.i;
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+    return withIndex.map((x) => x.row);
+  }, [data.table_rows, sortCol, sortDir]);
 
   const part = (key: string) => feedback?.parts.find((p) => p.key === key);
 
@@ -32,15 +70,39 @@ export default function TableAnalysisQuestion({
         <table className="w-full border-collapse text-xs">
           <thead>
             <tr>
-              {data.table_columns.map((c) => (
-                <th key={c} className="text-left font-semibold border-b border-ink/10 py-1.5 pr-3 whitespace-nowrap">
-                  {c}
-                </th>
-              ))}
+              {data.table_columns.map((c, colIndex) => {
+                const isActive = sortCol === colIndex;
+                return (
+                  <th
+                    key={c}
+                    className="text-left font-semibold border-b border-ink/10 py-1.5 pr-3 whitespace-nowrap"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleSort(colIndex)}
+                      className={[
+                        "inline-flex items-center gap-1 cursor-pointer select-none",
+                        isActive ? "text-brand" : "text-ink hover:text-brand/70",
+                      ].join(" ")}
+                      aria-label={`Sort by ${c}`}
+                    >
+                      <span>{c}</span>
+                      <span className="inline-flex flex-col leading-none text-[8px] -space-y-0.5">
+                        <span className={isActive && sortDir === "asc" ? "text-brand" : "text-ink/30"}>
+                          &#9650;
+                        </span>
+                        <span className={isActive && sortDir === "desc" ? "text-brand" : "text-ink/30"}>
+                          &#9660;
+                        </span>
+                      </span>
+                    </button>
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
-            {data.table_rows.map((row, r) => (
+            {sortedRows.map((row, r) => (
               <tr key={r} className="border-b border-ink/5">
                 {row.map((cell, c) => (
                   <td key={c} className="py-1.5 pr-3 whitespace-nowrap">
@@ -64,7 +126,7 @@ export default function TableAnalysisQuestion({
                 <span className="inline-block px-2 border-b-2 border-dashed border-brand/50 mx-0.5">
                   {sel[stmt.key]
                     ? stmt.options.find((o) => o.key === sel[stmt.key])?.text
-                    : "     "}
+                    : "     "}
                 </span>
                 {after}
               </p>
