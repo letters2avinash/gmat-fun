@@ -73,6 +73,20 @@ export default function ResultPage() {
           </div>
         </section>
 
+        {openQ && openReview ? (
+          <section className="rounded-xl2 border border-ink/10 bg-white p-6">
+            <p className="text-sm text-ink/60">
+              Q{openQ.n} · {openQ.type} · {openReview.ok ? "Correct" : "Incorrect"}
+            </p>
+            {openQ.stimulus || (openQ.passageId && test.passages[openQ.passageId]) ? (
+              <details className="mt-3">
+                <summary className="cursor-pointer text-sm text-brand">Show passage</summary>
+                <div className="mt-3 max-h-80 overflow-y-auto whitespace-pre-line text-[15px] leading-relaxed">
+                  {openQ.stimulus ?? test.passages[openQ.passageId!]?.text}
+                </div>
+              </details>
+            ) : null}
+
         <section className="rounded-xl2 border border-ink/10 bg-white p-4">
           <h2 className="px-2 pb-2 text-sm font-medium text-ink/70">Question by question</h2>
           <ul className="divide-y divide-ink/10">
@@ -98,19 +112,6 @@ export default function ResultPage() {
           </ul>
         </section>
 
-        {openQ && openReview ? (
-          <section className="rounded-xl2 border border-ink/10 bg-white p-6">
-            <p className="text-sm text-ink/60">
-              Q{openQ.n} · {openQ.type} · {openReview.ok ? "Correct" : "Incorrect"}
-            </p>
-            {openQ.stimulus || (openQ.passageId && test.passages[openQ.passageId]) ? (
-              <details className="mt-3">
-                <summary className="cursor-pointer text-sm text-brand">Show passage</summary>
-                <div className="mt-3 max-h-80 overflow-y-auto whitespace-pre-line text-[15px] leading-relaxed">
-                  {openQ.stimulus ?? test.passages[openQ.passageId!]?.text}
-                </div>
-              </details>
-            ) : null}
             <p className="mt-4 whitespace-pre-line font-medium leading-relaxed">{openQ.stem}</p>
             <div className="mt-4 flex flex-col gap-2">
               {openQ.options.map((o) => {
