@@ -81,7 +81,8 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         model: MODEL,
         messages: [{ role: "system", content: system }, ...history],
-        max_tokens: 700,
+        // Reasoning tokens count toward this cap, so leave generous room.
+        max_tokens: 2500,
       }),
     });
     if (!res.ok) {
