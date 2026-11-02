@@ -255,7 +255,7 @@ export default function TestPlayer() {
             <p>This section has 23 questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
-            <p>When you reach the last question, or choose End section, you review every question. You can change up to three answers before you submit.</p>
+            <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
             <p>The section opens in full screen. Leaving full screen does not stop the timer.</p>
           </div>
           {error ? <p className="mt-4 text-sm text-danger">{error}</p> : null}
@@ -333,13 +333,7 @@ export default function TestPlayer() {
             onFlag={() => toggleFlag(q.n)}
           />
         </div>
-        <footer className="flex items-center justify-between gap-3 border-t border-ink/10 bg-white px-5 py-3">
-          <button
-            onClick={openReview}
-            className="rounded-full border border-ink/15 px-4 py-2 text-sm"
-          >
-            End section
-          </button>
+        <footer className="flex items-center justify-end gap-3 border-t border-ink/10 bg-white px-5 py-3">
           <div className="flex items-center gap-3">
             {!answers[String(current)] ? (
               <span className="text-sm text-ink/60">Select an answer to continue.</span>
