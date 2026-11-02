@@ -9,7 +9,7 @@ import { createServerSupabase } from "@/lib/supabase";
 // Only available for SUBMITTED attempts: the chatbot is told the correct
 // answer, so it must never run during a live test.
 
-const MODEL = process.env.SERIES_CHAT_MODEL || "anthropic/claude-sonnet-4";
+const MODEL = process.env.SERIES_CHAT_MODEL || "anthropic/claude-haiku-5.5";
 const MAX_HISTORY = 12;
 const MAX_CHARS = 2000;
 
@@ -81,10 +81,14 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         model: MODEL,
         messages: [{ role: "system", content: system }, ...history],
-        max_tokens: 700,
+        // Reasoning tokens count toward this cap, so leave generous room.
+        max_tokens: 2500,
       }),
     });
     if (!res.ok) {
+      // Log the upstream reason (never the key) so it shows in Vercel logs.
+      const detail = await res.text().catch(() => "");
+      console.error("[series/chat] OpenRouter HTTP", res.status, detail.slice(0, 500));
       return NextResponse.json({ error: "The assistant is unavailable right now." }, { status: 502 });
     }
     const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
@@ -101,7 +105,8 @@ export async function POST(req: NextRequest) {
     await createServerSupabase().from("series_chat_messages").insert(rows);
 
     return NextResponse.json({ reply });
-  } catch {
+  } catch (err) {
+    console.error("[series/chat] request failed", err instanceof Error ? err.message : err);
     return NextResponse.json({ error: "The assistant is unavailable right now." }, { status: 502 });
   }
 }

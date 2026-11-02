@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { fmtSec } from "@/lib/series/client";
 import type { AnalyticsData } from "@/lib/series/analytics-types";
 
@@ -39,12 +40,17 @@ export default function AnalyticsView({ data }: { data: AnalyticsData }) {
           ) : (
             <ul className="divide-y divide-ink/10">
               {qa.topMissed.map((m) => (
-                <li key={`${m.testId}-${m.n}`} className="px-2 py-2.5 text-sm">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="font-medium">Test {m.testId} · Q{m.n} · {m.type}</span>
-                    <span className="whitespace-nowrap text-ink/60">missed {m.missed} of {m.attempted}</span>
-                  </div>
-                  <p className="mt-1 truncate text-ink/60">{m.stem}…</p>
+                <li key={`${m.testId}-${m.n}`}>
+                  <Link
+                    href={`/series/result/${m.attemptId}?q=${m.n}`}
+                    className="block rounded-lg px-2 py-2.5 text-sm hover:bg-canvas"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-medium text-brand">Test {m.testId} · Q{m.n} · {m.type}</span>
+                      <span className="whitespace-nowrap text-ink/60">missed {m.missed} of {m.attempted}</span>
+                    </div>
+                    <p className="mt-1 truncate text-ink/60">{m.stem}…</p>
+                  </Link>
                 </li>
               ))}
             </ul>

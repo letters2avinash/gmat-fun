@@ -20,6 +20,12 @@ export default function ResultPage() {
   const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState<number | null>(null);
 
+  // Opens a question when the page is reached from analytics (?q=n).
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q && Number.isInteger(Number(q))) setOpen(Number(q));
+  }, []);
+
   useEffect(() => {
     seriesFetch<Result>(`/api/series/attempts/${attemptId}`)
       .then((r) => {
@@ -73,31 +79,6 @@ export default function ResultPage() {
           </div>
         </section>
 
-        <section className="rounded-xl2 border border-ink/10 bg-white p-4">
-          <h2 className="px-2 pb-2 text-sm font-medium text-ink/70">Question by question</h2>
-          <ul className="divide-y divide-ink/10">
-            {review.map((r) => (
-              <li key={r.n}>
-                <button
-                  onClick={() => setOpen(r.n)}
-                  className={`flex w-full items-center justify-between gap-3 px-2 py-2.5 text-left text-sm hover:bg-canvas ${
-                    open === r.n ? "bg-brand-light" : ""
-                  }`}
-                >
-                  <span className="flex items-center gap-3">
-                    <span className={`h-2.5 w-2.5 rounded-full ${r.ok ? "bg-success" : r.picked ? "bg-danger" : "bg-ink/20"}`} />
-                    <span className="font-medium">Q{r.n}</span>
-                    <span className="text-ink/60">{r.type}</span>
-                  </span>
-                  <span className="whitespace-nowrap text-ink/60">
-                    {r.picked ?? "–"} / {r.correct} · {fmtSec(Math.round(r.timeMs / 1000))}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         {openQ && openReview ? (
           <section className="rounded-xl2 border border-ink/10 bg-white p-6">
             <p className="text-sm text-ink/60">
@@ -134,6 +115,32 @@ export default function ResultPage() {
             <p className="mt-3 text-xs text-ink/50">Time on this question: {fmtSec(Math.round(openReview.timeMs / 1000))}</p>
           </section>
         ) : null}
+
+        <section className="rounded-xl2 border border-ink/10 bg-white p-4">
+          <h2 className="px-2 pb-2 text-sm font-medium text-ink/70">Question by question</h2>
+          <ul className="divide-y divide-ink/10">
+            {review.map((r) => (
+              <li key={r.n}>
+                <button
+                  onClick={() => setOpen(r.n)}
+                  className={`flex w-full items-center justify-between gap-3 px-2 py-2.5 text-left text-sm hover:bg-canvas ${
+                    open === r.n ? "bg-brand-light" : ""
+                  }`}
+                >
+                  <span className="flex items-center gap-3">
+                    <span className={`h-2.5 w-2.5 rounded-full ${r.ok ? "bg-success" : r.picked ? "bg-danger" : "bg-ink/20"}`} />
+                    <span className="font-medium">Q{r.n}</span>
+                    <span className="text-ink/60">{r.type}</span>
+                  </span>
+                  <span className="whitespace-nowrap text-ink/60">
+                    {r.picked ?? "–"} / {r.correct} · {fmtSec(Math.round(r.timeMs / 1000))}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+
       </div>
 
       <aside className="lg:sticky lg:top-6 lg:h-[calc(100vh-7rem)]">
