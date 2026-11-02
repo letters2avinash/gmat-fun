@@ -138,7 +138,7 @@ export default function TestPlayer() {
       );
       if (full.attempt.status === "submitted") {
         leaveFullscreen();
-        router.replace(`/result/${full.attempt.id}`);
+        router.replace(`/series/result/${full.attempt.id}`);
         return;
       }
       const saved = full.attempt.answers ?? {};
@@ -211,7 +211,7 @@ export default function TestPlayer() {
         },
       });
       leaveFullscreen();
-      router.push(`/result/${attemptId}`);
+      router.push(`/series/result/${attemptId}`);
     } catch (e) {
       submittedRef.current = false;
       setSubmitting(false);
