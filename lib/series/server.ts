@@ -156,3 +156,23 @@ export function timeUsedSec(attempt: Attempt, test: FullTest, nowMs = Date.now()
 export function remainingSec(attempt: Attempt, test: FullTest, nowMs = Date.now()): number {
   return Math.max(0, test.durationMinutes * 60 - timeUsedSec(attempt, test, nowMs));
 }
+
+// ---- admin -----------------------------------------------------------------
+
+// Same as requireSeriesUser, plus the is_admin flag on the access row.
+export async function requireSeriesAdmin(
+  req: NextRequest
+): Promise<{ email: string } | { response: NextResponse }> {
+  const auth = await requireSeriesUser(req);
+  if ("response" in auth) return auth;
+  const admin = createServerSupabase();
+  const { data } = await admin
+    .from("series_access")
+    .select("is_admin")
+    .eq("email", auth.email)
+    .maybeSingle();
+  if (!data?.is_admin) {
+    return { response: NextResponse.json({ error: "Admins only." }, { status: 403 }) };
+  }
+  return auth;
+}

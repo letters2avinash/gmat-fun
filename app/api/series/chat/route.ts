@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getFullTest, requireSeriesUser } from "@/lib/series/server";
 import { getAttemptForUser } from "@/lib/series/attempts";
+import { createServerSupabase } from "@/lib/supabase";
 
 // POST /api/series/chat
 // body: { attemptId, n, messages: [{ role: "user" | "assistant", content }] }
@@ -89,6 +90,16 @@ export async function POST(req: NextRequest) {
     const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
     const reply = json.choices?.[0]?.message?.content?.trim();
     if (!reply) return NextResponse.json({ error: "The assistant returned nothing." }, { status: 502 });
+
+    // Keep the exchange so a teacher can review it. Best-effort: a logging
+    // failure must never block the student's answer.
+    const latestUser = [...history].reverse().find((m) => m.role === "user");
+    const rows = [
+      ...(latestUser ? [{ attempt_id: attempt.id, email: auth.email, n: q.n, role: "user", content: latestUser.content }] : []),
+      { attempt_id: attempt.id, email: auth.email, n: q.n, role: "assistant", content: reply },
+    ];
+    await createServerSupabase().from("series_chat_messages").insert(rows);
+
     return NextResponse.json({ reply });
   } catch {
     return NextResponse.json({ error: "The assistant is unavailable right now." }, { status: 502 });
