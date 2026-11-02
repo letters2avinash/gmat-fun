@@ -494,7 +494,7 @@ function QuestionPanel({
   return (
     <section className="min-h-0 flex-1 overflow-y-auto p-6">
       <div className="flex items-start justify-between gap-3">
-        <p className="text-sm text-ink/60">Question {q.n} · {q.type}</p>
+        <p className="text-sm text-ink/60">Question {q.n}</p>
         {onFlag ? (
           <button
             onClick={onFlag}
