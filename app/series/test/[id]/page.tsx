@@ -340,12 +340,18 @@ export default function TestPlayer() {
           >
             End section
           </button>
-          <button
-            onClick={next}
-            className="rounded-full bg-ink px-6 py-2 text-sm font-medium text-white"
-          >
-            {current >= total ? "Review answers" : "Next"}
-          </button>
+          <div className="flex items-center gap-3">
+            {!answers[String(current)] ? (
+              <span className="text-sm text-ink/60">Select an answer to continue.</span>
+            ) : null}
+            <button
+              onClick={next}
+              disabled={!answers[String(current)]}
+              className="rounded-full bg-ink px-6 py-2 text-sm font-medium text-white disabled:opacity-40"
+            >
+              {current >= total ? "Review answers" : "Next"}
+            </button>
+          </div>
         </footer>
       </div>
     );
