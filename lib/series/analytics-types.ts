@@ -11,7 +11,7 @@ export type AnalyticsData = {
   questionAnalysis: {
     byType: { type: string; attempted: number; correct: number; pct: number | null; avgSec: number | null }[];
     bySection: { label: string; attempted: number; correct: number; pct: number | null; avgSec: number | null }[];
-    topMissed: { testId: number; n: number; type: string; section: string; stem: string; attempted: number; missed: number }[];
+    topMissed: { testId: number; n: number; type: string; section: string; stem: string; attempted: number; missed: number; attemptId: string }[];
   };
   timeAnalysis: {
     buckets: { label: string; attempted: number; pct: number | null }[];

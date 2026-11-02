@@ -20,6 +20,12 @@ export default function ResultPage() {
   const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState<number | null>(null);
 
+  // Opens a question when the page is reached from analytics (?q=n).
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q && Number.isInteger(Number(q))) setOpen(Number(q));
+  }, []);
+
   useEffect(() => {
     seriesFetch<Result>(`/api/series/attempts/${attemptId}`)
       .then((r) => {

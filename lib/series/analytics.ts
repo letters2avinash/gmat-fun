@@ -24,7 +24,7 @@ export function computeAnalytics(attempts: AttemptRow[]) {
   const correctTime = blank();
   const wrongTime = blank();
   let unanswered = 0;
-  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC"; stem: string; attempted: number; missed: number }>();
+  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC"; stem: string; attempted: number; missed: number; attemptId: string }>();
   const pacing: {
     attemptId: string;
     testId: number;
@@ -84,9 +84,11 @@ export function computeAnalytics(attempts: AttemptRow[]) {
         stem: test.questions.find((q) => q.n === r.n)?.stem.slice(0, 140) ?? "",
         attempted: 0,
         missed: 0,
+        attemptId: a.id,
       };
       m.attempted++;
       if (!r.ok) m.missed++;
+      m.attemptId = a.id; // latest attempt wins (attempts are in submit order)
       missMap.set(key, m);
     }
   }
