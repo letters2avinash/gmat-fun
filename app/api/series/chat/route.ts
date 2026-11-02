@@ -85,6 +85,9 @@ export async function POST(req: NextRequest) {
       }),
     });
     if (!res.ok) {
+      // Log the upstream reason (never the key) so it shows in Vercel logs.
+      const detail = await res.text().catch(() => "");
+      console.error("[series/chat] OpenRouter HTTP", res.status, detail.slice(0, 500));
       return NextResponse.json({ error: "The assistant is unavailable right now." }, { status: 502 });
     }
     const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
@@ -101,7 +104,8 @@ export async function POST(req: NextRequest) {
     await createServerSupabase().from("series_chat_messages").insert(rows);
 
     return NextResponse.json({ reply });
-  } catch {
+  } catch (err) {
+    console.error("[series/chat] request failed", err instanceof Error ? err.message : err);
     return NextResponse.json({ error: "The assistant is unavailable right now." }, { status: 502 });
   }
 }
