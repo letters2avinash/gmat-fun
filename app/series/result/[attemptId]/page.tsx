@@ -86,6 +86,29 @@ export default function ResultPage() {
                 </div>
               </details>
             ) : null}
+            <p className="mt-4 whitespace-pre-line font-medium leading-relaxed">{openQ.stem}</p>
+            <div className="mt-4 flex flex-col gap-2">
+              {openQ.options.map((o) => {
+                const isCorrect = o.key === openReview.correct;
+                const isPicked = o.key === openReview.picked;
+                return (
+                  <div
+                    key={o.key}
+                    className={`flex gap-3 rounded-lg border px-3 py-2.5 text-[15px] ${
+                      isCorrect ? "border-success bg-success/10" : isPicked ? "border-danger bg-danger/10" : "border-ink/10"
+                    }`}
+                  >
+                    <span className="font-semibold">{o.key}.</span>
+                    <span>{o.text}</span>
+                    {isCorrect ? <span className="ml-auto text-xs text-success">Correct</span> : null}
+                    {isPicked && !isCorrect ? <span className="ml-auto text-xs text-danger">Your answer</span> : null}
+                  </div>
+                );
+              })}
+            </div>
+            <p className="mt-3 text-xs text-ink/50">Time on this question: {fmtSec(Math.round(openReview.timeMs / 1000))}</p>
+          </section>
+        ) : null}
 
         <section className="rounded-xl2 border border-ink/10 bg-white p-4">
           <h2 className="px-2 pb-2 text-sm font-medium text-ink/70">Question by question</h2>
@@ -112,29 +135,6 @@ export default function ResultPage() {
           </ul>
         </section>
 
-            <p className="mt-4 whitespace-pre-line font-medium leading-relaxed">{openQ.stem}</p>
-            <div className="mt-4 flex flex-col gap-2">
-              {openQ.options.map((o) => {
-                const isCorrect = o.key === openReview.correct;
-                const isPicked = o.key === openReview.picked;
-                return (
-                  <div
-                    key={o.key}
-                    className={`flex gap-3 rounded-lg border px-3 py-2.5 text-[15px] ${
-                      isCorrect ? "border-success bg-success/10" : isPicked ? "border-danger bg-danger/10" : "border-ink/10"
-                    }`}
-                  >
-                    <span className="font-semibold">{o.key}.</span>
-                    <span>{o.text}</span>
-                    {isCorrect ? <span className="ml-auto text-xs text-success">Correct</span> : null}
-                    {isPicked && !isCorrect ? <span className="ml-auto text-xs text-danger">Your answer</span> : null}
-                  </div>
-                );
-              })}
-            </div>
-            <p className="mt-3 text-xs text-ink/50">Time on this question: {fmtSec(Math.round(openReview.timeMs / 1000))}</p>
-          </section>
-        ) : null}
       </div>
 
       <aside className="lg:sticky lg:top-6 lg:h-[calc(100vh-7rem)]">
