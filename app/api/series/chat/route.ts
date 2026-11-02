@@ -9,7 +9,7 @@ import { createServerSupabase } from "@/lib/supabase";
 // Only available for SUBMITTED attempts: the chatbot is told the correct
 // answer, so it must never run during a live test.
 
-const MODEL = process.env.SERIES_CHAT_MODEL || "anthropic/claude-sonnet-4";
+const MODEL = process.env.SERIES_CHAT_MODEL || "anthropic/claude-haiku-5.5";
 const MAX_HISTORY = 12;
 const MAX_CHARS = 2000;
 
