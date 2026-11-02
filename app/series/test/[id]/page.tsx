@@ -11,6 +11,16 @@ type Times = Record<string, number>;
 type Phase = "gate" | "test" | "review";
 
 const AUTOSAVE_MS = 15_000;
+// GMAT Focus: up to three answers can be changed on the review screen of a section.
+const EDIT_LIMIT = 3;
+
+function changedCount(now: Answers, snap: Answers, total: number) {
+  let c = 0;
+  for (let n = 1; n <= total; n++) {
+    if ((now[String(n)] ?? null) !== (snap[String(n)] ?? null)) c++;
+  }
+  return c;
+}
 
 async function enterFullscreen() {
   try {
@@ -45,6 +55,8 @@ export default function TestPlayer() {
   const [submitting, setSubmitting] = useState(false);
   const [isFull, setIsFull] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [reviewSnapshot, setReviewSnapshot] = useState<Answers | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
   // Refs read by timers and the unload path, so they never see stale state.
   const timesRef = useRef<Times>({});
@@ -102,6 +114,8 @@ export default function TestPlayer() {
   function openReview() {
     stopTiming();
     setEditing(null);
+    setReviewSnapshot({ ...answers });
+    setNotice(null);
     setPhase("review");
   }
 
@@ -212,8 +226,17 @@ export default function TestPlayer() {
   }, [remaining]);
 
   function choose(n: number, letter: string) {
-    if (submittedRef.current) return;
-    setAnswers((prev) => ({ ...prev, [String(n)]: prev[String(n)] === letter ? null : letter }));
+    if (submittedRef.current || !test) return;
+    const cur = answersRef.current;
+    const updated = { ...cur, [String(n)]: cur[String(n)] === letter ? null : letter };
+    if (phase === "review" && reviewSnapshot) {
+      if (changedCount(updated, reviewSnapshot, test.questions.length) > EDIT_LIMIT) {
+        setNotice(`You can change up to ${EDIT_LIMIT} answers in this section.`);
+        return;
+      }
+    }
+    setNotice(null);
+    setAnswers(updated);
   }
 
   function toggleFlag(n: number) {
@@ -232,7 +255,7 @@ export default function TestPlayer() {
             <p>This section has 23 questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
-            <p>When you reach the last question, or choose End section, you review your answers before you submit.</p>
+            <p>When you reach the last question, or choose End section, you review every question. You can change up to three answers before you submit.</p>
             <p>The section opens in full screen. Leaving full screen does not stop the timer.</p>
           </div>
           {error ? <p className="mt-4 text-sm text-danger">{error}</p> : null}
@@ -259,6 +282,7 @@ export default function TestPlayer() {
   const answeredCount = test.questions.filter((x) => answers[String(x.n)]).length;
   const unanswered = total - answeredCount;
   const low = remaining <= 300;
+  const editsUsed = reviewSnapshot ? changedCount(answers, reviewSnapshot, total) : 0;
 
   const header = (title: string, sub: string) => (
     <header className="flex items-center justify-between gap-4 border-b border-ink/10 bg-white px-5 py-3">
@@ -349,6 +373,10 @@ export default function TestPlayer() {
           />
         </div>
         <footer className="flex items-center justify-between gap-3 border-t border-ink/10 bg-white px-5 py-3">
+          <div className="text-sm">
+            <p className="text-ink/70">Answer changes used: {editsUsed} of {EDIT_LIMIT}</p>
+            {notice ? <p className="text-danger">{notice}</p> : null}
+          </div>
           <button onClick={() => setEditing(null)} className="rounded-full bg-ink px-6 py-2 text-sm font-medium text-white">
             Back to review
           </button>
@@ -366,8 +394,10 @@ export default function TestPlayer() {
       <main className="mx-auto w-full max-w-3xl flex-1 p-6">
         <h1 className="text-xl font-semibold">Review your answers</h1>
         <p className="mt-2 text-sm text-ink/70">
-          Select any question to review or change its answer. Once you submit the section, you cannot change your answers.
+          Select any question to review or change its answer. You can change up to {EDIT_LIMIT} answers in this section. Once you submit, your answers are final.
         </p>
+        <p className="mt-3 text-sm text-ink/70">Answer changes used: {editsUsed} of {EDIT_LIMIT}</p>
+        {notice ? <p className="mt-2 text-sm text-danger">{notice}</p> : null}
 
         <div className="mt-6 grid grid-cols-6 gap-3 sm:grid-cols-8">
           {test.questions.map((x) => {
