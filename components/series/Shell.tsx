@@ -35,7 +35,7 @@ export default function SeriesShell({ children }: { children: React.ReactNode })
           {email ? (
             <nav className="flex items-center gap-2 text-sm">
               <Link href="/" className="rounded-full px-3 py-1.5 hover:bg-brand-light">Tests</Link>
-              <Link href="/analytics" className="rounded-full px-3 py-1.5 hover:bg-brand-light">Analytics</Link>
+              <Link href="/series/analytics" className="rounded-full px-3 py-1.5 hover:bg-brand-light">Analytics</Link>
               <button onClick={signOut} className="rounded-full border border-ink/15 px-3 py-1.5 hover:bg-ink/5">
                 Sign out
               </button>
