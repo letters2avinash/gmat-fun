@@ -4,14 +4,22 @@ import { createServerSupabase } from "@/lib/supabase";
 import { computeAnalytics } from "@/lib/series/analytics";
 
 export type TypeStat = { type: string; pct: number; attempted: number };
+export type Tip = {
+  key: string;
+  kind: "weak" | "strong";
+  type: string;
+  text: string;
+};
 export type StudentProfile = {
   submittedTests: number;
   weakTypes: TypeStat[];
   strongTypes: TypeStat[];
-  tips: string[];
+  tips: Tip[];
 };
 
-const MIN_ATTEMPTS = 3;
+// A type needs at least this many answered questions before it is mentioned,
+// so one or two misses never turn into a "0%" tip.
+const MIN_ATTEMPTS = 6;
 const WEAK_BELOW = 60;
 const STRONG_ABOVE = 80;
 
@@ -43,12 +51,22 @@ export async function buildStudentProfile(email: string): Promise<StudentProfile
   const weakTypes = typed.filter((t) => t.pct < WEAK_BELOW).sort((a, b) => a.pct - b.pct).slice(0, 2);
   const strongTypes = typed.filter((t) => t.pct >= STRONG_ABOVE).sort((a, b) => b.pct - a.pct).slice(0, 2);
 
-  const tips: string[] = [];
+  const tips: Tip[] = [];
   for (const w of weakTypes) {
-    tips.push(`${name}, ${w.type} questions are at ${w.pct}% across ${w.attempted} questions. Want a quick lesson on that type?`);
+    tips.push({
+      key: `weak:${w.type}`,
+      kind: "weak",
+      type: w.type,
+      text: `${name}, ${w.type} is your weakest type so far: ${w.pct}% across ${w.attempted} questions. Do you want to review those misses?`,
+    });
   }
   for (const s of strongTypes) {
-    tips.push(`${name}, you're at ${s.pct}% on ${s.type}. Use the same reasoning on related question types.`);
+    tips.push({
+      key: `strong:${s.type}`,
+      kind: "strong",
+      type: s.type,
+      text: `${name}, you're at ${s.pct}% on ${s.type}. Use the same reasoning on related question types. Do you want to keep this strength going?`,
+    });
   }
   return { submittedTests: rows.length, weakTypes, strongTypes, tips };
 }

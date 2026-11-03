@@ -125,7 +125,7 @@ function Tests() {
               {tests.length} tests · 23 questions each · 45 minutes · {done} started
             </p>
           </div>
-          <Link href="/analytics" className="rounded-full border border-ink/15 px-4 py-1.5 text-sm hover:bg-ink/5">
+          <Link href="/series/analytics" className="rounded-full border border-ink/15 px-4 py-1.5 text-sm hover:bg-ink/5">
             View analytics
           </Link>
         </div>
