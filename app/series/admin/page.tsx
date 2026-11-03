@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import AnalyticsView from "@/components/series/AnalyticsView";
 import { fmtSec, seriesFetch } from "@/lib/series/client";
 import type { AnalyticsData } from "@/lib/series/analytics-types";
+import { scaledScore } from "@/lib/series/scoring";
 
 type Student = {
   email: string;
@@ -132,7 +133,7 @@ export default function AdminPage() {
                         <td className="px-3 py-2.5">
                           {a.status === "submitted" ? (a.autoSubmitted ? "Time ran out" : "Submitted") : "In progress"}
                         </td>
-                        <td className="px-3 py-2.5">{a.correct !== null ? `${a.correct}/${a.total}` : "—"}</td>
+                        <td className="px-3 py-2.5">{a.correct !== null ? `${scaledScore(a.correct, a.total)} / 90` : "—"}</td>
                         <td className="px-3 py-2.5">{fmtSec(a.timeUsedSec)}</td>
                         <td className="px-3 py-2.5">
                           {a.chatMessages ? `${a.questionsDiscussed} questions · ${a.chatMessages} msgs` : "—"}

@@ -1,5 +1,6 @@
 // SERVER ONLY. Aggregates submitted attempts into question and time analytics.
 import { getFullTest, gradeAttempt, sanitizeAnswers, sanitizeTimes } from "@/lib/series/server";
+import { scaledScore } from "@/lib/series/scoring";
 
 export type AttemptRow = {
   id: string;
@@ -108,6 +109,9 @@ export function computeAnalytics(attempts: AttemptRow[]) {
     summary: {
       attempts: attempts.length,
       avgScorePct: pct(overall),
+      avgScore: pacing.length
+        ? Math.round(pacing.reduce((s, p) => s + scaledScore(p.correct, p.total), 0) / pacing.length)
+        : null,
       avgTimeUsedSec: pacing.length
         ? Math.round(pacing.reduce((s, p) => s + p.timeUsedSec, 0) / pacing.length)
         : null,

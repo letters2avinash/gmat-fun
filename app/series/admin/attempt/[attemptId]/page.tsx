@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fmtSec, seriesFetch } from "@/lib/series/client";
+import { scaledScore } from "@/lib/series/scoring";
 
 type ChatMsg = { n: number; role: "user" | "assistant"; content: string; created_at: string };
 
@@ -56,7 +57,7 @@ export default function AdminAttemptPage() {
         <Link href="/series/admin" className="text-sm text-brand hover:underline">← All students</Link>
         <h1 className="mt-2 text-2xl font-semibold">{attempt.testName}</h1>
         <p className="text-sm text-ink/60">
-          {attempt.email} · {attempt.correct}/{attempt.total} · time used {fmtSec(attempt.timeUsedSec)}
+          {attempt.email} · Verbal {scaledScore(attempt.correct, attempt.total)} / 90 · time used {fmtSec(attempt.timeUsedSec)}
           {attempt.autoSubmitted ? " · time ran out" : ""}
         </p>
       </div>

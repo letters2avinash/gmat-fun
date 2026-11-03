@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { createBrowserSupabase } from "@/lib/supabase";
 import { seriesFetch, fmtSec } from "@/lib/series/client";
 import type { Attempt, TestListItem } from "@/lib/series/types";
+import { scaledScore } from "@/lib/series/scoring";
 
 export default function SeriesHub() {
   const [ready, setReady] = useState(false);
@@ -135,7 +136,7 @@ function Tests() {
               <div>
                 <p className="text-xs uppercase tracking-wide text-ink/50">Test {t.id}</p>
                 <p className="mt-1 font-medium">
-                  {t.attempts > 0 ? `${t.bestScore}/${t.questionCount} best` : "Not attempted"}
+                  {t.attempts > 0 ? `${scaledScore(t.bestScore, t.questionCount)} / 90 best` : "Not attempted"}
                 </p>
               </div>
               <p className="mt-3 text-xs text-ink/60">
@@ -159,11 +160,11 @@ function Tests() {
                 <span>
                   Test {a.test_id} ·{" "}
                   {a.status === "submitted"
-                    ? `${a.correct}/${a.total} · ${fmtSec(a.time_used_sec)}${a.auto_submitted ? " · time ran out" : ""}`
+                    ? `${scaledScore(a.correct, a.total)} / 90 · ${fmtSec(a.time_used_sec)}${a.auto_submitted ? " · time ran out" : ""}`
                     : "in progress"}
                 </span>
                 {a.status === "submitted" ? (
-                  <Link href={`/result/${a.id}`} className="text-brand hover:underline">
+                  <Link href={`/series/result/${a.id}`} className="text-brand hover:underline">
                     Review
                   </Link>
                 ) : (

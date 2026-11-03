@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { fmtSec } from "@/lib/series/client";
 import type { AnalyticsData } from "@/lib/series/analytics-types";
+import { scaledScore } from "@/lib/series/scoring";
 
 // Renders the question and time analytics. Used for the student's own view
 // and for the teacher's view of any student.
@@ -12,7 +13,7 @@ export default function AnalyticsView({ data }: { data: AnalyticsData }) {
   return (
     <div className="flex flex-col gap-8">
       <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Stat label="Average score" value={summary.avgScorePct !== null ? `${summary.avgScorePct}%` : "—"} />
+        <Stat label="Average estimated score" value={summary.avgScore !== null ? `${summary.avgScore} / 90` : "—"} />
         <Stat label="Avg time per question" value={fmtSec(summary.avgSecPerQuestion)} />
         <Stat label="Avg time used per test" value={fmtSec(summary.avgTimeUsedSec)} />
         <Stat label="Time ran out" value={String(summary.autoSubmitted)} sub={`${summary.unanswered} unanswered`} />
@@ -75,7 +76,7 @@ export default function AnalyticsView({ data }: { data: AnalyticsData }) {
                 <li key={p.attemptId} className="flex items-center justify-between gap-3 py-2">
                   <span>Test {p.testId}</span>
                   <span className="text-ink/60">
-                    {p.correct}/{p.total} · {fmtSec(p.timeUsedSec)} of 45m
+                    {scaledScore(p.correct, p.total)} / 90 · {fmtSec(p.timeUsedSec)} of 45m
                     {p.autoSubmitted ? " · time ran out" : ""}
                   </span>
                 </li>

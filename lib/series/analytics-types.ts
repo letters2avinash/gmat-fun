@@ -3,6 +3,7 @@ export type AnalyticsData = {
   summary: {
     attempts: number;
     avgScorePct: number | null;
+    avgScore: number | null;
     avgTimeUsedSec: number | null;
     avgSecPerQuestion: number | null;
     autoSubmitted: number;

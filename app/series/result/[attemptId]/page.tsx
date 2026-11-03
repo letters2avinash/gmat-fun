@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { scaledScore, SCORE_NOTE } from "@/lib/series/scoring";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import DoubtsChat from "@/components/series/DoubtsChat";
@@ -49,7 +50,6 @@ export default function ResultPage() {
   if (!data) return <p className="text-sm text-ink/60">Loading result…</p>;
 
   const { attempt, test, review } = data;
-  const pct = Math.round(((attempt.correct ?? 0) / attempt.total) * 100);
   const bySec = (s: "CR" | "RC") => {
     const rows = review.filter((r) => r.section === s);
     return { correct: rows.filter((r) => r.ok).length, total: rows.length };
@@ -66,12 +66,13 @@ export default function ResultPage() {
           <p className="text-sm text-ink/60">{test.name}</p>
           <div className="mt-2 flex flex-wrap items-end gap-x-8 gap-y-2">
             <p className="text-4xl font-semibold tracking-tight">
-              {attempt.correct}/{attempt.total}
-              <span className="ml-2 text-lg font-normal text-ink/50">{pct}%</span>
+              {scaledScore(attempt.correct, attempt.total)}
+              <span className="ml-2 text-lg font-normal text-ink/50">/ 90</span>
             </p>
             <p className="text-sm text-ink/70">
-              CR {cr.correct}/{cr.total} · RC {rc.correct}/{rc.total}
+              CR {cr.total ? Math.round((cr.correct / cr.total) * 100) : 0}% · RC {rc.total ? Math.round((rc.correct / rc.total) * 100) : 0}%
             </p>
+            <p className="max-w-xs text-xs text-ink/50">{SCORE_NOTE}</p>
             <p className="text-sm text-ink/70">
               Time used {fmtSec(attempt.time_used_sec)} of {test.durationMinutes}m
               {attempt.auto_submitted ? " · submitted when time ran out" : ""}
