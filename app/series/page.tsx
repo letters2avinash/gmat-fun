@@ -6,6 +6,8 @@ import { createBrowserSupabase } from "@/lib/supabase";
 import { seriesFetch, fmtSec } from "@/lib/series/client";
 import type { Attempt, TestListItem } from "@/lib/series/types";
 import { scaledScore } from "@/lib/series/scoring";
+import SeriesTips from "@/components/series/SeriesTips";
+import SatisfactionPrompt from "@/components/series/SatisfactionPrompt";
 
 export default function SeriesHub() {
   const [ready, setReady] = useState(false);
@@ -113,6 +115,8 @@ function Tests() {
 
   return (
     <div className="flex flex-col gap-8">
+      <SeriesTips />
+      <SatisfactionPrompt />
       <section>
         <div className="flex flex-wrap items-end justify-between gap-2">
           <div>
