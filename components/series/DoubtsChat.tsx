@@ -114,7 +114,8 @@ export default function DoubtsChat({
     <div className={shell}>
       <div className="flex items-center justify-between gap-2 border-b border-ink/10 px-4 py-3">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-semibold text-white">A</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/series/avinash.jpg" alt="Avinash" className="h-9 w-9 rounded-full object-cover" />
           <div>
             <p className="font-medium">Avinash <span className="text-xs font-normal text-ink/50">· AI tutor</span></p>
             <p className="text-xs text-ink/60">Question {n}</p>
