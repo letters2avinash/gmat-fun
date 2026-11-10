@@ -3,7 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { createServerSupabase } from "@/lib/supabase";
 import rawTests from "@/data/series/tests.json";
+import { canonicalDi, diAnswerCorrect, isDiPartAnswer } from "@/lib/series/di-answer";
 import rawQaTests from "@/data/series/qa_tests.json";
+import rawDiTests from "@/data/series/di_tests.json";
 import type {
   Attempt,
   PublicQuestion,
@@ -16,12 +18,16 @@ export const QUESTIONS_PER_TEST = 23;
 // Grace period so a slow network at the final second does not lose answers.
 export const EXPIRY_GRACE_SEC = 30;
 
-type RawQuestion = PublicQuestion & { answer: string };
+type RawQuestion = PublicQuestion & { answer: string; diAnswer?: unknown };
 export type FullTest = Omit<PublicTest, "questions"> & { questions: RawQuestion[] };
 
 const TESTS: FullTest[] = [
   ...(rawTests as unknown as { tests: FullTest[] }).tests,
   ...(rawQaTests as unknown as { tests: FullTest[] }).tests,
+  // Data Insights tests stay hidden until every question type is playable.
+  ...(process.env.DI_ENABLED === "true"
+    ? (rawDiTests as unknown as { tests: FullTest[] }).tests
+    : []),
 ];
 
 export function getFullTest(id: number): FullTest | null {
@@ -39,8 +45,25 @@ export function toPublicTest(t: FullTest): PublicTest {
     name: t.name,
     durationMinutes: t.durationMinutes,
     passages: t.passages,
-    questions: t.questions.map(({ answer: _answer, ...q }) => q),
+    questions: t.questions.map(publicQuestion),
   };
+}
+
+// Strip every answer-bearing field before a question leaves the server.
+// Data Insights questions carry extra answer data (rows, dropdown keys, diAnswer).
+function publicQuestion(q: RawQuestion): PublicQuestion {
+  const {
+    answer: _answer,
+    diAnswer: _diAnswer,
+    tpaMap: _tpaMap,
+    gt: _gt,
+    rows: _rows,
+    answerSource: _answerSource,
+    answerStatus: _answerStatus,
+    answerNote: _answerNote,
+    ...rest
+  } = q as RawQuestion & Record<string, unknown>;
+  return rest as unknown as PublicQuestion;
 }
 
 // ---- auth ----------------------------------------------------------------
@@ -94,7 +117,8 @@ export function sanitizeAnswers(input: unknown): Record<string, string | null> {
   for (const [k, v] of Object.entries(input as Record<string, unknown>)) {
     const n = Number(k);
     if (!Number.isInteger(n) || n < 1 || n > QUESTIONS_PER_TEST) continue;
-    out[String(n)] = typeof v === "string" && LETTERS.has(v) ? v : null;
+    out[String(n)] =
+      typeof v === "string" && (LETTERS.has(v) || isDiPartAnswer(v)) ? v : null;
   }
   return out;
 }
@@ -130,7 +154,11 @@ export function gradeAttempt(
   let correct = 0;
   const review: ReviewItem[] = test.questions.map((q) => {
     const picked = answers[String(q.n)] ?? null;
-    const ok = picked === q.answer;
+    const ok =
+      picked !== null &&
+      (q.diAnswer !== undefined
+        ? diAnswerCorrect(picked, canonicalDi(q.diAnswer))
+        : picked === q.answer);
     if (ok) correct++;
     return {
       n: q.n,

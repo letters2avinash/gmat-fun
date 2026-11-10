@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { fmtClock, seriesFetch } from "@/lib/series/client";
-import { sectionLabel, type Attempt, type PublicQuestion, type PublicTest } from "@/lib/series/types";
+import { canonicalDi } from "@/lib/series/di-answer";
+import { sectionLabel, type Attempt, type DiSpec, type Passage, type PublicQuestion, type PublicTest } from "@/lib/series/types";
 
 type Answers = Record<string, string | null>;
 type Times = Record<string, number>;
@@ -239,6 +240,21 @@ export default function TestPlayer() {
     setAnswers(updated);
   }
 
+  // Sets a composite (multi-part) answer. An empty string clears the question.
+  function setAnswer(n: number, value: string) {
+    if (submittedRef.current || !test) return;
+    const cur = answersRef.current;
+    const updated = { ...cur, [String(n)]: value === "" ? null : value };
+    if (phase === "review" && reviewSnapshot) {
+      if (changedCount(updated, reviewSnapshot, test.questions.length) > EDIT_LIMIT) {
+        setNotice(`You can change up to ${EDIT_LIMIT} answers in this section.`);
+        return;
+      }
+    }
+    setNotice(null);
+    setAnswers(updated);
+  }
+
   function toggleFlag(n: number) {
     setFlagged((prev) => (prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]));
   }
@@ -247,14 +263,15 @@ export default function TestPlayer() {
 
   if (phase === "gate") {
     // Read from the URL: `test` is only loaded after "Begin section".
-    const isQuant = Number(id) >= 100;
+    const isQuant = Number(id) >= 100 && Number(id) < 200;
+    const isDi = Number(id) >= 200;
     return (
       <div className="fixed inset-0 z-[200] overflow-y-auto bg-canvas">
         <div className="mx-auto mt-12 max-w-xl rounded-xl2 border border-ink/10 bg-white p-8">
-          <p className="text-sm text-ink/60">{isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
-          <h1 className="mt-1 text-2xl font-semibold">{isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
+          <p className="text-sm text-ink/60">{isDi ? "GMAT Data Insights Section" : isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
+          <h1 className="mt-1 text-2xl font-semibold">{isDi ? `Data Insights ${Number(id) - 200}` : isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
           <div className="mt-6 flex flex-col gap-3 text-[15px] leading-relaxed">
-            <p>This section has {isQuant ? 21 : 23} questions and 45 minutes.</p>
+            <p>This section has {isDi ? 20 : isQuant ? 21 : 23} questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
             <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
@@ -311,11 +328,12 @@ export default function TestPlayer() {
 
   if (phase === "test") {
     const q = test.questions.find((x) => x.n === current) ?? test.questions[0];
-    const isQuantTest = test.id >= 100;
+    const isQuantTest = test.id >= 100 && test.id < 200;
+    const isDiTest = test.id >= 200;
     return (
       <div className="fixed inset-0 z-[200] flex flex-col overflow-hidden bg-canvas">
         {header(
-          isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
+          isDiTest ? "Data Insights" : isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
           `Question ${current} of ${total} · ${answeredCount} answered`
         )}
         {fullscreenBanner}
@@ -331,6 +349,7 @@ export default function TestPlayer() {
             answer={answers[String(q.n)] ?? null}
             isFlagged={flagged.includes(q.n)}
             onChoose={(l) => choose(q.n, l)}
+            onSet={(v) => setAnswer(q.n, v)}
             onFlag={() => toggleFlag(q.n)}
           />
         </div>
@@ -372,6 +391,7 @@ export default function TestPlayer() {
             answer={answers[String(q.n)] ?? null}
             isFlagged={flagged.includes(q.n)}
             onChoose={(l) => choose(q.n, l)}
+            onSet={(v) => setAnswer(q.n, v)}
             onFlag={() => toggleFlag(q.n)}
           />
         </div>
@@ -459,7 +479,7 @@ export default function TestPlayer() {
 // Quant questions usually have no passage: the question then takes the full width.
 function hasSharedContent(test: PublicTest, q: PublicQuestion): boolean {
   const passage = q.passageId ? test.passages[q.passageId] : null;
-  return !!(passage?.text || q.stimulus || q.image);
+  return !!(passage?.text || passage?.tabs?.length || q.stimulus || q.image);
 }
 
 // One side of the screen. The passage side shows the shared text; the question
@@ -471,6 +491,7 @@ function QuestionPanel({
   answer,
   isFlagged,
   onChoose,
+  onSet,
   onFlag,
 }: {
   test: PublicTest;
@@ -479,10 +500,21 @@ function QuestionPanel({
   answer?: string | null;
   isFlagged?: boolean;
   onChoose?: (letter: string) => void;
+  onSet?: (value: string) => void;
   onFlag?: () => void;
 }) {
   if (side === "passage") {
     const passage = q.passageId ? test.passages[q.passageId] : null;
+    if (passage?.tabs?.length) {
+      return (
+        <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
+          <p className="mb-3 text-xs font-medium uppercase tracking-wide text-ink/50">
+            {sectionLabel(q.section)}
+          </p>
+          <SourceTabs passage={passage} />
+        </section>
+      );
+    }
     const shared = passage?.text ?? q.stimulus;
     return (
       <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
@@ -510,7 +542,36 @@ function QuestionPanel({
           </button>
         ) : null}
       </div>
-      <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
+      {q.spec?.kind === "dropdown" ? (
+        <DropdownStem q={q} spec={q.spec} answer={answer} onSet={onSet} />
+      ) : (
+        <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
+      )}
+      {q.images && q.images.length ? (
+        <div className="mt-4 flex flex-col gap-3">
+          {q.images.map((f) => (
+            <img key={f} src={`/series/di/images/${f}`} alt={`Figure for question ${q.n}`} className="max-w-full" />
+          ))}
+        </div>
+      ) : null}
+      {q.statements ? (
+        <div className="mt-4 flex flex-col gap-3">
+          {Object.entries(q.statements).map(([k, text]) => (
+            <p key={k} className="whitespace-pre-line leading-relaxed">
+              <span className="font-semibold">{k}</span> {text}
+            </p>
+          ))}
+        </div>
+      ) : null}
+      {q.spec && isMultiPart(q.spec) ? (
+        <div className="mt-5">
+          {q.spec.kind === "tpa" ? (
+            <TpaGrid spec={q.spec} answer={answer} onSet={onSet} />
+          ) : q.spec.kind === "yesno" || q.spec.kind === "rows" ? (
+            <RowChoices spec={q.spec} answer={answer} onSet={onSet} />
+          ) : null}
+        </div>
+      ) : (
       <div className="mt-5 flex flex-col gap-2">
         {q.options.map((o) => {
           const sel = answer === o.key;
@@ -528,6 +589,198 @@ function QuestionPanel({
           );
         })}
       </div>
+      )}
     </section>
+  );
+}
+
+function isMultiPart(spec: DiSpec): boolean {
+  return spec.kind === "tpa" || spec.kind === "yesno" || spec.kind === "rows" || spec.kind === "dropdown";
+}
+
+function parseParts(answer?: string | null): Record<string, unknown> {
+  if (!answer) return {};
+  try {
+    const v = JSON.parse(answer);
+    return v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
+  } catch {
+    return {};
+  }
+}
+
+// Stores a composite answer; nothing selected means unanswered.
+function emitParts(next: Record<string, unknown>, onSet?: (v: string) => void) {
+  const any = Object.values(next).some((v) =>
+    Array.isArray(v) ? v.some((x) => x !== null && x !== undefined) : v !== null && v !== undefined
+  );
+  onSet?.(any ? canonicalDi(next) : "");
+}
+
+// Two Parts: one shared list of choices, one selection per column.
+function TpaGrid({ spec, answer, onSet }: { spec: { kind: "tpa"; rows: string[] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { col1?: number | null; col2?: number | null };
+  const pick = (key: "col1" | "col2", i: number) => {
+    const next = { col1: value.col1 ?? null, col2: value.col2 ?? null, [key]: value[key] === i ? null : i };
+    emitParts(next, onSet);
+  };
+  return (
+    <div>
+      <div className="grid items-center gap-y-2" style={{ gridTemplateColumns: "1fr 110px 110px" }}>
+        <span />
+        <span className="text-center text-sm font-semibold">Column 1</span>
+        <span className="text-center text-sm font-semibold">Column 2</span>
+        {spec.rows.map((label, i) => (
+          <div key={i} className="contents">
+            <span className="py-2 pr-3 text-[15px]">{label}</span>
+            {(["col1", "col2"] as const).map((key) => {
+              const sel = value[key] === i;
+              return (
+                <button
+                  key={key}
+                  aria-pressed={sel}
+                  onClick={() => pick(key, i)}
+                  className={`mx-auto h-6 w-6 rounded-full border-2 ${
+                    sel ? "border-brand bg-brand" : "border-ink/30 bg-white hover:border-brand/50"
+                  }`}
+                />
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Yes/No and True/False statement rows: one choice per row.
+function RowChoices({ spec, answer, onSet }: { spec: { kind: "yesno" | "rows"; rows: string[]; choices: string[] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { rows?: (string | null)[] };
+  const current: (string | null)[] = spec.rows.map((_, j) => value.rows?.[j] ?? null);
+  const opts =
+    spec.kind === "yesno"
+      ? (() => {
+          const extra = spec.choices.filter((c) => !["False", "True", "Yes", "No"].includes(c));
+          return extra.length === 2 ? extra : ["Yes", "No"];
+        })()
+      : spec.choices;
+  const choose = (i: number, opt: string) => {
+    const next = current.map((v, j) => (j === i ? (v === opt ? null : opt) : v));
+    emitParts({ rows: next }, onSet);
+  };
+  return (
+    <div className="flex flex-col gap-4">
+      {spec.rows.map((label, i) => (
+        <div key={i} className="flex flex-col gap-2">
+          <p className="text-[15px]">{label}</p>
+          <div className="flex flex-wrap gap-2">
+            {opts.map((opt) => {
+              const sel = current[i] === opt;
+              return (
+                <button
+                  key={opt}
+                  aria-pressed={sel}
+                  onClick={() => choose(i, opt)}
+                  className={`rounded-full border px-4 py-1.5 text-sm ${
+                    sel ? "border-brand bg-brand-light" : "border-ink/15 bg-white hover:border-brand/40"
+                  }`}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Two-Part dropdown question: the stem has {{1}}, {{2}} markers; each becomes a select.
+function DropdownStem({ q, spec, answer, onSet }: { q: PublicQuestion; spec: { kind: "dropdown"; groups: string[][] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { d?: (number | null)[] };
+  const current: (number | null)[] = spec.groups.map((_, j) => value.d?.[j] ?? null);
+  const set = (k: number, idx: number | null) => {
+    const next = current.map((v, j) => (j === k ? idx : v));
+    emitParts({ d: next }, onSet);
+  };
+  const parts = q.stem.split(/(\{\{\d+\}\})/);
+  return (
+    <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">
+      {parts.map((part, i) => {
+        const m = /^\{\{(\d+)\}\}$/.exec(part);
+        if (!m) return <span key={i}>{part}</span>;
+        const k = Number(m[1]) - 1;
+        const group = spec.groups[k] ?? [];
+        return (
+          <select
+            key={i}
+            value={current[k] === null ? "" : String(current[k])}
+            onChange={(e) => set(k, e.target.value === "" ? null : Number(e.target.value))}
+            className="mx-1 rounded border border-ink/20 bg-white px-2 py-1 text-[15px] font-normal"
+          >
+            <option value="">Select</option>
+            {group.map((opt, idx) => (
+              <option key={idx} value={idx}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        );
+      })}
+    </p>
+  );
+}
+
+// Multi-Source sets: each source is a tab. Images are served from /series/di/images.
+function SourceTabs({ passage }: { passage: Passage }) {
+  const tabs = passage.tabs ?? [];
+  const [active, setActive] = useState(0);
+  const current = tabs[active] ?? tabs[0];
+  return (
+    <div>
+      {passage.title ? <p className="mb-3 font-medium leading-relaxed">{passage.title}</p> : null}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {tabs.map((t, i) => (
+          <button
+            key={t.tab}
+            onClick={() => setActive(i)}
+            aria-pressed={i === active}
+            className={`rounded-full border px-3 py-1 text-sm ${
+              i === active ? "border-brand bg-brand-light" : "border-ink/15 bg-white hover:border-brand/40"
+            }`}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-col gap-3 text-[15px] leading-relaxed">
+        {current?.content.map((c, i) => {
+          if (c.type === "text") return <p key={i} className="whitespace-pre-line">{c.text}</p>;
+          if (c.type === "table") {
+            return (
+              <table key={i} className="border-collapse text-sm">
+                <tbody>
+                  {c.rows.map((row, r) => (
+                    <tr key={r} className={r === 0 ? "font-semibold" : ""}>
+                      {row.map((cell, k) => (
+                        <td key={k} className="border border-ink/15 px-3 py-1">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+          }
+          const name = c.file ? c.file.split("/").pop() : null;
+          return name ? (
+            <img key={i} src={`/series/di/images/${name}`} alt="Source figure" className="max-w-full" />
+          ) : (
+            <p key={i} className="rounded border border-dashed border-ink/25 p-3 text-sm text-ink/60">
+              Source figure not available in this copy.
+            </p>
+          );
+        })}
+      </div>
+    </div>
   );
 }

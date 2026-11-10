@@ -125,7 +125,8 @@ function Tests() {
 
       {[
         { title: "Verbal tests", note: "23 questions · 45 minutes", list: tests.filter((t) => t.id < 100), label: (t: TestListItem) => `Test ${t.id}` },
-        { title: "Quantitative tests", note: "21 questions · 45 minutes", list: tests.filter((t) => t.id >= 100), label: (t: TestListItem) => `Quant ${t.id - 100}` },
+        { title: "Quantitative tests", note: "21 questions · 45 minutes", list: tests.filter((t) => t.id >= 100 && t.id < 200), label: (t: TestListItem) => `Quant ${t.id - 100}` },
+        { title: "Data Insights tests", note: "20 questions · 45 minutes", list: tests.filter((t) => t.id >= 200 && t.id < 300), label: (t: TestListItem) => `Data Insights ${t.id - 200}` },
       ].map((sec) =>
         sec.list.length === 0 ? null : (
           <section key={sec.title}>
