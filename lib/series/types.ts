@@ -12,7 +12,17 @@ export type PublicQuestion = {
   options: Option[];
   image?: string | null;     // figure for quantitative questions (served from /public/series/qa)
   statements?: Record<string, string>; // Data Insights: numbered statements (1), (2)
+  spec?: DiSpec;             // Data Insights: how the player should draw multi-part answers
 };
+
+// Display-only description of a Data Insights question. Contains no answers.
+export type DiSpec =
+  | { kind: "ds" }
+  | { kind: "mcq" }
+  | { kind: "tpa"; rows: string[] }
+  | { kind: "yesno"; rows: string[]; choices: string[] }
+  | { kind: "rows"; rows: string[]; choices: string[] }
+  | { kind: "dropdown"; groups: string[][] };
 
 export function sectionLabel(s: "CR" | "RC" | "QA" | "DI"): string {
   if (s === "DI") return "Data Insights";

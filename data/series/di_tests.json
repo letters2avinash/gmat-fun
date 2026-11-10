@@ -394,7 +394,7 @@
      "type": "TPA",
      "paper": "32",
      "sourceN": 6,
-     "stem": "­Companies X, Y and Z are located in the same town and are involved in providing consultancy to firms involved in construction business. The median annual salary of employees at Company X is $10,000 more than that of employees at Company Y but less than the median annual salary of employees at Company Z. The median salary of at least one of the company is $100,000 or more. Statement: If the median annual salary at Company Z is ___1___, then the median annual salary at Company Y is ___2___.Select for 1 and for 2 the options that complete the statement so that it most accurately reflects the information provided and would be true under all circumstances. Make only two selections, one in each column.­",
+     "stem": "Companies X, Y and Z are located in the same town and are involved in providing consultancy to firms involved in construction business. The median annual salary of employees at Company X is $10,000 more than that of employees at Company Y but less than the median annual salary of employees at Company Z. The median salary of at least one of the company is $100,000 or more. Statement: If the median annual salary at Company Z is ___1___, then the median annual salary at Company Y is ___2___.Select for 1 and for 2 the options that complete the statement so that it most accurately reflects the information provided and would be true under all circumstances. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -445,7 +445,7 @@
      "type": "TPA",
      "paper": "05",
      "sourceN": 3,
-     "stem": "In June 1990, a small academic press published an initial run of 2,500 copies of linguist Chloe Vermeulen’s first book, Speech and Speaking. Because the first run was selling well, a second, larger run was produced in June 1995. Total sales for the period from June 1995–June 2000 represented an increase of 52 percent over total sales for the preceding five years; by June 2000, Vermeulen’s book had sold a total of 3,843 copies. In 2000, Speech and Speaking was cited in an influential paper; subsequently, for the period June 2000–June 2005, sales of Vermeulen’s book were double the sales for the previous five-year period. In the table, identify the number of books that most closely approximates the total sales of Speech and Speaking for each of the five-year periods June 1990–June 1995 and June 2000–June 2005, based on the information given. Make only two selections, one in each column.­",
+     "stem": "In June 1990, a small academic press published an initial run of 2,500 copies of linguist Chloe Vermeulen’s first book, Speech and Speaking. Because the first run was selling well, a second, larger run was produced in June 1995. Total sales for the period from June 1995–June 2000 represented an increase of 52 percent over total sales for the preceding five years; by June 2000, Vermeulen’s book had sold a total of 3,843 copies. In 2000, Speech and Speaking was cited in an influential paper; subsequently, for the period June 2000–June 2005, sales of Vermeulen’s book were double the sales for the previous five-year period. In the table, identify the number of books that most closely approximates the total sales of Speech and Speaking for each of the five-year periods June 1990–June 1995 and June 2000–June 2005, based on the information given. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -1101,7 +1101,7 @@
      "type": "TPA",
      "paper": "24",
      "sourceN": 3,
-     "stem": "­A palindrome is a number that reads the same forward and backward. For example. 13231 and 111 are palindromes. If 6-digit palindromes are formed using one or more of the ten digits, select for Even Palindromes, the number of palindromes that are made using even digits and select for Odd Palindromes, the number of Palindromes that are made using odd digits.­",
+     "stem": "A palindrome is a number that reads the same forward and backward. For example. 13231 and 111 are palindromes. If 6-digit palindromes are formed using one or more of the ten digits, select for Even Palindromes, the number of palindromes that are made using even digits and select for Odd Palindromes, the number of Palindromes that are made using odd digits.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -1152,7 +1152,7 @@
      "type": "TPA",
      "paper": "16",
      "sourceN": 12,
-     "stem": "­A citizens' group has proposed a law that would prevent their government representatives from buying and selling company stocks based on nonpublic information that those representatives obtained in their capacities as government officials that they could not have otherwise obtained. However, the law would not prevent them from making other stock transactions. The citizens are working on the following draft of the law:No government official is permitted to either purchase or sell any company's stock based on information that was 1 unless that information was 2.Select for 1 and for 2 the options that complete the draft statute in a manner that best captures the citizens' group's goals. Make only two selections, one in each column.­­­­",
+     "stem": "A citizens' group has proposed a law that would prevent their government representatives from buying and selling company stocks based on nonpublic information that those representatives obtained in their capacities as government officials that they could not have otherwise obtained. However, the law would not prevent them from making other stock transactions. The citizens are working on the following draft of the law:No government official is permitted to either purchase or sell any company's stock based on information that was 1 unless that information was 2.Select for 1 and for 2 the options that complete the draft statute in a manner that best captures the citizens' group's goals. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -1556,7 +1556,7 @@
      "type": "GT",
      "paper": "17",
      "sourceN": 16,
-     "stem": "The graphic provides data on world ethanol and biodiesel production, including the top 10 countries in each category, for 2005.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nFor the top 10 ethanol-producing countries in 2005, the median of the given volumes of ethanol produced is {{1}} million liters.\n\nIn 2005, the ratio of the volume of ethanol produced by the country that ranked 11th in ethanol production by volume to the total volume of ethanol produced by China and India was {{2}}.\n\n­",
+     "stem": "The graphic provides data on world ethanol and biodiesel production, including the top 10 countries in each category, for 2005.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nFor the top 10 ethanol-producing countries in 2005, the median of the given volumes of ethanol produced is {{1}} million liters.\n\nIn 2005, the ratio of the volume of ethanol produced by the country that ranked 11th in ethanol production by volume to the total volume of ethanol produced by China and India was {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -1629,7 +1629,7 @@
      "type": "TPA",
      "paper": "15",
      "sourceN": 6,
-     "stem": "­A car mechanic observed that although there is no direct formula to calculate the resale value of a car, the value of car did depreceate by almost 5% of initial cost every year. The less the age of car, the more the resale value. Thus, he found the linear relationship to be y = 5x, where y is the depreceated value as % of the original price and x is the age of the car in years. Based on the information above, select for y the depreceated value as % of the original value and for x the the age of the car consistent with that depreceated value. Make only two selections, one for each.­",
+     "stem": "A car mechanic observed that although there is no direct formula to calculate the resale value of a car, the value of car did depreceate by almost 5% of initial cost every year. The less the age of car, the more the resale value. Thus, he found the linear relationship to be y = 5x, where y is the depreceated value as % of the original price and x is the age of the car in years. Based on the information above, select for y the depreceated value as % of the original value and for x the the age of the car consistent with that depreceated value. Make only two selections, one for each.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -1724,7 +1724,7 @@
      "type": "GT",
      "paper": "23",
      "sourceN": 2,
-     "stem": "Researchers collected and studied emails sent by staff at three campuses of an Australian university. The table shows the exact percentages of the sampled emails from each campus that were sent to each of six destinations: the three campuses themselves, two other branch campuses, and locations external to the campuses. The percentages in a column may add to more than 100% because some emails were sent to more than one destination.\n­\nFor each of the questions below, select Yes if the question can be answered correctly based on the information provided. Otherwise, select No.­\n\n­",
+     "stem": "Researchers collected and studied emails sent by staff at three campuses of an Australian university. The table shows the exact percentages of the sampled emails from each campus that were sent to each of six destinations: the three campuses themselves, two other branch campuses, and locations external to the campuses. The percentages in a column may add to more than 100% because some emails were sent to more than one destination.\n\nFor each of the questions below, select Yes if the question can be answered correctly based on the information provided. Otherwise, select No.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -2070,7 +2070,7 @@
      "stem": "On Monday morning a certain machine ran continuously at a uniform rate to fill a production order. At what time did it completely fill the order that morning?",
      "statements": {
       "(1)": "The machine began filling the order at 9:30 a.m.",
-      "(2)": "The machine had filled 1/2 of the order by 10:30 a.m. and 5/6 to the order by 11:10 a.m.­\n\nID: 700115"
+      "(2)": "The machine had filled 1/2 of the order by 10:30 a.m. and 5/6 to the order by 11:10 a.m.\n\nID: 700115"
      },
      "options": [
       {
@@ -2325,7 +2325,7 @@
      "type": "TPA",
      "paper": "08",
      "sourceN": 3,
-     "stem": "­Two primary school teachers are debating the merits of classrooms with highly decorated walls. Teacher 1: A recent study has shown that highly decorated walls can interfere with learning in the classroom. We should therefore decrease the number of wall decorations in our classrooms. Teacher 2: The results of that study are correct, but pertain only to the retention of information from single lessons in which the students were in the classroom for only a short period of time. Our students are in the same classroom all day, five days a week. Without some added stimulation, students can become bored and therefore even more distracted than they would be by highly decorated walls. I therefore maintain that highly decorated walls serve to increase learning over the long term. Select for X and for Y the options such that the following statement, if filled in accordingly, has the most support from the information provided. Make only two selections, one in each column. Teacher 2 suggests that he agrees with Teacher 1 about the effects of wall decorations on X, but disagrees about the effects of wall decorations on Y.­",
+     "stem": "Two primary school teachers are debating the merits of classrooms with highly decorated walls. Teacher 1: A recent study has shown that highly decorated walls can interfere with learning in the classroom. We should therefore decrease the number of wall decorations in our classrooms. Teacher 2: The results of that study are correct, but pertain only to the retention of information from single lessons in which the students were in the classroom for only a short period of time. Our students are in the same classroom all day, five days a week. Without some added stimulation, students can become bored and therefore even more distracted than they would be by highly decorated walls. I therefore maintain that highly decorated walls serve to increase learning over the long term. Select for X and for Y the options such that the following statement, if filled in accordingly, has the most support from the information provided. Make only two selections, one in each column. Teacher 2 suggests that he agrees with Teacher 1 about the effects of wall decorations on X, but disagrees about the effects of wall decorations on Y.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -2373,7 +2373,7 @@
      "type": "TPA",
      "paper": "24",
      "sourceN": 6,
-     "stem": "Linguist: Plosives and fricatives are two classes of consonants. A \"voicing contrast\" is a distinction between two consonants that are identical except that one is voiced and the other is unvoiced. In language family X, languages with voicing contrasts in their fricatives always have voicing contrasts in their plosives. This means that in that family, any given language has a voicing contrast in its fricatives __________ it has a voicing contrast in its plosives. In other words, a given language in that family lacks any voicing contrasts in its plosives __________ it lacks any such contrasts in its fricatives. Select for First blank the word or phrase that most logically completes the statement with the first blank. And select for Second blank the word or phrase that most logically completes the statement with the second blank. Make only two selections, one in each column.­",
+     "stem": "Linguist: Plosives and fricatives are two classes of consonants. A \"voicing contrast\" is a distinction between two consonants that are identical except that one is voiced and the other is unvoiced. In language family X, languages with voicing contrasts in their fricatives always have voicing contrasts in their plosives. This means that in that family, any given language has a voicing contrast in its fricatives __________ it has a voicing contrast in its plosives. In other words, a given language in that family lacks any voicing contrasts in its plosives __________ it lacks any such contrasts in its fricatives. Select for First blank the word or phrase that most logically completes the statement with the first blank. And select for Second blank the word or phrase that most logically completes the statement with the second blank. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -2463,7 +2463,7 @@
      "type": "GT",
      "paper": "22",
      "sourceN": 5,
-     "stem": "For each year from 2011 through 2015, the graph shows the number of employees of a certain company during that year, together with the total amount paid by the company in compensation to its employees during that year.\n\nSelect from each drop-down menu the option that completes the statement so that it has the most support from the information provided.\n\nThe year in which the average (arithmetic mean) annual compensation per employee was GREATEST was {{1}}\n\nThe year in which the average (arithmetic mean) annual compensation per employee was LEAST was {{2}}\n\nUsing official mocks already?\n\nAdd GMAT Club Tests for harder practice, analytics, and explanations without overlapping Official Guide or official mock questions.\nTry it now →",
+     "stem": "For each year from 2011 through 2015, the graph shows the number of employees of a certain company during that year, together with the total amount paid by the company in compensation to its employees during that year.\n\nSelect from each drop-down menu the option that completes the statement so that it has the most support from the information provided.\n\nThe year in which the average (arithmetic mean) annual compensation per employee was GREATEST was {{1}}\n\nThe year in which the average (arithmetic mean) annual compensation per employee was LEAST was {{2}}\n\nUsing official mocks already?\n\nAdd",
      "statements": null,
      "options": null,
      "rows": null,
@@ -2713,7 +2713,7 @@
      "type": "GT",
      "paper": "17",
      "sourceN": 2,
-     "stem": "­\n\nThe graph shows data for physicians who, in 2000 and 2008, were surveyed about the average number of times per month they used each of 3 methods (telephone, email, and video conferencing) to communicate with their patients. The bars represent the percentage of the respondents who reported using the indicated method the indicated number of times per month.\n\nSelect from each drop-down menu the option that completes the statement so that it most accurately reflects the information provided.\n\nIt must be the case that the median number of times per month respondents reported having communicated with patients by {{1}} in the 2008 survey was less than that in the 2000 survey.\n\nIt must be the case that the percentage of respondents who reported having communicated with patients by both {{2}} was as great or greater in the 2008 survey as it was in the 2000 survey.\n\nSolving this question helps.\n\nTaking a timed set of similar questions in\nGMAT Club Forum Quiz →\nis even better.",
+     "stem": "\n\nThe graph shows data for physicians who, in 2000 and 2008, were surveyed about the average number of times per month they used each of 3 methods (telephone, email, and video conferencing) to communicate with their patients. The bars represent the percentage of the respondents who reported using the indicated method the indicated number of times per month.\n\nSelect from each drop-down menu the option that completes the statement so that it most accurately reflects the information provided.\n\nIt must be the case that the median number of times per month respondents reported having communicated with patients by {{1}} in the 2008 survey was less than that in the 2000 survey.\n\nIt must be the case that the percentage of respondents who reported having communicated with patients by both {{2}} was as great or greater in the 2008 survey as it was in the 2000 survey.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -2783,7 +2783,7 @@
      "type": "TPA",
      "paper": "29",
      "sourceN": 6,
-     "stem": "The following statements describe certain characteristics of a certain pool of candidates for a position. Any candidate who did not meet the minimum qualifications for the position was immediately excluded from consideration. The two candidates who met the minimum qualifications for the position and met all of the desired qualifications also had multiple recommendations. All candidates who received a telephone interview also had extensive experience. All candidates who had extensive experience and impressed the hiring committee during the telephone interview were invited to interview on-site. At least one candidate declined an invitation for an on-site interview, and exactly one candidate was interviewed on-site without receiving a telephone interview. Consider the following incomplete sentence:If any candidate _______1________, then that candidate _______2________.Select for 1 and for 2 two different options that best complete the sentence such that it can be logically inferred from the information provided. Make only two selections, one in each column.­",
+     "stem": "The following statements describe certain characteristics of a certain pool of candidates for a position. Any candidate who did not meet the minimum qualifications for the position was immediately excluded from consideration. The two candidates who met the minimum qualifications for the position and met all of the desired qualifications also had multiple recommendations. All candidates who received a telephone interview also had extensive experience. All candidates who had extensive experience and impressed the hiring committee during the telephone interview were invited to interview on-site. At least one candidate declined an invitation for an on-site interview, and exactly one candidate was interviewed on-site without receiving a telephone interview. Consider the following incomplete sentence:If any candidate _______1________, then that candidate _______2________.Select for 1 and for 2 two different options that best complete the sentence such that it can be logically inferred from the information provided. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -3033,7 +3033,7 @@
      "type": "GT",
      "paper": "02",
      "sourceN": 5,
-     "stem": "­\n\nThe two charts show how female and male survey respondents answered a question about how often they ate a certain type of food. The survey specified that \"infrequently\" meant more often than \"rarely\" but less often than \"occasionally.\"\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nSlightly less than {{1}} respondents indicated that they ate the food at most {{2}}.­",
+     "stem": "\n\nThe two charts show how female and male survey respondents answered a question about how often they ate a certain type of food. The survey specified that \"infrequently\" meant more often than \"rarely\" but less often than \"occasionally.\"\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nSlightly less than {{1}} respondents indicated that they ate the food at most {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -3070,20 +3070,17 @@
       "key": "Dropdown 1: 20% of the female Dropdown 2: Infrequently"
      },
      "diAnswer": {
-      "rows": [
-       "20% of the female",
-       "Infrequently"
+      "d": [
+       1,
+       1
       ]
      },
      "diChoices": [
       "Slightly less than [dropdown 1] respondents indicated that they ate the food at most [dropdown 2]."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Slightly less than [dropdown 1] respondents indicated that they ate the food at most [dropdown 2]."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "10% of the male",
         "20% of the female",
@@ -3497,7 +3494,7 @@
      "type": "TPA",
      "paper": "05",
      "sourceN": 12,
-     "stem": "Football matches between Fancy Club and Dare Devil never end in a tie whenever Louis Jr. plays for Fancy Club. However, Fancy Club has won against Dare Devil regardless of whether Louis Jr. played for the team. Statements: Fancy Club has won matches against Dare Devil __1__ Louis Jr. has played in those matches. Furthermore, matches between Fancy Club and Dare Devil end in a tie __2__ Louis Jr. has not played for Fancy Club in those matches. Select for 1 and for 2 the options that complete the statement so that it most accurately reflects the information provided. Make only two selections, one in each column. Make only two selections, one in each column.­",
+     "stem": "Football matches between Fancy Club and Dare Devil never end in a tie whenever Louis Jr. plays for Fancy Club. However, Fancy Club has won against Dare Devil regardless of whether Louis Jr. played for the team. Statements: Fancy Club has won matches against Dare Devil __1__ Louis Jr. has played in those matches. Furthermore, matches between Fancy Club and Dare Devil end in a tie __2__ Louis Jr. has not played for Fancy Club in those matches. Select for 1 and for 2 the options that complete the statement so that it most accurately reflects the information provided. Make only two selections, one in each column. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -3545,7 +3542,7 @@
      "type": "TPA",
      "paper": "09",
      "sourceN": 3,
-     "stem": "The following argument is logically flawed. The author's goal was to craft the argument so that the conclusion follows logically from Premises 1 and 2 and so that both premises are necessary to draw the conclusion. Premise 1: Every respondent to our survey who reported feeling satisfied also reported being in a good mood. Premise 2: Every respondent to our survey who reported having a central goal also reported being in a good mood. Conclusion: Therefore, assuming all of the reports were accurate and complete, every respondent to our survey who felt satisfied also had a central goal. Select for Boldface A and for Boldface B two of the boldface phrases in the argument such that Boldface A occurs earlier in the argument than Boldface B, and exchanging the positions of those two phrases in the argument would make it so the argument fulfills the author's goal. Make only two selections, one in each column.­",
+     "stem": "The following argument is logically flawed. The author's goal was to craft the argument so that the conclusion follows logically from Premises 1 and 2 and so that both premises are necessary to draw the conclusion. Premise 1: Every respondent to our survey who reported feeling satisfied also reported being in a good mood. Premise 2: Every respondent to our survey who reported having a central goal also reported being in a good mood. Conclusion: Therefore, assuming all of the reports were accurate and complete, every respondent to our survey who felt satisfied also had a central goal. Select for Boldface A and for Boldface B two of the boldface phrases in the argument such that Boldface A occurs earlier in the argument than Boldface B, and exchanging the positions of those two phrases in the argument would make it so the argument fulfills the author's goal. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -3761,7 +3758,7 @@
      "type": "GT",
      "paper": "11",
      "sourceN": 2,
-     "stem": "For a given city, the graph represents the daily deviation, in degrees Fahrenheit (°F), of the high temperature from the expected high temperature for each day in a 100-day period. Data is grouped into disjoint classes of deviations: for each value of T marked on the horizontal axis, the class centered at T includes all observed deviations greater than or equal to (T-2)°F but less than (T+2)°F. The height of each bar represents the number of deviations in the corresponding class. A given day's high temperature is x°F less than seasonal if it is x°F less than the left endpoint of the class centered at 0, and the high temperature is x°F greater than seasonal if it is x°F greater than the right endpoint of the class centered at 0.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nFor a randomly selected day in this 100-day period, the probability that the high temperature was more than 4°F less than seasonal is {{1}} and the probability that the high temperature was more than 8°F less than seasonal is {{2}}­\n\nNeed more Tests to Practice?\nGMAT Club Tests give expert solutions for every question in full and sectional GMAT Focus mocks.\nLearn more →",
+     "stem": "For a given city, the graph represents the daily deviation, in degrees Fahrenheit (°F), of the high temperature from the expected high temperature for each day in a 100-day period. Data is grouped into disjoint classes of deviations: for each value of T marked on the horizontal axis, the class centered at T includes all observed deviations greater than or equal to (T-2)°F but less than (T+2)°F. The height of each bar represents the number of deviations in the corresponding class. A given day's high temperature is x°F less than seasonal if it is x°F less than the left endpoint of the class centered at 0, and the high temperature is x°F greater than seasonal if it is x°F greater than the right endpoint of the class centered at 0.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nFor a randomly selected day in this 100-day period, the probability that the high temperature was more than 4°F less than seasonal is {{1}} and the probability that the high temperature was more than 8°F less than seasonal is {{2}}",
      "statements": null,
      "options": null,
      "rows": null,
@@ -5082,7 +5079,7 @@
      "type": "TPA",
      "paper": "13",
      "sourceN": 12,
-     "stem": "­Every ice cream flavor displayed in the Brussels Sweets Festival is by a Belgian chef. Some ice cream flavors displayed in the Brussels Sweets Festival are by custard specialists. All custard specialists use boysenberry. In the first column, choose an option that can be definitely inferred as true, based on the information given. In the second column, choose an option that can be definitely inferred as false, based on the information given. Make only two selections, one in each column.­",
+     "stem": "Every ice cream flavor displayed in the Brussels Sweets Festival is by a Belgian chef. Some ice cream flavors displayed in the Brussels Sweets Festival are by custard specialists. All custard specialists use boysenberry. In the first column, choose an option that can be definitely inferred as true, based on the information given. In the second column, choose an option that can be definitely inferred as false, based on the information given. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -5217,7 +5214,7 @@
      "type": "GT",
      "paper": "28",
      "sourceN": 13,
-     "stem": "­\n\nThe graph shows the percentage of vehicles that have failed routine inspections in a certain region in the past year, by vehicle age, as well as the percentage of those failures attributable to each of the following causes: faulty lights, faulty brakes, worn tires, and exceeding emissions.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe inspection failure rate was highest for vehicles that were {{1}} years old, where approximately {{2}} percent of vehicles of that age failed inspection due to faulty lights.­",
+     "stem": "\n\nThe graph shows the percentage of vehicles that have failed routine inspections in a certain region in the past year, by vehicle age, as well as the percentage of those failures attributable to each of the following causes: faulty lights, faulty brakes, worn tires, and exceeding emissions.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe inspection failure rate was highest for vehicles that were {{1}} years old, where approximately {{2}} percent of vehicles of that age failed inspection due to faulty lights.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -5293,7 +5290,7 @@
      "type": "GT",
      "paper": "17",
      "sourceN": 14,
-     "stem": "The graph shows the maximum absolute humidity—the maximum amount of water vapor that atmospheric air at sea level can hold—in grams of water vapor per cubic meter (g/m³), for integer-valued temperatures on the Celsius scale from 1°C through 41°C. When the air contains this maximum amount of water vapor, the air is said to be at its saturation point. In addition, at sea level and at a temperature of T °C, the density of air containing no water vapor is 10⁵/(287(T + 273)) kg/m³ where 1 kg = 1 kilogram = 1,000 g.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nAt 37°C, and at sea level, the weight of water vapor in 1 m³ of air at its saturation point is {{1}} % of the weight of 1 m³ of air containing no water vapor.\n\nThe average rate of change of maximum absolute humidity from 31°C to 41°C is {{2}} the average rate of change of maximum absolute humidity from 11°C to 21°C.­\n\n­",
+     "stem": "The graph shows the maximum absolute humidity—the maximum amount of water vapor that atmospheric air at sea level can hold—in grams of water vapor per cubic meter (g/m³), for integer-valued temperatures on the Celsius scale from 1°C through 41°C. When the air contains this maximum amount of water vapor, the air is said to be at its saturation point. In addition, at sea level and at a temperature of T °C, the density of air containing no water vapor is 10⁵/(287(T + 273)) kg/m³ where 1 kg = 1 kilogram = 1,000 g.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nAt 37°C, and at sea level, the weight of water vapor in 1 m³ of air at its saturation point is {{1}} % of the weight of 1 m³ of air containing no water vapor.\n\nThe average rate of change of maximum absolute humidity from 31°C to 41°C is {{2}} the average rate of change of maximum absolute humidity from 11°C to 21°C.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -5405,9 +5402,9 @@
       "note": "Country A has by far the most Merchant Navy ships per capita (~90 vs under 60 for others). Countries A and B are the only ones in the top four for both ships and troops, so 2/7 = 0.29. Read from bubble chart, approximate."
      },
      "diAnswer": {
-      "rows": [
-       "Country A",
-       "0.29"
+      "d": [
+       0,
+       1
       ]
      },
      "diChoices": [
@@ -5415,12 +5412,8 @@
       "The probability that a country is in the top four for both Merchant Navy ships and Military Navy troops is"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "The country that has the most ships in its Merchant Navy relative to population is",
-       "The probability that a country is in the top four for both Merchant Navy ships and Military Navy troops is"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "Country A",
         "Country B",
@@ -5794,7 +5787,7 @@
      "type": "GT",
      "paper": "19",
      "sourceN": 5,
-     "stem": "­The graph shows, for each of 12 randomly selected dates, the number of cats housed in a facility that cares for lost and abandoned cats. Throughout the time shown, the facility had a guideline that the combined floor space of areas in which cats were kept should equal or exceed 1 square meter per cat. Until March 2016, the facility kept all cats together in a room whose dimensions were 3 meters by 5 meters. From March 2016 on, the cats were distributed equally between this and a second room of the same size.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nBased on the information provided in the graph and in the accompanying text, on exactly {{1}} of the 2015 dates shown and on exactly {{2}} of the 2016 dates shown, the facility was NOT in compliance with the stated guideline for floor space per cat.­",
+     "stem": "The graph shows, for each of 12 randomly selected dates, the number of cats housed in a facility that cares for lost and abandoned cats. Throughout the time shown, the facility had a guideline that the combined floor space of areas in which cats were kept should equal or exceed 1 square meter per cat. Until March 2016, the facility kept all cats together in a room whose dimensions were 3 meters by 5 meters. From March 2016 on, the cats were distributed equally between this and a second room of the same size.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nBased on the information provided in the graph and in the accompanying text, on exactly {{1}} of the 2015 dates shown and on exactly {{2}} of the 2016 dates shown, the facility was NOT in compliance with the stated guideline for floor space per cat.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -5879,7 +5872,7 @@
      "stem": "A certain high school with a total enrollment of 900 students held a science fair for three days last week. How many of the students enrolled in the high school attended the science fair on all three days?",
      "statements": {
       "(1)": "Of the students enrolled in the school, 30 percent attended the science fair on two or more days.",
-      "(2)": "Of the students enrolled in the school, 10 percent of those that attended the science fair on at least one day attended on all three days.­"
+      "(2)": "Of the students enrolled in the school, 10 percent of those that attended the science fair on at least one day attended on all three days."
      },
      "options": [
       {
@@ -6066,7 +6059,7 @@
      "type": "TPA",
      "paper": "30",
      "sourceN": 6,
-     "stem": "­Country C has a long-standing policy that every person who earns an annual income above a certain specified amount in any given year must file an income tax return for that year that includes Schedule X. However, for every year, most people who file an income tax return that includes Schedule X do not earn an annual income above the specified amount. Assume that everyone in Country C always follows the country's tax policies. Select the statement about people in Country C that must be true, given this assumption and the information provided. And select the statement about people in Country C that must be false, given this assumption and the information provided. Make only two selections, one in each column. ­",
+     "stem": "Country C has a long-standing policy that every person who earns an annual income above a certain specified amount in any given year must file an income tax return for that year that includes Schedule X. However, for every year, most people who file an income tax return that includes Schedule X do not earn an annual income above the specified amount. Assume that everyone in Country C always follows the country's tax policies. Select the statement about people in Country C that must be true, given this assumption and the information provided. And select the statement about people in Country C that must be false, given this assumption and the information provided. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -6117,7 +6110,7 @@
      "type": "TPA",
      "paper": "14",
      "sourceN": 6,
-     "stem": "Today a certain cinema multiplex has exactly two showings (an early showing and a late showing) for each of five films (Films A, B, C, D, and E). All of these showings occur after noon, and each showing consists of the film only, with no previews, announcements, or advertisements. The following gives the duration of each film and the start time for each showing:Film A (90 minutes); 3:45 and 5:30Film B (100 minutes); 1:30 and 7:15Film C (105 minutes); 2:00 and 6:00Film D (115 minutes); 5:00 and 8:00Film E (125 minutes); 12:15 and 7:00Statement: The early showing of Film 1 overlaps with at least part of both showings of Film 2.Select for 1 and for 2 the options that complete the statement so that it is accurate of the showings listed in the information provided. Make only two selections, one in each column.\n\nPro tip:\n\nCombine official questions for familiarity with GMAT Club Tests for analytics and tougher Focus-level practice so the real exam feels manageable.\nExplore →",
+     "stem": "Today a certain cinema multiplex has exactly two showings (an early showing and a late showing) for each of five films (Films A, B, C, D, and E). All of these showings occur after noon, and each showing consists of the film only, with no previews, announcements, or advertisements. The following gives the duration of each film and the start time for each showing:Film A (90 minutes); 3:45 and 5:30Film B (100 minutes); 1:30 and 7:15Film C (105 minutes); 2:00 and 6:00Film D (115 minutes); 5:00 and 8:00Film E (125 minutes); 12:15 and 7:00Statement: The early showing of Film 1 overlaps with at least part of both showings of Film 2.Select for 1 and for 2 the options that complete the statement so that it is accurate of the showings listed in the information provided. Make only two selections, one in each column.\n\nPro tip:\n\nCombine official questions for familiarity with",
      "statements": null,
      "options": null,
      "rows": null,
@@ -6339,7 +6332,7 @@
      "type": "TPA",
      "paper": "27",
      "sourceN": 6,
-     "stem": "An American museum of East Asian art reviewed its acquisitions strategy in 2009. As part of that review, a marketing executive recommended purchasing more ceramics, jades, and paintings of people or landscapes because visitor surveys indicated that those types are of greatest interest to museumgoers in the region. The museum’s curator recommended purchasing more twenty-first-century East Asian art—particularly abstract (nonrepresentational) paintings and sculptures—because the museum’s collection is weakest in that area. Among the East Asian works of art described below, select a painting and a sculpture, each of which satisfies at least one of the recommendations made by the marketing executive and at least one of the recommendations made by the curator. Make only two selections, one in each column. ­",
+     "stem": "An American museum of East Asian art reviewed its acquisitions strategy in 2009. As part of that review, a marketing executive recommended purchasing more ceramics, jades, and paintings of people or landscapes because visitor surveys indicated that those types are of greatest interest to museumgoers in the region. The museum’s curator recommended purchasing more twenty-first-century East Asian art—particularly abstract (nonrepresentational) paintings and sculptures—because the museum’s collection is weakest in that area. Among the East Asian works of art described below, select a painting and a sculpture, each of which satisfies at least one of the recommendations made by the marketing executive and at least one of the recommendations made by the curator. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -6703,9 +6696,9 @@
       "note": "Four countries priced above $60 (D, C, A, B); P/E above 40 for C (~42) and B (~52), so 2. Only N has P/E below 10 (~8), so 1."
      },
      "diAnswer": {
-      "rows": [
-       "2",
-       "1"
+      "d": [
+       1,
+       0
       ]
      },
      "diChoices": [
@@ -6713,12 +6706,8 @@
       "1.2 The number of companies with P/E less than 10 is"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "1.1 Of the companies whose stock price is greater than $60, the number with P/E greater than 40 is",
-       "1.2 The number of companies with P/E less than 10 is"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "1",
         "2",
@@ -6875,7 +6864,7 @@
      "type": "GT",
      "paper": "21",
      "sourceN": 18,
-     "stem": "­\n\nA certain restaurant serves exactly 5 entrées—E1 through E5. Customers may order an entrée alone, but most customers order an entrée as part of a combination meal, which consists of one entrée plus extras—a side dish and drink. While the entrées vary in cost to the restaurant, the extras always have the same cost to the restaurant. The graph shows the actual cost to the restaurant for the entrée and the extras as a percent of the price charged for the meal.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nOf the five combination meals, the meal with entrée {{1}} has the highest price.\n\nOf the five combination meals, the sale of a single meal with entrée {{2}} nets the least profit.\n\n­",
+     "stem": "\n\nA certain restaurant serves exactly 5 entrées—E1 through E5. Customers may order an entrée alone, but most customers order an entrée as part of a combination meal, which consists of one entrée plus extras—a side dish and drink. While the entrées vary in cost to the restaurant, the extras always have the same cost to the restaurant. The graph shows the actual cost to the restaurant for the entrée and the extras as a percent of the price charged for the meal.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nOf the five combination meals, the meal with entrée {{1}} has the highest price.\n\nOf the five combination meals, the sale of a single meal with entrée {{2}} nets the least profit.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -7153,7 +7142,7 @@
      "type": "TPA",
      "paper": "18",
      "sourceN": 12,
-     "stem": "Neighborhood blog post on Saturday morning: During the past 5 days, traffic was bad on Wednesday, worse on Monday, and better on Tuesday than on Wednesday. Also, traffic was better on Friday than on Thursday. Assume the blog post is accurate. Select for Could determine worst the statement that, if added to the post, would make it possible to determine which of the 5 days had the worst traffic, based on the information given in the post. Select for Could determine best the statement that, if added to the post, would make it possible to determine which of the 5 days had the best traffic, based on the information given in the post. Make only two selections, one in each column. ­\n\nQuestion exposed a gap?\n\nCheck whether it is a pattern. Run an adaptive Quant, Verbal, or DI section in GMAT Club Tests and review the detailed score report.\nGet started →",
+     "stem": "Neighborhood blog post on Saturday morning: During the past 5 days, traffic was bad on Wednesday, worse on Monday, and better on Tuesday than on Wednesday. Also, traffic was better on Friday than on Thursday. Assume the blog post is accurate. Select for Could determine worst the statement that, if added to the post, would make it possible to determine which of the 5 days had the worst traffic, based on the information given in the post. Select for Could determine best the statement that, if added to the post, would make it possible to determine which of the 5 days had the best traffic, based on the information given in the post. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -7201,7 +7190,7 @@
      "type": "GT",
      "paper": "15",
      "sourceN": 16,
-     "stem": "­\n\nBefore deciding whether to accept a batch of grain, agricultural-import inspectors in a certain country test five samples from the batch. The graph shows the probabilities that a batch will be accepted based on the average (arithmetic mean) percentage of impure grains found in the samples. The four curves represent how the probabilities of acceptance vary given four different standards for the maximum acceptable number of samples that test positive (are found to contain one or more impure grains). If all five samples test positive, the batch will not be accepted.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided in the graph.\n\nFor a batch for which the average percentage of impure grains in the samples is {{1}} percent, the probability that the inspectors will accept the batch is approximately 0.35 less if the maximum acceptable number of positive samples is {{2}} than if it is 4.\n\n­",
+     "stem": "\n\nBefore deciding whether to accept a batch of grain, agricultural-import inspectors in a certain country test five samples from the batch. The graph shows the probabilities that a batch will be accepted based on the average (arithmetic mean) percentage of impure grains found in the samples. The four curves represent how the probabilities of acceptance vary given four different standards for the maximum acceptable number of samples that test positive (are found to contain one or more impure grains). If all five samples test positive, the batch will not be accepted.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided in the graph.\n\nFor a batch for which the average percentage of impure grains in the samples is {{1}} percent, the probability that the inspectors will accept the batch is approximately 0.35 less if the maximum acceptable number of positive samples is {{2}} than if it is 4.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -7557,7 +7546,7 @@
      "type": "TPA",
      "paper": "23",
      "sourceN": 6,
-     "stem": "­After a 16-member team at Company A saw a certain software demonstration, each of the team members gave the software exactly one of the ratings 1, 2, 3, 4, or 5, where greater numbers indicate higher ratings. The team's manager intended to record the 16 ratings but accidentally recorded one team member's rating twice. The ratings she recorded show two ratings of 1, two ratings of 2, two ratings of 3, two ratings of 4, and nine ratings of 5, for a total of 17 ratings. The manager determined that the extra rating was ____P____, and after this extra rating was removed, the average (arithmetic mean) of the remaining 16 ratings was exactly ____Q____. Select for P and for Q the options that create a statement that is consistent with the information provided. Make only two selections, one in each column.",
+     "stem": "After a 16-member team at Company A saw a certain software demonstration, each of the team members gave the software exactly one of the ratings 1, 2, 3, 4, or 5, where greater numbers indicate higher ratings. The team's manager intended to record the 16 ratings but accidentally recorded one team member's rating twice. The ratings she recorded show two ratings of 1, two ratings of 2, two ratings of 3, two ratings of 4, and nine ratings of 5, for a total of 17 ratings. The manager determined that the extra rating was ____P____, and after this extra rating was removed, the average (arithmetic mean) of the remaining 16 ratings was exactly ____Q____. Select for P and for Q the options that create a statement that is consistent with the information provided. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -7733,7 +7722,7 @@
      "type": "GT",
      "paper": "10",
      "sourceN": 8,
-     "stem": "Question # 130, Date: 07-Feb-2020\nThis post is a part of \n\nThe table below gives information on the total inventory in 2010 and the total items sold by an international furniture manufacturer over a three-year period, from 2008 to 2010. The 19 furniture items were included in the table because they fall among the top 25 items produced by the company in terms of both total inventory and total items sold. In addition to listing the total inventory and total number sold for each furniture type, the table also gives the percent increase or decrease over the 2009 inventory and 2005–2007 sales numbers and the rank of each furniture type for total inventory and total items sold.\n\n \n\nReview each of the statements below. Based on information provided in the table, indicate whether the statement is true or false.\n\nQuestion #1 based on the same table is available here­­­­­",
+     "stem": "Question # 130, Date: 07-Feb-2020\nThis post is a part of \n\nThe table below gives information on the total inventory in 2010 and the total items sold by an international furniture manufacturer over a three-year period, from 2008 to 2010. The 19 furniture items were included in the table because they fall among the top 25 items produced by the company in terms of both total inventory and total items sold. In addition to listing the total inventory and total number sold for each furniture type, the table also gives the percent increase or decrease over the 2009 inventory and 2005–2007 sales numbers and the rank of each furniture type for total inventory and total items sold.\n\n \n\nReview each of the statements below. Based on information provided in the table, indicate whether the statement is true or false.\n\nQuestion #1 based on the same table is available here",
      "statements": null,
      "options": null,
      "rows": null,
@@ -8404,7 +8393,7 @@
      "type": "GT",
      "paper": "14",
      "sourceN": 14,
-     "stem": "­For a manufacturing company in Thailand, the graph displays data on the cost of purchase from an outside supplier (P) versus the cost of in-house manufacture (M), in hundreds of Thai baht (B), for 13 different industrial parts. For each of the 13 parts, if M < P, the company will manufacture that part in-house. There is a fixed value, k, such that for any of the 13 parts, if k ≥ M ≥ P, the company will purchase the part from an outside supplier; if P ≥ k, the company will manufacture the part in-house, even if M ≥ P. The graph also displays 3 lines, one of which represents the maximum amount the company will pay to purchase a part from an outside supplier.\n\nUse the drop-down menus to create the most accurate statements based on the information provided.\n\nThe graph displays data for {{1}} industrial parts for which the cost of in-house manufacture exceeds the cost of purchase from an outside supplier. For industrial parts for which the cost of in-house manufacture exceeds the cost of purchase from an outside supplier, the maximum cost of purchase is {{2}}­\n\n­\n\nTrying to understand why the right answer is right?\n\nGMAT Club Tests explanations walk through concepts, shortcuts, and common traps on many questions.\nSee how →",
+     "stem": "For a manufacturing company in Thailand, the graph displays data on the cost of purchase from an outside supplier (P) versus the cost of in-house manufacture (M), in hundreds of Thai baht (B), for 13 different industrial parts. For each of the 13 parts, if M < P, the company will manufacture that part in-house. There is a fixed value, k, such that for any of the 13 parts, if k ≥ M ≥ P, the company will purchase the part from an outside supplier; if P ≥ k, the company will manufacture the part in-house, even if M ≥ P. The graph also displays 3 lines, one of which represents the maximum amount the company will pay to purchase a part from an outside supplier.\n\nUse the drop-down menus to create the most accurate statements based on the information provided.\n\nThe graph displays data for {{1}} industrial parts for which the cost of in-house manufacture exceeds the cost of purchase from an outside supplier. For industrial parts for which the cost of in-house manufacture exceeds the cost of purchase from an outside supplier, the maximum cost of purchase is {{2}}\n\n\n\nTrying to understand why the right answer is right?",
      "statements": null,
      "options": null,
      "rows": null,
@@ -8594,7 +8583,7 @@
      "type": "GT",
      "paper": "18",
      "sourceN": 14,
-     "stem": "­\nThe graph shows an analyst's assessment of how the cost of processing capacity for a certain type of information management software depends on whether that capacity is provided using point-to-point interfaces, interfacing capabilities, or integration capabilities. Most information management software of this type has nonzero capacities provided by all three methods. Cost and capacity levels indicated by the levels of the curves at the far left end of the graph reflect minimums that are shared by all information management software of this type. The lines continue to the right with similar slopes beyond the points shown.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nFor the information management software with {{1}} levels of processing capacity, it would be least expensive to add a small amount of processing capacity by means of {{2}}­.\n\nPro tip:\n\nCombine official questions for familiarity with GMAT Club Tests for analytics and tougher Focus-level practice so the real exam feels manageable.\nExplore →",
+     "stem": "\nThe graph shows an analyst's assessment of how the cost of processing capacity for a certain type of information management software depends on whether that capacity is provided using point-to-point interfaces, interfacing capabilities, or integration capabilities. Most information management software of this type has nonzero capacities provided by all three methods. Cost and capacity levels indicated by the levels of the curves at the far left end of the graph reflect minimums that are shared by all information management software of this type. The lines continue to the right with similar slopes beyond the points shown.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nFor the information management software with {{1}} levels of processing capacity, it would be least expensive to add a small amount of processing capacity by means of {{2}}.\n\nPro tip:\n\nCombine official questions for familiarity with",
      "statements": null,
      "options": null,
      "rows": null,
@@ -8706,7 +8695,7 @@
      "type": "TPA",
      "paper": "11",
      "sourceN": 12,
-     "stem": "­The government of Nation X restricts how banks share customers' information with other institutions. For instance, unless a customer explicitly grants permission, no nonpublic information about the customer—e.g., account balances or credit history—can be shared with any non-affiliated institution. Furthermore, banks must allow customers to forbid the sharing of even publicly available information about them, such as listed telephone numbers, with non-affiliated institutions. The bank must honor any decision the customer makes in these cases; however, none of these restrictions limits the sharing of these types of information with any affiliated institutions. All sharing of information other than the types mentioned above is permitted—except that under no circumstances may customers' passwords be shared, even with affiliated institutions. The government of Nation X also requires that banks inform customers of all of these policies. Select for With an affiliated institution the circumstances under which the government of Nation X allows a bank to share a customer's account balance with an affiliated institution and for With a non-affiliated institution the circumstances under which the government of Nation X allows a bank to share a customer's account balance with a non-affiliated institution. Make only two selections, one in each column.­\n\nNeed more Tests to Practice?\nGMAT Club Tests give expert solutions for every question in full and sectional GMAT Focus mocks.\nLearn more →",
+     "stem": "The government of Nation X restricts how banks share customers' information with other institutions. For instance, unless a customer explicitly grants permission, no nonpublic information about the customer—e.g., account balances or credit history—can be shared with any non-affiliated institution. Furthermore, banks must allow customers to forbid the sharing of even publicly available information about them, such as listed telephone numbers, with non-affiliated institutions. The bank must honor any decision the customer makes in these cases; however, none of these restrictions limits the sharing of these types of information with any affiliated institutions. All sharing of information other than the types mentioned above is permitted—except that under no circumstances may customers' passwords be shared, even with affiliated institutions. The government of Nation X also requires that banks inform customers of all of these policies. Select for With an affiliated institution the circumstances under which the government of Nation X allows a bank to share a customer's account balance with an affiliated institution and for With a non-affiliated institution the circumstances under which the government of Nation X allows a bank to share a customer's account balance with a non-affiliated institution. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -8751,49 +8740,43 @@
     {
      "n": 14,
      "section": "DI",
-     "type": "TPA",
-     "paper": "06",
-     "sourceN": 6,
-     "stem": null,
-     "statements": null,
-     "options": null,
+     "type": "DS",
+     "paper": "31",
+     "sourceN": 19,
+     "stem": "If S = {2, 3, x, y}, what is the value of x + y?",
+     "statements": {
+      "(1)": "x and y are prime numbers.",
+      "(2)": "3, x, and y are consecutive odd integers in ascending order."
+     },
      "rows": null,
      "choices": null,
-     "images": [],
-     "answer": null,
-     "answerSource": null,
-     "tpaMap": {
-      "status": "auto",
-      "col1": 4,
-      "col2": 1,
-      "rows": [
-       "110",
-       "150",
-       "170",
-       "210",
-       "230"
-      ]
-     },
-     "diAnswer": {
-      "col1": 4,
-      "col2": 1
-     },
-     "diChoices": [
-      "110",
-      "150",
-      "170",
-      "210",
-      "230"
+     "options": [
+      {
+       "key": "A",
+       "text": "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient."
+      },
+      {
+       "key": "B",
+       "text": "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient."
+      },
+      {
+       "key": "C",
+       "text": "BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficient."
+      },
+      {
+       "key": "D",
+       "text": "EACH statement ALONE is sufficient."
+      },
+      {
+       "key": "E",
+       "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
+      }
      ],
+     "images": [],
+     "answer": "B",
+     "answerSource": "official",
      "spec": {
-      "kind": "tpa",
-      "rows": [
-       "110",
-       "150",
-       "170",
-       "210",
-       "230"
-      ]
+      "kind": "ds"
      }
     },
     {
@@ -8802,7 +8785,7 @@
      "type": "TPA",
      "paper": "26",
      "sourceN": 3,
-     "stem": "Researchers tracked several songbirds on their annual migration from Canada to South America. Each songbird traveled a total distance of 3,200 to 4,000 kilometers (km) in a total time of 72 to 96 hours (h) without stopping. Based on the information provided, select values for the minimum possible average speed and the maximum possible average speed for one of the songbirds that the researchers tracked on this annual migration. Make only two selections, one in each column.­",
+     "stem": "Researchers tracked several songbirds on their annual migration from Canada to South America. Each songbird traveled a total distance of 3,200 to 4,000 kilometers (km) in a total time of 72 to 96 hours (h) without stopping. Based on the information provided, select values for the minimum possible average speed and the maximum possible average speed for one of the songbirds that the researchers tracked on this annual migration. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -8843,7 +8826,7 @@
        "426/7",
        "444/9",
        "50",
-       "555/9­"
+       "555/9"
       ]
      }
     },
@@ -9023,7 +9006,7 @@
      "type": "GT",
      "paper": "02",
      "sourceN": 18,
-     "stem": "The table shows a website's ratings of the finances and accountability of each of seven charities to which Gordon is considering donating money. Greater numbers of asterisks (*) indicate higher ratings. Gordon will NOT donate to a charity UNLESS, for both finances and accountability, it is at least as highly rated as any of the other charities in the same category. Gordon may have other criteria that would prevent him from donating to one or more of these charities.\n\nFor each of the following statements, select Indicates statement is correct if the information provided indicates that the statement is correct. Otherwise, select Does not indicate statement is correct.\n\n­",
+     "stem": "The table shows a website's ratings of the finances and accountability of each of seven charities to which Gordon is considering donating money. Greater numbers of asterisks (*) indicate higher ratings. Gordon will NOT donate to a charity UNLESS, for both finances and accountability, it is at least as highly rated as any of the other charities in the same category. Gordon may have other criteria that would prevent him from donating to one or more of these charities.\n\nFor each of the following statements, select Indicates statement is correct if the information provided indicates that the statement is correct. Otherwise, select Does not indicate statement is correct.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -9308,10 +9291,15 @@
      "n": 6,
      "section": "DI",
      "type": "DS",
-     "paper": "18",
-     "sourceN": 19,
-     "stem": null,
-     "statements": null,
+     "paper": "31",
+     "sourceN": 20,
+     "stem": "Is quadrilateral Q a square?",
+     "statements": {
+      "(1)": "The sides of Q have the same length.",
+      "(2)": "The diagonals of Q have the same length"
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -9334,10 +9322,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "C",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -9349,7 +9335,7 @@
      "type": "GT",
      "paper": "11",
      "sourceN": 8,
-     "stem": "The graph shows the estimated total elephant population in each of 4 regions of India for each of 4 different years.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nFrom 1993 to 2007, the estimated total elephant population in the {{1}} region decreased by {{2}} percent, to the nearest 10 percent.\n\nPro tip:\n\nCombine official questions for familiarity with GMAT Club Tests for analytics and tougher Focus-level practice so the real exam feels manageable.\nExplore →",
+     "stem": "The graph shows the estimated total elephant population in each of 4 regions of India for each of 4 different years.\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nFrom 1993 to 2007, the estimated total elephant population in the {{1}} region decreased by {{2}} percent, to the nearest 10 percent.\n\nPro tip:\n\nCombine official questions for familiarity with",
      "statements": null,
      "options": null,
      "rows": null,
@@ -9422,7 +9408,7 @@
      "type": "GT",
      "paper": "24",
      "sourceN": 14,
-     "stem": "The graph above shows the changes in major land cover types in the given five-state region from 1982 to 1997.\n\nThe graph shows the percent change in the area of different land cover types across five states (DE, MD, PA, VA, and WV) as well as for these five states combined, from 1982 to 1997.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nIf in 1997 Pennsylvania's (PA) rural land coverage equaled the average rural land coverage of the five states combined, then in 1982 Pennsylvania's rural land coverage was {{1}} of the combined rural land coverage for all five states.\n\nIf Delaware (DE) and Maryland (MD) had similar acreage of land under crop in 1997, Delaware would have had approximately {{2}} more acreage of cropland as compared to that in Maryland in 1982.­\n\n­",
+     "stem": "The graph above shows the changes in major land cover types in the given five-state region from 1982 to 1997.\n\nThe graph shows the percent change in the area of different land cover types across five states (DE, MD, PA, VA, and WV) as well as for these five states combined, from 1982 to 1997.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nIf in 1997 Pennsylvania's (PA) rural land coverage equaled the average rural land coverage of the five states combined, then in 1982 Pennsylvania's rural land coverage was {{1}} of the combined rural land coverage for all five states.\n\nIf Delaware (DE) and Maryland (MD) had similar acreage of land under crop in 1997, Delaware would have had approximately {{2}} more acreage of cropland as compared to that in Maryland in 1982.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -9686,7 +9672,7 @@
      "stem": "After winning 50 percent of the first 20 games it played, Team A won all of the remaining games it played. What was the total number of games that Team A won?",
      "statements": {
       "(1)": "Team A played 25 games altogether.",
-      "(2)": "Team A won 60 percent of all the games it played.­\n\nID: 700112"
+      "(2)": "Team A won 60 percent of all the games it played.\n\nID: 700112"
      },
      "options": [
       {
@@ -9851,7 +9837,7 @@
      "type": "GT",
      "paper": "09",
      "sourceN": 14,
-     "stem": "­\nThe graph shows the price per share in dollars of Helix Motors throughout the day on Day 1 and Day 2. An investor purchased shares at one of the times indicated on the x-axis on Day 1 and sold all of them exactly one hour later on Day 2, resulting in the greatest possible dollar gain per share.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe investor sold the shares at {{1}} on Day 2, resulting in a percentage gain per share of {{2}}.",
+     "stem": "\nThe graph shows the price per share in dollars of Helix Motors throughout the day on Day 1 and Day 2. An investor purchased shares at one of the times indicated on the x-axis on Day 1 and sold all of them exactly one hour later on Day 2, resulting in the greatest possible dollar gain per share.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe investor sold the shares at {{1}} on Day 2, resulting in a percentage gain per share of {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -9892,9 +9878,9 @@
       "key": "Dropdown 1: 2pm Dropdown 2: 28%"
      },
      "diAnswer": {
-      "rows": [
-       "2pm",
-       "28%"
+      "d": [
+       2,
+       3
       ]
      },
      "diChoices": [
@@ -9902,12 +9888,8 @@
       "Percentage gain per share"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Sale time on Day 2",
-       "Percentage gain per share"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "12pm",
         "1pm",
@@ -10373,7 +10355,7 @@
      "type": "GT",
      "paper": "24",
      "sourceN": 2,
-     "stem": "­\n\nThe graph shows the history of the value of currency X—in units of currency A and in units of currency B—for the 12-week period beginning on 8 April.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 12-week period shown in the graph, the greatest value of a unit of currency X expressed in units of currency A occurred around {{1}}, and the greatest value of a unit of currency X expressed in units of currency B occurred around {{2}}.­",
+     "stem": "\n\nThe graph shows the history of the value of currency X—in units of currency A and in units of currency B—for the 12-week period beginning on 8 April.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 12-week period shown in the graph, the greatest value of a unit of currency X expressed in units of currency A occurred around {{1}}, and the greatest value of a unit of currency X expressed in units of currency B occurred around {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -10532,7 +10514,7 @@
      "stem": "A car traveled a distance of d miles in t minutes at an average rate of r miles per minute. What is the ratio of d to r?",
      "statements": {
       "(1)": "t = 30",
-      "(2)": "d = 25\n\nID: 700123\nDS20557­"
+      "(2)": "d = 25\n\nID: 700123\nDS20557"
      },
      "options": [
       {
@@ -10618,7 +10600,7 @@
      "stem": "Sally gave some of her candy to her friends. How many pieces of candy did she have before giving any to her friends?",
      "statements": {
       "(1)": "Sally gave each friend 8 pieces of candy",
-      "(2)": "Sally had 7 pieces of candy left after giving candy to her friends.\n\nID 06831\n\nUsing official mocks already?\n\nAdd GMAT Club Tests for harder practice, analytics, and explanations without overlapping Official Guide or official mock questions.\nTry it now →"
+      "(2)": "Sally had 7 pieces of candy left after giving candy to her friends.\n\nID 06831\n\nUsing official mocks already?\n\nAdd"
      },
      "options": [
       {
@@ -10657,7 +10639,7 @@
      "type": "GT",
      "paper": "09",
      "sourceN": 8,
-     "stem": "The graphs show the results of a survey of frequent business travelers, separated into two groups: those who travel with carry-on luggage only and those who travel with both carry-on luggage and checked luggage. The survey asked, \"During the last year, has your overall flight experience gotten better, gotten worse, or remained the same relative to the previous year?\" The graphs report the number of travelers by group and response.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nWhen a respondent is selected at random from all respondents, the probability that he or she thought the flight experience had remained the same is approximately\n{{1}}\n\nWhen a respondent is selected at random from those who thought the flight experience had gotten worse, the probability that he or she checked luggage is approximately {{2}}\n\nTrying to understand why the right answer is right?\n\nGMAT Club Tests explanations walk through concepts, shortcuts, and common traps on many questions.\nSee how →",
+     "stem": "The graphs show the results of a survey of frequent business travelers, separated into two groups: those who travel with carry-on luggage only and those who travel with both carry-on luggage and checked luggage. The survey asked, \"During the last year, has your overall flight experience gotten better, gotten worse, or remained the same relative to the previous year?\" The graphs report the number of travelers by group and response.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nWhen a respondent is selected at random from all respondents, the probability that he or she thought the flight experience had remained the same is approximately\n{{1}}\n\nWhen a respondent is selected at random from those who thought the flight experience had gotten worse, the probability that he or she checked luggage is approximately {{2}}\n\nTrying to understand why the right answer is right?",
      "statements": null,
      "options": null,
      "rows": null,
@@ -10696,9 +10678,9 @@
       "key": "Dropdown 1: 0.250 Dropdown 2: 0.750"
      },
      "diAnswer": {
-      "rows": [
-       "0.250",
-       "0.750"
+      "d": [
+       1,
+       2
       ]
      },
      "diChoices": [
@@ -10706,12 +10688,8 @@
       "Random respondent who thought it got worse checked luggage"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Random respondent thought experience remained the same",
-       "Random respondent who thought it got worse checked luggage"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "0.125",
         "0.250",
@@ -10730,72 +10708,43 @@
     {
      "n": 14,
      "section": "DI",
-     "type": "GT",
-     "paper": "16",
-     "sourceN": 16,
-     "stem": null,
-     "statements": null,
-     "options": null,
+     "type": "DS",
+     "paper": "19",
+     "sourceN": 7,
+     "stem": "Does x² = y?",
+     "statements": {
+      "(1)": "√(y) = -x",
+      "(2)": "x < y"
+     },
      "rows": null,
      "choices": null,
-     "images": [],
-     "answer": null,
-     "answerSource": null,
-     "gt": {
-      "kind": "dropdown",
-      "status": "auto",
-      "groups": [
-       [
-        "1993",
-        "1998",
-        "2003"
-       ],
-       [
-        "0.1",
-        "0.2",
-        "0.4",
-        "0.6"
-       ]
-      ],
-      "answer": [
-       0,
-       3
-      ]
-     },
-     "diAnswer": {
-      "d": [
-       0,
-       3
-      ]
-     },
-     "diChoices": [
-      [
-       "1993",
-       "1998",
-       "2003"
-      ],
-      [
-       "0.1",
-       "0.2",
-       "0.4",
-       "0.6"
-      ]
+     "options": [
+      {
+       "key": "A",
+       "text": "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient."
+      },
+      {
+       "key": "B",
+       "text": "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient."
+      },
+      {
+       "key": "C",
+       "text": "BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficient."
+      },
+      {
+       "key": "D",
+       "text": "EACH statement ALONE is sufficient."
+      },
+      {
+       "key": "E",
+       "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
+      }
      ],
+     "images": [],
+     "answer": "A",
+     "answerSource": "official",
      "spec": {
-      "kind": "dropdown",
-      "groups": [
-       [
-        "1993",
-        "1998",
-        "2003"
-       ],
-       [
-        "0.1",
-        "0.2",
-        "0.4",
-        "0.6"
-       ]
-      ]
+      "kind": "ds"
      }
     },
     {
@@ -11023,7 +10972,7 @@
      "type": "GT",
      "paper": "15",
      "sourceN": 2,
-     "stem": "­\nThe graph shows, for 7 groups—Groups A through G—the relationship between the median and the arithmetic mean of annual salaries for members of that group. All 7 groups have the same number of employees and each group plans to hire a new worker at the group's median salary.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor exactly {{1}} of the groups, the addition of the new worker will result in an increase in the arithmetic mean salary for the group. For Group {{2}}, the increase (as a percentage of the previous arithmetic mean) will be the greatest.­\n\n­",
+     "stem": "\nThe graph shows, for 7 groups—Groups A through G—the relationship between the median and the arithmetic mean of annual salaries for members of that group. All 7 groups have the same number of employees and each group plans to hire a new worker at the group's median salary.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor exactly {{1}} of the groups, the addition of the new worker will result in an increase in the arithmetic mean salary for the group. For Group {{2}}, the increase (as a percentage of the previous arithmetic mean) will be the greatest.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -11405,7 +11354,7 @@
      "type": "TPA",
      "paper": "19",
      "sourceN": 3,
-     "stem": "Manager S: Our company provides a small annual monetary benefit for each employee who submits documentation to the company proving that the employee had a comprehensive medical exam in a given year. The policy has been successful in increasing the number of employees who get the exam annually precisely because the benefit requires this specific form of documentation, and this success has resulted in improved employee health. [Insert Sentence 1.]Manager T: I agree that the overall policy has improved employee health, and it is good to improve employee health. However, the required documentation resulted in our company having access to an employee's private medical data. The benefit to employee health is not worth compromising employee privacy. [Insert Sentence 2.]Select for Sentence 1 the sentence that best completes Manager S's argument, and select for Sentence 2 the sentence that best completes Manager T's argument. Make only two selections, one in each column.­",
+     "stem": "Manager S: Our company provides a small annual monetary benefit for each employee who submits documentation to the company proving that the employee had a comprehensive medical exam in a given year. The policy has been successful in increasing the number of employees who get the exam annually precisely because the benefit requires this specific form of documentation, and this success has resulted in improved employee health. [Insert Sentence 1.]Manager T: I agree that the overall policy has improved employee health, and it is good to improve employee health. However, the required documentation resulted in our company having access to an employee's private medical data. The benefit to employee health is not worth compromising employee privacy. [Insert Sentence 2.]Select for Sentence 1 the sentence that best completes Manager S's argument, and select for Sentence 2 the sentence that best completes Manager T's argument. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -11453,7 +11402,7 @@
      "type": "GT",
      "paper": "09",
      "sourceN": 16,
-     "stem": "The graph shows the average (arithmetic mean) mature tree heights of each of Species A-C at each of the Tree Farms W-Z.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 4 tree farms, the sum of the average mature heights of Species A, B, and C is greatest for Tree Farm {{1}}.\n\nFor the 3 species, the standard deviation of the 4 average mature heights given on the graph is greatest for Species {{2}}.\n\nNeed more Tests to Practice?\nGMAT Club Tests give expert solutions for every question in full and sectional GMAT Focus mocks.\nLearn more →",
+     "stem": "The graph shows the average (arithmetic mean) mature tree heights of each of Species A-C at each of the Tree Farms W-Z.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 4 tree farms, the sum of the average mature heights of Species A, B, and C is greatest for Tree Farm {{1}}.\n\nFor the 3 species, the standard deviation of the 4 average mature heights given on the graph is greatest for Species {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -11491,9 +11440,9 @@
       "key": "Dropdown 1: Z Dropdown 2: B"
      },
      "diAnswer": {
-      "rows": [
-       "Z",
-       "B"
+      "d": [
+       3,
+       1
       ]
      },
      "diChoices": [
@@ -11501,12 +11450,8 @@
       "Species with greatest standard deviation across farms"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Tree farm with greatest sum of average heights",
-       "Species with greatest standard deviation across farms"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "W",
         "X",
@@ -11567,10 +11512,15 @@
      "n": 10,
      "section": "DI",
      "type": "DS",
-     "paper": "24",
-     "sourceN": 15,
-     "stem": null,
-     "statements": null,
+     "paper": "10",
+     "sourceN": 7,
+     "stem": "In the figure above, what is the area of the circular region with center O?",
+     "statements": {
+      "(1)": "MN is perpendicular to RS.",
+      "(2)": "The area of triangular region OMT is 4."
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -11593,10 +11543,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "E",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -11956,9 +11904,9 @@
       "key": "Dropdown 1: 20 Dropdown 2: Aggregate and repost content"
      },
      "diAnswer": {
-      "rows": [
-       "20",
-       "Aggregate and repost content"
+      "d": [
+       2,
+       1
       ]
      },
      "diChoices": [
@@ -11966,12 +11914,8 @@
       "RO2: less than 20% of Internet users over age 11"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "RO1: 62+ social media users who used social networking sites",
-       "RO2: less than 20% of Internet users over age 11"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "6",
         "8",
@@ -11993,7 +11937,7 @@
      "type": "GT",
      "paper": "21",
      "sourceN": 5,
-     "stem": "The graph shows daily 6:00 a.m. observations of sky conditions in City Z for one year, arranged by month from December through November.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe number of clear days equals the number of overcast days in February, {{1}}, and {{2}}.\n\nSolving this question helps.\n\nTaking a timed set of similar questions in\nGMAT Club Forum Quiz →\nis even better.",
+     "stem": "The graph shows daily 6:00 a.m. observations of sky conditions in City Z for one year, arranged by month from December through November.\n\nSelect from each drop-down menu the option that creates the most accurate statement based on the information provided.\n\nThe number of clear days equals the number of overcast days in February, {{1}}, and {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -12075,7 +12019,7 @@
      "type": "GT",
      "paper": "23",
      "sourceN": 8,
-     "stem": "­For each of three years and five survey prompts, the table shows the percentage of respondents to a job-satisfaction survey who agreed with the prompt. For columns showing pairs of years in the top row, a minus sign (–) or plus sign (+) for a prompt indicates that the change in the percentage of respondents from the first year to the second represents a significant decrease or significant increase, respectively. For the difference in the number of percentage points to be considered significant, its absolute value must be greater than a certain number, x. Although the percentages in the table are rounded to the nearest percentage point, whether a change is significant is determined using the raw percentages prior to rounding.\n\nFor each of the following values, select Could be x if that exact value for x is consistent with the information provided. Otherwise, select Cannot be x.",
+     "stem": "For each of three years and five survey prompts, the table shows the percentage of respondents to a job-satisfaction survey who agreed with the prompt. For columns showing pairs of years in the top row, a minus sign (–) or plus sign (+) for a prompt indicates that the change in the percentage of respondents from the first year to the second represents a significant decrease or significant increase, respectively. For the difference in the number of percentage points to be considered significant, its absolute value must be greater than a certain number, x. Although the percentages in the table are rounded to the nearest percentage point, whether a change is significant is determined using the raw percentages prior to rounding.\n\nFor each of the following values, select Could be x if that exact value for x is consistent with the information provided. Otherwise, select Cannot be x.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -12446,7 +12390,7 @@
      "type": "GT",
      "paper": "03",
      "sourceN": 18,
-     "stem": "­\n\nEmployees at a certain company were asked to choose which of four methods of training-visual, aural, print, and kinesthetic-to include in an upcoming training seminar. Each respondent to the survey chose from one to four of the methods. For each of the four methods, the chart shows the percentage of respondents who chose only that method. The chart also shows the percentage of respondents who chose exactly two of the methods, exactly three of the methods, and all four of the methods.\n\nSelect from the drop-down menus the options that create the statement that is most strongly supported by the information provided.\n\nIt must be the case that {{1}}of the employees chose the{{2}} method.­",
+     "stem": "\n\nEmployees at a certain company were asked to choose which of four methods of training-visual, aural, print, and kinesthetic-to include in an upcoming training seminar. Each respondent to the survey chose from one to four of the methods. For each of the four methods, the chart shows the percentage of respondents who chose only that method. The chart also shows the percentage of respondents who chose exactly two of the methods, exactly three of the methods, and all four of the methods.\n\nSelect from the drop-down menus the options that create the statement that is most strongly supported by the information provided.\n\nIt must be the case that {{1}}of the employees chose the{{2}} method.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -12483,20 +12427,17 @@
       "key": "Dropdown 1: more than 50 percent Dropdown 2: Print"
      },
      "diAnswer": {
-      "rows": [
-       "more than 50 percent",
-       "Print"
+      "d": [
+       2,
+       3
       ]
      },
      "diChoices": [
       "It must be the case that [dropdown 1] of the employees chose the [dropdown 2] method."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "It must be the case that [dropdown 1] of the employees chose the [dropdown 2] method."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "less than 25 percent",
         "more than 25 but less than 50 percent",
@@ -13118,7 +13059,7 @@
      "type": "GT",
      "paper": "04",
      "sourceN": 8,
-     "stem": "­\n\nThe traffic that passes through a certain location is composed exclusively of the following nonoverlapping types of vehicles: “rural cars,” “urban cars,” “business day trucks,” and “through trucks.” For each of these vehicle types, and for each hour of the day, the graph depicts the typical percentage of the total number of the given type of vehicle passing through the location during that hour. For example, the graph indicates that slightly less than 8 percent of all urban cars that pass through the location on a typical day do so during hour 9.\n\nOn the basis of the given information, select from each of the drop-down menus the option that makes the statement most accurate.\n\nFrom hour 17 to hour 22, the percent change in number of business day trucks passing through the location {{1}}.\n\nAssuming that total traffic over the day is the same for each of the four vehicle types, the hour of maximum total traffic is {{2}}.\n\n­",
+     "stem": "\n\nThe traffic that passes through a certain location is composed exclusively of the following nonoverlapping types of vehicles: “rural cars,” “urban cars,” “business day trucks,” and “through trucks.” For each of these vehicle types, and for each hour of the day, the graph depicts the typical percentage of the total number of the given type of vehicle passing through the location during that hour. For example, the graph indicates that slightly less than 8 percent of all urban cars that pass through the location on a typical day do so during hour 9.\n\nOn the basis of the given information, select from each of the drop-down menus the option that makes the statement most accurate.\n\nFrom hour 17 to hour 22, the percent change in number of business day trucks passing through the location {{1}}.\n\nAssuming that total traffic over the day is the same for each of the four vehicle types, the hour of maximum total traffic is {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -13156,9 +13097,9 @@
       "note": "Business day trucks ~4.9 at hour 17 to ~2.2 at hour 22 (about -55%, nearest 60%). Sum of four curves peaks at hour 16 (~25.4 vs ~24.4 at hour 15)."
      },
      "diAnswer": {
-      "rows": [
-       "is a decrease of about 60%",
-       "16"
+      "d": [
+       1,
+       2
       ]
      },
      "diChoices": [
@@ -13166,12 +13107,8 @@
       "Assuming equal totals for the four vehicle types, the hour of maximum total traffic is"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "From hour 17 to hour 22, the percent change in business day trucks",
-       "Assuming equal totals for the four vehicle types, the hour of maximum total traffic is"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "is a decrease of about 40%",
         "is a decrease of about 60%",
@@ -13237,7 +13174,7 @@
      "stem": "A small factory that produces only upholstered chairs and sofas uses 1 cushion for each chair and 4 cushions for each sofa. If the factory used a total of 300 cushions on the furniture it produced last week, how many sofas did it produce last week?",
      "statements": {
       "(1)": "Last week the factory produced more chairs than sofas.",
-      "(2)": "Last week the factory produced a total of 150 chairs and sofas.\n\nID: 700117\nDS20349­"
+      "(2)": "Last week the factory produced a total of 150 chairs and sofas.\n\nID: 700117\nDS20349"
      },
      "options": [
       {
@@ -13520,7 +13457,7 @@
      "type": "GT",
      "paper": "16",
      "sourceN": 18,
-     "stem": "In the chart, the outer circle represents the age distribution of subscribers to Beautiful Garden magazine, and the inner circle represents the age distribution of subscribers to Garden Joy magazine. Neither magazine has any subscribers less than 18 years old.\n\nSelect from the drop-down menus the options that complete the statement so that it is accurate based on the information provided.\n\nIt can be determined from the chart that the {{1}} of the ages of the subscribers to Beautiful Garden is between 44 and 55 years, whereas that for subscribers to Garden Joy is between {{2}} years.­\n\nTrying to understand why the right answer is right?\n\nGMAT Club Tests explanations walk through concepts, shortcuts, and common traps on many questions.\nSee how →",
+     "stem": "In the chart, the outer circle represents the age distribution of subscribers to Beautiful Garden magazine, and the inner circle represents the age distribution of subscribers to Garden Joy magazine. Neither magazine has any subscribers less than 18 years old.\n\nSelect from the drop-down menus the options that complete the statement so that it is accurate based on the information provided.\n\nIt can be determined from the chart that the {{1}} of the ages of the subscribers to Beautiful Garden is between 44 and 55 years, whereas that for subscribers to Garden Joy is between {{2}} years.\n\nTrying to understand why the right answer is right?",
      "statements": null,
      "options": null,
      "rows": null,
@@ -13893,7 +13830,7 @@
      "type": "GT",
      "paper": "25",
      "sourceN": 2,
-     "stem": "The graph shows the numbers of medals won by 7 selected countries in the Summer Olympics that were held in the years 1996, 2000, 2004, and 2008. The following statements apply only to the Summer Olympics and the countries represented in the graph.\n\nUsing the drop-down menus, create the most accurate statements based on the information provided.\n\nThe variance in the numbers of medals won is the least for {{1}}.\n\nIf, for each country, the point representing the medals won in 2004 had been on the line determined by the points representing the medals won in 1996 and 2000, then the country that would have won the greatest number of medals in 2004 is {{2}}.\n\n­",
+     "stem": "The graph shows the numbers of medals won by 7 selected countries in the Summer Olympics that were held in the years 1996, 2000, 2004, and 2008. The following statements apply only to the Summer Olympics and the countries represented in the graph.\n\nUsing the drop-down menus, create the most accurate statements based on the information provided.\n\nThe variance in the numbers of medals won is the least for {{1}}.\n\nIf, for each country, the point representing the medals won in 2004 had been on the line determined by the points representing the medals won in 1996 and 2000, then the country that would have won the greatest number of medals in 2004 is {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -14547,7 +14484,7 @@
      "type": "TPA",
      "paper": "09",
      "sourceN": 6,
-     "stem": "­MyMax is a retail chain of men's casual wear; it is peculiar in that it charges a flat price for any garment of the same type. Hence, the prices of all jackets in the store shall be the same and the prices of all denims in the store shall be the same on any given day. The price of a jacket may, however, differ from the price of a denim. In March'16, Stephano spent $70.70 for buying 7 jackets and the same amount for buying 5 denims. In April'16, MyMax offered flat 20% discount on all apparels so Stephano bought 4 more jackets and 3 more denims. In the first column of the table, select the option that represents the amount spent by Stephano in April'16 on buying jackets at MyMax. In the second column of the table, select the option that represents the amount spent by Stephano in April'16 on buying denims at MyMax. All prices rounded off to the nearest cent. Make only two selections, one in each column.",
+     "stem": "MyMax is a retail chain of men's casual wear; it is peculiar in that it charges a flat price for any garment of the same type. Hence, the prices of all jackets in the store shall be the same and the prices of all denims in the store shall be the same on any given day. The price of a jacket may, however, differ from the price of a denim. In March'16, Stephano spent $70.70 for buying 7 jackets and the same amount for buying 5 denims. In April'16, MyMax offered flat 20% discount on all apparels so Stephano bought 4 more jackets and 3 more denims. In the first column of the table, select the option that represents the amount spent by Stephano in April'16 on buying jackets at MyMax. In the second column of the table, select the option that represents the amount spent by Stephano in April'16 on buying denims at MyMax. All prices rounded off to the nearest cent. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -14598,7 +14535,7 @@
      "type": "GT",
      "paper": "28",
      "sourceN": 2,
-     "stem": "­A certain assembly project requires the completion of each of 5 tasks. In the diagram, the tasks are represented by circles labeled A–E and the number above each circle represents the number of days needed to complete the task. Arrows indicate prerequisite tasks. For instance, the arrow from Task A to Task C indicates that Task A must be completed before Task C can be started. Unless otherwise prohibited by these constraints, several tasks can be worked on at the same time. The project is complete once all 5 tasks are completed. Use the drop-down menus to create the most accurate statements based on the information provided.\n\nThe least number of days needed to complete the project is {{1}} days.\n\nIf the number of days needed to complete Task C is increased by 1 day, then the least number of days needed to complete the project {{2}}.­",
+     "stem": "A certain assembly project requires the completion of each of 5 tasks. In the diagram, the tasks are represented by circles labeled A–E and the number above each circle represents the number of days needed to complete the task. Arrows indicate prerequisite tasks. For instance, the arrow from Task A to Task C indicates that Task A must be completed before Task C can be started. Unless otherwise prohibited by these constraints, several tasks can be worked on at the same time. The project is complete once all 5 tasks are completed. Use the drop-down menus to create the most accurate statements based on the information provided.\n\nThe least number of days needed to complete the project is {{1}} days.\n\nIf the number of days needed to complete Task C is increased by 1 day, then the least number of days needed to complete the project {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -15081,7 +15018,7 @@
      "type": "TPA",
      "paper": "32",
      "sourceN": 9,
-     "stem": "Researcher: Soils are adversely affected by road salts used to melt ice and snow, particularly along roadsides and salt storage areas. Soil samples were collected from highway medians and in salt storage yards. These samples showed chloride levels 11–160 times the level sufficient to inhibit bacteria growth in soil. The samples also had sodium levels 15–200 times the level sufficient to inhibit bacterial growth in soil. Inhibited bacterial growth in soil greatly inhibits plant growth in that soil. An agriculture official would like to use the researcher’s results to support the argument that sand, rather than road salts, should be used as a winter road treatment, thereby eliminating the need for salt yards. Select the additional information that, if true, would most strengthen the official’s case and select the additional information that, if true, would most weaken the official’s case. Make only two selections, one in each column.\n\nUsing official mocks already?\n\nAdd GMAT Club Tests for harder practice, analytics, and explanations without overlapping Official Guide or official mock questions.\nTry it now →",
+     "stem": "Researcher: Soils are adversely affected by road salts used to melt ice and snow, particularly along roadsides and salt storage areas. Soil samples were collected from highway medians and in salt storage yards. These samples showed chloride levels 11–160 times the level sufficient to inhibit bacteria growth in soil. The samples also had sodium levels 15–200 times the level sufficient to inhibit bacterial growth in soil. Inhibited bacterial growth in soil greatly inhibits plant growth in that soil. An agriculture official would like to use the researcher’s results to support the argument that sand, rather than road salts, should be used as a winter road treatment, thereby eliminating the need for salt yards. Select the additional information that, if true, would most strengthen the official’s case and select the additional information that, if true, would most weaken the official’s case. Make only two selections, one in each column.\n\nUsing official mocks already?\n\nAdd",
      "statements": null,
      "options": null,
      "rows": null,
@@ -15219,7 +15156,7 @@
      "type": "GT",
      "paper": "27",
      "sourceN": 8,
-     "stem": "For each of the first 11 months of last year, the graph shows the total number of transactions processed during the month for Martina's bank account.\n\nSelect the options from the drop-down menus that create the most accurate statement based on the information provided.\n\nConsistent with the information provided, the least that Martina's median monthly number of bank account transactions for the 12 months of last year could be is {{1}}, and the greatest that it could be is {{2}}.­\n\n­",
+     "stem": "For each of the first 11 months of last year, the graph shows the total number of transactions processed during the month for Martina's bank account.\n\nSelect the options from the drop-down menus that create the most accurate statement based on the information provided.\n\nConsistent with the information provided, the least that Martina's median monthly number of bank account transactions for the 12 months of last year could be is {{1}}, and the greatest that it could be is {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -15338,7 +15275,7 @@
      "type": "GT",
      "paper": "24",
      "sourceN": 16,
-     "stem": "For two years, the graph shows the total advertising revenue, in US dollars, by source (Source A, Source B, Source C, and Source D) for all newspapers in the United States. No advertising revenue was from more than one source. A billion is equal to 1,000,000,000.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nFrom Year 1 to Year 2, newspapers in the United States had an overall decline in advertising revenue between {{1}} billion US dollars. More than half of this overall decline is a result of a decline from Source {{2}}.­\n\n­",
+     "stem": "For two years, the graph shows the total advertising revenue, in US dollars, by source (Source A, Source B, Source C, and Source D) for all newspapers in the United States. No advertising revenue was from more than one source. A billion is equal to 1,000,000,000.\n\nFrom each drop-down menu, select the option that creates the most accurate statement based on the information provided.\n\nFrom Year 1 to Year 2, newspapers in the United States had an overall decline in advertising revenue between {{1}} billion US dollars. More than half of this overall decline is a result of a decline from Source {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -15453,7 +15390,7 @@
      "type": "GT",
      "paper": "06",
      "sourceN": 8,
-     "stem": "For each of the 8 quarters of 2008-2009, the graph shows a Japanese electronics firm ́s total US sales (rounded to the nearest 1 million US dollars), and the change in the average value of US dollar in Japanese yen, where the change is expressed as a percentage of the dollar ́s value in the first quarter of 2008 (Q1 2008), to the nearest 1 percent. For any given quarter, this data may be used to convert total US sales to their Q1 2008 yen equivalent: a value directly proportional to that quarter ́s total US sales in Q1 2008 yen.\n\nOn the basis of the information provided, select from each of the drop-down menus the option that created the most accurate statement.\n\nQ1 2008 yen-equivalent sales were highest in {{1}} of 2009.\n\nQ1 2008 yen-equivalent sales for Q4 2009 were {{2}} Q1 2008 yen-equivalent sales for Q4 2008. ­\n\nQuestion exposed a gap?\n\nTake sectional Adaptive Quant, Verbal, or DI tests on GMAT Club and review the detailed score report.\nGet started →",
+     "stem": "For each of the 8 quarters of 2008-2009, the graph shows a Japanese electronics firm ́s total US sales (rounded to the nearest 1 million US dollars), and the change in the average value of US dollar in Japanese yen, where the change is expressed as a percentage of the dollar ́s value in the first quarter of 2008 (Q1 2008), to the nearest 1 percent. For any given quarter, this data may be used to convert total US sales to their Q1 2008 yen equivalent: a value directly proportional to that quarter ́s total US sales in Q1 2008 yen.\n\nOn the basis of the information provided, select from each of the drop-down menus the option that created the most accurate statement.\n\nQ1 2008 yen-equivalent sales were highest in {{1}} of 2009.\n\nQ1 2008 yen-equivalent sales for Q4 2009 were {{2}} Q1 2008 yen-equivalent sales for Q4 2008.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -15491,9 +15428,9 @@
       "note": "Yen-equivalent (sales x (1 + pct/100)): Q1 2009 ~28.0, Q4 2009 ~28.1 (close margin, graph reading). Q4 2009 ~28.1 vs Q4 2008 ~26.4."
      },
      "diAnswer": {
-      "rows": [
-       "Q4",
-       "greater than"
+      "d": [
+       3,
+       1
       ]
      },
      "diChoices": [
@@ -15501,12 +15438,8 @@
       "Q1 2008 yen-equivalent sales for Q4 2009 were (comparison) Q1 2008 yen-equivalent sales for Q4 2008."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Q1 2008 yen-equivalent sales were highest in (quarter) of 2009.",
-       "Q1 2008 yen-equivalent sales for Q4 2009 were (comparison) Q1 2008 yen-equivalent sales for Q4 2008."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "Q1",
         "Q2",
@@ -15613,7 +15546,7 @@
      "type": "GT",
      "paper": "18",
      "sourceN": 18,
-     "stem": "In Country C, the numbers of transactions made by various noncash methods in 2006 and 2009 are shown in the graphic. All other transactions were made with cash.\n\nIf the total value of all credit card transactions in 2009 was 10% more than the total value of all credit card transactions in 2006, then the average (arithmetic mean) value of credit card transactions increased by {{1}} % from 2006 to 2009.\n\nThe number of {{2}} transactions increased by 25% from 2006 to 2009.\n\n­",
+     "stem": "In Country C, the numbers of transactions made by various noncash methods in 2006 and 2009 are shown in the graphic. All other transactions were made with cash.\n\nIf the total value of all credit card transactions in 2009 was 10% more than the total value of all credit card transactions in 2006, then the average (arithmetic mean) value of credit card transactions increased by {{1}} % from 2006 to 2009.\n\nThe number of {{2}} transactions increased by 25% from 2006 to 2009.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -16574,7 +16507,7 @@
      "type": "TPA",
      "paper": "12",
      "sourceN": 6,
-     "stem": "Lee is planning a trip and estimates that, rounded to the nearest 5 kilometers (km), the length of the trip will be 560 km and that, rounded to the nearest 1/4 hour, the driving time for the trip will be 7 hours. If these estimates are correct, then Lee’s average driving speed during the trip will be between __x__ kilometers per hour and _y__ kilometers per hour, where x < y. From the values given in the table, select for x and for y the values that complete the statement in such a way that the interval between the selected values includes all possible average speeds for Lee's trip and y – x is minimal. Make only two selections, one in each column.­",
+     "stem": "Lee is planning a trip and estimates that, rounded to the nearest 5 kilometers (km), the length of the trip will be 560 km and that, rounded to the nearest 1/4 hour, the driving time for the trip will be 7 hours. If these estimates are correct, then Lee’s average driving speed during the trip will be between __x__ kilometers per hour and _y__ kilometers per hour, where x < y. From the values given in the table, select for x and for y the values that complete the statement in such a way that the interval between the selected values includes all possible average speeds for Lee's trip and y – x is minimal. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -16620,10 +16553,15 @@
      "n": 8,
      "section": "DI",
      "type": "DS",
-     "paper": "29",
-     "sourceN": 15,
-     "stem": null,
-     "statements": null,
+     "paper": "13",
+     "sourceN": 20,
+     "stem": "What is the greatest common divisor of positive integers m and n?",
+     "statements": {
+      "(1)": "m is a prime number.",
+      "(2)": "m and n are consecutive integers."
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -16646,10 +16584,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "B",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -17005,7 +16941,7 @@
      "type": "TPA",
      "paper": "22",
      "sourceN": 12,
-     "stem": null,
+     "stem": "Speaker: A certain ethical theory holds that everyone has six fundamental duties: to avoid causing harm to others, to promote the common good, to act honorably, to be fair, to obey authority, and to be loyal. According to the theory, when these duties conflict, avoiding causing harm to others is more important than being fair or acting honorably, and being fair is more important than obeying authority. Promoting the common good is more important than being loyal but is less important than acting honorably or obeying authority. Statement: The speaker's statements do NOT indicate that the duty to ______1______ is ever less important than any of other duties, and the statements do NOT indicate that the duty to ______2______ is ever more important than any of the other duties. Select for 1 and 2 the options that complete the statement so that it is most accurate based on the information provided. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -17314,7 +17250,7 @@
      "type": "TPA",
      "paper": "01",
      "sourceN": 3,
-     "stem": "A financial adviser was showing a client the value, rounded to the nearest cent, of an initial investment of $100.00 after 5, 10, 15, 20, 25, and 30 years, under the assumption that the value increases by r% per year for some positive constant r. The adviser correctly gave $130.01 for the value after 5 years. However, the adviser inadvertently made two transcription errors, and as a result, two of the remaining values shown to the client were incorrect. Assuming the options provided are the remaining five amounts shown to the client, select for First error the lesser of the two incorrectly transcribed values and select for Second error the greater of the two incorrectly transcribed values. Make only two selections, one in each column.­",
+     "stem": "A financial adviser was showing a client the value, rounded to the nearest cent, of an initial investment of $100.00 after 5, 10, 15, 20, 25, and 30 years, under the assumption that the value increases by r% per year for some positive constant r. The adviser correctly gave $130.01 for the value after 5 years. However, the adviser inadvertently made two transcription errors, and as a result, two of the remaining values shown to the client were incorrect. Assuming the options provided are the remaining five amounts shown to the client, select for First error the lesser of the two incorrectly transcribed values and select for Second error the greater of the two incorrectly transcribed values. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -17362,7 +17298,7 @@
      "type": "GT",
      "paper": "06",
      "sourceN": 14,
-     "stem": "Lauren wants to assemble a collection of books with fish-themed titles by shopping at her local bookstore. On the bookstore's website, she searched for the keyword fish. The search returned only the results shown in the table. From the copies in stock included in the search results, Lauren purchased 4 books with distinct titles from 4 different sections with an average (arithmetic mean) price of more than $12.00.\n\nFor each of the following statements, select Yes if the statement is true about the purchase that Lauren made. Otherwise, select No.\n\nSimilar questions:\nQuestion 1\nQuestion 2\n\nUsing official mocks already?\n\nAdd GMAT Club Tests for harder practice, analytics, and explanations without overlapping Official Guide or official mock questions.\nTry it now →",
+     "stem": "Lauren wants to assemble a collection of books with fish-themed titles by shopping at her local bookstore. On the bookstore's website, she searched for the keyword fish. The search returned only the results shown in the table. From the copies in stock included in the search results, Lauren purchased 4 books with distinct titles from 4 different sections with an average (arithmetic mean) price of more than $12.00.\n\nFor each of the following statements, select Yes if the statement is true about the purchase that Lauren made. Otherwise, select No.\n\nSimilar questions:\nQuestion 1\nQuestion 2\n\nUsing official mocks already?\n\nAdd",
      "statements": null,
      "options": null,
      "rows": null,
@@ -17503,10 +17439,15 @@
      "n": 8,
      "section": "DI",
      "type": "DS",
-     "paper": "22",
-     "sourceN": 20,
-     "stem": null,
-     "statements": null,
+     "paper": "04",
+     "sourceN": 19,
+     "stem": "A number of people each wrote down one of the first 30 positive integers. Were any of the integers written down by more than one of the people?",
+     "statements": {
+      "(1)": "The number of people who wrote down an integer was greater than 40.",
+      "(2)": "The number of people who wrote down an integer was less than 70."
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -17529,10 +17470,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "A",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -17582,9 +17521,9 @@
       "key": "Dropdown 1: 70 Dropdown 2: 18"
      },
      "diAnswer": {
-      "rows": [
-       "70",
-       "18"
+      "d": [
+       3,
+       1
       ]
      },
      "diChoices": [
@@ -17592,12 +17531,8 @@
       "Taken together, the 3 categories having the lowest frequencies account for [dropdown 2]% of the repairs in the sample."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Taken together, the 3 categories having the greatest frequencies account for [dropdown 1]% of the repairs in the sample.",
-       "Taken together, the 3 categories having the lowest frequencies account for [dropdown 2]% of the repairs in the sample."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "20",
         "50",
@@ -17736,7 +17671,7 @@
      "type": "TPA",
      "paper": "08",
      "sourceN": 12,
-     "stem": "­Events A, B, and C have the following probabilities of future occurrence:A: 20%B: 50%C: 80%On the basis of these probabilities, select for Both A and B a description that must be true of the probability that both A and B will occur. And select for B or C or Both a description that must be true of the probability that B or C or both will occur. Make only two selections, one in each column.­",
+     "stem": "Events A, B, and C have the following probabilities of future occurrence:A: 20%B: 50%C: 80%On the basis of these probabilities, select for Both A and B a description that must be true of the probability that both A and B will occur. And select for B or C or Both a description that must be true of the probability that B or C or both will occur. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -17911,7 +17846,7 @@
      "stem": "A sum of $200,000 from a certain estate was divided among a spouse and three children. How much did the youngest child receive?",
      "statements": {
       "(1)": "The spouse received 1/2 of the sum from the estate, and the oldest child received 1/4 of the reminder",
-      "(2)": "Each of the two younger children received 12,500 more than the oldest child and 62500 less than the spouse\n\nNeed more Tests to Practice?\nGMAT Club Tests give expert solutions for every question in full and sectional GMAT Focus mocks.\nLearn more →"
+      "(2)": "Each of the two younger children received 12,500 more than the oldest child and 62500 less than the spouse"
      },
      "options": [
       {
@@ -18168,9 +18103,9 @@
       "note": "Goal met in Year 2 (+11.5%) and Year 4 (+14.7%), missed in Years 3 and 5. Year 5 growth 54,000.79 / 50,063.45 = +7.9%, so 8."
      },
      "diAnswer": {
-      "rows": [
-       "2 and 4",
-       "8"
+      "d": [
+       3,
+       3
       ]
      },
      "diChoices": [
@@ -18178,12 +18113,8 @@
       "In Year 5, the organization raised only X percent more than the previous year (nearest percent)"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "The organization met its fundraising goal in Years",
-       "In Year 5, the organization raised only X percent more than the previous year (nearest percent)"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "1 and 2",
         "1 and 3",
@@ -18409,7 +18340,7 @@
      "type": "TPA",
      "paper": "08",
      "sourceN": 6,
-     "stem": "­Two flawed rough-draft versions of a section of a contract:Version 1: The client shall pay $4,500 (the fee) on or before 7 August 2017. If the fee is not paid by that date, the client shall also pay a late charge of $100, and the total amount of that late charge shall not exceed 1 percent of the $4,500 fee. Version 2: The client shall pay $4,500 (the fee) on or before 7 August 2017. If the fee is not paid by that date, the client shall pay an additional charge of $100 for each month in which the fee remains unpaid. The total amount of the fee plus any additional charges will exceed 1 percent of the fee. Select for Problem with Version 1 the statement that most accurately describes a way in which Version 1 is flawed, and select for Problem with Version 2 the statement that most accurately describes a way in which Version 2 is flawed. Make only two selections, one in each column.­",
+     "stem": "Two flawed rough-draft versions of a section of a contract:Version 1: The client shall pay $4,500 (the fee) on or before 7 August 2017. If the fee is not paid by that date, the client shall also pay a late charge of $100, and the total amount of that late charge shall not exceed 1 percent of the $4,500 fee. Version 2: The client shall pay $4,500 (the fee) on or before 7 August 2017. If the fee is not paid by that date, the client shall pay an additional charge of $100 for each month in which the fee remains unpaid. The total amount of the fee plus any additional charges will exceed 1 percent of the fee. Select for Problem with Version 1 the statement that most accurately describes a way in which Version 1 is flawed, and select for Problem with Version 2 the statement that most accurately describes a way in which Version 2 is flawed. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -18668,7 +18599,7 @@
      "type": "GT",
      "paper": "03",
      "sourceN": 2,
-     "stem": "­\n\nThe graph shows data for physicians who, in 2000 and 2008, were surveyed about the average number of times per month they used each of 3 methods (telephone, email, and video conferencing) to communicate with their patients. The bars represent the percentage of the respondents who reported using the indicated method the indicated number of times per month.\n\nSelect from each drop-down menu the option that completes the statement so that it most accurately reflects the information provided.\n\nIt must be the case that the median number of times per month respondents reported having communicated with patients by {{1}} in the 2008 survey was less than that in the 2000 survey.\n\nIt must be the case that the percentage of respondents who reported having communicated with patients by both {{2}} was as great or greater in the 2008 survey as it was in the 2000 survey.\n\nSolving this question helps.\n\nTaking a timed set of similar questions in\nGMAT Club Forum Quiz →\nis even better.",
+     "stem": "\n\nThe graph shows data for physicians who, in 2000 and 2008, were surveyed about the average number of times per month they used each of 3 methods (telephone, email, and video conferencing) to communicate with their patients. The bars represent the percentage of the respondents who reported using the indicated method the indicated number of times per month.\n\nSelect from each drop-down menu the option that completes the statement so that it most accurately reflects the information provided.\n\nIt must be the case that the median number of times per month respondents reported having communicated with patients by {{1}} in the 2008 survey was less than that in the 2000 survey.\n\nIt must be the case that the percentage of respondents who reported having communicated with patients by both {{2}} was as great or greater in the 2008 survey as it was in the 2000 survey.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -18705,9 +18636,9 @@
       "key": "Dropdown 1: telephone Dropdown 2: telephone and email"
      },
      "diAnswer": {
-      "rows": [
-       "telephone",
-       "telephone and email"
+      "d": [
+       0,
+       0
       ]
      },
      "diChoices": [
@@ -18715,12 +18646,8 @@
       "It must be the case that the percentage of respondents who reported having communicated with patients by both [dropdown 2] was as great or greater in the 2008 survey as it was in the 2000 survey."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "It must be the case that the median number of times per month respondents reported having communicated with patients by [dropdown 1] in the 2008 survey was less than that in the 2000 survey.",
-       "It must be the case that the percentage of respondents who reported having communicated with patients by both [dropdown 2] was as great or greater in the 2008 survey as it was in the 2000 survey."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "telephone",
         "email",
@@ -19428,7 +19355,7 @@
      "type": "GT",
      "paper": "11",
      "sourceN": 16,
-     "stem": "In a music contest, a panel of 100 audience members ranked each of 4 performers with integer ranks—from 1 to 4. For each performer, the table indicates the number of audience members who assigned each rank to the given performer. For example, exactly 49 audience members assigned rank 4 to Performer A. Two methods—the Mode Method and the Median Method—are used to assign final ranks to the performers based on these audience rankings.\n\nMode Method: Assign to each performer a final rank equal to the audience rank the performer received most often.\n\nMedian Method: Compute the median audience ranking for each performer. The ordering of the final rankings will be the same as the ordering of these medians.\n­\n\nFor each of the following final ranks, select Same if the two final ranking methods assigned the same performer the given rank. Otherwise, select Not same.\n\n­",
+     "stem": "In a music contest, a panel of 100 audience members ranked each of 4 performers with integer ranks—from 1 to 4. For each performer, the table indicates the number of audience members who assigned each rank to the given performer. For example, exactly 49 audience members assigned rank 4 to Performer A. Two methods—the Mode Method and the Median Method—are used to assign final ranks to the performers based on these audience rankings.\n\nMode Method: Assign to each performer a final rank equal to the audience rank the performer received most often.\n\nMedian Method: Compute the median audience ranking for each performer. The ordering of the final rankings will be the same as the ordering of these medians.\n\n\nFor each of the following final ranks, select Same if the two final ranking methods assigned the same performer the given rank. Otherwise, select Not same.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -19487,7 +19414,7 @@
      "type": "TPA",
      "paper": "02",
      "sourceN": 3,
-     "stem": "A growing company seeks a new CEO. The company—which has always been led by members of one family—wants to make a change in order to generate revenue quickly, possibly by hiring a famous CEO. Promoting from within has been a successful strategy for the company, yielding many of its most effective high-level managers. However, many companies are now hiring famous CEOs who are famous because they have impeccable qualifications and experience running many different kinds of companies. On the basis of the information provided, select Famous CEO for the principle that, if accepted, would most strongly imply that the company should hire a famous CEO, and select Promote from within for the principle that, if accepted, would most strongly imply that the company should promote someone within the company to the position of CEO. Make only two selections, one in each column.­",
+     "stem": "A growing company seeks a new CEO. The company—which has always been led by members of one family—wants to make a change in order to generate revenue quickly, possibly by hiring a famous CEO. Promoting from within has been a successful strategy for the company, yielding many of its most effective high-level managers. However, many companies are now hiring famous CEOs who are famous because they have impeccable qualifications and experience running many different kinds of companies. On the basis of the information provided, select Famous CEO for the principle that, if accepted, would most strongly imply that the company should hire a famous CEO, and select Promote from within for the principle that, if accepted, would most strongly imply that the company should promote someone within the company to the position of CEO. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -19829,10 +19756,15 @@
      "n": 11,
      "section": "DI",
      "type": "DS",
-     "paper": "19",
-     "sourceN": 4,
-     "stem": null,
-     "statements": null,
+     "paper": "04",
+     "sourceN": 13,
+     "stem": "If J, K, L, M, and N and positive integers in ascending order, what is the value of L?",
+     "statements": {
+      "(1)": "The value of K is 3.",
+      "(2)": "The value of M is 7."
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -19855,10 +19787,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "E",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -20171,7 +20101,7 @@
      "type": "TPA",
      "paper": "23",
      "sourceN": 12,
-     "stem": null,
+     "stem": "The following excerpt is the content of a newspaper advertisement by a school. It features the school's requirement of an ideal teacher and lists the school's expectations from candidates. The ideal teacher that we seek for our school must uphold academic integrity and impart the virtue of knowledge. The teacher must train our students to understand, contribute to, and succeed in a rapidly changing society, thus preparing them for holistic personal development. Our school's pride lies in our dedication and ability to give our students personal attention, thereby armouring them to battle their daily personal and emotional challenges. The ideal teacher must, therefore, be able to connect with students, be patient with them, and steer them through their numerous",
      "statements": null,
      "options": null,
      "rows": null,
@@ -20354,9 +20284,9 @@
       "key": "Dropdown 1: -1.3 Dropdown 2: 100% greater"
      },
      "diAnswer": {
-      "rows": [
-       "-1.3",
-       "100% greater"
+      "d": [
+       1,
+       3
       ]
      },
      "diChoices": [
@@ -20364,12 +20294,8 @@
       "The number of students within 11 inches of the center of the target is [dropdown 2] after day 2 of training than before any training."
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "The slope of the regression line is closest to [dropdown 1].",
-       "The number of students within 11 inches of the center of the target is [dropdown 2] after day 2 of training than before any training."
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "-2.6",
         "-1.3",
@@ -20704,7 +20630,7 @@
      "type": "GT",
      "paper": "28",
      "sourceN": 17,
-     "stem": "The graph shows the total energy usage in kilowatt hours (kWh) for a small retail business for each month of last year. The business owner is interested in comparing the business's median monthly energy usage per quarter among Quarter 1 (January through March), Quarter 2 (April through June), Quarter 3 (July through September), and Quarter 4 (October through December).\n\nSelect from the drop-down menus the options that create the sentence that most accurately reflects the information provided.\n\nAmong the quarterly medians (the medians of the business's monthly energy usages for each quarter), the greatest quarterly median was for Quarter {{1}}, and that quarterly median exceeded the least quarterly median by {{2}} kWh, to the nearest 50 kWh.\n\n­­",
+     "stem": "The graph shows the total energy usage in kilowatt hours (kWh) for a small retail business for each month of last year. The business owner is interested in comparing the business's median monthly energy usage per quarter among Quarter 1 (January through March), Quarter 2 (April through June), Quarter 3 (July through September), and Quarter 4 (October through December).\n\nSelect from the drop-down menus the options that create the sentence that most accurately reflects the information provided.\n\nAmong the quarterly medians (the medians of the business's monthly energy usages for each quarter), the greatest quarterly median was for Quarter {{1}}, and that quarterly median exceeded the least quarterly median by {{2}} kWh, to the nearest 50 kWh.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -20988,7 +20914,7 @@
      "type": "TPA",
      "paper": "26",
      "sourceN": 6,
-     "stem": "Amanda, Bruce, Carlos, David, and Eva have different weights. Carlos is heavier than both Bruce and Eva. In the first column, choose an option that, together with the information above, confirms who the heaviest among Amanda, Bruce, Carlos, David, and Eva is. In the second column, choose an option that, together with the information above, confirms who the lightest among the five is. Make only two selections, one in each column.­",
+     "stem": "Amanda, Bruce, Carlos, David, and Eva have different weights. Carlos is heavier than both Bruce and Eva. In the first column, choose an option that, together with the information above, confirms who the heaviest among Amanda, Bruce, Carlos, David, and Eva is. In the second column, choose an option that, together with the information above, confirms who the lightest among the five is. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -21081,7 +21007,7 @@
      "stem": "Pat is reading a book that has a total of 15 chapters. Has Pat read at least 1/3 of the pages in the book?",
      "statements": {
       "(1)": "Pat has just finished reading the first 5 chapters.",
-      "(2)": "Each of the first 3 chapters has more pages than each of the other 12 chapters in the book.\n\nID: 700139\nDS21225­"
+      "(2)": "Each of the first 3 chapters has more pages than each of the other 12 chapters in the book.\n\nID: 700139\nDS21225"
      },
      "options": [
       {
@@ -21384,7 +21310,7 @@
      "type": "GT",
      "paper": "05",
      "sourceN": 5,
-     "stem": "A certain computer program allows a user to convert a digital image in one of five formats—Formats V through Z—to other formats among Formats V through Z. An asterisk is shown at the intersection of a row and a column in the table if and only if the program can directly convert from the format indicated at the beginning of the row to the format indicated at the top of the column.\n\nThe program can also be used to perform a series of direct conversions to indirectly convert from one format to another. For example, the program cannot directly convert an image from Format V to Format W, but it can convert an image from Format V to Format X, and then from Format X to Format W.\n\nFor each of the following formats, select Can convert to every other format if the information provided indicates it is possible to convert, either directly or indirectly, from that format to each of the other four formats. Otherwise, select Cannot convert to one or more formats.\n\n­",
+     "stem": "A certain computer program allows a user to convert a digital image in one of five formats—Formats V through Z—to other formats among Formats V through Z. An asterisk is shown at the intersection of a row and a column in the table if and only if the program can directly convert from the format indicated at the beginning of the row to the format indicated at the top of the column.\n\nThe program can also be used to perform a series of direct conversions to indirectly convert from one format to another. For example, the program cannot directly convert an image from Format V to Format W, but it can convert an image from Format V to Format X, and then from Format X to Format W.\n\nFor each of the following formats, select Can convert to every other format if the information provided indicates it is possible to convert, either directly or indirectly, from that format to each of the other four formats. Otherwise, select Cannot convert to one or more formats.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -21444,9 +21370,14 @@
      "section": "DI",
      "type": "DS",
      "paper": "09",
-     "sourceN": 15,
-     "stem": null,
-     "statements": null,
+     "sourceN": 1,
+     "stem": "If x is a positive number, what is the value of x?",
+     "statements": {
+      "(1)": "|x – 2| = 1",
+      "(2)": "x² = 4x -3"
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -21469,10 +21400,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "E",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -21610,7 +21539,7 @@
      "type": "TPA",
      "paper": "17",
      "sourceN": 3,
-     "stem": "A village's ordinances require residents to exercise reasonable care to avoid disturbing their neighbors with noise. The village council may impose fines for noise violations in response to formal complaints. But unless there have been formal complaints from multiple residents, the council will not consider a complaint if the complaining individual has not attempted to resolve the issue directly with the alleged violator or with the violator's landlord if the violator is a renter. The council's first action in response to any formal verbal or written complaint that they are considering will be to offer to mediate the dispute. Select for 1 and for 2 two different events such that the guidelines most clearly indicate that if the event selected for 1 occurs, then the event selected for 2 either will occur or has already occurred. Make only two selections, one in each column.­",
+     "stem": "A village's ordinances require residents to exercise reasonable care to avoid disturbing their neighbors with noise. The village council may impose fines for noise violations in response to formal complaints. But unless there have been formal complaints from multiple residents, the council will not consider a complaint if the complaining individual has not attempted to resolve the issue directly with the alleged violator or with the violator's landlord if the violator is a renter. The council's first action in response to any formal verbal or written complaint that they are considering will be to offer to mediate the dispute. Select for 1 and for 2 two different events such that the guidelines most clearly indicate that if the event selected for 1 occurs, then the event selected for 2 either will occur or has already occurred. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -21979,10 +21908,15 @@
      "n": 14,
      "section": "DI",
      "type": "DS",
-     "paper": "05",
-     "sourceN": 13,
-     "stem": null,
-     "statements": null,
+     "paper": "26",
+     "sourceN": 20,
+     "stem": "In the figure above, line AC represents a seesaw that is touching level ground at point A. If B is the midpoint of AC, how far above the ground is point C?",
+     "statements": {
+      "(1)": "x = 30",
+      "(2)": "Point B is 5 feet above the ground."
+     },
+     "rows": null,
+     "choices": null,
      "options": [
       {
        "key": "A",
@@ -22005,10 +21939,8 @@
        "text": "Statements (1) and (2) TOGETHER are NOT sufficient."
       }
      ],
-     "rows": null,
-     "choices": null,
      "images": [],
-     "answer": null,
+     "answer": "B",
      "answerSource": "official",
      "spec": {
       "kind": "ds"
@@ -22138,7 +22070,7 @@
      "type": "TPA",
      "paper": "30",
      "sourceN": 9,
-     "stem": "Professor A: The field of Artificial Intelligence (AI) was originally aimed exclusively at the construction of thinking machines, that is, computer systems with human like general intelligence. But the difficulty of this goal of general AI has led researchers to shift their focus to producing narrow AI systems: software displaying intelligence regarding specific tasks in relatively narrow domains such as chess. The problem is, narrow AI and general AI are fundamentally and entirely different pursuits. If modeling general intelligence is the objective, Al researchers must redirect themselves toward the original goals of the field and confront the more difficult issues of human-like intelligence. Professor B: Narrow AI work is producing real results today, such as chess-playing programs that can defeat any human, programs that translate speech to text, and programs that can drive automated vehicles. Achievements in this field will continue to flow, and eventually narrow AI will lead to the creation of systems with general intelligence. On the basis of the given information, select a claim that Professor A would most likely disagree with, and select a claim that Professor B would most likely disagree with. Select only two claims, one in each column.­",
+     "stem": "Professor A: The field of Artificial Intelligence (AI) was originally aimed exclusively at the construction of thinking machines, that is, computer systems with human like general intelligence. But the difficulty of this goal of general AI has led researchers to shift their focus to producing narrow AI systems: software displaying intelligence regarding specific tasks in relatively narrow domains such as chess. The problem is, narrow AI and general AI are fundamentally and entirely different pursuits. If modeling general intelligence is the objective, Al researchers must redirect themselves toward the original goals of the field and confront the more difficult issues of human-like intelligence. Professor B: Narrow AI work is producing real results today, such as chess-playing programs that can defeat any human, programs that translate speech to text, and programs that can drive automated vehicles. Achievements in this field will continue to flow, and eventually narrow AI will lead to the creation of systems with general intelligence. On the basis of the given information, select a claim that Professor A would most likely disagree with, and select a claim that Professor B would most likely disagree with. Select only two claims, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -22765,7 +22697,7 @@
      "type": "GT",
      "paper": "05",
      "sourceN": 2,
-     "stem": "­\n\nThe graph shows the history of the value of currency X—in units of currency A and in units of currency B—for the 12-week period beginning on 8 April.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 12-week period shown in the graph, the greatest value of a unit of currency X expressed in units of currency A occurred around {{1}}, and the greatest value of a unit of currency X expressed in units of currency B occurred around {{2}}.­",
+     "stem": "\n\nThe graph shows the history of the value of currency X—in units of currency A and in units of currency B—for the 12-week period beginning on 8 April.\n\nBased on the information provided, select from each drop-down menu the option that creates the most accurate statement.\n\nFor the 12-week period shown in the graph, the greatest value of a unit of currency X expressed in units of currency A occurred around {{1}}, and the greatest value of a unit of currency X expressed in units of currency B occurred around {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -22802,9 +22734,9 @@
       "note": "Units-of-A peak near 4 May (~0.129). Units-of-B peak near 30 May to 1 June (~0.1275), nearest 01 June."
      },
      "diAnswer": {
-      "rows": [
-       "04 May",
-       "01 June"
+      "d": [
+       0,
+       1
       ]
      },
      "diChoices": [
@@ -22812,12 +22744,8 @@
       "Greatest value of a unit of currency X in units of currency B occurred around"
      ],
      "spec": {
-      "kind": "rows",
-      "rows": [
-       "Greatest value of a unit of currency X in units of currency A occurred around",
-       "Greatest value of a unit of currency X in units of currency B occurred around"
-      ],
-      "choices": [
+      "kind": "dropdown",
+      "groups": [
        [
         "04 May",
         "01 June",
@@ -23098,7 +23026,7 @@
      "type": "GT",
      "paper": "18",
      "sourceN": 8,
-     "stem": "In the graph, each circle represents an individual star. The position of the circle’s center indicates the star’s temperature in kelvins (K) and its luminosity (rate of energy emission) relative to that of the sun (Lsun). Note that higher temperatures are to the left. The size of the circle indicates the relative physical size of the star, and the labels indicate the types of stars shown.\n\nSelect from each of the drop-down menus the option that creates the most accurate statement based on the information provided.\n\nIf it is assumed that one of the stars on the graph represents the sun, it must be that the sun is a {{1}} star.\n\nApart from the main sequence stars, the group of stars with the greatest range of temperatures is the group of {{2}}\n\n­",
+     "stem": "In the graph, each circle represents an individual star. The position of the circle’s center indicates the star’s temperature in kelvins (K) and its luminosity (rate of energy emission) relative to that of the sun (Lsun). Note that higher temperatures are to the left. The size of the circle indicates the relative physical size of the star, and the labels indicate the types of stars shown.\n\nSelect from each of the drop-down menus the option that creates the most accurate statement based on the information provided.\n\nIf it is assumed that one of the stars on the graph represents the sun, it must be that the sun is a {{1}} star.\n\nApart from the main sequence stars, the group of stars with the greatest range of temperatures is the group of {{2}}",
      "statements": null,
      "options": null,
      "rows": null,
@@ -23473,7 +23401,7 @@
      "type": "TPA",
      "paper": "28",
      "sourceN": 3,
-     "stem": "About 80% of the ecosystem biomass of tropical rainforests occurs as woody tissues of trees, while only about 15% of the organic matter occurs in soil and litter, and about 5% is foliage. As with all forests, the biomass of animals is much less than 1% of that of the total ecosystem. In contrast, temperate forests maintain much larger fractions of their total ecosystem biomass as organic matter of the soil and forest floor. The reason for this difference is the relatively rapid rate of decomposition of dead biomass in the warm and humid environmental conditions of tropical rainforests. Because most of the biomass and nutrient content of tropical rainforests occurs in the biomass of living trees, and because their soils are usually highly infertile and extremely weathered, the fertility of this ecosystem is rapidly degraded after the forest is cleared. Select Strengthen for the statement that would, if true, most strengthen the argument, and select Weaken for the statement that would, if true, most weaken the argument. Make only two selections, one in each column.­",
+     "stem": "About 80% of the ecosystem biomass of tropical rainforests occurs as woody tissues of trees, while only about 15% of the organic matter occurs in soil and litter, and about 5% is foliage. As with all forests, the biomass of animals is much less than 1% of that of the total ecosystem. In contrast, temperate forests maintain much larger fractions of their total ecosystem biomass as organic matter of the soil and forest floor. The reason for this difference is the relatively rapid rate of decomposition of dead biomass in the warm and humid environmental conditions of tropical rainforests. Because most of the biomass and nutrient content of tropical rainforests occurs in the biomass of living trees, and because their soils are usually highly infertile and extremely weathered, the fertility of this ecosystem is rapidly degraded after the forest is cleared. Select Strengthen for the statement that would, if true, most strengthen the argument, and select Weaken for the statement that would, if true, most weaken the argument. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -23605,7 +23533,7 @@
      "type": "TPA",
      "paper": "06",
      "sourceN": 3,
-     "stem": "­A small business has just invested in a new piece of equipment. The business's accountant estimates that the value of the equipment will decrease over time at a constant rate. Based on this assumption, the accountant properly estimates the value of the equipment 3 years afterward to be $X, 6 years afterward to be $Y, and 8 years afterward to be, for the first time, $0.Select values for X and for Y that are jointly consistent with the given information. Make only two selections, one in each column.",
+     "stem": "A small business has just invested in a new piece of equipment. The business's accountant estimates that the value of the equipment will decrease over time at a constant rate. Based on this assumption, the accountant properly estimates the value of the equipment 3 years afterward to be $X, 6 years afterward to be $Y, and 8 years afterward to be, for the first time, $0.Select values for X and for Y that are jointly consistent with the given information. Make only two selections, one in each column.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -23920,7 +23848,7 @@
      "type": "GT",
      "paper": "13",
      "sourceN": 16,
-     "stem": "­\n\nThe two charts show how female and male survey respondents answered a question about how often they ate a certain type of food. The survey specified that \"infrequently\" meant more often than \"rarely\" but less often than \"occasionally.\"\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nSlightly less than {{1}} respondents indicated that they ate the food at most {{2}}.­",
+     "stem": "\n\nThe two charts show how female and male survey respondents answered a question about how often they ate a certain type of food. The survey specified that \"infrequently\" meant more often than \"rarely\" but less often than \"occasionally.\"\n\nSelect from the drop-down menus the options that create the statement that most accurately reflects the information provided.\n\nSlightly less than {{1}} respondents indicated that they ate the food at most {{2}}.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -23993,7 +23921,7 @@
      "type": "GT",
      "paper": "28",
      "sourceN": 8,
-     "stem": "The table summarizes the results of a recent study conducted by a market research firm. Each study participant viewed product safety data presented in exactly one of four different formats for exactly one of six different products. For each product, the effectiveness of a given format is the percentage of participants who express willingness to purchase that product after viewing product safety data in that format. A format is optimal for a given product if that format has the greatest effectiveness among the four formats for that product.\n\nEach of the following options is a description of exactly one of the four formats. For each option, select Describes paragraph format if the given information indicates that the description is true of the paragraph format. Otherwise, select Does not describe paragraph format.\n\nQuestion exposed a gap?\n\nCheck whether it is a pattern. Run an adaptive Quant, Verbal, or DI section in GMAT Club Tests and review the detailed score report.\nGet started →",
+     "stem": "The table summarizes the results of a recent study conducted by a market research firm. Each study participant viewed product safety data presented in exactly one of four different formats for exactly one of six different products. For each product, the effectiveness of a given format is the percentage of participants who express willingness to purchase that product after viewing product safety data in that format. A format is optimal for a given product if that format has the greatest effectiveness among the four formats for that product.\n\nEach of the following options is a description of exactly one of the four formats. For each option, select Describes paragraph format if the given information indicates that the description is true of the paragraph format. Otherwise, select Does not describe paragraph format.",
      "statements": null,
      "options": null,
      "rows": null,
@@ -24178,7 +24106,7 @@
      "type": "GT",
      "paper": "29",
      "sourceN": 2,
-     "stem": "Based on a study of a 10,000 person sample of the adult population of Country Y, the unbroken curve on the graph plots an association between daily consumption of various amounts of Beverage Z and the relative risk of contracting Disease X compared to the risk with no consumption of Beverage Z (indicated by 1.00). For the entire adult population of Country Y, the relative-risk values could—because of sampling error—be either higher or lower than for the particular 10,000 person sample studied. Thus the two broken lines show the estimates of how high or how low those relative-risk values for that population could be.­\n\nFrom the drop-down menus, select the options that create the statement that is most strongly supported by the information provided.\n\nCompared to the risk with no consumption of Beverage Z, the reduction in relative risk of contracting Disease X for adults of Country Y is {{1}} when the daily consumption of Beverage Z is in the range of {{2}} 100 mg glasses.\n\n­",
+     "stem": "Based on a study of a 10,000 person sample of the adult population of Country Y, the unbroken curve on the graph plots an association between daily consumption of various amounts of Beverage Z and the relative risk of contracting Disease X compared to the risk with no consumption of Beverage Z (indicated by 1.00). For the entire adult population of Country Y, the relative-risk values could—because of sampling error—be either higher or lower than for the particular 10,000 person sample studied. Thus the two broken lines show the estimates of how high or how low those relative-risk values for that population could be.\n\nFrom the drop-down menus, select the options that create the statement that is most strongly supported by the information provided.\n\nCompared to the risk with no consumption of Beverage Z, the reduction in relative risk of contracting Disease X for adults of Country Y is {{1}} when the daily consumption of Beverage Z is in the range of {{2}} 100 mg glasses.",
      "statements": null,
      "options": null,
      "rows": null,

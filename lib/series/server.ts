@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { createServerSupabase } from "@/lib/supabase";
 import rawTests from "@/data/series/tests.json";
-import { diAnswerCorrect, isDiPartAnswer } from "@/lib/series/di-answer";
+import { canonicalDi, diAnswerCorrect, isDiPartAnswer } from "@/lib/series/di-answer";
 import rawQaTests from "@/data/series/qa_tests.json";
 import rawDiTests from "@/data/series/di_tests.json";
 import type {
@@ -18,7 +18,7 @@ export const QUESTIONS_PER_TEST = 23;
 // Grace period so a slow network at the final second does not lose answers.
 export const EXPIRY_GRACE_SEC = 30;
 
-type RawQuestion = PublicQuestion & { answer: string };
+type RawQuestion = PublicQuestion & { answer: string; diAnswer?: unknown };
 export type FullTest = Omit<PublicTest, "questions"> & { questions: RawQuestion[] };
 
 const TESTS: FullTest[] = [
@@ -154,7 +154,11 @@ export function gradeAttempt(
   let correct = 0;
   const review: ReviewItem[] = test.questions.map((q) => {
     const picked = answers[String(q.n)] ?? null;
-    const ok = picked !== null && (LETTERS.has(q.answer) ? picked === q.answer : diAnswerCorrect(picked, q.answer));
+    const ok =
+      picked !== null &&
+      (q.diAnswer !== undefined
+        ? diAnswerCorrect(picked, canonicalDi(q.diAnswer))
+        : picked === q.answer);
     if (ok) correct++;
     return {
       n: q.n,

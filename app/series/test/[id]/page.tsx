@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { fmtClock, seriesFetch } from "@/lib/series/client";
-import { sectionLabel, type Attempt, type PublicQuestion, type PublicTest } from "@/lib/series/types";
+import { canonicalDi } from "@/lib/series/di-answer";
+import { sectionLabel, type Attempt, type DiSpec, type PublicQuestion, type PublicTest } from "@/lib/series/types";
 
 type Answers = Record<string, string | null>;
 type Times = Record<string, number>;
@@ -239,6 +240,21 @@ export default function TestPlayer() {
     setAnswers(updated);
   }
 
+  // Sets a composite (multi-part) answer. An empty string clears the question.
+  function setAnswer(n: number, value: string) {
+    if (submittedRef.current || !test) return;
+    const cur = answersRef.current;
+    const updated = { ...cur, [String(n)]: value === "" ? null : value };
+    if (phase === "review" && reviewSnapshot) {
+      if (changedCount(updated, reviewSnapshot, test.questions.length) > EDIT_LIMIT) {
+        setNotice(`You can change up to ${EDIT_LIMIT} answers in this section.`);
+        return;
+      }
+    }
+    setNotice(null);
+    setAnswers(updated);
+  }
+
   function toggleFlag(n: number) {
     setFlagged((prev) => (prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]));
   }
@@ -333,6 +349,7 @@ export default function TestPlayer() {
             answer={answers[String(q.n)] ?? null}
             isFlagged={flagged.includes(q.n)}
             onChoose={(l) => choose(q.n, l)}
+            onSet={(v) => setAnswer(q.n, v)}
             onFlag={() => toggleFlag(q.n)}
           />
         </div>
@@ -374,6 +391,7 @@ export default function TestPlayer() {
             answer={answers[String(q.n)] ?? null}
             isFlagged={flagged.includes(q.n)}
             onChoose={(l) => choose(q.n, l)}
+            onSet={(v) => setAnswer(q.n, v)}
             onFlag={() => toggleFlag(q.n)}
           />
         </div>
@@ -473,6 +491,7 @@ function QuestionPanel({
   answer,
   isFlagged,
   onChoose,
+  onSet,
   onFlag,
 }: {
   test: PublicTest;
@@ -481,6 +500,7 @@ function QuestionPanel({
   answer?: string | null;
   isFlagged?: boolean;
   onChoose?: (letter: string) => void;
+  onSet?: (value: string) => void;
   onFlag?: () => void;
 }) {
   if (side === "passage") {
@@ -512,7 +532,11 @@ function QuestionPanel({
           </button>
         ) : null}
       </div>
-      <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
+      {q.spec?.kind === "dropdown" ? (
+        <DropdownStem q={q} spec={q.spec} answer={answer} onSet={onSet} />
+      ) : (
+        <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
+      )}
       {q.statements ? (
         <div className="mt-4 flex flex-col gap-3">
           {Object.entries(q.statements).map(([k, text]) => (
@@ -522,6 +546,15 @@ function QuestionPanel({
           ))}
         </div>
       ) : null}
+      {q.spec && isMultiPart(q.spec) ? (
+        <div className="mt-5">
+          {q.spec.kind === "tpa" ? (
+            <TpaGrid spec={q.spec} answer={answer} onSet={onSet} />
+          ) : q.spec.kind === "yesno" || q.spec.kind === "rows" ? (
+            <RowChoices spec={q.spec} answer={answer} onSet={onSet} />
+          ) : null}
+        </div>
+      ) : (
       <div className="mt-5 flex flex-col gap-2">
         {q.options.map((o) => {
           const sel = answer === o.key;
@@ -539,6 +572,144 @@ function QuestionPanel({
           );
         })}
       </div>
+      )}
     </section>
+  );
+}
+
+function isMultiPart(spec: DiSpec): boolean {
+  return spec.kind === "tpa" || spec.kind === "yesno" || spec.kind === "rows" || spec.kind === "dropdown";
+}
+
+function parseParts(answer?: string | null): Record<string, unknown> {
+  if (!answer) return {};
+  try {
+    const v = JSON.parse(answer);
+    return v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
+  } catch {
+    return {};
+  }
+}
+
+// Stores a composite answer; nothing selected means unanswered.
+function emitParts(next: Record<string, unknown>, onSet?: (v: string) => void) {
+  const any = Object.values(next).some((v) =>
+    Array.isArray(v) ? v.some((x) => x !== null && x !== undefined) : v !== null && v !== undefined
+  );
+  onSet?.(any ? canonicalDi(next) : "");
+}
+
+// Two Parts: one shared list of choices, one selection per column.
+function TpaGrid({ spec, answer, onSet }: { spec: { kind: "tpa"; rows: string[] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { col1?: number | null; col2?: number | null };
+  const pick = (key: "col1" | "col2", i: number) => {
+    const next = { col1: value.col1 ?? null, col2: value.col2 ?? null, [key]: value[key] === i ? null : i };
+    emitParts(next, onSet);
+  };
+  return (
+    <div>
+      <div className="grid items-center gap-y-2" style={{ gridTemplateColumns: "1fr 110px 110px" }}>
+        <span />
+        <span className="text-center text-sm font-semibold">Column 1</span>
+        <span className="text-center text-sm font-semibold">Column 2</span>
+        {spec.rows.map((label, i) => (
+          <div key={i} className="contents">
+            <span className="py-2 pr-3 text-[15px]">{label}</span>
+            {(["col1", "col2"] as const).map((key) => {
+              const sel = value[key] === i;
+              return (
+                <button
+                  key={key}
+                  aria-pressed={sel}
+                  onClick={() => pick(key, i)}
+                  className={`mx-auto h-6 w-6 rounded-full border-2 ${
+                    sel ? "border-brand bg-brand" : "border-ink/30 bg-white hover:border-brand/50"
+                  }`}
+                />
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Yes/No and True/False statement rows: one choice per row.
+function RowChoices({ spec, answer, onSet }: { spec: { kind: "yesno" | "rows"; rows: string[]; choices: string[] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { rows?: (string | null)[] };
+  const current: (string | null)[] = spec.rows.map((_, j) => value.rows?.[j] ?? null);
+  const opts =
+    spec.kind === "yesno"
+      ? (() => {
+          const extra = spec.choices.filter((c) => !["False", "True", "Yes", "No"].includes(c));
+          return extra.length === 2 ? extra : ["Yes", "No"];
+        })()
+      : spec.choices;
+  const choose = (i: number, opt: string) => {
+    const next = current.map((v, j) => (j === i ? (v === opt ? null : opt) : v));
+    emitParts({ rows: next }, onSet);
+  };
+  return (
+    <div className="flex flex-col gap-4">
+      {spec.rows.map((label, i) => (
+        <div key={i} className="flex flex-col gap-2">
+          <p className="text-[15px]">{label}</p>
+          <div className="flex flex-wrap gap-2">
+            {opts.map((opt) => {
+              const sel = current[i] === opt;
+              return (
+                <button
+                  key={opt}
+                  aria-pressed={sel}
+                  onClick={() => choose(i, opt)}
+                  className={`rounded-full border px-4 py-1.5 text-sm ${
+                    sel ? "border-brand bg-brand-light" : "border-ink/15 bg-white hover:border-brand/40"
+                  }`}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Two-Part dropdown question: the stem has {{1}}, {{2}} markers; each becomes a select.
+function DropdownStem({ q, spec, answer, onSet }: { q: PublicQuestion; spec: { kind: "dropdown"; groups: string[][] }; answer?: string | null; onSet?: (v: string) => void }) {
+  const value = parseParts(answer) as { d?: (number | null)[] };
+  const current: (number | null)[] = spec.groups.map((_, j) => value.d?.[j] ?? null);
+  const set = (k: number, idx: number | null) => {
+    const next = current.map((v, j) => (j === k ? idx : v));
+    emitParts({ d: next }, onSet);
+  };
+  const parts = q.stem.split(/(\{\{\d+\}\})/);
+  return (
+    <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">
+      {parts.map((part, i) => {
+        const m = /^\{\{(\d+)\}\}$/.exec(part);
+        if (!m) return <span key={i}>{part}</span>;
+        const k = Number(m[1]) - 1;
+        const group = spec.groups[k] ?? [];
+        return (
+          <select
+            key={i}
+            value={current[k] === null ? "" : String(current[k])}
+            onChange={(e) => set(k, e.target.value === "" ? null : Number(e.target.value))}
+            className="mx-1 rounded border border-ink/20 bg-white px-2 py-1 text-[15px] font-normal"
+          >
+            <option value="">Select</option>
+            {group.map((opt, idx) => (
+              <option key={idx} value={idx}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        );
+      })}
+    </p>
   );
 }
