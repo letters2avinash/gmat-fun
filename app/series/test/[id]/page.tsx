@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { fmtClock, seriesFetch } from "@/lib/series/client";
 import { canonicalDi } from "@/lib/series/di-answer";
-import { sectionLabel, type Attempt, type DiSpec, type PublicQuestion, type PublicTest } from "@/lib/series/types";
+import { sectionLabel, type Attempt, type DiSpec, type Passage, type PublicQuestion, type PublicTest } from "@/lib/series/types";
 
 type Answers = Record<string, string | null>;
 type Times = Record<string, number>;
@@ -479,7 +479,7 @@ export default function TestPlayer() {
 // Quant questions usually have no passage: the question then takes the full width.
 function hasSharedContent(test: PublicTest, q: PublicQuestion): boolean {
   const passage = q.passageId ? test.passages[q.passageId] : null;
-  return !!(passage?.text || q.stimulus || q.image);
+  return !!(passage?.text || passage?.tabs?.length || q.stimulus || q.image);
 }
 
 // One side of the screen. The passage side shows the shared text; the question
@@ -505,6 +505,16 @@ function QuestionPanel({
 }) {
   if (side === "passage") {
     const passage = q.passageId ? test.passages[q.passageId] : null;
+    if (passage?.tabs?.length) {
+      return (
+        <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
+          <p className="mb-3 text-xs font-medium uppercase tracking-wide text-ink/50">
+            {sectionLabel(q.section)}
+          </p>
+          <SourceTabs passage={passage} />
+        </section>
+      );
+    }
     const shared = passage?.text ?? q.stimulus;
     return (
       <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
@@ -711,5 +721,59 @@ function DropdownStem({ q, spec, answer, onSet }: { q: PublicQuestion; spec: { k
         );
       })}
     </p>
+  );
+}
+
+// Multi-Source sets: each source is a tab. Images are served from /series/di/images.
+function SourceTabs({ passage }: { passage: Passage }) {
+  const tabs = passage.tabs ?? [];
+  const [active, setActive] = useState(0);
+  const current = tabs[active] ?? tabs[0];
+  return (
+    <div>
+      {passage.title ? <p className="mb-3 font-medium leading-relaxed">{passage.title}</p> : null}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {tabs.map((t, i) => (
+          <button
+            key={t.tab}
+            onClick={() => setActive(i)}
+            aria-pressed={i === active}
+            className={`rounded-full border px-3 py-1 text-sm ${
+              i === active ? "border-brand bg-brand-light" : "border-ink/15 bg-white hover:border-brand/40"
+            }`}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-col gap-3 text-[15px] leading-relaxed">
+        {current?.content.map((c, i) => {
+          if (c.type === "text") return <p key={i} className="whitespace-pre-line">{c.text}</p>;
+          if (c.type === "table") {
+            return (
+              <table key={i} className="border-collapse text-sm">
+                <tbody>
+                  {c.rows.map((row, r) => (
+                    <tr key={r} className={r === 0 ? "font-semibold" : ""}>
+                      {row.map((cell, k) => (
+                        <td key={k} className="border border-ink/15 px-3 py-1">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+          }
+          const name = c.file ? c.file.split("/").pop() : null;
+          return name ? (
+            <img key={i} src={`/series/di/images/${name}`} alt="Source figure" className="max-w-full" />
+          ) : (
+            <p key={i} className="rounded border border-dashed border-ink/25 p-3 text-sm text-ink/60">
+              Source figure not available in this copy.
+            </p>
+          );
+        })}
+      </div>
+    </div>
   );
 }

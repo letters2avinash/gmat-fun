@@ -29,7 +29,21 @@ export function sectionLabel(s: "CR" | "RC" | "QA" | "DI"): string {
   return s === "CR" ? "Critical Reasoning" : s === "QA" ? "Quantitative Aptitude" : "Reading Comprehension";
 }
 
-export type Passage = { source: string | null; wordCount: number | null; text: string };
+export type SourceContent =
+  | { type: "text"; text: string }
+  | { type: "table"; rows: string[][] }
+  | { type: "image"; file?: string | null; available?: boolean };
+
+export type SourceTab = { tab: number; label: string; content: SourceContent[] };
+
+// `text` is used by reading passages. Multi-Source sets use `title` and `tabs`.
+export type Passage = {
+  source: string | null;
+  wordCount: number | null;
+  text: string;
+  title?: string;
+  tabs?: SourceTab[];
+};
 
 export type PublicTest = {
   id: number;

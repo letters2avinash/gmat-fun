@@ -5,7 +5,42 @@
    "id": 201,
    "name": "GMAT Data Insights – Test 1",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p08_msr9": {
+     "title": "We have conducted a recent study with mice that indicates that Virus",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Article",
+       "content": [
+        {
+         "type": "text",
+         "text": "The following is an article in a medical journal by researchers at Albion University."
+        },
+        {
+         "type": "text",
+         "text": "We have conducted a recent study with mice that indicates that Virus Alpha is contagious in a subject up to 3 weeks after infection. This result was found by placing recovering mice, which had been infected more than two weeks prior, into healthy mice communities. More than half of the healthy communities then developed a Virus Alpha outbreak. This finding belies our earlier hypothesis, which posited that Virus Alpha was reduced by the immune system to non-contagious levels in the subject within 1 week of infection. Clearly, this means that we must re-visit our response to Virus Alpha, especially with regards to citizen outreach. To ensure the most prompt public notice, our research team plans to send a service announcement to the major web-based news magazines, radio stations, and television networks with recommendations about methods of prevention, when and how to avoid contagion, and symptom recognition."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Blog Entry",
+       "content": [
+        {
+         "type": "text",
+         "text": "The following is an entry in the blog Communications and Culture."
+        },
+        {
+         "type": "text",
+         "text": "A major drawback of the Information Revolution is the ease with which an unfounded panic spreads. There is a tendency in our culture to try to prepare for every single contingency; any report of bad news, however small, triggers an avalanche of \"preparedness recommendations\". This situation is exacerbated by a litigious culture in which \"misfortune\" becomes regularly redefined as \"culpability.\" Because no agency wants to be liable for withholding crucial facts, information on every new health risk is disseminated almost as soon as it is discovered, many times without much verification. Too often this data becomes inflated via the rumor-mill of the Internet into a \"crisis\" or \"epidemic,\" causing lowered productivity as workers stay home from fear of infection, and medicine shortages as shoppers make runs on pharmacies. Thus, attempts by the health industry to educate the citizenry via the Internet and newsfeeds result in less public security, not more."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -59,7 +94,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p08_msr9"
     },
     {
      "n": 2,
@@ -113,7 +149,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p08_msr9"
     },
     {
      "n": 3,
@@ -167,7 +204,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p08_msr9"
     },
     {
      "n": 4,
@@ -941,7 +979,48 @@
    "id": 202,
    "name": "GMAT Data Insights – Test 2",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p03_msr9": {
+     "title": "Mortgage points, also known as discount points, are fees paid directly",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Mortgage Point Chart",
+       "content": [
+        {
+         "type": "text",
+         "text": "Mortgage points, also known as discount points, are fees paid directly to the lender at closing in exchange for a reduced interest rate. The chart below shows three options for a qualified lender who wants to borrow $200,000 at a 30-year term from a local bank called First Lending."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=80024",
+         "file": "images/80024.jpg",
+         "available": true
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Home Buyer Profile",
+       "content": [
+        {
+         "type": "text",
+         "text": "Susanne is trying to buy her first home and has only been approved by First Lending for a loan of $200,000 or below. She has $10,000 in cash on hand that she will spend on her home purchase for any of the three upfront costs (down payment, fees, and/or points) and she must keep her payment to First Lending under $1000 a month. First Lending requires that the homebuyer put down at least 20% on the purchase price of a home along with a fixed closing cost of $2500."
+        },
+        {
+         "type": "text",
+         "text": "As an incentive to move to the region, Susanne’s employer offers a special program in which the company will provide a one-time bonus payment for a down payment of 20% of the purchase price of any home in the region, with a payment limit of $60,000. This amount can only be used for the down payment and must be paid back if the employee does not remain with the company for at least 5 years."
+        }
+       ]
+      }
+     ],
+     "images": {
+      "1": [
+       "d03_q09_s1.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -973,7 +1052,8 @@
        "$10,500",
        "$12,500"
       ]
-     }
+     },
+     "passageId": "p03_msr9"
     },
     {
      "n": 2,
@@ -1033,7 +1113,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p03_msr9"
     },
     {
      "n": 3,
@@ -1093,7 +1174,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p03_msr9"
     },
     {
      "n": 4,
@@ -1913,7 +1995,56 @@
    "id": 203,
    "name": "GMAT Data Insights – Test 3",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p01_msr10": {
+     "title": "We need to hire a cleaning company as soon as possible to provide adeq",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Email #1",
+       "content": [
+        {
+         "type": "text",
+         "text": "E-mail from Project Manager to his Assistant January 23, 11:02 A.M."
+        },
+        {
+         "type": "text",
+         "text": "We need to hire a cleaning company as soon as possible to provide adequate working conditions for our employees. So if the contractors submitted their bids and you have made appropriate background investigations on the companies, we should make a decision on which cleaning firm to hire by the end of the week. Did all four bids arrive yesterday?"
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Email #2",
+       "content": [
+        {
+         "type": "text",
+         "text": "E-mail from Assistant to Project Manager in Response to the Project Manager’s January 23, 11:02 A.M., Message January 23, 11:23 A.M."
+        },
+        {
+         "type": "text",
+         "text": "Ambrosia Cleaning sent us a bid of $25,000, the highest of the four bids. Ambrosia Cleaning has a spotless track record and provides exceptional service. Indigo Cleaning submitted a lower bid of $22,000. However, in the past 3 years, there have been two customer complaints about the quality of work completed by Indigo Cleaning. Finally, ABC Cleaning and Hugo Cleaning submitted bids of $20,000 each, but neither of them can begin work this month."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Email #3",
+       "content": [
+        {
+         "type": "text",
+         "text": "E-mail from Project Manager to his Assistant in Response to the Assistant’s January 23, 11:23 A.M., Message January 23, 11:42 A.M."
+        },
+        {
+         "type": "text",
+         "text": "Determine how many buildings Indigo Cleaning serviced over the past 3 years. If Indigo Cleaning cleaned more than 50 buildings in the past 3 years with only two customer complaints, I would not hesitate to hire them. Otherwise, we should hire Ambrosia Cleaning, even though their bid is higher."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -1945,7 +2076,8 @@
        "12",
        "15"
       ]
-     }
+     },
+     "passageId": "p01_msr10"
     },
     {
      "n": 2,
@@ -1977,7 +2109,8 @@
        "27",
        "29"
       ]
-     }
+     },
+     "passageId": "p01_msr10"
     },
     {
      "n": 3,
@@ -2873,7 +3006,71 @@
    "id": 204,
    "name": "GMAT Data Insights – Test 4",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p02_msr9": {
+     "title": "The Ramos family of 4 is estimating the cost of a planned trip that in",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Trip Plans",
+       "content": [
+        {
+         "type": "text",
+         "text": "The Ramos family of 4 is estimating the cost of a planned trip that includes 4 round-trip airline tickets (each consisting of 2 nonstop flights—one to their destination and the other back home) and 1 hotel room for the 6 days/nights at their destination."
+        },
+        {
+         "type": "text",
+         "text": "While at their destination, they can use public transportation, which they estimate will cost a total of $200, or they can rent a car. If they rent a car for the\n6 days, they will be charged a total of $150 for parking at the hotel in addition to paying the daily rental fee for the car for each of the 6 days. Also, if and only if they rent a car, the 2 children will each need to be buckled into an appropriate child safety seat, which the Ramos family can take with them or rent for a separate fee where they rent the car. They are not including any estimated gasoline costs in their planning."
+        },
+        {
+         "type": "text",
+         "text": "They plan to take a total of 3 suitcases on each of the nonstop flights, and each suitcase will be checked as a separate baggage item for each nonstop flight. If they take their own child safety seats, then each seat will be checked as a separate baggage item, and they will check a total of 5 baggage items on each flight."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Airline Costs",
+       "content": [
+        {
+         "type": "text",
+         "text": "The table shows round-trip ticket costs and baggage fees for the 5 airlines being considered by the Ramos family."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=78451",
+         "file": "images/78451.png",
+         "available": true
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Rental Fees",
+       "content": [
+        {
+         "type": "text",
+         "text": "The table shows, for each of the 4 car rental companies being considered by the Ramos family, the daily rental fee for a car and the daily rental fee for a child safety seat, which is separate from the car rental fee."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=78450",
+         "file": "images/78450.png",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "2": [
+       "d02_q09_s2.png"
+      ],
+      "3": [
+       "d02_q09_s3.png"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -2905,7 +3102,8 @@
        "350",
        "450"
       ]
-     }
+     },
+     "passageId": "p02_msr9"
     },
     {
      "n": 2,
@@ -2965,7 +3163,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p02_msr9"
     },
     {
      "n": 3,
@@ -3025,7 +3224,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p02_msr9"
     },
     {
      "n": 4,
@@ -3876,7 +4076,93 @@
    "id": 205,
    "name": "GMAT Data Insights – Test 5",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p21_msr9": {
+     "title": "Mayor Johnson is preparing a campaign speech that must include the fol",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Speech Requirements",
+       "content": [
+        {
+         "type": "text",
+         "text": "Mayor Johnson is preparing a campaign speech that must include the following:"
+        },
+        {
+         "type": "text",
+         "text": "A. A statement of the mayor’s long-term vision.\nB. An explanation of why the mayor is seeking re-election.\nC. A description of the mayor’s personal strengths or past achievements.\nD. A proposal for a specific policy initiative the mayor intends to pursue."
+        },
+        {
+         "type": "text",
+         "text": "The speech should avoid repeating information already presented in the candidate’s official biography."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Speech Notes",
+       "content": [
+        {
+         "type": "text",
+         "text": "Mayor Johnson has drafted the following notes for his campaign speech. Each note is numbered for reference:"
+        },
+        {
+         "type": "text",
+         "text": "(1) I have served in public office for more than a decade, gaining valuable administrative experience.\n(2) I am determined, pragmatic, and deeply committed to public service.\n(3) Effective governance depends on collaboration with local leaders, and I have consistently demonstrated this skill.\n(4) My vision is to create an environment where small businesses can thrive.\n(5) If elected, I will launch a citywide apprenticeship program linking high school students with local employers through funded training partnerships."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Consultants’ Comments",
+       "content": [
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Note",
+           "Rivera",
+           "Malik",
+           "Chen"
+          ],
+          [
+           "1",
+           "Keep — experience gives credibility",
+           "Fine",
+           "Acceptable"
+          ],
+          [
+           "2",
+           "Add concrete examples of determination",
+           "Move after vision statement",
+           "Strong point — keep"
+          ],
+          [
+           "3",
+           "Phrase “consistently demonstrated” is redundant",
+           "Acceptable as evidence of leadership",
+           "Delete “consistently”"
+          ],
+          [
+           "4",
+           "Repeats biography — delete",
+           "Cut; voters already know this",
+           "Remove to avoid duplication"
+          ],
+          [
+           "5",
+           "Merge with Note 4 for clarity",
+           "Good — shows ambition",
+           "Acceptable as closing"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -3936,7 +4222,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p21_msr9"
     },
     {
      "n": 2,
@@ -3968,7 +4255,8 @@
        "Note 4",
        "Note 5"
       ]
-     }
+     },
+     "passageId": "p21_msr9"
     },
     {
      "n": 3,
@@ -4028,7 +4316,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p21_msr9"
     },
     {
      "n": 4,
@@ -4835,7 +5124,34 @@
    "id": 206,
    "name": "GMAT Data Insights – Test 6",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p07_msr9": {
+     "title": "Producers do not expect blind adoration by critics, but a little loyal",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Statement by theater producer",
+       "content": [
+        {
+         "type": "text",
+         "text": "Producers do not expect blind adoration by critics, but a little loyalty and support for the artists are not too much to ask for. A production that reaches a Broadway stage represents thousands of hours spent by countless individuals with track records of excellence in their fields. Surely such a production is of some worth—and yet, from reading recent reviews, one would be excused to think that all new productions are worthless. Meanwhile, rising real estate and labor costs mean that producers are taking ever-increasing risks to bring major productions to the stage. Inevitably, these increasing costs are shared with audiences in the form of higher ticket prices. Yet why would a consumer who is choosing between a play and a considerably less expensive movie pick the play if that has been proclaimed “soporific” by the press? It is unconscionable that critics should treat so carelessly the art they are supposed to love."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Statement by theater critic",
+       "content": [
+        {
+         "type": "text",
+         "text": "It is precisely because the theater critic loves the theater that he must be ruthless in his assessment of it. Every time a critic reviews a stage production, he may be responding to that production, but he is responsible for all theater. Rather than individuals, he must serve the art form. If he upgrades a mediocre production to winning, or lauds a decent one as great, he harms all productions. The Smiths may not pay a king’s ransom for tickets to a show they’ve been warned is bad, but if they do pay a king’s ransom for tickets to a show that has received good notices in the press, but is in fact mediocre, then they may never pay for theater tickets again. Surely producers are not asking that critics should harm the stellar shows of tomorrow by lying to audiences about the lamentable shows of today."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -4889,7 +5205,8 @@
        "Inferable",
        "Not inferable"
       ]
-     }
+     },
+     "passageId": "p07_msr9"
     },
     {
      "n": 2,
@@ -4921,7 +5238,8 @@
        "Critics should laud decent productions as great.",
        "Critics do not have a responsibility toward the theatrical art form."
       ]
-     }
+     },
+     "passageId": "p07_msr9"
     },
     {
      "n": 3,
@@ -4987,7 +5305,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p07_msr9"
     },
     {
      "n": 4,
@@ -5911,7 +6230,52 @@
    "id": 207,
    "name": "GMAT Data Insights – Test 7",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p17_msr9": {
+     "title": "A certain electric utility is considering exactly two designs (Designs",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Designs",
+       "content": [
+        {
+         "type": "text",
+         "text": "A certain electric utility is considering exactly two designs (Designs 1 and 2) for a new power generation plant. Each design would result in a plant that would generate the same amount of power annually; but Design 1 would use a single Type A power generator, whereas Design 2 would use three Type B power generators."
+        },
+        {
+         "type": "text",
+         "text": "Type A generators cost less than Type B generators to fuel per unit of power generated and vent through taller chimneys, which better prevent pollutants from concentrating near the plant. However, Type A generators produce solid waste that is difficult and expensive to dispose of safely."
+        },
+        {
+         "type": "text",
+         "text": "Type B generators produce no solid waste and, as compared to Type A generators, vent approximately half as much Pollutant X, and even less Pollutant Y, per unit of power generated annually. However, Type B generators vent through much shorter chimneys."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Pollutants by Phase",
+       "content": [
+        {
+         "type": "text",
+         "text": "Both Type A and Type B generators emit (vent) significantly more of Pollutant Y during the startup phase—when a generator is brought to its normal power-generating phase from nonoperation. During startup, unhealthy levels of Pollutant Y can become concentrated at ground level near the power plant. The following table shows, for a single Type A or Type B generator, Pollutant Y emissions, in kilograms per hour (kg/hr), and the resultant contributions from those generators to the ground-level concentration of Pollutant Y, in micrograms per cubic meter of air (mcg/m3), near the plant during the startup and normal generating phases."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=55730",
+         "file": "images/55730.jpg",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "2": [
+       "d17_q09_s2.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -5971,7 +6335,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p17_msr9"
     },
     {
      "n": 2,
@@ -6019,7 +6384,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p17_msr9"
     },
     {
      "n": 3,
@@ -6051,7 +6417,8 @@
        "1.22",
        "36.33"
       ]
-     }
+     },
+     "passageId": "p17_msr9"
     },
     {
      "n": 4,
@@ -6946,7 +7313,56 @@
    "id": 208,
    "name": "GMAT Data Insights – Test 8",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p11_msr9": {
+     "title": "The frequency of flooding onto floodplainsthe lands situated adjacent",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Discussion",
+       "content": [
+        {
+         "type": "text",
+         "text": "The frequency of flooding onto floodplains—the lands situated adjacent to rivers and other waterways—depends on factors such as climate, drainage area, channel slope, and the absorptive capacity of soil. In rainy regions, the floodplain may be inundated frequently, and in arid regions the floodplain may remain dry for years. In many regions, floods occur primarily during the snowmelt runoff season."
+        },
+        {
+         "type": "text",
+         "text": "Floods are often described in terms of their statistical frequency. A 100-year flood, for example, describes the level of floodwater expected to be equaled or exceeded once every 100 years. Such a flood is also considered the 1% annual exceedance probability flood (i.e., a flood with a 1% chance of being equaled or exceeded in any given year). Hydrologists commonly map the boundaries of 100-year floods to advise public officials on flood risk management and containment strategies."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Table of Waterway Statistics",
+       "content": [
+        {
+         "type": "text",
+         "text": "The table shows the results of hydrologists’ measurements of all of the waterways in Region X under the hydrologists’ jurisdiction. Channel slope is the difference in elevation between two points on a waterway divided by the horizontal distance between them. Drainage area is the total surface area, upstream from the mouth of that waterway, from which water will drain to that point."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=55004",
+         "file": "images/55004.jpg",
+         "available": true
+        },
+        {
+         "type": "text",
+         "text": "DA = drainage area (square kilometers)"
+        },
+        {
+         "type": "text",
+         "text": "ACS = average channel slope (meters per kilometer)\nSF = snowmelt floods (% of total floods)\n100-year FL = 100-year flood level (meters)\n100-year FB = area within the 100-year floodplain boundary (square kilometers)"
+        }
+       ]
+      }
+     ],
+     "images": {
+      "2": [
+       "d11_q09_s2.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -6978,7 +7394,8 @@
        "The larger a waterway’s drainage area, the more frequently its floodplain becomes inundated.",
        "The greater the average channel slope of a waterway, the more prone the waterway is to snowmelt flooding."
       ]
-     }
+     },
+     "passageId": "p11_msr9"
     },
     {
      "n": 2,
@@ -7038,7 +7455,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p11_msr9"
     },
     {
      "n": 3,
@@ -7092,7 +7510,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p11_msr9"
     },
     {
      "n": 4,
@@ -8009,7 +8428,205 @@
    "id": 209,
    "name": "GMAT Data Insights – Test 9",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p29_msr9": {
+     "title": "In the Group stage, each team in a group plays against every other",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Introduction",
+       "content": [
+        {
+         "type": "text",
+         "text": "In the Group stage, each team in a group plays against every other team in that group. A win earns the winning team 3 points, while a draw gives 1 point to each team. The losing team gets no points. The top two teams from each group advance to the Quarter Finals. In each group, all teams finished with different point totals, so there were no ties in the final group standings."
+        },
+        {
+         "type": "text",
+         "text": "The position of the teams at the end of the Group stage is as given below:"
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Standing",
+           "Team Name"
+          ],
+          [
+           "1",
+           "Team 1"
+          ],
+          [
+           "2",
+           "Team 2"
+          ],
+          [
+           "3",
+           "Team 3"
+          ],
+          [
+           "4",
+           "Team 4"
+          ],
+          [
+           "5",
+           "Team 5"
+          ],
+          [
+           "6",
+           "Team 6"
+          ],
+          [
+           "7",
+           "Team 7"
+          ],
+          [
+           "8",
+           "Team 8"
+          ],
+          [
+           "9",
+           "Team 9"
+          ],
+          [
+           "10",
+           "Team 10"
+          ],
+          [
+           "11",
+           "Team 11"
+          ],
+          [
+           "12",
+           "Team 12"
+          ],
+          [
+           "13",
+           "Team 13"
+          ],
+          [
+           "14",
+           "Team 14"
+          ],
+          [
+           "15",
+           "Team 15"
+          ],
+          [
+           "16",
+           "Team 16"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Group Stage",
+       "content": [
+        {
+         "type": "text",
+         "text": "In the Group stage, each team in a group plays against every other team in that group. A win earns the winning team 3 points, while a draw gives 1 point to each team. The losing team gets no points. The top two teams from each group advance to the Quarter Finals. In each group, all teams finished with different point totals, so there were no ties in the final group standings."
+        },
+        {
+         "type": "text",
+         "text": "The position of the teams at the end of the Group stage is as given below:"
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Position",
+           "Group 1",
+           "Group 2",
+           "Group 3",
+           "Group 4"
+          ],
+          [
+           "1",
+           "Team 14",
+           "Team 13",
+           "Team 7",
+           "Team 9"
+          ],
+          [
+           "2",
+           "Team 5",
+           "Team 12",
+           "Team 16",
+           "Team 11"
+          ],
+          [
+           "3",
+           "Team 10",
+           "Team 2",
+           "Team 1",
+           "Team 3"
+          ],
+          [
+           "4",
+           "Team 6",
+           "Team 8",
+           "Team 15",
+           "Team 4"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Knockout Stage",
+       "content": [
+        {
+         "type": "text",
+         "text": "Format of the matches in the knockout stage is as given below:"
+        },
+        {
+         "type": "text",
+         "text": "Quarter-finals:"
+        },
+        {
+         "type": "text",
+         "text": "Match A: Winner of Group 1 vs Runner-up of Group 2"
+        },
+        {
+         "type": "text",
+         "text": "Match B: Runner-up of Group 1 vs Winner of Group 2"
+        },
+        {
+         "type": "text",
+         "text": "Match C: Winner of Group 3 vs Runner-up of Group 4"
+        },
+        {
+         "type": "text",
+         "text": "Match D: Runner-up of Group 3 vs Winner of Group 4"
+        },
+        {
+         "type": "text",
+         "text": "Semi-finals:"
+        },
+        {
+         "type": "text",
+         "text": "SF1: Winner of Match A vs Winner of Match D"
+        },
+        {
+         "type": "text",
+         "text": "SF2: Winner of Match B vs Winner of Match C"
+        },
+        {
+         "type": "text",
+         "text": "Final: Winner of SF1 vs Winner of SF2"
+        },
+        {
+         "type": "text",
+         "text": "In the knockout stage, there were no upsets — that is, a team with a better initial standing (as shown in the Introduction tab) always won against a team with a lower standing."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -8069,7 +8686,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p29_msr9"
     },
     {
      "n": 2,
@@ -8129,7 +8747,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p29_msr9"
     },
     {
      "n": 3,
@@ -8161,7 +8780,8 @@
        "7",
        "8"
       ]
-     }
+     },
+     "passageId": "p29_msr9"
     },
     {
      "n": 4,
@@ -9065,7 +9685,60 @@
    "id": 210,
    "name": "GMAT Data Insights – Test 10",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p09_msr9": {
+     "title": "Azalea County has one of the largest school districts in its state. It",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Special Education",
+       "content": [
+        {
+         "type": "text",
+         "text": "Azalea County has one of the largest school districts in its state. It also has one of the highest proportions of students with special needs in the nation."
+        },
+        {
+         "type": "text",
+         "text": "Many students in Azalea County receive accommodations called “504s,” named for section 504 of the Rehabilitation Act of 1973. These accommodations are provided to students with physical disabilities and to students with cognitive or learning impairments that do not significantly impact their ability to learn in class. Students with 504s are taught the same curricula and assessed by the same grading standards as is the general student body, but they are provided with various forms of assistance, such as text readers for students with visual impairments or preferential seating for students with attention-deficit disorders."
+        },
+        {
+         "type": "text",
+         "text": "Students with learning, cognitive, or emotional impairments that significantly affect their ability to learn receive Individualized Education Plans (IEPs), which are characterized by alternative curricula and grading standards. Whenever possible, Azalea County IEPs are “inclusive,” meaning that all accommodations take place in a standard classroom. However, students with the most severe needs are “mainstreamed,” learning only select subjects in general-education classes and spending most of the day in separate special-needs classrooms."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Budget",
+       "content": [
+        {
+         "type": "text",
+         "text": "In Azalea County, the direct expenses of any accommodation are paid from a county-wide fund. Nonetheless, individual schools in Azalea County are responsible for the administrative costs of designing, certifying, and monitoring their students’ 504s and IEPs. An Azalea school’s budget allows for the administration of an unlimited number of 504s. It also allows for the administration of 12 inclusive IEPs and 4 mainstreamed IEPs per 100 total students."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Employees",
+       "content": [
+        {
+         "type": "text",
+         "text": "There are no educational requirements to work as an assistant to a student on a 504 plan in the Azalea County School District. Many assistants to students with mobility restrictions do not have high school diplomas."
+        },
+        {
+         "type": "text",
+         "text": "All aides who provide assistance to students with must have college degrees. Additionally, these aides must complete a special six-month certification, unless they majored in education."
+        },
+        {
+         "type": "text",
+         "text": "Azalea County teachers must have a master’s degree. Teachers are occasionally allowed to begin working for the district while still enrolled in their master's programs, but this exception does not apply to teachers of children with special needs; these teachers must complete additional education and observation requirements after earning their degrees but before teaching."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -9113,7 +9786,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p09_msr9"
     },
     {
      "n": 2,
@@ -9167,7 +9841,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p09_msr9"
     },
     {
      "n": 3,
@@ -9199,7 +9874,8 @@
        "All of the aides who assist these students have completed a special six month certification.",
        "These students spend a minority of their time, if any, in general education classes."
       ]
-     }
+     },
+     "passageId": "p09_msr9"
     },
     {
      "n": 4,
@@ -10046,7 +10722,135 @@
    "id": 211,
    "name": "GMAT Data Insights – Test 11",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p12_msr8": {
+     "title": "The expenses related to sponsoring a conference can be immense. An org",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Article",
+       "content": [
+        {
+         "type": "text",
+         "text": "The expenses related to sponsoring a conference can be immense. An organization sponsoring a conference can recoup these expenses through registration fees and partnership with the host hotel. As part of the partnership, the host hotel sets aside a block of rooms for conference attendees, with rooms available at a slightly higher-than-normal rate."
+        },
+        {
+         "type": "text",
+         "text": "While most conference attendees prefer to stay in the host hotel, they often follow an alternate strategy to avoid the extra cost of reserving a room within the block at the host hotel. Some attendees reserve rooms outside the host hotel -- the ROHH strategy. Others reserve rooms outside the block -- the ROB strategy."
+        },
+        {
+         "type": "text",
+         "text": "Conference sponsors have succeeded in countering these strategies by increasing the conference registration fee by a fixed amount and then offering an equivalent registration fee discount to attendees who book rooms in the block. A study has shown that if this registration discount is equal to at least half the potential savings of an attendee's particular cost-saving strategy, the attendee is much more likely to reserve a room within the block."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Weekend Conferences",
+       "content": [
+        {
+         "type": "text",
+         "text": "Ten conferences are scheduled for the same weekend in City X. For each conference, the table lists the conference sponsor, the registration fee, the discounted registration fee (if any), the host hotel, the rate for rooms in the block at the host hotel, and the lowest rate for an available room in the host hotel during that same weekend. Conference attendees will require two nights lodging, and all room rates are per guest, per night, assuming two guests per room. The lowest rate for an available room in City X on this same weekend is $65."
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Sponsor",
+           "Registration Fee",
+           "Discounted registration",
+           "Host Hotel",
+           "Block Rate",
+           "Lowest Rate in host hotel"
+          ],
+          [
+           "AMG",
+           "$225",
+           "$150",
+           "Garden Inn",
+           "$120",
+           "$65"
+          ],
+          [
+           "CC",
+           "$720",
+           "$620",
+           "Hilton",
+           "$110",
+           "$70"
+          ],
+          [
+           "CDA",
+           "$450",
+           "$400",
+           "Asiawest Center",
+           "$190",
+           "$185"
+          ],
+          [
+           "FFNA",
+           "$325",
+           "$275",
+           "Hilton",
+           "$140",
+           "$70"
+          ],
+          [
+           "HMHPA",
+           "$600",
+           "$575",
+           "Holiday Inn",
+           "$104",
+           "$79"
+          ],
+          [
+           "PPOA",
+           "$550",
+           "$400",
+           "Hilton",
+           "$105",
+           "$70"
+          ],
+          [
+           "PNDA",
+           "$425",
+           "$400",
+           "Bard Inn",
+           "$125",
+           "$125"
+          ],
+          [
+           "QRTA",
+           "$325",
+           "no discount",
+           "Asiawest Center",
+           "$195",
+           "$185"
+          ],
+          [
+           "RCD",
+           "$995",
+           "$895",
+           "Asiawest Center",
+           "$195",
+           "$185"
+          ],
+          [
+           "WWLOP",
+           "$475",
+           "no discount",
+           "Perry Pavilion",
+           "$155",
+           "$155"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -10106,7 +10910,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 2,
@@ -10166,7 +10971,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 3,
@@ -10226,7 +11032,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 4,
@@ -10283,7 +11090,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 5,
@@ -10315,7 +11123,8 @@
        "X+Y",
        "2(X-Y)"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 6,
@@ -10347,7 +11156,8 @@
        "RCD",
        "WWLOP"
       ]
-     }
+     },
+     "passageId": "p12_msr8"
     },
     {
      "n": 7,
@@ -11060,7 +11870,53 @@
    "id": 212,
    "name": "GMAT Data Insights – Test 12",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p20_msr8": {
+     "title": "The Huffingdale All Boys School has produced a comprehensive set of",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Kilometer Run",
+       "content": [
+        {
+         "type": "text",
+         "text": "The Huffingdale All Boys School has produced a comprehensive set of running standards for young boys. These standards are based on data from young boys attending Huffingdale in good health conditions - as determined by a physician. The table displays the percentile distribution of time on a kilometer run for Huffingdale students at grade levels 1 through 5 according to the Huffingdale model. In a model population -- a large population of young students grade 1 through 5 that conforms to the Huffingdale running standards -- for n=5, 15, 50, 85, and 95, the nth percentile in running time for a given grade is the unique running time among boys of that grade level that is slower than or equal to n percent, and faster than or equal to (100 - n) percent, of running times for students of that grade level."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=53928",
+         "file": "images/53928.jpg",
+         "available": true
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Height",
+       "content": [
+        {
+         "type": "text",
+         "text": "The graph shows the percentile distribution of height, in centimeters, for running times from 500 to 700 seconds, according to the Huffingdale model. In a model population, for n=5, 15, 50, 85, and 95, the nth percentile in height for a given running time is the unique height among boys of that running time that is taller than or equal to n percent, and shorter than or equal to (100-n) percent, of heights of boys of that running time."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=53929",
+         "file": "images/53929.jpg",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "1": [
+       "d20_q08_s1.jpg"
+      ],
+      "2": [
+       "d20_q08_s2.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -11092,7 +11948,8 @@
        "His height is approximately 130% of his height in Grade 2.",
        "His height is approximately 185% of his height in Grade 2."
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 2,
@@ -11146,7 +12003,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 3,
@@ -11178,7 +12036,8 @@
        "35%",
        "40%"
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 4,
@@ -11232,7 +12091,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 5,
@@ -11292,7 +12152,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 6,
@@ -11346,7 +12207,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p20_msr8"
     },
     {
      "n": 7,
@@ -12078,7 +12940,61 @@
    "id": 213,
    "name": "GMAT Data Insights – Test 13",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p14_msr9": {
+     "title": "Marketers theorize that consumers purchase decisions are driven by",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Expectancy-Value Model",
+       "content": [
+        {
+         "type": "text",
+         "text": "Marketers theorize that consumers’ purchase decisions are driven by the perception of value. This perception, often obtained through a cost-benefit analysis, can be manipulated by adding more features or by reducing the price. This is called the expectancy-value model. Let’s see an example."
+        },
+        {
+         "type": "text",
+         "text": "Jack, who wants to purchase a laptop, has narrowed down his choices to 4 brands of laptop computers (A, B, C, D). He 1s interested in 5 attributes: Processor Performance (PP), Graphics Capability (GC), Size & Weight (SW), Battery life (BL), & Marked Price (MP) and is evaluating the offerings based on the same. Jack puts 30% priority on Processor Performance, 10% on Graphic Capability, and equal priority on Size & Weight, Battery life, and Price. He comes up with a number called Composite Attribute Value that is the weighted average of the performance of a brand’s offering against Jack’s priorities."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=65968",
+         "file": "images/65968.jpg",
+         "available": true
+        },
+        {
+         "type": "text",
+         "text": "Each attribute is rated from 0 to 10, where 10 represents the highest performance."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Customer Cost & Benefit",
+       "content": [
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=65969",
+         "file": "images/65969.jpg",
+         "available": true
+        },
+        {
+         "type": "text",
+         "text": "Customer Value is the difference between Customer Benefit and Customer Cost, where Customer Benefit is calculated by multiplying Customer cost with Customer Composite Attribute Value and dividing the product by 5."
+        }
+       ]
+      }
+     ],
+     "images": {
+      "1": [
+       "d14_q09_s1.jpg"
+      ],
+      "2": [
+       "d14_q09_s2.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -12138,7 +13054,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p14_msr9"
     },
     {
      "n": 2,
@@ -12170,7 +13087,8 @@
        "X=Y/(5(5-Z))",
        "X=(YZ-5Z)/5"
       ]
-     }
+     },
+     "passageId": "p14_msr9"
     },
     {
      "n": 3,
@@ -12230,7 +13148,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p14_msr9"
     },
     {
      "n": 4,
@@ -13213,7 +14132,128 @@
    "id": 214,
    "name": "GMAT Data Insights – Test 14",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p23_msr9": {
+     "title": "A small British retail store has the following 6 monthly goals",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Goals",
+       "content": [
+        {
+         "type": "text",
+         "text": "A small British retail store has the following 6 monthly goals (Goals 1-6)."
+        },
+        {
+         "type": "text",
+         "text": "1. The median number of transactions for the cashiers should be greater than 2,000.\n2. The arithmetic mean number of transactions for the cashiers should be greater than 2,000.\n3. Each cashier should have a minimum of 1,800 transactions.\n4. The median value of the transactions for the cashiers should be greater than 10 pounds sterling (£).\n5. The arithmetic mean value of the transactions for each cashier should be greater than £10.\n6. The arithmetic mean value of all the transactions should be greater than £10."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Cashiers",
+       "content": [
+        {
+         "type": "text",
+         "text": "For the three months shown in the table, the retail store had exactly 7 cashiers. The table shows the number of transactions for each cashier in these three months and the total number of transactions in those months."
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Cashier",
+           "Transactions for Month 1",
+           "Transactions for Month 2",
+           "Transactions for Month 3"
+          ],
+          [
+           "1",
+           "2,145",
+           "1,781",
+           "2,189"
+          ],
+          [
+           "2",
+           "2,138",
+           "2,035",
+           "1,931"
+          ],
+          [
+           "3",
+           "2,097",
+           "2,045",
+           "1,862"
+          ],
+          [
+           "4",
+           "2,041",
+           "1,856",
+           "1,862"
+          ],
+          [
+           "5",
+           "2,041",
+           "1,789",
+           "1,790"
+          ],
+          [
+           "6",
+           "1,994",
+           "2,045",
+           "1,981"
+          ],
+          [
+           "7",
+           "1,786",
+           "1,744",
+           "1,970"
+          ],
+          [
+           "Total",
+           "14,242",
+           "13,295",
+           "13,585"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Value",
+       "content": [
+        {
+         "type": "text",
+         "text": "For each of Months 1-3, the table shows the total value of all transactions for that month."
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Period",
+           "Value of transactions"
+          ],
+          [
+           "Month 1",
+           "£159,937.66"
+          ],
+          [
+           "Month 2",
+           "£127,100.20"
+          ],
+          [
+           "Month 3",
+           "£165,193.60"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -13273,7 +14313,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p23_msr9"
     },
     {
      "n": 2,
@@ -13333,7 +14374,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p23_msr9"
     },
     {
      "n": 3,
@@ -13365,7 +14407,8 @@
        "4",
        "5"
       ]
-     }
+     },
+     "passageId": "p23_msr9"
     },
     {
      "n": 4,
@@ -14164,7 +15207,67 @@
    "id": 215,
    "name": "GMAT Data Insights – Test 15",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p22_msr9": {
+     "title": "The ABC Reservoir on Clear River is used to prevent flooding in downst",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Reservoir",
+       "content": [
+        {
+         "type": "text",
+         "text": "­The ABC Reservoir on Clear River is used to prevent flooding in downstream cities and to provide a recreation area for fishing, swimming and boating. Engineers control the depth of the reservoir by controlling the outflow rate - the rate at which water flows out of the reservoir. The inflow rate - the rate at which water flows into the reservoir - is uncontrolled and varies. The engineers use a computer model to predict the inflow rate. It is considered a rare event for the actual average inflow to differ from the model's prediction by more than 4% of the prediction."
+        },
+        {
+         "type": "text",
+         "text": "The reservoir depth decreases whenever the outflow exceeds the inflow. Similarly, the reservoir depth increases whenever the inflow exceeds the outflow. Whenever possible, the engineers are expected to keep the reservoir depth within a certain 23 meter allowable range - high enough to support recreational activities and not above the reservoir's maximum allowable depth - and to keep the outflow rates within a certain 25 cubic meters per second (m3/s) allowable range. The engineers have never failed to satisfy these constraints."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Constraints",
+       "content": [
+        {
+         "type": "text",
+         "text": "The following table indicates the minimum and maximum values allowed for the reservoir depths and for the outflow rates"
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=76986",
+         "file": "images/76986.jpg",
+         "available": true
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Predictions",
+       "content": [
+        {
+         "type": "text",
+         "text": "Figure 1 shows the inflow predicted by the engineers' model for a certain 7-day period last year. Based on these predictions and on the engineers' plans for outflow rate over that same time period, Figure 2 shows how the depth of the reservoir was predicted to change."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=76987",
+         "file": "images/76987.jpg",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "2": [
+       "d22_q09_s2.jpg"
+      ],
+      "3": [
+       "d22_q09_s3.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -14218,7 +15321,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p22_msr9"
     },
     {
      "n": 2,
@@ -14272,7 +15376,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p22_msr9"
     },
     {
      "n": 3,
@@ -14304,7 +15409,8 @@
        "Day 4",
        "Day 5"
       ]
-     }
+     },
+     "passageId": "p22_msr9"
     },
     {
      "n": 4,
@@ -15235,7 +16341,44 @@
    "id": 216,
    "name": "GMAT Data Insights – Test 16",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p32_msr10": {
+     "title": "The costs we have incurred to develop a smartphone application for our",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "From CFO",
+       "content": [
+        {
+         "type": "text",
+         "text": "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "From CMO",
+       "content": [
+        {
+         "type": "text",
+         "text": "Our innovative application still hasn't gained attention from media. As with all types of product launches these days, we need to get the word out fast and get this product to go viral. I recommend a marketing budget closer to $400K. This will allow us to use some big name celebrities to help us get the word out on television, in magazines, and even through social networks like Facebook and Twitter. Once we get over the hump, further expense will be neglible as marketing will be largely free and will occur through word of mouth. Without strong celebrity promotion from the very beginning, the product launch will fizzle away and die unspectacularly - we'll never recoup our largest product development cost. For anything to go viral, it must have a cool factor, be funny, and be useful. A big name celebrity can help us get over that hump."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "From CEO",
+       "content": [
+        {
+         "type": "text",
+         "text": "Qoop helps complement our existing product offering. While Qoop expenses have been our largest product development cost, the cost should also be shared among the low costs of our other products. In addition, no product should be looked at as a standalone product. It's more important for us to grow our market share and gain competitive advantage in our industry. To do this, we have to launch more products and start generating a portfolio of products to match our big competitors. We should be marketing all of our products alongside Qoop and not just pigeonhole ourselves to promoting just one product whenever we access the TV or social media marketing channels."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -15267,7 +16410,8 @@
        "Developers can do a better job to gain user adoption for the smartphone application than can marketers with no technical knowledge.",
        "Marketing has turned 2.0; it is technical marketers who are experienced in programming that are needed to help spread the word throughout the web, not traditional marketers."
       ]
-     }
+     },
+     "passageId": "p32_msr10"
     },
     {
      "n": 2,
@@ -16227,7 +17371,125 @@
    "id": 217,
    "name": "GMAT Data Insights – Test 17",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p27_msr9": {
+     "title": "Researchers conducted a controlled study to examine how different",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Study Setup",
+       "content": [
+        {
+         "type": "text",
+         "text": "Researchers conducted a controlled study to examine how different follow-up activities affected retention of the same academic material. Five groups of equal size participated. All participants were drawn from the same academic program, and the groups were balanced with respect to prior course performance, gender, and age distribution. Each group first read the same chapter of a textbook for one hour."
+        },
+        {
+         "type": "text",
+         "text": "After this initial reading, four groups were assigned distinct one-hour follow-up activities:"
+        },
+        {
+         "type": "text",
+         "text": "• Flashcard Review: students studied a prepared set of flashcards that summarized key concepts from the chapter."
+        },
+        {
+         "type": "text",
+         "text": "• Silent Re-reading: students read the chapter again quietly on their own."
+        },
+        {
+         "type": "text",
+         "text": "• Video Recap: students watched a one-hour instructional video that explained and summarized the chapter."
+        },
+        {
+         "type": "text",
+         "text": "• Group Discussion: students discussed the chapter in their assigned groups, using a prepared set of guiding questions."
+        },
+        {
+         "type": "text",
+         "text": "A fifth group served as the control. These students read the chapter once for one hour and then took the recall quizzes without any additional activity."
+        },
+        {
+         "type": "text",
+         "text": "All groups completed the recall quiz three times: immediately after their assigned study procedure, one day later, and one week later. None of the groups had any further contact with the material between the first test and the final test. The quiz scores reported for each group represent the average percentage of correct answers achieved by that group."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Predicted Outcomes",
+       "content": [
+        {
+         "type": "text",
+         "text": "Before the results were collected, expectations differed by testing stage:"
+        },
+        {
+         "type": "text",
+         "text": "• Immediately after the study session: Flashcard Review was expected to produce the highest scores, Group Discussion second, Video Recap third, and Silent Re-reading lowest."
+        },
+        {
+         "type": "text",
+         "text": "• One day later: Flashcard Review was expected to remain the highest, Group Discussion second, Silent Re-reading third, and Video Recap lowest."
+        },
+        {
+         "type": "text",
+         "text": "• One week later: Group Discussion was expected to move to the top position, Flashcard Review second, Silent Re-reading third, and Video Recap lowest."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Recorded Scores",
+       "content": [
+        {
+         "type": "text",
+         "text": "The table below reports the average percentage of correct answers on the recall quiz for each group across the three testing times."
+        },
+        {
+         "type": "table",
+         "rows": [
+          [
+           "Group",
+           "Immediately After",
+           "1 Day Later",
+           "1 Week Later"
+          ],
+          [
+           "Flashcard Review",
+           "82%",
+           "71%",
+           "55%"
+          ],
+          [
+           "Silent Re-reading",
+           "68%",
+           "50%",
+           "28%"
+          ],
+          [
+           "Video Recap",
+           "64%",
+           "43%",
+           "22%"
+          ],
+          [
+           "Group Discussion",
+           "74%",
+           "64%",
+           "59%"
+          ],
+          [
+           "Control",
+           "20%",
+           "12%",
+           "5%"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -16293,7 +17555,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p27_msr9"
     },
     {
      "n": 2,
@@ -16341,7 +17604,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p27_msr9"
     },
     {
      "n": 3,
@@ -16373,7 +17637,8 @@
        "The median of the Video Recap group’s three scores",
        "The average score of the Flashcard Review group across the three tests"
       ]
-     }
+     },
+     "passageId": "p27_msr9"
     },
     {
      "n": 4,
@@ -17118,7 +18383,68 @@
    "id": 218,
    "name": "GMAT Data Insights – Test 18",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p26_msr9": {
+     "title": "SH is a startup charity in Australia which uses a crowdsourcing",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Charitable Startup",
+       "content": [
+        {
+         "type": "text",
+         "text": "SH is a startup charity in Australia which uses a crowdsourcing interface to help donors provide assistance directly to individuals in need of financial backing in order to cope with any of a variety of problems."
+        },
+        {
+         "type": "text",
+         "text": "Each person applying for help can put a listing on the website for free, describing the nature of his/her problem, the financial circumstances, and so forth. There is an application process in which the SH employees confirm the truth of the claim. Once the listing is publicly available, donors can then browse the listings and donate to any of the applicants in increments of $10. Donors also have the option to sponsor a listing, wherein they are listed as sponsors in return for a promise to match donations, gaining positive advertising."
+        },
+        {
+         "type": "text",
+         "text": "SH also partners with service providers, such as doctors, lenders, and so forth. Together, they work to ensure that people can afford the services they need without hardship."
+        },
+        {
+         "type": "text",
+         "text": "SH earns its money through a 5% commission on each transaction, including donations made to the \"charity giveaway\" in which each $10 donation to \"the pot\" lets someone vote for a charity registered with the site. Once the pot reaches $1,000, the charity with the most votes gets the entire amount."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Competitors",
+       "content": [
+        {
+         "type": "text",
+         "text": "In contrast to other charitable crowdsourcing platforms, SH has placed itself in a unique competitive position by not just raising money but also acting as an advocate on behalf of those who need assistance. Each claim is confirmed for validity, something only two other organizations offer, to ensure that the donors' money is being used legitimately. Furthermore, SH also negotiates with providers to bring the cost down of whatever is burdening the applicant. Providers tend to agree, as the alternative is often that they should receive nothing. SH also keeps the fees lower than the market average."
+        },
+        {
+         "type": "text",
+         "text": "To attract donors giving donations of different sizes, advertising and sponsorship opportunities exist, and reward points are also offered for all donations. Both institutional charities and individuals in need may apply to be listed, in the respective parts of the website. Charities are chosen by draws and receive pooled funds, while individuals collect whatever they attract in donations."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Demographics",
+       "content": [
+        {
+         "type": "text",
+         "text": "Worldwide, India has the highest volume of donors, with roughly 165 million people making donations in the most recent year. Also having huge volumes of donors are the United States (143 million), Indonesia (126 million), and China (109 million)."
+        },
+        {
+         "type": "text",
+         "text": "Women are only slightly more likely to make donations than men, but age plays a more significant role. Roughly one-third of those included in the global donor pool are aged 50+. Only about one-fourth of those in the pool are aged 15-34. It is a reasonable expectation, since younger people are less likely to have the funds available to make donations, but for a crowdsourcing startup, it complicates things. Those aged 15-34 also compose the bulk of internet users, while the older generations - those most likely to make donations - are relatively far less likely to make financial transactions online."
+        },
+        {
+         "type": "text",
+         "text": "A reliable survey suggests that altogether, there are roughly 450 million potential donors worldwide who are willing to use the internet as a charitable medium."
+        }
+       ]
+      }
+     ],
+     "images": {}
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -17150,7 +18476,8 @@
        "Providing opportunities for sponsorship",
        "Donating with established institutional charities in addition to individual people"
       ]
-     }
+     },
+     "passageId": "p26_msr9"
     },
     {
      "n": 2,
@@ -17210,7 +18537,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p26_msr9"
     },
     {
      "n": 3,
@@ -17242,7 +18570,8 @@
        "$225 million",
        "$2.25 billion"
       ]
-     }
+     },
+     "passageId": "p26_msr9"
     },
     {
      "n": 4,
@@ -18138,7 +19467,79 @@
    "id": 219,
    "name": "GMAT Data Insights – Test 19",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p16_msr9": {
+     "title": "A certain mobile-phone video game consists of four puzzles, which play",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Game Elements",
+       "content": [
+        {
+         "type": "text",
+         "text": "‎ ‎ ‎ ‎ ‎ ‎ A certain mobile-phone video game consists of four puzzles, which players can attempt in any order. No puzzle is part of another. The puzzles, from easiest to most difficult, are:"
+        },
+        {
+         "type": "text",
+         "text": "• Forest\n• Desert\n• Mountain\n• Ocean"
+        },
+        {
+         "type": "text",
+         "text": "‎ ‎ ‎ ‎ ‎ ‎ The puzzles require players to use items of various types. The player begins the game with exactly 3 items, one of each of the following types:"
+        },
+        {
+         "type": "text",
+         "text": "• Compass\n• Bottle\n• Rope"
+        },
+        {
+         "type": "text",
+         "text": "‎ ‎ ‎ ‎ ‎ ‎ Each of a player’s items can be either used once in solving a puzzle or exchanged once for coins—the in-game currency—but not both. Coins are used to purchase items. The player begins the game with 0 coins."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Puzzle Details",
+       "content": [
+        {
+         "type": "text",
+         "text": "‎ ‎ ‎ ‎ ‎ ‎ To solve each puzzle, a player is required to use one item of a specific type and a number of additional items of any type. Solving each puzzle earns the player a reward of coins. The complete list of requirements and rewards is shown in the table."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=76090",
+         "file": "images/76090.png",
+         "available": true
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Item Values",
+       "content": [
+        {
+         "type": "text",
+         "text": "‎ ‎ ‎ ‎ ‎ ‎ For each item type, the table shows the purchase price and exchange value per item. A player can purchase multiple items of a given type provided he or she has enough coins. For example, a player with 20 coins can purchase 2 Clocks."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?id=76091",
+         "file": "images/76091.png",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "2": [
+       "d16_q09_s2.png"
+      ],
+      "3": [
+       "d16_q09_s3.png"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -18170,7 +19571,8 @@
        "55",
        "70"
       ]
-     }
+     },
+     "passageId": "p16_msr9"
     },
     {
      "n": 2,
@@ -18230,7 +19632,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p16_msr9"
     },
     {
      "n": 3,
@@ -18290,7 +19693,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p16_msr9"
     },
     {
      "n": 4,
@@ -19207,7 +20611,78 @@
    "id": 220,
    "name": "GMAT Data Insights – Test 20",
    "durationMinutes": 45,
-   "passages": {},
+   "passages": {
+    "p05_msr9": {
+     "title": "As you know, our revenues have declined for each of the past three qua",
+     "tabs": [
+      {
+       "tab": 1,
+       "label": "Email 1",
+       "content": [
+        {
+         "type": "text",
+         "text": "Email from Marketing Director to Marketing Researcher on October 4, 2011."
+        },
+        {
+         "type": "text",
+         "text": "As you know, our revenues have declined for each of the past three quarters. To address this issue, I suggest that we initiate a massive advertising buy. On three separate occasions, in 1978, 1987, and 1993, we responded to revenue decreases by increasing our advertising expenditures by 30%. On all three occasions, our revenues began to increase again within one quarter. Therefore, if we increase the number of advertisements targeted at our top consumers by 30%, we will once again increase our revenues."
+        },
+        {
+         "type": "text",
+         "text": "Since our top consumers are females aged 15–25, determine the top two television programs watched by that group. Also, research the prices for a 30- second commercial for each television program."
+        }
+       ]
+      },
+      {
+       "tab": 2,
+       "label": "Email 2",
+       "content": [
+        {
+         "type": "text",
+         "text": "Email from Marketing Researcher to Marketing Director on October 10, 2011."
+        },
+        {
+         "type": "text",
+         "text": "We’ve hit a slight complication in our research. While we’ve had no problem determining the top two programs and advertising prices for each, we’ve realized that there is a fair amount of overlap between the viewers of the two programs. We’ve found that 80% of the viewers who are females aged 15–25 for Hart Attack also watch Blonde Fury."
+        },
+        {
+         "type": "text",
+         "text": "I’ll send you the chart summarizing the audience size and advertising prices tomorrow."
+        }
+       ]
+      },
+      {
+       "tab": 3,
+       "label": "Memo 1",
+       "content": [
+        {
+         "type": "text",
+         "text": "MEMORANDUM"
+        },
+        {
+         "type": "text",
+         "text": "TO: Marketing Director\nFROM: Marketing Researcher\nDATE: October 11, 2011\nRE: Market Research Results"
+        },
+        {
+         "type": "text",
+         "text": "The attached chart presents the results from our research on the top 2 television programs watched by females aged 15–25."
+        },
+        {
+         "type": "image",
+         "source_url": "https://gmatclub.com/forum/download/file.php?mode=view&id=52705",
+         "file": "images/52705.jpg",
+         "available": true
+        }
+       ]
+      }
+     ],
+     "images": {
+      "3": [
+       "d05_q09_s3.jpg"
+      ]
+     }
+    }
+   },
    "questions": [
     {
      "n": 1,
@@ -19261,7 +20736,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p05_msr9"
     },
     {
      "n": 2,
@@ -19293,7 +20769,8 @@
        "9.6",
        "11.2"
       ]
-     }
+     },
+     "passageId": "p05_msr9"
     },
     {
      "n": 3,
@@ -19347,7 +20824,8 @@
        "Yes",
        "No"
       ]
-     }
+     },
+     "passageId": "p05_msr9"
     },
     {
      "n": 4,
