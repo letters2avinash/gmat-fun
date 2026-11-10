@@ -311,20 +311,19 @@ export default function TestPlayer() {
 
   if (phase === "test") {
     const q = test.questions.find((x) => x.n === current) ?? test.questions[0];
+    const isQuantTest = test.id >= 100;
     return (
       <div className="fixed inset-0 z-[200] flex flex-col overflow-hidden bg-canvas">
         {header(
-          "Verbal Section",
+          isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
           `Question ${current} of ${total} · ${answeredCount} answered`
         )}
         {fullscreenBanner}
         {errorBanner}
         <div className="flex min-h-0 flex-1 flex-col md:flex-row">
-          <QuestionPanel
-            test={test}
-            q={q}
-            side="passage"
-          />
+          {hasSharedContent(test, q) ? (
+            <QuestionPanel test={test} q={q} side="passage" />
+          ) : null}
           <QuestionPanel
             test={test}
             q={q}
@@ -363,7 +362,9 @@ export default function TestPlayer() {
         {fullscreenBanner}
         {errorBanner}
         <div className="flex min-h-0 flex-1 flex-col md:flex-row">
-          <QuestionPanel test={test} q={q} side="passage" />
+          {hasSharedContent(test, q) ? (
+            <QuestionPanel test={test} q={q} side="passage" />
+          ) : null}
           <QuestionPanel
             test={test}
             q={q}
@@ -453,6 +454,12 @@ export default function TestPlayer() {
       </main>
     </div>
   );
+}
+
+// Quant questions usually have no passage: the question then takes the full width.
+function hasSharedContent(test: PublicTest, q: PublicQuestion): boolean {
+  const passage = q.passageId ? test.passages[q.passageId] : null;
+  return !!(passage?.text || q.stimulus || q.image);
 }
 
 // One side of the screen. The passage side shows the shared text; the question
