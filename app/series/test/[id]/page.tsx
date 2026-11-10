@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { fmtClock, seriesFetch } from "@/lib/series/client";
-import type { Attempt, PublicQuestion, PublicTest } from "@/lib/series/types";
+import { sectionLabel, type Attempt, type PublicQuestion, type PublicTest } from "@/lib/series/types";
 
 type Answers = Record<string, string | null>;
 type Times = Record<string, number>;
@@ -246,13 +246,15 @@ export default function TestPlayer() {
   // ---- gate ---------------------------------------------------------------
 
   if (phase === "gate") {
+    // Read from the URL: `test` is only loaded after "Begin section".
+    const isQuant = Number(id) >= 100;
     return (
       <div className="fixed inset-0 z-[200] overflow-y-auto bg-canvas">
         <div className="mx-auto mt-12 max-w-xl rounded-xl2 border border-ink/10 bg-white p-8">
-          <p className="text-sm text-ink/60">GMAT Verbal Section</p>
-          <h1 className="mt-1 text-2xl font-semibold">Test {id}</h1>
+          <p className="text-sm text-ink/60">{isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
+          <h1 className="mt-1 text-2xl font-semibold">{isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
           <div className="mt-6 flex flex-col gap-3 text-[15px] leading-relaxed">
-            <p>This section has 23 questions and 45 minutes.</p>
+            <p>This section has {isQuant ? 21 : 23} questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
             <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
@@ -309,20 +311,19 @@ export default function TestPlayer() {
 
   if (phase === "test") {
     const q = test.questions.find((x) => x.n === current) ?? test.questions[0];
+    const isQuantTest = test.id >= 100;
     return (
       <div className="fixed inset-0 z-[200] flex flex-col overflow-hidden bg-canvas">
         {header(
-          "Verbal Section",
+          isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
           `Question ${current} of ${total} · ${answeredCount} answered`
         )}
         {fullscreenBanner}
         {errorBanner}
         <div className="flex min-h-0 flex-1 flex-col md:flex-row">
-          <QuestionPanel
-            test={test}
-            q={q}
-            side="passage"
-          />
+          {hasSharedContent(test, q) ? (
+            <QuestionPanel test={test} q={q} side="passage" />
+          ) : null}
           <QuestionPanel
             test={test}
             q={q}
@@ -361,7 +362,9 @@ export default function TestPlayer() {
         {fullscreenBanner}
         {errorBanner}
         <div className="flex min-h-0 flex-1 flex-col md:flex-row">
-          <QuestionPanel test={test} q={q} side="passage" />
+          {hasSharedContent(test, q) ? (
+            <QuestionPanel test={test} q={q} side="passage" />
+          ) : null}
           <QuestionPanel
             test={test}
             q={q}
@@ -453,6 +456,12 @@ export default function TestPlayer() {
   );
 }
 
+// Quant questions usually have no passage: the question then takes the full width.
+function hasSharedContent(test: PublicTest, q: PublicQuestion): boolean {
+  const passage = q.passageId ? test.passages[q.passageId] : null;
+  return !!(passage?.text || q.stimulus || q.image);
+}
+
 // One side of the screen. The passage side shows the shared text; the question
 // side shows the stem, options, and flag control.
 function QuestionPanel({
@@ -478,9 +487,10 @@ function QuestionPanel({
     return (
       <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
         <p className="mb-3 text-xs font-medium uppercase tracking-wide text-ink/50">
-          {q.section === "CR" ? "Critical Reasoning" : "Reading Comprehension"}
+          {sectionLabel(q.section)}
         </p>
         {shared ? <div className="whitespace-pre-line text-[15px] leading-relaxed">{shared}</div> : null}
+        {q.image ? <img src={q.image} alt={`Figure for question ${q.n}`} className="mt-2 max-w-full" /> : null}
       </section>
     );
   }

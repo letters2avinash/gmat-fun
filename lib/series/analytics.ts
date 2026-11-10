@@ -19,13 +19,13 @@ const avgSec = (a: Agg) => (a.timed ? Math.round(a.timeMs / a.timed / 100) / 10 
 
 export function computeAnalytics(attempts: AttemptRow[]) {
   const byType = new Map<string, Agg>();
-  const bySection = { CR: blank(), RC: blank() };
+  const bySection = { CR: blank(), RC: blank(), QA: blank() };
   const overall = blank();
   const timing = { under30s: blank(), s30to90: blank(), s90to180: blank(), over180s: blank() };
   const correctTime = blank();
   const wrongTime = blank();
   let unanswered = 0;
-  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC"; stem: string; attempted: number; missed: number; attemptId: string }>();
+  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC" | "QA"; stem: string; attempted: number; missed: number; attemptId: string }>();
   const pacing: {
     attemptId: string;
     testId: number;
@@ -124,6 +124,7 @@ export function computeAnalytics(attempts: AttemptRow[]) {
       bySection: [
         { label: "Critical Reasoning", ...bySection.CR, pct: pct(bySection.CR), avgSec: avgSec(bySection.CR) },
         { label: "Reading Comprehension", ...bySection.RC, pct: pct(bySection.RC), avgSec: avgSec(bySection.RC) },
+        { label: "Quantitative Aptitude", ...bySection.QA, pct: pct(bySection.QA), avgSec: avgSec(bySection.QA) },
       ],
       topMissed,
     },

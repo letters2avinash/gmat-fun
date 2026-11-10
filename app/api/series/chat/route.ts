@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getFullTest, requireSeriesUser } from "@/lib/series/server";
 import { getAttemptForUser } from "@/lib/series/attempts";
 import { createServerSupabase } from "@/lib/supabase";
+import { sectionLabel } from "@/lib/series/types";
 import { buildStudentProfile, studentName } from "@/lib/series/profile";
 
 // POST /api/series/chat
@@ -99,7 +100,7 @@ export async function POST(req: NextRequest) {
     "Use plain language. Keep answers short unless the student asks for more. Do not invent facts that are not in the passage or question.",
     "Note: the Assumption family (Assumption, Strengthen, Weaken, Flaw, Evaluate) differs from Resolve the Paradox, which should be taught as its own type.",
     "",
-    `Test ${test.id}, question ${q.n} (${q.section === "CR" ? "Critical Reasoning" : "Reading Comprehension"}, type: ${q.type}).`,
+    `Test ${test.id}, question ${q.n} (${sectionLabel(q.section)}, type: ${q.type}).`,
     shared ? `\n--- Text ---\n${shared}` : "",
     `\n--- Question ---\n${q.stem}\n\n${optionLines}`,
     `\nCorrect answer: ${q.answer}`,

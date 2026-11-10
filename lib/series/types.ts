@@ -4,13 +4,18 @@ export type Option = { key: string; text: string };
 
 export type PublicQuestion = {
   n: number;                 // 1..23 within the test
-  section: "CR" | "RC";      // Critical Reasoning or Reading Comprehension
+  section: "CR" | "RC" | "QA"; // Critical Reasoning, Reading Comprehension, or Quantitative Aptitude
   type: string;              // e.g. "Weaken", "Inference"
   stimulus: string | null;   // CR argument text
   passageId: string | null;  // RC passage key into `passages`
   stem: string;
   options: Option[];
+  image?: string | null;     // figure for quantitative questions (served from /public/series/qa)
 };
+
+export function sectionLabel(s: "CR" | "RC" | "QA"): string {
+  return s === "CR" ? "Critical Reasoning" : s === "QA" ? "Quantitative Aptitude" : "Reading Comprehension";
+}
 
 export type Passage = { source: string | null; wordCount: number | null; text: string };
 
@@ -42,7 +47,7 @@ export type Attempt = {
 export type ReviewItem = {
   n: number;
   type: string;
-  section: "CR" | "RC";
+  section: "CR" | "RC" | "QA";
   picked: string | null;
   correct: string;
   ok: boolean;

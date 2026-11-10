@@ -111,49 +111,54 @@ function Tests() {
   if (!tests) return <p className="text-sm text-ink/60">Loading tests…</p>;
 
   const recent = attempts.slice(0, 5);
-  const done = tests.filter((t) => t.attempts > 0).length;
 
   return (
     <div className="flex flex-col gap-8">
       <SeriesTips />
       <SatisfactionPrompt />
-      <section>
-        <div className="flex flex-wrap items-end justify-between gap-2">
-          <div>
-            <h1 className="text-2xl font-semibold">Verbal tests</h1>
-            <p className="text-sm text-ink/60">
-              {tests.length} tests · 23 questions each · 45 minutes · {done} started
-            </p>
-          </div>
-          <Link href="/series/analytics" className="rounded-full border border-ink/15 px-4 py-1.5 text-sm hover:bg-ink/5">
-            View analytics
-          </Link>
-        </div>
+      <div className="flex flex-wrap items-end justify-between gap-2">
+        <h1 className="text-2xl font-semibold">Practice tests</h1>
+        <Link href="/series/analytics" className="rounded-full border border-ink/15 px-4 py-1.5 text-sm hover:bg-ink/5">
+          View analytics
+        </Link>
+      </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-          {tests.map((t) => (
-            <Link
-              key={t.id}
-              href={`/test/${t.id}`}
-              className="flex flex-col justify-between rounded-xl2 border border-ink/10 bg-white p-4 hover:border-brand/50"
-            >
-              <div>
-                <p className="text-xs uppercase tracking-wide text-ink/50">Test {t.id}</p>
-                <p className="mt-1 font-medium">
-                  {t.attempts > 0 ? `${scaledScore(t.bestScore, t.questionCount)} / 90 best` : "Not attempted"}
-                </p>
-              </div>
-              <p className="mt-3 text-xs text-ink/60">
-                {t.lastStatus === "in_progress"
-                  ? "In progress — resume"
-                  : t.attempts > 0
-                  ? `${t.attempts} submitted`
-                  : "Start"}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {[
+        { title: "Verbal tests", note: "23 questions · 45 minutes", list: tests.filter((t) => t.id < 100), label: (t: TestListItem) => `Test ${t.id}` },
+        { title: "Quantitative tests", note: "21 questions · 45 minutes", list: tests.filter((t) => t.id >= 100), label: (t: TestListItem) => `Quant ${t.id - 100}` },
+      ].map((sec) =>
+        sec.list.length === 0 ? null : (
+          <section key={sec.title}>
+            <h2 className="text-xl font-semibold">{sec.title}</h2>
+            <p className="text-sm text-ink/60">
+              {sec.list.length} tests · {sec.note} · {sec.list.filter((t) => t.attempts > 0).length} started
+            </p>
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+              {sec.list.map((t) => (
+                <Link
+                  key={t.id}
+                  href={`/test/${t.id}`}
+                  className="flex flex-col justify-between rounded-xl2 border border-ink/10 bg-white p-4 hover:border-brand/50"
+                >
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-ink/50">{sec.label(t)}</p>
+                    <p className="mt-1 font-medium">
+                      {t.attempts > 0 ? `${scaledScore(t.bestScore, t.questionCount)} / 90 best` : "Not attempted"}
+                    </p>
+                  </div>
+                  <p className="mt-3 text-xs text-ink/60">
+                    {t.lastStatus === "in_progress"
+                      ? "In progress — resume"
+                      : t.attempts > 0
+                      ? `${t.attempts} submitted`
+                      : "Start"}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )
+      )}
 
       {recent.length > 0 ? (
         <section>
