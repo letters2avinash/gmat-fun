@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { createServerSupabase } from "@/lib/supabase";
 import rawTests from "@/data/series/tests.json";
+import { diAnswerCorrect, isDiPartAnswer } from "@/lib/series/di-answer";
 import rawQaTests from "@/data/series/qa_tests.json";
 import rawDiTests from "@/data/series/di_tests.json";
 import type {
@@ -99,7 +100,8 @@ export function sanitizeAnswers(input: unknown): Record<string, string | null> {
   for (const [k, v] of Object.entries(input as Record<string, unknown>)) {
     const n = Number(k);
     if (!Number.isInteger(n) || n < 1 || n > QUESTIONS_PER_TEST) continue;
-    out[String(n)] = typeof v === "string" && LETTERS.has(v) ? v : null;
+    out[String(n)] =
+      typeof v === "string" && (LETTERS.has(v) || isDiPartAnswer(v)) ? v : null;
   }
   return out;
 }
@@ -135,7 +137,7 @@ export function gradeAttempt(
   let correct = 0;
   const review: ReviewItem[] = test.questions.map((q) => {
     const picked = answers[String(q.n)] ?? null;
-    const ok = picked === q.answer;
+    const ok = picked !== null && (LETTERS.has(q.answer) ? picked === q.answer : diAnswerCorrect(picked, q.answer));
     if (ok) correct++;
     return {
       n: q.n,
