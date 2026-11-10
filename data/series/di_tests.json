@@ -349,9 +349,10 @@
      ],
      "images": [],
      "passageId": "p16_msr9",
-     "answer": "5",
+     "answer": "E",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok_check",
+     "answerNote": "key says 5; mapped to the 5th option, E = 70. Please confirm"
     },
     {
      "n": 18,
@@ -5626,9 +5627,9 @@
      ],
      "images": [],
      "passageId": "p12_msr8",
-     "answer": "X−YX−YX-Y",
+     "answer": "C",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok"
     },
     {
      "n": 14,
@@ -5845,9 +5846,9 @@
      ],
      "images": [],
      "passageId": "p01_msr10",
-     "answer": "14",
+     "answer": "A",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok"
     },
     {
      "n": 3,
@@ -7859,9 +7860,10 @@
      ],
      "images": [],
      "passageId": "p17_msr9",
-     "answer": "1.2",
+     "answer": "D",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok_check",
+     "answerNote": "key says 1.2; option is 1.22. Likely a truncated key value. Please confirm"
     },
     {
      "n": 19,
@@ -8407,9 +8409,10 @@
      ],
      "images": [],
      "passageId": "p28_msr10",
-     "answer": "3:0 p.m.",
+     "answer": "A",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok_check",
+     "answerNote": "key says 3:0 p.m.; option is 3:00 p.m. Typo in key. Please confirm"
     },
     {
      "n": 3,
@@ -11335,9 +11338,9 @@
      ],
      "images": [],
      "passageId": "p14_msr9",
-     "answer": "X=Y(Z−5)5X=Y(Z−5)5X=(Y(Z-5))/5",
+     "answer": "A",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok"
     },
     {
      "n": 11,
