@@ -1031,11 +1031,26 @@
      "stem": "Which of the following represents the approximate total savings between a $200,000 loan by Susanne with 2 points and a $200,000 loan by Susanne with 1 point, assuming both loans go to term?",
      "statements": null,
      "options": [
-      "$6,500",
-      "$7,000",
-      "$8,500",
-      "$10,500",
-      "$12,500"
+      {
+       "key": "A",
+       "text": "$6,500"
+      },
+      {
+       "key": "B",
+       "text": "$7,000"
+      },
+      {
+       "key": "C",
+       "text": "$8,500"
+      },
+      {
+       "key": "D",
+       "text": "$10,500"
+      },
+      {
+       "key": "E",
+       "text": "$12,500"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -2055,11 +2070,26 @@
      "stem": "Suppose that Indigo Cleaning serviced exactly 50 buildings in the past 3 years with two customer complaints, one each from two different buildings. The percentage of serviced buildings about which Indigo Cleaning received customer complaints would be closest to __________.",
      "statements": null,
      "options": [
-      "1",
-      "5",
-      "10",
-      "12",
-      "15"
+      {
+       "key": "A",
+       "text": "1"
+      },
+      {
+       "key": "B",
+       "text": "5"
+      },
+      {
+       "key": "C",
+       "text": "10"
+      },
+      {
+       "key": "D",
+       "text": "12"
+      },
+      {
+       "key": "E",
+       "text": "15"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -2088,11 +2118,26 @@
      "stem": "Suppose that the project manager hires Ambrosia Cleaning instead of Indigo Cleaning. The amount spent on cleaning services provided by Ambrosia will be higher than the amount that would have been charged by Indigo by approximately what percent?",
      "statements": null,
      "options": [
-      "11",
-      "14",
-      "22",
-      "27",
-      "29"
+      {
+       "key": "A",
+       "text": "11"
+      },
+      {
+       "key": "B",
+       "text": "14"
+      },
+      {
+       "key": "C",
+       "text": "22"
+      },
+      {
+       "key": "D",
+       "text": "27"
+      },
+      {
+       "key": "E",
+       "text": "29"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -3081,11 +3126,26 @@
      "stem": "Assume the Ramos family plans to use Airline A5. According to the information provided, if they rent only a car from the company with the lowest daily rate, then their estimated costs would be, at a minimum, how much more than their estimated costs if they use public transportation?",
      "statements": null,
      "options": [
-      "77",
-      "102",
-      "212",
-      "350",
-      "450"
+      {
+       "key": "A",
+       "text": "77"
+      },
+      {
+       "key": "B",
+       "text": "102"
+      },
+      {
+       "key": "C",
+       "text": "212"
+      },
+      {
+       "key": "D",
+       "text": "350"
+      },
+      {
+       "key": "E",
+       "text": "450"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -4234,11 +4294,26 @@
      "stem": "Based on the consultants’ comments, all three recommend that which one of the following notes be revised or deleted?",
      "statements": null,
      "options": [
-      "Note 1",
-      "Note 2",
-      "Note 3",
-      "Note 4",
-      "Note 5"
+      {
+       "key": "A",
+       "text": "Note 1"
+      },
+      {
+       "key": "B",
+       "text": "Note 2"
+      },
+      {
+       "key": "C",
+       "text": "Note 3"
+      },
+      {
+       "key": "D",
+       "text": "Note 4"
+      },
+      {
+       "key": "E",
+       "text": "Note 5"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -5217,11 +5292,26 @@
      "stem": "Based on the given information, which one of the following can most reason- ably be inferred to be a view held by the producer?",
      "statements": null,
      "options": [
-      "Consumers prefer going to the movies to going to the theater.",
-      "A good review will make consumers choose the theater over the movies.",
-      "A theatrical production is likely to be of some worth if it is put together by individuals with track records of excellence in their fields.",
-      "Critics should laud decent productions as great.",
-      "Critics do not have a responsibility toward the theatrical art form."
+      {
+       "key": "A",
+       "text": "Consumers prefer going to the movies to going to the theater."
+      },
+      {
+       "key": "B",
+       "text": "A good review will make consumers choose the theater over the movies."
+      },
+      {
+       "key": "C",
+       "text": "A theatrical production is likely to be of some worth if it is put together by individuals with track records of excellence in their fields."
+      },
+      {
+       "key": "D",
+       "text": "Critics should laud decent productions as great."
+      },
+      {
+       "key": "E",
+       "text": "Critics do not have a responsibility toward the theatrical art form."
+      }
      ],
      "rows": null,
      "choices": null,
@@ -6396,11 +6486,26 @@
      "stem": "Suppose that the startup phase for Type A generators takes exactly one hour. Given this and based on the information in the tabs, which one of the following would be closest to the startup time, in hours, for Type B generators that would result in equal emissions of Pollutant Y for both power plant designs during a single startup phase?",
      "statements": null,
      "options": [
-      "3.67",
-      "0.27",
-      "0.81",
-      "1.22",
-      "36.33"
+      {
+       "key": "A",
+       "text": "3.67"
+      },
+      {
+       "key": "B",
+       "text": "0.27"
+      },
+      {
+       "key": "C",
+       "text": "0.81"
+      },
+      {
+       "key": "D",
+       "text": "1.22"
+      },
+      {
+       "key": "E",
+       "text": "36.33"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -7373,11 +7478,26 @@
      "stem": "Which one of the following can be most logically inferred from the information given?",
      "statements": null,
      "options": [
-      "The drainage area and channel slope of a waterway are positively correlated.",
-      "The channel slope of a waterway is positively correlated with the area of the 100-year floodplain boundary.",
-      "A 5-year flood has a 20% annual exceedance probability.",
-      "The larger a waterway’s drainage area, the more frequently its floodplain becomes inundated.",
-      "The greater the average channel slope of a waterway, the more prone the waterway is to snowmelt flooding."
+      {
+       "key": "A",
+       "text": "The drainage area and channel slope of a waterway are positively correlated."
+      },
+      {
+       "key": "B",
+       "text": "The channel slope of a waterway is positively correlated with the area of the 100-year floodplain boundary."
+      },
+      {
+       "key": "C",
+       "text": "A 5-year flood has a 20% annual exceedance probability."
+      },
+      {
+       "key": "D",
+       "text": "The larger a waterway’s drainage area, the more frequently its floodplain becomes inundated."
+      },
+      {
+       "key": "E",
+       "text": "The greater the average channel slope of a waterway, the more prone the waterway is to snowmelt flooding."
+      }
      ],
      "rows": null,
      "choices": null,
@@ -8759,11 +8879,26 @@
      "stem": "If Team 10 drew all three of its group-stage matches, how many points did Team 5 get in the Group stage?",
      "statements": null,
      "options": [
-      "4",
-      "5",
-      "6",
-      "7",
-      "8"
+      {
+       "key": "A",
+       "text": "4"
+      },
+      {
+       "key": "B",
+       "text": "5"
+      },
+      {
+       "key": "C",
+       "text": "6"
+      },
+      {
+       "key": "D",
+       "text": "7"
+      },
+      {
+       "key": "E",
+       "text": "8"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -9853,11 +9988,26 @@
      "stem": "Suppose in an Azalea County school with a total student population of 316, there are 12 students with IEPs who are mainstreamed. Based on the information provided, select the answer that must be true about this group of 12 students.",
      "statements": null,
      "options": [
-      "At least some of these students spend all of their class time in special needs classes.",
-      "The school’s budget does not cover the administration of the IEP of at least one of these students.",
-      "Some of these students are taught the same curriculum and graded by the same standards as are students without IEPs.",
-      "All of the aides who assist these students have completed a special six month certification.",
-      "These students spend a minority of their time, if any, in general education classes."
+      {
+       "key": "A",
+       "text": "At least some of these students spend all of their class time in special needs classes."
+      },
+      {
+       "key": "B",
+       "text": "The school’s budget does not cover the administration of the IEP of at least one of these students."
+      },
+      {
+       "key": "C",
+       "text": "Some of these students are taught the same curriculum and graded by the same standards as are students without IEPs."
+      },
+      {
+       "key": "D",
+       "text": "All of the aides who assist these students have completed a special six month certification."
+      },
+      {
+       "key": "E",
+       "text": "These students spend a minority of their time, if any, in general education classes."
+      }
      ],
      "rows": null,
      "choices": null,
@@ -11102,11 +11252,26 @@
      "stem": "Let X denote the block rate of the host hotel for a particular conference, and let Y denote the lowest room rate available in the host hotel outside of the conference block. For a conference that requires a two-night hotel stay, which one of the following expressions represents the least amount of discount on the conference registration fee that, according to the article, would be sufficient to deter conference attendees from employing the ROB strategy in choosing accommodations?",
      "statements": null,
      "options": [
-      "(X+Y)/2",
-      "(X-Y)/2",
-      "X-Y",
-      "X+Y",
-      "2(X-Y)"
+      {
+       "key": "A",
+       "text": "(X+Y)/2"
+      },
+      {
+       "key": "B",
+       "text": "(X-Y)/2"
+      },
+      {
+       "key": "C",
+       "text": "X-Y"
+      },
+      {
+       "key": "D",
+       "text": "X+Y"
+      },
+      {
+       "key": "E",
+       "text": "2(X-Y)"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -11135,11 +11300,26 @@
      "stem": "Assume that all host hotels for the conferences in City X on the weekend indicated have conference block rooms available and that all hotels in City X have rooms available at their lowest rates for the conference weekend. Which one of the following conferences is most likely to have attendees favoring the ROB strategy over the ROHH strategy?",
      "statements": null,
      "options": [
-      "AMG",
-      "CDA",
-      "QRTA",
-      "RCD",
-      "WWLOP"
+      {
+       "key": "A",
+       "text": "AMG"
+      },
+      {
+       "key": "B",
+       "text": "CDA"
+      },
+      {
+       "key": "C",
+       "text": "QRTA"
+      },
+      {
+       "key": "D",
+       "text": "RCD"
+      },
+      {
+       "key": "E",
+       "text": "WWLOP"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -11927,11 +12107,26 @@
      "stem": "Consider an individual boy from a model population. Suppose that from grades 1 through 5, this boy's height is at the 50th percentile for his running time and his running time is at the 50th percentile for his grade level. Which one of the following statements must be true of the boy at Grade 5?",
      "statements": null,
      "options": [
-      "His grade level is at the 50th percentile for his running time.",
-      "His height is at the 50th percentile for his grade level.",
-      "His running time is at the 50th percentile for his height.",
-      "His height is approximately 130% of his height in Grade 2.",
-      "His height is approximately 185% of his height in Grade 2."
+      {
+       "key": "A",
+       "text": "His grade level is at the 50th percentile for his running time."
+      },
+      {
+       "key": "B",
+       "text": "His height is at the 50th percentile for his grade level."
+      },
+      {
+       "key": "C",
+       "text": "His running time is at the 50th percentile for his height."
+      },
+      {
+       "key": "D",
+       "text": "His height is approximately 130% of his height in Grade 2."
+      },
+      {
+       "key": "E",
+       "text": "His height is approximately 185% of his height in Grade 2."
+      }
      ],
      "rows": null,
      "choices": null,
@@ -12015,11 +12210,26 @@
      "stem": "A boy, John, selected at random from a model population runs a 10:50 kilometer. Another randomly selected boy, Peter, runs a 10:00 kilometer. Both boys measured 80cm tall. The difference in their percentiles in height among boys who run their respective speeds is most closest to",
      "statements": null,
      "options": [
-      "15%",
-      "25%",
-      "30%",
-      "35%",
-      "40%"
+      {
+       "key": "A",
+       "text": "15%"
+      },
+      {
+       "key": "B",
+       "text": "25%"
+      },
+      {
+       "key": "C",
+       "text": "30%"
+      },
+      {
+       "key": "D",
+       "text": "35%"
+      },
+      {
+       "key": "E",
+       "text": "40%"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -13066,11 +13276,26 @@
      "stem": "Let X denote Customer Value, Y denote Customer Cost, and let Z denote Composite Attribute Value. Which of the following algebraic expressions represents relationship among X, Y & Z?",
      "statements": null,
      "options": [
-      "X=(Y(Z-5))/5",
-      "X=4/5*Y*Z",
-      "X=(Y(5-Z))/5",
-      "X=Y/(5(5-Z))",
-      "X=(YZ-5Z)/5"
+      {
+       "key": "A",
+       "text": "X=(Y(Z-5))/5"
+      },
+      {
+       "key": "B",
+       "text": "X=4/5*Y*Z"
+      },
+      {
+       "key": "C",
+       "text": "X=(Y(5-Z))/5"
+      },
+      {
+       "key": "D",
+       "text": "X=Y/(5(5-Z))"
+      },
+      {
+       "key": "E",
+       "text": "X=(YZ-5Z)/5"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -14386,11 +14611,26 @@
      "stem": "Consider the following incomplete statement:If Goal _____ is met next month, then Goal 6 will also be met next month. Which one of the following would complete the statement such that it must be the case based on the information provided?",
      "statements": null,
      "options": [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5"
+      {
+       "key": "A",
+       "text": "1"
+      },
+      {
+       "key": "B",
+       "text": "2"
+      },
+      {
+       "key": "C",
+       "text": "3"
+      },
+      {
+       "key": "D",
+       "text": "4"
+      },
+      {
+       "key": "E",
+       "text": "5"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -15388,11 +15628,26 @@
      "stem": "Assuming the predictions made by the model about Days 1 through 7 were all accurate, on which one of the following days can it be most logically inferred that the average outflow was greater than the average inflow?",
      "statements": null,
      "options": [
-      "Day 1",
-      "Day 2",
-      "Day 3",
-      "Day 4",
-      "Day 5"
+      {
+       "key": "A",
+       "text": "Day 1"
+      },
+      {
+       "key": "B",
+       "text": "Day 2"
+      },
+      {
+       "key": "C",
+       "text": "Day 3"
+      },
+      {
+       "key": "D",
+       "text": "Day 4"
+      },
+      {
+       "key": "E",
+       "text": "Day 5"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -16389,11 +16644,26 @@
      "stem": "Based on the statements, which one of the following can be most reasonably be inferred to be a view held by the company's Qoop developers?",
      "statements": null,
      "options": [
-      "The company has enough funds for development on a new product.",
-      "As the adoption of Qoop grows with the company's marketing efforts, more development resources are needed to position the product to scale.",
-      "It has taken more financial resources, but not necessarily more developers, to create Qoop than to create the company's other products.",
-      "Developers can do a better job to gain user adoption for the smartphone application than can marketers with no technical knowledge.",
-      "Marketing has turned 2.0; it is technical marketers who are experienced in programming that are needed to help spread the word throughout the web, not traditional marketers."
+      {
+       "key": "A",
+       "text": "The company has enough funds for development on a new product."
+      },
+      {
+       "key": "B",
+       "text": "As the adoption of Qoop grows with the company's marketing efforts, more development resources are needed to position the product to scale."
+      },
+      {
+       "key": "C",
+       "text": "It has taken more financial resources, but not necessarily more developers, to create Qoop than to create the company's other products."
+      },
+      {
+       "key": "D",
+       "text": "Developers can do a better job to gain user adoption for the smartphone application than can marketers with no technical knowledge."
+      },
+      {
+       "key": "E",
+       "text": "Marketing has turned 2.0; it is technical marketers who are experienced in programming that are needed to help spread the word throughout the web, not traditional marketers."
+      }
      ],
      "rows": null,
      "choices": null,
@@ -17616,11 +17886,26 @@
      "stem": "According to the information provided in Tab 3, which one of the following values, calculated from the scores of the four experimental groups only, is the largest?",
      "statements": null,
      "options": [
-      "The average score of the Silent Re-reading group across the three tests",
-      "The lowest score achieved by the Group Discussion group on any test",
-      "The range (highest minus lowest) of the Flashcard Review group’s scores across the three tests",
-      "The median of the Video Recap group’s three scores",
-      "The average score of the Flashcard Review group across the three tests"
+      {
+       "key": "A",
+       "text": "The average score of the Silent Re-reading group across the three tests"
+      },
+      {
+       "key": "B",
+       "text": "The lowest score achieved by the Group Discussion group on any test"
+      },
+      {
+       "key": "C",
+       "text": "The range (highest minus lowest) of the Flashcard Review group’s scores across the three tests"
+      },
+      {
+       "key": "D",
+       "text": "The median of the Video Recap group’s three scores"
+      },
+      {
+       "key": "E",
+       "text": "The average score of the Flashcard Review group across the three tests"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -18455,11 +18740,26 @@
      "stem": "Based on the information given in the passage, identify the way in which SH will reach a larger population of donors who do not typically use the internet.",
      "statements": null,
      "options": [
-      "Working with providers to help people pay for basic expenses like medical care",
-      "Negotiating price on behalf of donation seekers",
-      "Verifying the legitimacy of claims",
-      "Providing opportunities for sponsorship",
-      "Donating with established institutional charities in addition to individual people"
+      {
+       "key": "A",
+       "text": "Working with providers to help people pay for basic expenses like medical care"
+      },
+      {
+       "key": "B",
+       "text": "Negotiating price on behalf of donation seekers"
+      },
+      {
+       "key": "C",
+       "text": "Verifying the legitimacy of claims"
+      },
+      {
+       "key": "D",
+       "text": "Providing opportunities for sponsorship"
+      },
+      {
+       "key": "E",
+       "text": "Donating with established institutional charities in addition to individual people"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -18549,11 +18849,26 @@
      "stem": "If the pool of global potential donors is composed 50% of people aged 15-34, how much revenue will be generated by SH if each donor in that age group makes one donation of the minimum accepted denomination?",
      "statements": null,
      "options": [
-      "$2.25 million",
-      "$11.25 million",
-      "$112.5 million",
-      "$225 million",
-      "$2.25 billion"
+      {
+       "key": "A",
+       "text": "$2.25 million"
+      },
+      {
+       "key": "B",
+       "text": "$11.25 million"
+      },
+      {
+       "key": "C",
+       "text": "$112.5 million"
+      },
+      {
+       "key": "D",
+       "text": "$225 million"
+      },
+      {
+       "key": "E",
+       "text": "$2.25 billion"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -19550,11 +19865,26 @@
      "stem": "Suppose that the game’s designer added to the game a fifth puzzle—the Cave puzzle that requires players to use 1 Lantern and 4 additional items of any type. Assuming that nothing else has changed, which one of the following is the minimum number of coins a player who currently has no items would have to spend to purchase all of the items necessary to solve the Cave puzzle?",
      "statements": null,
      "options": [
-      "15",
-      "40",
-      "50",
-      "55",
-      "70"
+      {
+       "key": "A",
+       "text": "15"
+      },
+      {
+       "key": "B",
+       "text": "40"
+      },
+      {
+       "key": "C",
+       "text": "50"
+      },
+      {
+       "key": "D",
+       "text": "55"
+      },
+      {
+       "key": "E",
+       "text": "70"
+      }
      ],
      "rows": null,
      "choices": null,
@@ -20748,11 +21078,26 @@
      "stem": "If there are 20,000,000 females aged 15–25, then how many females aged 15–25 (in millions) watch neither Blonde Fury nor Hart Attack?",
      "statements": null,
      "options": [
-      "1.4",
-      "4.0",
-      "5.6",
-      "9.6",
-      "11.2"
+      {
+       "key": "A",
+       "text": "1.4"
+      },
+      {
+       "key": "B",
+       "text": "4.0"
+      },
+      {
+       "key": "C",
+       "text": "5.6"
+      },
+      {
+       "key": "D",
+       "text": "9.6"
+      },
+      {
+       "key": "E",
+       "text": "11.2"
+      }
      ],
      "rows": null,
      "choices": null,
