@@ -246,13 +246,15 @@ export default function TestPlayer() {
   // ---- gate ---------------------------------------------------------------
 
   if (phase === "gate") {
+    // Read from the URL: `test` is only loaded after "Begin section".
+    const isQuant = Number(id) >= 100;
     return (
       <div className="fixed inset-0 z-[200] overflow-y-auto bg-canvas">
         <div className="mx-auto mt-12 max-w-xl rounded-xl2 border border-ink/10 bg-white p-8">
-          <p className="text-sm text-ink/60">{(test?.id ?? 0) >= 100 ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
-          <h1 className="mt-1 text-2xl font-semibold">{(test?.id ?? 0) >= 100 ? `Quant ${(test?.id ?? 0) - 100}` : `Test ${id}`}</h1>
+          <p className="text-sm text-ink/60">{isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
+          <h1 className="mt-1 text-2xl font-semibold">{isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
           <div className="mt-6 flex flex-col gap-3 text-[15px] leading-relaxed">
-            <p>This section has {test?.questions.length ?? 0} questions and 45 minutes.</p>
+            <p>This section has {isQuant ? 21 : 23} questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
             <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
