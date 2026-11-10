@@ -2357,9 +2357,28 @@
      "options": [],
      "images": [],
      "passageId": "p07_msr9",
-     "answer": "A theatrical production is likely to be of some worth if it is put together by individuals with track records of excellence in their fields.",
+     "answer": null,
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok_check",
+     "rows": [
+      {
+       "label": "The higher cost of theatrical labor is one of the factors that have led to higher ticket prices for theatrical productions.",
+       "answer": "Inferable"
+      },
+      {
+       "label": "The critic would prefer to risk harming a bad production via a negative review in the interest of helping good productions in the future.",
+       "answer": "Not inferable"
+      },
+      {
+       "label": "The critic laments that at present theatrical productions are of poor quality, but expects them to be of good quality in the future.",
+       "answer": "Not inferable"
+      }
+     ],
+     "choices": [
+      "Inferable",
+      "Not inferable"
+     ],
+     "answerNote": "Read from PDF page 50. Row 3 is my judgment; please confirm."
     },
     {
      "n": 5,
@@ -2378,9 +2397,10 @@
      ],
      "images": [],
      "passageId": "p07_msr9",
-     "answer": "The degree to which critics love the theater.: Cannot infer disagreement Where the theater critic’s loyalty lies.: Disagree The quality of new productions.: Cannot infer disagreement",
+     "answer": "C",
      "answerSource": "official (logged-in)",
-     "answerStatus": "review"
+     "answerStatus": "ok",
+     "answerNote": "Read from PDF page 50. Key text was misaligned (it held the Q11 answer)."
     },
     {
      "n": 6,
