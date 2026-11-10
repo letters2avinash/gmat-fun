@@ -34,7 +34,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -63,7 +75,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -92,7 +116,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -174,7 +210,19 @@
        "15",
        "36"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 4
+     },
+     "diChoices": [
+      "4",
+      "6",
+      "9",
+      "12",
+      "15",
+      "36"
+     ]
     },
     {
      "n": 8,
@@ -220,7 +268,19 @@
        "equal to $90,000",
        "less than $90,000."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 5
+     },
+     "diChoices": [
+      "greater than $110,000.",
+      "greater than $100,000.",
+      "equal to $100,000.",
+      "greater than $90,000.",
+      "equal to $90,000",
+      "less than $90,000."
+     ]
     },
     {
      "n": 10,
@@ -248,7 +308,19 @@
        "3,800",
        "4,640"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 5
+     },
+     "diChoices": [
+      "1,320",
+      "1,530",
+      "2,530",
+      "2,640",
+      "3,800",
+      "4,640"
+     ]
     },
     {
      "n": 11,
@@ -301,7 +373,19 @@
       ],
       "key": "Removing BX-06 will decrease the standard deviation of weights in the remaining load.: False Adding BX-Sub to the main load will reduce the standard deviation of weights.: True The standard deviation ",
       "note": "Weights symmetric around 260: removing BX-06 (at mean) raises SD; adding BX-Sub (260) lowers SD. Volume SD drops most when BX-03 (5.1, farthest from mean) is removed, not BX-10."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "False",
+       "True",
+       "False"
+      ]
+     },
+     "diChoices": [
+      "Removing BX-06 will decrease the standard deviation of weights in the remaining load.",
+      "Adding BX-Sub to the main load will reduce the standard deviation of weights.",
+      "The standard deviation of volumes will be most decreased if BX-10 is removed."
+     ]
     },
     {
      "n": 13,
@@ -456,7 +540,18 @@
        "9",
        "11"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 1
+     },
+     "diChoices": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "11"
+     ]
     }
    ]
   },
@@ -518,7 +613,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -551,7 +659,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -579,7 +700,19 @@
        "10³",
        "5⁶"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 2
+     },
+     "diChoices": [
+      "5²",
+      "10²",
+      "5³",
+      "5⁴",
+      "10³",
+      "5⁶"
+     ]
     },
     {
      "n": 5,
@@ -607,7 +740,19 @@
        "related to a private transaction",
        "acquired as part of their official duties"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 2
+     },
+     "diChoices": [
+      "of a trivial nature",
+      "specific to a certain company",
+      "already available to the public",
+      "pertaining to pending legislation",
+      "related to a private transaction",
+      "acquired as part of their official duties"
+     ]
     },
     {
      "n": 6,
@@ -671,7 +816,19 @@
        "when costs from cancellations and last minute replacements are considered, keeping the current lead is less expensive than hiring the seasoned touring lead",
        "when costs from cancellations and last minute replacements are considered, hiring the seasoned touring lead is less expensive than keeping the current lead"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 5
+     },
+     "diChoices": [
+      "we should reduce ticket prices to compensate patrons for the inconvenience of cancellations and rescheduling",
+      "we should replace the current lead actor with the seasoned touring lead",
+      "we should replace the production with one that does not depend on a single lead role",
+      "when costs of hiring and onboarding a new lead actor are considered, keeping the current lead is less expensive than hiring the seasoned touring lead",
+      "when costs from cancellations and last minute replacements are considered, keeping the current lead is less expensive than hiring the seasoned touring lead",
+      "when costs from cancellations and last minute replacements are considered, hiring the seasoned touring lead is less expensive than keeping the current lead"
+     ]
     },
     {
      "n": 9,
@@ -772,7 +929,18 @@
        "is not truly beautiful",
        "is not widely appreciated by unsophisticated observers"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 3
+     },
+     "diChoices": [
+      "is considered beautiful by everyone",
+      "is thought by most observers to have some aesthetic flaws",
+      "would appear hideous to hypothetical observers of even greater sophistication than the most sophisticated actual observers",
+      "is not truly beautiful",
+      "is not widely appreciated by unsophisticated observers"
+     ]
     },
     {
      "n": 14,
@@ -810,7 +978,26 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "110",
+       "350",
+       "830",
+       "4,090"
+      ],
+      [
+       "less than 0.10",
+       "between 0.1 and 0.75",
+       "greater than 0.75"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -838,7 +1025,19 @@
        "50",
        "60"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 2
+     },
+     "diChoices": [
+      "1",
+      "2",
+      "12",
+      "40",
+      "50",
+      "60"
+     ]
     },
     {
      "n": 16,
@@ -893,7 +1092,19 @@
       ],
       "note": "Key agrees on all three rows. Row 1 NO (row sums depend on unknown sample sizes); row 2 YES (Campus 3 share exceeds Campus 4 in every source column); row 3 YES (Campus 5 only receives from Campus 2 at 2.3%, so 100%).",
       "key": "Were more of the emails sent to Campus 1 than to Campus 2?: NO Were more of the emails sent to Campus 3 than to Campus 4?: YES What percentage of the emails to Campus 5 were sent from Campus 2?: YES"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "NO",
+       "YES",
+       "YES"
+      ]
+     },
+     "diChoices": [
+      "Were more of the emails sent to Campus 1 than to Campus 2?",
+      "Were more of the emails sent to Campus 3 than to Campus 4?",
+      "What percentage of the emails to Campus 5 were sent from Campus 2?"
+     ]
     },
     {
      "n": 18,
@@ -920,7 +1131,18 @@
        "10:30 am",
        "11 am"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 2
+     },
+     "diChoices": [
+      "8:30 am",
+      "9:30 am",
+      "10 am",
+      "10:30 am",
+      "11 am"
+     ]
     },
     {
      "n": 19,
@@ -1045,7 +1267,29 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "1960-1990",
+       "1965-1995",
+       "1970-2000",
+       "1975-2005",
+       "1980-2010"
+      ],
+      [
+       "20 million",
+       "40 million",
+       "65 million",
+       "136 million",
+       "175 million"
+      ]
+     ]
     },
     {
      "n": 4,
@@ -1186,7 +1430,18 @@
        "retention of information from multiple lessons given in the same room over a period of time",
        "retention of information from lessons given in rooms occupied for only a short time"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 3
+     },
+     "diChoices": [
+      "retention of certain specified types of information",
+      "the effectiveness of teaching methods that eschew rote learning",
+      "the ability of students to maintain skills if practiced in various classrooms",
+      "retention of information from multiple lessons given in the same room over a period of time",
+      "retention of information from lessons given in rooms occupied for only a short time"
+     ]
     },
     {
      "n": 11,
@@ -1213,7 +1468,18 @@
        "or",
        "unless"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 1
+     },
+     "diChoices": [
+      "and",
+      "if",
+      "only if",
+      "or",
+      "unless"
+     ]
     },
     {
      "n": 12,
@@ -1272,7 +1538,29 @@
        3,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015"
+      ],
+      [
+       "2011",
+       "2012",
+       "2013",
+       "2014",
+       "2015"
+      ]
+     ]
     },
     {
      "n": 14,
@@ -1381,7 +1669,25 @@
        0,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "telephone",
+       "email",
+       "video conferencing"
+      ],
+      [
+       "telephone and email",
+       "telephone and video conferencing",
+       "email and video conferencing"
+      ]
+     ]
     },
     {
      "n": 19,
@@ -1408,7 +1714,18 @@
        "impressed the hiring committee during the telephone interview",
        "interviewed on-site"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 2
+     },
+     "diChoices": [
+      "did not meet the minimum qualifications",
+      "had multiple recommendations",
+      "had extensive experience",
+      "impressed the hiring committee during the telephone interview",
+      "interviewed on-site"
+     ]
     },
     {
      "n": 20,
@@ -1488,7 +1805,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -1521,7 +1851,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -1564,7 +1907,16 @@
       ],
       "note": "Female rarely plus infrequently is about 19%, so slightly less than 20%. Adding occasionally pushes it well past 20%, so Infrequently is the cap.",
       "key": "Dropdown 1: 20% of the female Dropdown 2: Infrequently"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "20% of the female",
+       "Infrequently"
+      ]
+     },
+     "diChoices": [
+      "Slightly less than [dropdown 1] respondents indicated that they ate the food at most [dropdown 2]."
+     ]
     },
     {
      "n": 5,
@@ -1607,7 +1959,31 @@
        1,
        4
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       4
+      ]
+     },
+     "diChoices": [
+      [
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F"
+      ],
+      [
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F"
+      ]
+     ]
     },
     {
      "n": 6,
@@ -1727,7 +2103,19 @@
        "Kylie (female, web developer, Amazon)",
        "Maria (female, web developer, Facebook)"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 5
+     },
+     "diChoices": [
+      "Steve (male, Android, Google)",
+      "Jeremy (male, Java developer, Cisco)",
+      "Michelle (female, Android developer, Yahoo)",
+      "Xiao (female, Android developer, Facebook)",
+      "Kylie (female, web developer, Amazon)",
+      "Maria (female, web developer, Facebook)"
+     ]
     },
     {
      "n": 12,
@@ -1772,7 +2160,18 @@
        "unless",
        "or"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 1
+     },
+     "diChoices": [
+      "If",
+      "Only if",
+      "whether or not",
+      "unless",
+      "or"
+     ]
     },
     {
      "n": 14,
@@ -1799,7 +2198,18 @@
        "felt satisfied",
        "had a central goal"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 2
+     },
+     "diChoices": [
+      "reported feeling satisfied",
+      "reported having a central goal",
+      "reported being in a good mood",
+      "felt satisfied",
+      "had a central goal"
+     ]
     },
     {
      "n": 15,
@@ -1910,7 +2320,27 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "0.12",
+       "0.14",
+       "0.18",
+       "0.24"
+      ],
+      [
+       "0.02",
+       "0.05",
+       "0.12",
+       "0.15"
+      ]
+     ]
     },
     {
      "n": 20,
@@ -1969,7 +2399,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -2023,7 +2466,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -2136,7 +2592,27 @@
        3,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "3711",
+       "4215",
+       "7624",
+       "8388"
+      ],
+      [
+       "10",
+       "50",
+       "100",
+       "200"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -2175,7 +2651,27 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "2010",
+       "2011",
+       "2012",
+       "2013"
+      ],
+      [
+       "2010",
+       "2011",
+       "2012",
+       "2013"
+      ]
+     ]
     },
     {
      "n": 10,
@@ -2203,7 +2699,19 @@
        "56",
        "63"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 1
+     },
+     "diChoices": [
+      "21",
+      "28",
+      "36",
+      "45",
+      "56",
+      "63"
+     ]
     },
     {
      "n": 11,
@@ -2266,7 +2774,18 @@
        "At least some people with illness L eventually recover.",
        "Without treatment, illness L progresses, causing worsening symptoms and eventually serious disability."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 1
+     },
+     "diChoices": [
+      "Maintaining connections with family or friends is necessary to prevent illness L.",
+      "Medications are not effective in the treatment of people with illness L.",
+      "People with illness L tend to feel a sense of hope when they feel supported by others.",
+      "At least some people with illness L eventually recover.",
+      "Without treatment, illness L progresses, causing worsening symptoms and eventually serious disability."
+     ]
     },
     {
      "n": 14,
@@ -2431,7 +2950,18 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Inferable",
+       "Not inferable",
+       "Not inferable"
+      ]
+     },
+     "diChoices": [
+      "Inferable",
+      "Not inferable"
+     ]
     },
     {
      "n": 2,
@@ -2487,7 +3017,22 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Cannot infer disagreement",
+       "Disagree",
+       "Cannot infer disagreement"
+      ]
+     },
+     "diChoices": [
+      "Cannot infer disagreement",
+      "Disagree",
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -2551,7 +3096,19 @@
        "Some ice creams displayed in the Brussels Sweets Festival contain boysenberry.",
        "No custard specialists use any other berry than boysenberry in ice creams."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 2
+     },
+     "diChoices": [
+      "All Belgian chefs are custard experts.",
+      "Only custard experts use boysenberry in their ice creams.",
+      "No Belgian chefs use boysenberry in their ice creams.",
+      "Boysenberry is used only in custard ice creams.",
+      "Some ice creams displayed in the Brussels Sweets Festival contain boysenberry.",
+      "No custard specialists use any other berry than boysenberry in ice creams."
+     ]
     },
     {
      "n": 7,
@@ -2626,7 +3183,27 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "15-20",
+       "20-25",
+       "25-30",
+       "30+"
+      ],
+      [
+       "5",
+       "15",
+       "25",
+       "30"
+      ]
+     ]
     },
     {
      "n": 10,
@@ -2664,7 +3241,26 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "3.0",
+       "3.6",
+       "4.0",
+       "4.2"
+      ],
+      [
+       "less than",
+       "about the same as",
+       "greater than"
+      ]
+     ]
     },
     {
      "n": 11,
@@ -2709,7 +3305,17 @@
       ],
       "key": "Dropdown 1: Country A Dropdown 2: 0.29",
       "note": "Country A has by far the most Merchant Navy ships per capita (~90 vs under 60 for others). Countries A and B are the only ones in the top four for both ships and troops, so 2/7 = 0.29. Read from bubble chart, approximate."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Country A",
+       "0.29"
+      ]
+     },
+     "diChoices": [
+      "The country that has the most ships in its Merchant Navy relative to population is",
+      "The probability that a country is in the top four for both Merchant Navy ships and Military Navy troops is"
+     ]
     },
     {
      "n": 12,
@@ -2773,7 +3379,19 @@
        "2187",
        "15309"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "3",
+      "9",
+      "81",
+      "567",
+      "2187",
+      "15309"
+     ]
     },
     {
      "n": 15,
@@ -2819,7 +3437,19 @@
        "Furuya",
        "Gatz"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "Abbey",
+      "Barden",
+      "Crenshaw",
+      "De Grande",
+      "Furuya",
+      "Gatz"
+     ]
     },
     {
      "n": 17,
@@ -2860,7 +3490,29 @@
        4,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       4,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "number of\nemployees decreases; revenue decreases",
+       "number of employees stays about the same, revenue stays about the same",
+       "number of employees stays about the\nsame; revenue increases",
+       "number of employees increases, revenue stays about the same",
+       "number of employees increases, revenue increases"
+      ],
+      [
+       "number of employees decreases; revenue decreases",
+       "number of employees stays about the same, revenue stays about the same",
+       "number of employees\nstays about the same; revenue increases",
+       "number of employees increases, revenue stays about the same",
+       "number of employees increases, revenue\nincreases"
+      ]
+     ]
     },
     {
      "n": 18,
@@ -2919,7 +3571,29 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "0",
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      [
+       "0",
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
+     ]
     },
     {
      "n": 20,
@@ -2978,7 +3652,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -3003,7 +3690,18 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -3052,7 +3750,19 @@
        "Most people file Schedule X.",
        "Most people do not file Schedule X."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 0
+     },
+     "diChoices": [
+      "More people earn an income above the specified amount than file Schedule X with their income tax return.",
+      "More people file Schedule X with their income tax return than earn an annual income above the specified amount.",
+      "More people file Schedule X than earn an income below the specified amount.",
+      "More people earn an income below the specified amount than file Schedule X.",
+      "Most people file Schedule X.",
+      "Most people do not file Schedule X."
+     ]
     },
     {
      "n": 5,
@@ -3079,7 +3789,18 @@
        "D",
        "E"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 0
+     },
+     "diChoices": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ]
     },
     {
      "n": 6,
@@ -3160,7 +3881,18 @@
        "The group uses fire for warmth and protection",
        "The group uses thick-walled pots."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 0
+     },
+     "diChoices": [
+      "The group is sedentary rather than nomadic.",
+      "The group has not discovered pottery.",
+      "The group uses thin-walled pots.",
+      "The group uses fire for warmth and protection",
+      "The group uses thick-walled pots."
+     ]
     },
     {
      "n": 10,
@@ -3187,7 +3919,18 @@
        "Abstract sequence of interconnected curves, ceramic, 2008.",
        "Fossil-like, jagged sculpture suspended from cables, stainless steel, aluminum, fiberglass, and cable, 2004."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "Painting of girl’s face, in shades of blue and red, acrylic and oil on canvas, 2006.",
+      "Chinese brush painting of fish in a tank, ink on paper, 2002.",
+      "Fish-shaped vase with dragon head, jade, 1849.",
+      "Abstract sequence of interconnected curves, ceramic, 2008.",
+      "Fossil-like, jagged sculpture suspended from cables, stainless steel, aluminum, fiberglass, and cable, 2004."
+     ]
     },
     {
      "n": 11,
@@ -3245,7 +3988,28 @@
        1,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "141",
+       "274",
+       "331",
+       "360",
+       "416"
+      ],
+      [
+       "2",
+       "12",
+       "37",
+       "51"
+      ]
+     ]
     },
     {
      "n": 13,
@@ -3282,7 +4046,25 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "Supports",
+       "Refutes",
+       "Nor supports neither refute"
+      ],
+      [
+       "Supports",
+       "Refutes",
+       "Nor supports neither refute"
+      ]
+     ]
     },
     {
      "n": 14,
@@ -3365,7 +4147,17 @@
       ],
       "key": "Dropdown 1: 2 Dropdown 2: 1",
       "note": "Four countries priced above $60 (D, C, A, B); P/E above 40 for C (~42) and B (~52), so 2. Only N has P/E below 10 (~8), so 1."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "2",
+       "1"
+      ]
+     },
+     "diChoices": [
+      "1.1 Of the companies whose stock price is greater than $60, the number with P/E greater than 40 is",
+      "1.2 The number of companies with P/E less than 10 is"
+     ]
     },
     {
      "n": 17,
@@ -3393,7 +4185,19 @@
        "Vargas Llosa (male, Spanish, Peru)",
        "Zola (male, French, France)"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 1
+     },
+     "diChoices": [
+      "LeGuin (female, English, USA)",
+      "Longfellow (male, English, USA)",
+      "Murasaki (female, Japanese, Japan)",
+      "Colette (female, French, France)",
+      "Vargas Llosa (male, Spanish, Peru)",
+      "Zola (male, French, France)"
+     ]
     },
     {
      "n": 18,
@@ -3470,7 +4274,29 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "E1",
+       "E2",
+       "E3",
+       "E4",
+       "E5"
+      ],
+      [
+       "E1",
+       "E2",
+       "E3",
+       "E4",
+       "E5"
+      ]
+     ]
     }
    ]
   },
@@ -3532,7 +4358,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -3561,7 +4400,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -3606,7 +4457,18 @@
        "Traffic was worse on Thursday than on Tuesday.",
        "Traffic was worse on Friday than on Tuesday."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 4
+     },
+     "diChoices": [
+      "Traffic was better on Thursday than on Monday",
+      "Traffic was better on Wednesday than on Thursday.",
+      "Traffic was better on Friday than on Wednesday.",
+      "Traffic was worse on Thursday than on Tuesday.",
+      "Traffic was worse on Friday than on Tuesday."
+     ]
     },
     {
      "n": 6,
@@ -3645,7 +4507,27 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      [
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
+     ]
     },
     {
      "n": 7,
@@ -3702,7 +4584,25 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "40",
+       "93",
+       "108"
+      ],
+      [
+       "17",
+       "60",
+       "170"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -3743,7 +4643,29 @@
        3,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "June",
+       "July",
+       "August",
+       "September",
+       "October"
+      ],
+      [
+       "Workers without a high school diploma",
+       "High school\ngraduates with no college education",
+       "Workers with some college education",
+       "Workers with a bachelor’s degree or higher",
+       "All groups showed a rise."
+      ]
+     ]
     },
     {
      "n": 10,
@@ -3806,7 +4728,18 @@
        "4",
        "5"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ]
     },
     {
      "n": 13,
@@ -3895,7 +4828,17 @@
       ],
       "note": "Inventory rank 1 is Chair (Oak, Natural); sold rank 1 is Chair (Maple, Natural): different rows. 2009 Table inventory = 200407/0.969 = about 206,800, within 0.2% of 206,400.",
       "key": "The furniture type with the highest rank based on total inventory is the same as the type with the highest rank based on total items sold.: False The total inventory of Cherry Red mahogany Tables in 2"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "False",
+       "True"
+      ]
+     },
+     "diChoices": [
+      "Highest-ranked furniture type by inventory is the same as highest-ranked by items sold.",
+      "Total inventory of Cherry Red mahogany Tables in 2009 was approximately 206,400."
+     ]
     },
     {
      "n": 17,
@@ -3935,7 +4878,28 @@
        3,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "Bombardier",
+       "Learjet ZX",
+       "Gulfstream Mini",
+       "Gulfstream GX",
+       "Learjet\nLux"
+      ],
+      [
+       "450$",
+       "460$",
+       "640$",
+       "720$"
+      ]
+     ]
     },
     {
      "n": 18,
@@ -3972,7 +4936,25 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "Mondays",
+       "Tuesdays",
+       "Wednesdays",
+       "Thursdays",
+       "Fridays"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 19,
@@ -4049,7 +5031,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -4082,7 +5077,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -4159,7 +5167,26 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "22%",
+       "25%",
+       "28%",
+       "33%"
+      ],
+      [
+       "February 2007",
+       "July 2007",
+       "October 2007"
+      ]
+     ]
     },
     {
      "n": 6,
@@ -4213,7 +5240,24 @@
        3,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "Australia",
+       "Italy",
+       "Japan",
+       "Mexico"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -4252,7 +5296,27 @@
        0,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "4",
+       "9",
+       "11",
+       "13"
+      ],
+      [
+       "1150",
+       "1000",
+       "1500",
+       "1700"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -4309,7 +5373,25 @@
        0,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "Positive",
+       "A negative",
+       "No"
+      ],
+      [
+       "2.5",
+       "5",
+       "6"
+      ]
+     ]
     },
     {
      "n": 11,
@@ -4346,7 +5428,25 @@
        2,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "higher levels but not the software with lower",
+       "lower levels but not the software with higher",
+       "all of\nthe indicated"
+      ],
+      [
+       "point-to-point interfaces",
+       "interfacing capabilities",
+       "integration capabilities"
+      ]
+     ]
     },
     {
      "n": 12,
@@ -4391,7 +5491,18 @@
        "Only if a customer has explicitly granted permission",
        "No circumstances"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "All circumstances",
+      "Upon informing the customer that it will",
+      "Only if a customer has not explicitly forbidden it",
+      "Only if a customer has explicitly granted permission",
+      "No circumstances"
+     ]
     },
     {
      "n": 14,
@@ -4418,7 +5529,18 @@
        "210",
        "230"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 1
+     },
+     "diChoices": [
+      "110",
+      "150",
+      "170",
+      "210",
+      "230"
+     ]
     },
     {
      "n": 15,
@@ -4446,7 +5568,19 @@
        "50",
        "555/9­"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 5
+     },
+     "diChoices": [
+      "331/3",
+      "412/3",
+      "426/7",
+      "444/9",
+      "50",
+      "555/9­"
+     ]
     },
     {
      "n": 16,
@@ -4555,7 +5689,19 @@
       ],
       "note": "Qualifying charities are Green World and Healthy Hearts (best on both criteria in their category). Community has no charity best on both, and the 'may have other criteria' clause leaves rows 1-2 undetermined.",
       "key": "Gordon will donate to at least one of these charities.: Does not indicate statement is correct Gordon will donate to at most one of these charities.: Does not indicate statement is correct Gordon will"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Does not indicate statement is correct",
+       "Does not indicate statement is correct",
+       "Indicates statement is correct"
+      ]
+     },
+     "diChoices": [
+      "Gordon will donate to at least one of these charities.",
+      "Gordon will donate to at most one of these charities.",
+      "Gordon will not donate to a charity in the Community category."
+     ]
     }
    ]
   },
@@ -4588,7 +5734,18 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -4615,7 +5772,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Possible"
+      ]
+     },
+     "diChoices": [
+      "Not possible",
+      "Possible",
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -4727,7 +5897,26 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "east-central",
+       "northeastern",
+       "northen",
+       "southern"
+      ],
+      [
+       "20",
+       "30",
+       "40"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -4768,7 +5957,29 @@
        1,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "10%",
+       "20%",
+       "25%",
+       "50%",
+       "75%"
+      ],
+      [
+       "25%",
+       "30%",
+       "35%",
+       "40%",
+       "45%"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -4814,7 +6025,19 @@
        "$250",
        "$304"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 4
+     },
+     "diChoices": [
+      "$200",
+      "$219",
+      "$224",
+      "$245",
+      "$250",
+      "$304"
+     ]
     },
     {
      "n": 11,
@@ -4971,7 +6194,17 @@
       ],
       "note": "Best pair is buy 1pm Day 1 at 125, sell 2pm Day 2 at 160: gain 35, or 28%.",
       "key": "Dropdown 1: 2pm Dropdown 2: 28%"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "2pm",
+       "28%"
+      ]
+     },
+     "diChoices": [
+      "Sale time on Day 2",
+      "Percentage gain per share"
+     ]
     },
     {
      "n": 18,
@@ -4999,7 +6232,19 @@
        "64",
        "73"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 0
+     },
+     "diChoices": [
+      "27",
+      "34",
+      "41",
+      "53",
+      "64",
+      "73"
+     ]
     },
     {
      "n": 19,
@@ -5074,7 +6319,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -5107,7 +6365,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -5140,7 +6411,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -5170,7 +6454,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "No loss",
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 5,
@@ -5249,7 +6546,25 @@
        0,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "04 May",
+       "01 June",
+       "30 June"
+      ],
+      [
+       "04 May",
+       "01 June",
+       "30 June"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -5388,7 +6703,17 @@
       ],
       "note": "Same = 20+30 of 200 = 0.250; checked among worse = 75 of 100 = 0.750.",
       "key": "Dropdown 1: 0.250 Dropdown 2: 0.750"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "0.250",
+       "0.750"
+      ]
+     },
+     "diChoices": [
+      "Random respondent thought experience remained the same",
+      "Random respondent who thought it got worse checked luggage"
+     ]
     },
     {
      "n": 14,
@@ -5424,7 +6749,26 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "1993",
+       "1998",
+       "2003"
+      ],
+      [
+       "0.1",
+       "0.2",
+       "0.4",
+       "0.6"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -5488,7 +6832,19 @@
        "90",
        "110"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 1
+     },
+     "diChoices": [
+      "10",
+      "25",
+      "27",
+      "29",
+      "90",
+      "110"
+     ]
     },
     {
      "n": 18,
@@ -5567,7 +6923,31 @@
        1,
        5
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       5
+      ]
+     },
+     "diChoices": [
+      [
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7"
+      ],
+      [
+       "B",
+       "C",
+       "D",
+       "E",
+       "F",
+       "G"
+      ]
+     ]
     }
    ]
   },
@@ -5625,7 +7005,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -5675,7 +7067,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 5,
@@ -5708,7 +7112,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 6,
@@ -5737,7 +7154,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 7,
@@ -5764,7 +7193,18 @@
        "Promoting employee health with financial incentives is counterproductive.",
        "Promoting employee health with financial incentives is worthwhile."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 2
+     },
+     "diChoices": [
+      "Requiring the documentation has no effect on employees.",
+      "Our company should continue requiring the specific documentation that it does.",
+      "Our company should not require that form of documentation.",
+      "Promoting employee health with financial incentives is counterproductive.",
+      "Promoting employee health with financial incentives is worthwhile."
+     ]
     },
     {
      "n": 8,
@@ -5808,7 +7248,17 @@
       ],
       "note": "Sums: W 100, X 106, Y 108, Z 111. Ranges: A 3, B 8, C 3.",
       "key": "Dropdown 1: Z Dropdown 2: B"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Z",
+       "B"
+      ]
+     },
+     "diChoices": [
+      "Tree farm with greatest sum of average heights",
+      "Species with greatest standard deviation across farms"
+     ]
     },
     {
      "n": 9,
@@ -5868,7 +7318,18 @@
        "Offer promotional bonuses to reward viewers who have been loyal viewers of the company's videos.",
        "Mount an internet-wide advertising campaign emphasizing the minimal banner advertisement and entertainment value of MeTube Production's hilarious news videos."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 4
+     },
+     "diChoices": [
+      "Obtain public funding to double the spending on visual effects and video editing without increasing ad impressions.",
+      "Return spending on special effects and video editing services to levels of several years ago.",
+      "Expand video content to include talk shows, skits, and documentaries.",
+      "Offer promotional bonuses to reward viewers who have been loyal viewers of the company's videos.",
+      "Mount an internet-wide advertising campaign emphasizing the minimal banner advertisement and entertainment value of MeTube Production's hilarious news videos."
+     ]
     },
     {
      "n": 12,
@@ -5950,7 +7411,19 @@
        "60",
        "80"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 1
+     },
+     "diChoices": [
+      "21",
+      "25",
+      "30",
+      "42",
+      "60",
+      "80"
+     ]
     },
     {
      "n": 16,
@@ -6031,7 +7504,17 @@
       ],
       "note": "RO1: 6 of 30 (62+ social media users) = 20%; RO2 fits the aggregate/repost line, which stays under 20% for all groups over 11.",
       "key": "Dropdown 1: 20 Dropdown 2: Aggregate and repost content"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "20",
+       "Aggregate and repost content"
+      ]
+     },
+     "diChoices": [
+      "RO1: 62+ social media users who used social networking sites",
+      "RO2: less than 20% of Internet users over age 11"
+     ]
     },
     {
      "n": 19,
@@ -6072,7 +7555,29 @@
        2,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "January",
+       "March",
+       "April",
+       "May",
+       "June"
+      ],
+      [
+       "July",
+       "August",
+       "October",
+       "November",
+       "December"
+      ]
+     ]
     },
     {
      "n": 20,
@@ -6107,7 +7612,19 @@
       ],
       "note": "Key agrees. Significant-change marks (+/-) on the 2014-2015 column for row 5 force x < 2 because the rounded change is 1 point and raw change must be under 2.",
       "key": "0.9: Could be x 1.4: Could be x 2: Cannot be x"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Could be x",
+       "Could be x",
+       "Cannot be x"
+      ]
+     },
+     "diChoices": [
+      "0.9",
+      "1.4",
+      "2"
+     ]
     }
    ]
   },
@@ -6148,7 +7665,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -6202,7 +7732,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -6240,7 +7783,26 @@
        1,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "Herbicides\n& PGR",
+       "Insecticides",
+       "Fungicides and Other"
+      ],
+      [
+       "between 20% and 25%",
+       "between 25% and 30%",
+       "between 30% and 35%",
+       "between\n40% and 45%"
+      ]
+     ]
     },
     {
      "n": 5,
@@ -6280,7 +7842,28 @@
        2,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "third",
+       "fourth",
+       "fifth",
+       "sixth"
+      ],
+      [
+       "$10",
+       "$12",
+       "$15",
+       "$18",
+       "$25"
+      ]
+     ]
     },
     {
      "n": 6,
@@ -6323,7 +7906,16 @@
       ],
       "note": "Print lower bound is 19.1 (print only) + 31.9 (all four) = 51.0%, so more than 50% is forced.",
       "key": "Dropdown 1: more than 50 percent Dropdown 2: Print"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "more than 50 percent",
+       "Print"
+      ]
+     },
+     "diChoices": [
+      "It must be the case that [dropdown 1] of the employees chose the [dropdown 2] method."
+     ]
     },
     {
      "n": 7,
@@ -6358,7 +7950,19 @@
       ],
       "note": "Rocky average 93 vs forest 81. Top-3 usage is Summit, Granite, Aspen. Canyon Bend (81) is the lowest-satisfaction above-average trail but ranks 5th, not least used. Stored key row 1 contains both '· Yes · No'; first mark is Yes and matches my reading.",
       "key": "Trails with rocky terrain have, on average, higher satisfaction scores than those with forest terrain.: · Yes · No gravel trail ranks among the three most-used trails.: · Yes Among the trails with abo"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "Trails with rocky terrain have, on average, higher satisfaction scores than those with forest terrain.",
+      "No gravel trail ranks among the three most-used trails.",
+      "Among the trails with above-average hike times, the one with the lowest satisfaction score is also the least used overall."
+     ]
     },
     {
      "n": 8,
@@ -6429,7 +8033,19 @@
       ],
       "key": "Exactly two layouts have the same median satisfaction rate.: True Exactly two layouts have the same range of satisfaction rates.: True Exactly two layouts have the same highest satisfaction rate acros",
       "note": "Medians: Card grid and Horizontal scroll both 23. Ranges: Card grid and Compact list both 17. All five maxima (31, 34, 27, 30, 33) are distinct."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "True",
+       "True",
+       "Not true"
+      ]
+     },
+     "diChoices": [
+      "Exactly two layouts have the same median satisfaction rate.",
+      "Exactly two layouts have the same range of satisfaction rates.",
+      "Exactly two layouts have the same highest satisfaction rate across all user groups."
+     ]
     },
     {
      "n": 11,
@@ -6493,7 +8109,19 @@
        "40",
        "80"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 5
+     },
+     "diChoices": [
+      "21",
+      "23",
+      "25",
+      "36",
+      "40",
+      "80"
+     ]
     },
     {
      "n": 14,
@@ -6532,7 +8160,27 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "2010",
+       "2014",
+       "2018",
+       "2022"
+      ],
+      [
+       "same as",
+       "more than",
+       "less than",
+       "twice as many as"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -6569,7 +8217,25 @@
        0,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "Increase",
+       "Decrease",
+       "Stay the same"
+      ],
+      [
+       "Increase",
+       "Decrease",
+       "Stay the same"
+      ]
+     ]
     },
     {
      "n": 16,
@@ -6626,7 +8292,27 @@
        3,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "30",
+       "32",
+       "34",
+       "36",
+       "37"
+      ],
+      [
+       "before",
+       "at",
+       "after"
+      ]
+     ]
     },
     {
      "n": 18,
@@ -6670,7 +8356,17 @@
       ],
       "key": "Dropdown 1: is a decrease of about 60% Dropdown 2: 16",
       "note": "Business day trucks ~4.9 at hour 17 to ~2.2 at hour 22 (about -55%, nearest 60%). Sum of four curves peaks at hour 16 (~25.4 vs ~24.4 at hour 15)."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "is a decrease of about 60%",
+       "16"
+      ]
+     },
+     "diChoices": [
+      "From hour 17 to hour 22, the percent change in business day trucks",
+      "Assuming equal totals for the four vehicle types, the hour of maximum total traffic is"
+     ]
     },
     {
      "n": 19,
@@ -6747,7 +8443,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -6780,7 +8489,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -6874,7 +8596,25 @@
        1,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "mean",
+       "median",
+       "mode"
+      ],
+      [
+       "24 and 35",
+       "34 and 45",
+       "44 and 55"
+      ]
+     ]
     },
     {
      "n": 7,
@@ -6902,7 +8642,19 @@
        "11",
        "12"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 1
+     },
+     "diChoices": [
+      "3",
+      "4",
+      "5",
+      "10",
+      "11",
+      "12"
+     ]
     },
     {
      "n": 8,
@@ -7049,7 +8801,27 @@
        0,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "France",
+       "Russia",
+       "United Kingdom",
+       "United States"
+      ],
+      [
+       "Australia",
+       "China",
+       "Russia",
+       "United States"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -7166,7 +8938,18 @@
        "$14 Mn.",
        "$16 Mn."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 0
+     },
+     "diChoices": [
+      "$8 Mn.",
+      "$10 Mn.",
+      "$12 Mn.",
+      "$14 Mn.",
+      "$16 Mn."
+     ]
     }
    ]
   },
@@ -7203,7 +8986,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -7232,7 +9027,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -7294,7 +9101,29 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "2006",
+       "2007",
+       "2009",
+       "2010",
+       "2011"
+      ],
+      [
+       "41.6%",
+       "58.3%",
+       "85.7%",
+       "171.4%",
+       "240%"
+      ]
+     ]
     },
     {
      "n": 5,
@@ -7321,7 +9150,18 @@
        "Refuse to confess that Q stole the cookies",
        "Confess only that P stole the cookies"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "Confess only that Q stole the cookies",
+      "Refuse to confess that P stole the cookies",
+      "Confess that both P and Q stole the cookies",
+      "Refuse to confess that Q stole the cookies",
+      "Confess only that P stole the cookies"
+     ]
     },
     {
      "n": 6,
@@ -7367,7 +9207,19 @@
        "$42.42",
        "$44.00"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 1
+     },
+     "diChoices": [
+      "$32.32",
+      "$33.94",
+      "$35.20",
+      "$36.18",
+      "$42.42",
+      "$44.00"
+     ]
     },
     {
      "n": 8,
@@ -7408,7 +9260,29 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "13",
+       "20",
+       "26",
+       "39",
+       "41"
+      ],
+      [
+       "remains the same",
+       "increases by 6 days",
+       "increases by 1 day",
+       "decreases by 1 day",
+       "decreases by 6 days"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -7499,7 +9373,25 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "Between 2008 and 2009",
+       "Between 2009 and 2010",
+       "Between 2010 and 2011"
+      ],
+      [
+       "23",
+       "24",
+       "25"
+      ]
+     ]
     },
     {
      "n": 13,
@@ -7527,7 +9419,19 @@
        "56",
        "60"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 0
+     },
+     "diChoices": [
+      "17",
+      "27",
+      "31",
+      "48",
+      "56",
+      "60"
+     ]
     },
     {
      "n": 14,
@@ -7582,7 +9486,25 @@
        2,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "supports",
+       "refutes",
+       "neither supports nor refutes"
+      ],
+      [
+       "supports",
+       "refutes",
+       "neither supports nor refutes"
+      ]
+     ]
     },
     {
      "n": 16,
@@ -7627,7 +9549,18 @@
        "Sand is much less effective than salt at making roads safe to drive in winter conditions.",
        "Runoff from roads is often absorbed by farmland."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 3
+     },
+     "diChoices": [
+      "A high number of road accidents are attributable to untreated roads in winter.",
+      "The cost of removing salts from soil in abandoned salt yards is high.",
+      "High chloride concentrations in drinking water supplies have a negative impact on health.",
+      "Sand is much less effective than salt at making roads safe to drive in winter conditions.",
+      "Runoff from roads is often absorbed by farmland."
+     ]
     },
     {
      "n": 18,
@@ -7654,7 +9587,18 @@
        "After the first week, the number of movie screens on which Prime Meridian is shown will be doubled.",
        "Sequels do not always match the box office success of the original films."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "Family dramas have historically not performed well at the box office when competing against bigbudget action-adventures.",
+      "Blowtorch is expected to have higher box office revenues than Animal Pleasures.",
+      "The last two films by the Prime Meridian lead actor did very well in DVD sales, rentals, and online downloads.",
+      "After the first week, the number of movie screens on which Prime Meridian is shown will be doubled.",
+      "Sequels do not always match the box office success of the original films."
+     ]
     },
     {
      "n": 19,
@@ -7712,7 +9656,28 @@
        4,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       4,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "21",
+       "22",
+       "23",
+       "24",
+       "25"
+      ],
+      [
+       "25",
+       "26",
+       "27",
+       "28"
+      ]
+     ]
     }
    ]
   },
@@ -7779,7 +9744,26 @@
        1,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "0 and 10",
+       "10 and 20",
+       "20 and 30"
+      ],
+      [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     ]
     },
     {
      "n": 3,
@@ -7841,7 +9825,17 @@
       ],
       "key": "Dropdown 1: Q4 Dropdown 2: greater than",
       "note": "Yen-equivalent (sales x (1 + pct/100)): Q1 2009 ~28.0, Q4 2009 ~28.1 (close margin, graph reading). Q4 2009 ~28.1 vs Q4 2008 ~26.4."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Q4",
+       "greater than"
+      ]
+     },
+     "diChoices": [
+      "Q1 2008 yen-equivalent sales were highest in (quarter) of 2009.",
+      "Q1 2008 yen-equivalent sales for Q4 2009 were (comparison) Q1 2008 yen-equivalent sales for Q4 2008."
+     ]
     },
     {
      "n": 5,
@@ -7918,7 +9912,27 @@
        2,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "2.0",
+       "17.4",
+       "21.0",
+       "22.0"
+      ],
+      [
+       "Debit Card",
+       "Paper Check",
+       "Credit Card",
+       "Auto Transfer"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -7981,7 +9995,18 @@
        "5.7",
        "8.0"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 0
+     },
+     "diChoices": [
+      "2.0",
+      "2.8",
+      "4.0",
+      "5.7",
+      "8.0"
+     ]
     },
     {
      "n": 11,
@@ -8034,7 +10059,19 @@
       ],
       "note": "Nematoda is the only cephalized, non-circulatory phylum with a body cavity. Platyhelminthes lacks a body cavity but shows cephalization. Segmented phyla (Annelida, Arthropoda, Chordata) have all other traits.",
       "key": "Of the phyla that exhibit cephalization but not a circulatory system, only one exhibits a body cavity.: · Yes Of the phyla without a body cavity, none exhibit any of the three other listed characteris"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "Of the phyla that exhibit cephalization but not a circulatory system, only one exhibits a body cavity.",
+      "Of the phyla without a body cavity, none exhibit any of the three other listed characteristics.",
+      "The phyla that exhibit segmentation exhibit all of the other characteristics as well."
+     ]
     },
     {
      "n": 13,
@@ -8147,7 +10184,27 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "Region A",
+       "Region B",
+       "Region C",
+       "Region D"
+      ],
+      [
+       "Region A",
+       "Region B",
+       "Region C",
+       "Region D"
+      ]
+     ]
     },
     {
      "n": 18,
@@ -8244,7 +10301,22 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Not consistent",
+       "Consistent",
+       "Consistent"
+      ]
+     },
+     "diChoices": [
+      "Not consistent",
+      "Consistent",
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -8269,7 +10341,18 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -8371,7 +10454,18 @@
        "82",
        "85"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 3
+     },
+     "diChoices": [
+      "73",
+      "76",
+      "79",
+      "82",
+      "85"
+     ]
     },
     {
      "n": 8,
@@ -8469,7 +10563,18 @@
        "290",
        "455"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 0
+     },
+     "diChoices": [
+      "0",
+      "145",
+      "215",
+      "290",
+      "455"
+     ]
     },
     {
      "n": 13,
@@ -8569,7 +10674,19 @@
        "obey authority",
        "be loyal"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 5
+     },
+     "diChoices": [
+      "avoid causing harm to others",
+      "promote the common good",
+      "act honorably",
+      "be fair",
+      "obey authority",
+      "be loyal"
+     ]
     },
     {
      "n": 18,
@@ -8685,7 +10802,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -8733,7 +10863,18 @@
        "$317.43",
        "$482.90"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 3
+     },
+     "diChoices": [
+      "$160.02",
+      "$219.75",
+      "$285.70",
+      "$317.43",
+      "$482.90"
+     ]
     },
     {
      "n": 5,
@@ -8768,7 +10909,19 @@
       ],
       "key": "Lauren purchased a new book.: · Yes Lauren purchased a book from the cooking section.: · Yes Lauren purchased Eels.: · Yes",
       "note": "Only purchase set meeting constraints (4 sections, outdoors out of stock, average > $12): Curious George at the Aquarium, Fish (used hardcover), Saving Fish from Drowning (new paperback), Eels. Sum 48.96."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "Lauren purchased a new book.",
+      "Lauren purchased a book from the cooking section.",
+      "Lauren purchased Eels."
+     ]
     },
     {
      "n": 6,
@@ -8863,7 +11016,17 @@
       ],
       "note": "Greatest three: electrical 30 + engine 22 + exhaust 18 = 70. Lowest three: steering 3 + braking 5 + transmission 10 = 18.",
       "key": "Dropdown 1: 70 Dropdown 2: 18"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "70",
+       "18"
+      ]
+     },
+     "diChoices": [
+      "Taken together, the 3 categories having the greatest frequencies account for [dropdown 1]% of the repairs in the sample.",
+      "Taken together, the 3 categories having the lowest frequencies account for [dropdown 2]% of the repairs in the sample."
+     ]
     },
     {
      "n": 10,
@@ -8920,7 +11083,27 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "Highest",
+       "3rd Highest",
+       "3rd Lowest",
+       "Lowest"
+      ],
+      [
+       "21%",
+       "26%",
+       "56%",
+       "92%"
+      ]
+     ]
     },
     {
      "n": 12,
@@ -8947,7 +11130,18 @@
        "Must be less than or equal to 20%",
        "Must be greater than or equal to 80%"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "Must be equal to 40%",
+      "Must be equal to 50%",
+      "Must be equal to 70%",
+      "Must be less than or equal to 20%",
+      "Must be greater than or equal to 80%"
+     ]
     },
     {
      "n": 13,
@@ -9006,7 +11200,29 @@
        3,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "2",
+       "3",
+       "5",
+       "9",
+       "12"
+      ],
+      [
+       "5 months",
+       "10 months",
+       "12 months",
+       "20 months",
+       "30 months"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -9088,7 +11304,19 @@
        "$280",
        "$300"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 5
+     },
+     "diChoices": [
+      "$200",
+      "$220",
+      "$240",
+      "$260",
+      "$280",
+      "$300"
+     ]
     },
     {
      "n": 19,
@@ -9153,7 +11381,17 @@
       ],
       "key": "Dropdown 1: 2 and 4 Dropdown 2: 8",
       "note": "Goal met in Year 2 (+11.5%) and Year 4 (+14.7%), missed in Years 3 and 5. Year 5 growth 54,000.79 / 50,063.45 = +7.9%, so 8."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "2 and 4",
+       "8"
+      ]
+     },
+     "diChoices": [
+      "The organization met its fundraising goal in Years",
+      "In Year 5, the organization raised only X percent more than the previous year (nearest percent)"
+     ]
     }
    ]
   },
@@ -9215,7 +11453,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 3,
@@ -9248,7 +11499,20 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -9293,7 +11557,18 @@
        "It uses the words that date without any indication of what date they refer to.",
        "It stipulates a necessarily true but pointless and uninformative condition."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 4
+     },
+     "diChoices": [
+      "It uses the term client in two mutually exclusive ways without acknowledging the difference in meaning",
+      "It proposes a definition for a technical term even though that term is irrelevant to the topic it addresses.",
+      "It contains requirements that contradict each other.",
+      "It uses the words that date without any indication of what date they refer to.",
+      "It stipulates a necessarily true but pointless and uninformative condition."
+     ]
     },
     {
      "n": 6,
@@ -9321,7 +11596,19 @@
        "16",
        "26"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 2
+     },
+     "diChoices": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "26"
+     ]
     },
     {
      "n": 7,
@@ -9378,7 +11665,27 @@
        2,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "40",
+       "60",
+       "80",
+       "100"
+      ],
+      [
+       "10",
+       "20",
+       "40",
+       "80"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -9439,7 +11746,17 @@
       ],
       "note": "Telephone 2008 median falls in the 0<n<=1 band versus 1<n<=4 in 2000. Telephone plus email has a 2008 lower bound above the 2000 upper bound. Bar heights are read by eye.",
       "key": "Dropdown 1: telephone Dropdown 2: telephone and email"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "telephone",
+       "telephone and email"
+      ]
+     },
+     "diChoices": [
+      "It must be the case that the median number of times per month respondents reported having communicated with patients by [dropdown 1] in the 2008 survey was less than that in the 2000 survey.",
+      "It must be the case that the percentage of respondents who reported having communicated with patients by both [dropdown 2] was as great or greater in the 2008 survey as it was in the 2000 survey."
+     ]
     },
     {
      "n": 11,
@@ -9478,7 +11795,27 @@
        3,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       3,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "supply of palladium from Russia",
+       "supply of palladium from South Africa",
+       "supply of palladium from North America",
+       "global supply of\npalladium"
+      ],
+      [
+       "supply of palladium from Russia",
+       "supply of palladium\nfrom South Africa",
+       "supply of palladium from North America",
+       "global supply of palladium"
+      ]
+     ]
     },
     {
      "n": 12,
@@ -9515,7 +11852,25 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "Between 8 and 15",
+       "Between 24 and 30",
+       "Between 42 and 50"
+      ],
+      [
+       "$5.5B",
+       "$108B",
+       "$530M"
+      ]
+     ]
     },
     {
      "n": 13,
@@ -9596,7 +11951,18 @@
        "11",
        "13"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 0
+     },
+     "diChoices": [
+      "3",
+      "5",
+      "8",
+      "11",
+      "13"
+     ]
     },
     {
      "n": 17,
@@ -9624,7 +11990,19 @@
        "35",
        "45"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "15",
+      "18",
+      "21",
+      "30",
+      "35",
+      "45"
+     ]
     },
     {
      "n": 18,
@@ -9670,7 +12048,19 @@
        "78",
        "390"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 3
+     },
+     "diChoices": [
+      "6",
+      "13",
+      "52",
+      "65",
+      "78",
+      "390"
+     ]
     },
     {
      "n": 20,
@@ -9709,7 +12099,27 @@
        1,
        4
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       4
+      ]
+     },
+     "diChoices": [
+      [
+       "Wednesday",
+       "Thursday",
+       "Saturday"
+      ],
+      [
+       "5",
+       "15",
+       "33",
+       "133",
+       "300"
+      ]
+     ]
     }
    ]
   },
@@ -9746,7 +12156,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "No",
+       "No"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 2,
@@ -9796,7 +12218,19 @@
      ],
      "images": [],
      "answer": null,
-     "answerSource": null
+     "answerSource": null,
+     "diAnswer": {
+      "rows": [
+       "Yes",
+       "Yes"
+      ]
+     },
+     "diChoices": [
+      "False",
+      "True",
+      "Yes",
+      "No"
+     ]
     },
     {
      "n": 4,
@@ -9831,7 +12265,19 @@
       ],
       "note": "Mode method: A=1, C=2, B=3, D=4. Median method: A=1, C=2, B=3, D=4.",
       "key": "Rank 1: Same Rank 2: Same Rank 3: Same"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Same",
+       "Same",
+       "Same"
+      ]
+     },
+     "diChoices": [
+      "Rank 1",
+      "Rank 2",
+      "Rank 3"
+     ]
     },
     {
      "n": 5,
@@ -9858,7 +12304,18 @@
        "A company will often see a quick rise in revenue immediately after hiring a CEO with experience in various industries.",
        "When hiring a new CEO, a company needs to ensure that it does not alienate its employees in the process."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 1
+     },
+     "diChoices": [
+      "CEOs have a responsibility to ensure that the companies they head remain profitable.",
+      "A company should not dispense with a current strategy unless that strategy has proven to be unsuccessful.",
+      "A company should choose as CEO the candidate who has the most experience in that company's specific industry.",
+      "A company will often see a quick rise in revenue immediately after hiring a CEO with experience in various industries.",
+      "When hiring a new CEO, a company needs to ensure that it does not alienate its employees in the process."
+     ]
     },
     {
      "n": 6,
@@ -9899,7 +12356,29 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "1",
+       "2",
+       "3",
+       "5",
+       "8"
+      ],
+      [
+       "4.5%",
+       "8.5%",
+       "11%",
+       "18%",
+       "22%"
+      ]
+     ]
     },
     {
      "n": 7,
@@ -9927,7 +12406,19 @@
        "0.79",
        "0.83"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 1
+     },
+     "diChoices": [
+      "0.56",
+      "0.62",
+      "0.68",
+      "0.75",
+      "0.79",
+      "0.83"
+     ]
     },
     {
      "n": 8,
@@ -9965,7 +12456,26 @@
        0,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "True",
+       "False",
+       "Cannot determine"
+      ],
+      [
+       "54",
+       "116",
+       "129",
+       "147"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -9992,7 +12502,18 @@
        "The side effects of most allergy medicines take at least two years to appear.",
        "The pharmacist can assess known risks depending on patient profiles, but cannot do so with unknown risks."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 4
+     },
+     "diChoices": [
+      "Allergies, if left untreated, can lead to serious medical problems.",
+      "Certirizine in both compounded and non-compounded forms has unknown long-term side effects.",
+      "The pharmacist does not believe that the studies conducted on certirizine are well substantiated.",
+      "The side effects of most allergy medicines take at least two years to appear.",
+      "The pharmacist can assess known risks depending on patient profiles, but cannot do so with unknown risks."
+     ]
     },
     {
      "n": 10,
@@ -10066,7 +12587,29 @@
        4,
        4
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       4,
+       4
+      ]
+     },
+     "diChoices": [
+      [
+       "Nolan Ryan",
+       "Bobby Bonilla",
+       "Darryl Strawberry",
+       "Gary Sheffield",
+       "Alex Rodriguez"
+      ],
+      [
+       "None",
+       "3",
+       "5",
+       "7",
+       "8"
+      ]
+     ]
     },
     {
      "n": 13,
@@ -10130,7 +12673,19 @@
        "6",
        "7"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 2
+     },
+     "diChoices": [
+      "0",
+      "1",
+      "2",
+      "4",
+      "6",
+      "7"
+     ]
     },
     {
      "n": 16,
@@ -10193,7 +12748,18 @@
        "Possess a pleasant disposition in order to easily connect with those he/she is associated with",
        "Be an expert in rapidly changing social norms"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 1
+     },
+     "diChoices": [
+      "Should have a balanced emotional state so that he/she can inspire the same in the students",
+      "Should value only academic development",
+      "Should have dealt with his/her own emotional challenges as a student earlier",
+      "Possess a pleasant disposition in order to easily connect with those he/she is associated with",
+      "Be an expert in rapidly changing social norms"
+     ]
     },
     {
      "n": 19,
@@ -10286,7 +12852,17 @@
       ],
       "note": "Slope from about 11.3 at day 0 to about 4.9 at day 5 gives -1.3. Within 11 inches: 2 students-arrows at day 0 (10, 8) vs 4 at day 2 (10, 9, 8, 6), i.e. 100% greater.",
       "key": "Dropdown 1: -1.3 Dropdown 2: 100% greater"
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "-1.3",
+       "100% greater"
+      ]
+     },
+     "diChoices": [
+      "The slope of the regression line is closest to [dropdown 1].",
+      "The number of students within 11 inches of the center of the target is [dropdown 2] after day 2 of training than before any training."
+     ]
     },
     {
      "n": 2,
@@ -10396,7 +12972,26 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "greater than",
+       "equal to",
+       "less than"
+      ],
+      [
+       "2 out\nof 30",
+       "3 out of 30",
+       "2 out of 5",
+       "3 out of 5"
+      ]
+     ]
     },
     {
      "n": 7,
@@ -10433,7 +13028,25 @@
        1,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "0",
+       "5",
+       "10",
+       "20",
+       "40"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -10472,7 +13085,27 @@
        2,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      [
+       "150",
+       "200",
+       "250",
+       "300"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -10511,7 +13144,27 @@
        1,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "3",
+       "4",
+       "6",
+       "10"
+      ],
+      [
+       "2",
+       "4",
+       "7",
+       "12"
+      ]
+     ]
     },
     {
      "n": 10,
@@ -10538,7 +13191,18 @@
        "Thursday",
        "Friday"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 2,
+      "col2": 3
+     },
+     "diChoices": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+     ]
     },
     {
      "n": 11,
@@ -10601,7 +13265,18 @@
        "Amanda is heavier than David and Carlos.",
        "Eva is heavier than only Bruce."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "Amanda is heavier than David and Bruce.",
+      "Amanda is heavier than Carlos.",
+      "David is lighter than both Bruce and Eva.",
+      "Amanda is heavier than David and Carlos.",
+      "Eva is heavier than only Bruce."
+     ]
     },
     {
      "n": 14,
@@ -10794,7 +13469,19 @@
       ],
       "key": "Format X: Can Convert to every other format Format Y: Can Convert to every other format Format Z: Can Convert to every other format",
       "note": "Derived from the asterisk grid: each format reaches all other four, directly or indirectly (e.g. X->W->V/Y/Z; Y->V->X->W; Z->Y->V->X->W)."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Can Convert to every other format",
+       "Can Convert to every other format",
+       "Can Convert to every other format"
+      ]
+     },
+     "diChoices": [
+      "Format X",
+      "Format Y",
+      "Format Z"
+     ]
     },
     {
      "n": 3,
@@ -10890,7 +13577,18 @@
        "The council offers to mediate a dispute about noise.",
        "The complaining individual contacts the alleged violator's landlord."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 3
+     },
+     "diChoices": [
+      "The council imposes a fine for noise violation.",
+      "The council considers a formal written noise complaint.",
+      "The complaining individual attempts to resolve the issue with the alleged violator",
+      "The council offers to mediate a dispute about noise.",
+      "The complaining individual contacts the alleged violator's landlord."
+     ]
     },
     {
      "n": 8,
@@ -10932,7 +13630,30 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "25% more",
+       "15% more",
+       "5% more",
+       "20% less",
+       "25% less",
+       "100% more"
+      ],
+      [
+       "Between 2001 and 2002",
+       "Between 2002 and 2003",
+       "Between 2004 and 2005",
+       "Between 2005\nand 2006",
+       "Between 2006 and 2007"
+      ]
+     ]
     },
     {
      "n": 9,
@@ -11005,7 +13726,25 @@
        0,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "42%",
+       "50%",
+       "70%",
+       "90%",
+       "110%"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 12,
@@ -11083,7 +13822,18 @@
        "€7.00",
        "€7.50"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 4,
+      "col2": 2
+     },
+     "diChoices": [
+      "€5.50",
+      "€6.00",
+      "€6.50",
+      "€7.00",
+      "€7.50"
+     ]
     },
     {
      "n": 16,
@@ -11120,7 +13870,25 @@
        1,
        2
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       2
+      ]
+     },
+     "diChoices": [
+      [
+       "Between 2008 and 2009",
+       "Between 2009 and 2010",
+       "Between 2010 and 2011"
+      ],
+      [
+       "23",
+       "24",
+       "25"
+      ]
+     ]
     },
     {
      "n": 17,
@@ -11151,7 +13919,22 @@
        "The second analyst expects that Widgitainers’ share price will increase in 2012.",
        "The second analyst expects that Next Widget’s profits will not increase by more than $193 million in 2012."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 3
+     },
+     "diChoices": [
+      "The creation of computer systems that display human-like general intelligence is an important goal.",
+      "The creation of systems that display intelligence regarding specific tasks is an especially important step toward the creation of systems with general intelligence.",
+      "Systems with general intelligence are more difficult to create than are systems with narrow intelligence.",
+      "Research in the narrow Al field is not likely to lead to significant breakthroughs in the general Al field.",
+      "The original aim of AI research was to create systems with general intelligence.",
+      "The research into narrow AI is not producing results that real people can benefit from today.",
+      "The first analyst expects that Next Widget will make a profit in South America in the coming year.",
+      "The second analyst expects that Widgitainers’ share price will increase in 2012.",
+      "The second analyst expects that Next Widget’s profits will not increase by more than $193 million in 2012."
+     ]
     },
     {
      "n": 18,
@@ -11242,7 +14025,18 @@
        "The soccer section redesign will cost more than the baseball section redesign.",
        "The company’s Web site development team will need at least ten months in order to complete the redesign of either the baseball or the soccer section."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 0,
+      "col2": 4
+     },
+     "diChoices": [
+      "The company cannot redesign both sections this year.",
+      "The soccer world cup is going to take place later this year.",
+      "Baseball is more popular with the company’s customers than is soccer.",
+      "The soccer section redesign will cost more than the baseball section redesign.",
+      "The company’s Web site development team will need at least ten months in order to complete the redesign of either the baseball or the soccer section."
+     ]
     },
     {
      "n": 2,
@@ -11331,7 +14125,23 @@
        2,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "greater than",
+       "equal to",
+       "less than"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 6,
@@ -11385,7 +14195,24 @@
        0,
        0
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       0
+      ]
+     },
+     "diChoices": [
+      [
+       "positive",
+       "negative",
+       "zero",
+       "undefined"
+      ],
+      [
+       "Choose this one"
+      ]
+     ]
     },
     {
      "n": 8,
@@ -11464,7 +14291,17 @@
       ],
       "key": "Dropdown 1: 04 May Dropdown 2: 01 June",
       "note": "Units-of-A peak near 4 May (~0.129). Units-of-B peak near 30 May to 1 June (~0.1275), nearest 01 June."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "04 May",
+       "01 June"
+      ]
+     },
+     "diChoices": [
+      "Greatest value of a unit of currency X in units of currency A occurred around",
+      "Greatest value of a unit of currency X in units of currency B occurred around"
+     ]
     },
     {
      "n": 11,
@@ -11528,7 +14365,19 @@
        "24",
        "32"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 5,
+      "col2": 2
+     },
+     "diChoices": [
+      "5",
+      "6",
+      "8",
+      "20",
+      "24",
+      "32"
+     ]
     },
     {
      "n": 14,
@@ -11620,7 +14469,26 @@
        0,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "main sequence",
+       "red giant",
+       "red\nsupergiant"
+      ],
+      [
+       "blue giants",
+       "red giants",
+       "red supergiants",
+       "white dwarfs"
+      ]
+     ]
     },
     {
      "n": 18,
@@ -11741,7 +14609,29 @@
        2,
        3
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       2,
+       3
+      ]
+     },
+     "diChoices": [
+      [
+       "Open Motorboat",
+       "Canoe",
+       "Personal Watercraft",
+       "Cabin Motorboat",
+       "Pontoon"
+      ],
+      [
+       "2",
+       "4",
+       "6",
+       "10",
+       "15"
+      ]
+     ]
     },
     {
      "n": 3,
@@ -11788,7 +14678,18 @@
        "The least contribution to biomass of forests is by the organic matter from soil.",
        "Most deserts that were once tropical forests are near coastal areas where salt content is very high in the air, affecting the ecosystems fertility."
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 4
+     },
+     "diChoices": [
+      "The rate of decomposition of biomass in warm and hot climates is one of the major contributors for the clearing of the equatorial forests.",
+      "The soils of tropical rain forests are found to be poor in mineral content.",
+      "Temperate forests are far more enriched in fertility and wildlife diversity.",
+      "The least contribution to biomass of forests is by the organic matter from soil.",
+      "Most deserts that were once tropical forests are near coastal areas where salt content is very high in the air, affecting the ecosystems fertility."
+     ]
     },
     {
      "n": 5,
@@ -11851,7 +14752,18 @@
        "500",
        "600"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 3,
+      "col2": 0
+     },
+     "diChoices": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600"
+     ]
     },
     {
      "n": 8,
@@ -11950,7 +14862,18 @@
        "6",
        "15"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 3
+     },
+     "diChoices": [
+      "9",
+      "12",
+      "18",
+      "6",
+      "15"
+     ]
     },
     {
      "n": 13,
@@ -11978,7 +14901,19 @@
        "168",
        "174"
       ]
-     }
+     },
+     "diAnswer": {
+      "col1": 1,
+      "col2": 4
+     },
+     "diChoices": [
+      "142",
+      "150",
+      "157",
+      "165",
+      "168",
+      "174"
+     ]
     },
     {
      "n": 14,
@@ -12016,7 +14951,26 @@
        1,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       1,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "10% of the male",
+       "20% of the female",
+       "30% of the female",
+       "40% of the male"
+      ],
+      [
+       "Rarely",
+       "Infrequently",
+       "Occasionally"
+      ]
+     ]
     },
     {
      "n": 15,
@@ -12051,7 +15005,19 @@
       ],
       "key": "Is optimal for the greatest number of products: Does not describe paragraph format Has the greatest range of effectiveness: Describes paragraph format Has the lowest median effectiveness: Does not des",
       "note": "Key agrees on all three rows. Table is best for 3 products (C, E, F). Paragraph has the widest range (36-8=28). Scatterplot has the lowest median (12, against 12.5 for paragraph)."
-     }
+     },
+     "diAnswer": {
+      "rows": [
+       "Does not describe paragraph format",
+       "Describes paragraph format",
+       "Does not describe paragraph format"
+      ]
+     },
+     "diChoices": [
+      "Is optimal for the greatest number of products",
+      "Has the greatest range of effectiveness",
+      "Has the lowest median effectiveness"
+     ]
     },
     {
      "n": 16,
@@ -12142,7 +15108,25 @@
        0,
        1
       ]
-     }
+     },
+     "diAnswer": {
+      "d": [
+       0,
+       1
+      ]
+     },
+     "diChoices": [
+      [
+       "Greatest",
+       "Unchanged",
+       "Least"
+      ],
+      [
+       "1-3",
+       "4-6",
+       "7-8"
+      ]
+     ]
     },
     {
      "n": 20,
