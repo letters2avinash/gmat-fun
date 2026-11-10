@@ -550,7 +550,7 @@ function QuestionPanel({
       {q.images && q.images.length ? (
         <div className="mt-4 flex flex-col gap-3">
           {q.images.map((f) => (
-            <img key={f} src={`/series/di/images/${f}`} alt={`Figure for question ${q.n}`} className="max-w-full" />
+            <img key={f} src={`/series/di/images/${f}`} alt={`Figure for question ${q.n}`} className="max-h-[60vh] w-auto max-w-full object-contain" />
           ))}
         </div>
       ) : null}
