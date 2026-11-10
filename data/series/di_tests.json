@@ -1826,7 +1826,9 @@
      "options": null,
      "rows": null,
      "choices": null,
-     "images": [],
+     "images": [
+      "d23_q17.png"
+     ],
      "answer": "Were more of the emails sent to Campus 1 than to Campus 2?: NO Were more of the emails sent to Campus 3 than to Campus 4?: YES What percentage of the emails to Campus 5 were sent from Campus 2?: YES",
      "answerSource": null,
      "gt": {
