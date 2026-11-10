@@ -4,16 +4,18 @@ export type Option = { key: string; text: string };
 
 export type PublicQuestion = {
   n: number;                 // 1..23 within the test
-  section: "CR" | "RC" | "QA"; // Critical Reasoning, Reading Comprehension, or Quantitative Aptitude
+  section: "CR" | "RC" | "QA" | "DI"; // Critical Reasoning, Reading Comprehension, Quantitative Aptitude, or Data Insights
   type: string;              // e.g. "Weaken", "Inference"
   stimulus: string | null;   // CR argument text
   passageId: string | null;  // RC passage key into `passages`
   stem: string;
   options: Option[];
   image?: string | null;     // figure for quantitative questions (served from /public/series/qa)
+  statements?: Record<string, string>; // Data Insights: numbered statements (1), (2)
 };
 
-export function sectionLabel(s: "CR" | "RC" | "QA"): string {
+export function sectionLabel(s: "CR" | "RC" | "QA" | "DI"): string {
+  if (s === "DI") return "Data Insights";
   return s === "CR" ? "Critical Reasoning" : s === "QA" ? "Quantitative Aptitude" : "Reading Comprehension";
 }
 
@@ -47,7 +49,7 @@ export type Attempt = {
 export type ReviewItem = {
   n: number;
   type: string;
-  section: "CR" | "RC" | "QA";
+  section: "CR" | "RC" | "QA" | "DI";
   picked: string | null;
   correct: string;
   ok: boolean;

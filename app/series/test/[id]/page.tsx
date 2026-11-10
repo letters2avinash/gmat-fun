@@ -247,14 +247,15 @@ export default function TestPlayer() {
 
   if (phase === "gate") {
     // Read from the URL: `test` is only loaded after "Begin section".
-    const isQuant = Number(id) >= 100;
+    const isQuant = Number(id) >= 100 && Number(id) < 200;
+    const isDi = Number(id) >= 200;
     return (
       <div className="fixed inset-0 z-[200] overflow-y-auto bg-canvas">
         <div className="mx-auto mt-12 max-w-xl rounded-xl2 border border-ink/10 bg-white p-8">
-          <p className="text-sm text-ink/60">{isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
-          <h1 className="mt-1 text-2xl font-semibold">{isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
+          <p className="text-sm text-ink/60">{isDi ? "GMAT Data Insights Section" : isQuant ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
+          <h1 className="mt-1 text-2xl font-semibold">{isDi ? `Data Insights ${Number(id) - 200}` : isQuant ? `Quant ${Number(id) - 100}` : `Test ${id}`}</h1>
           <div className="mt-6 flex flex-col gap-3 text-[15px] leading-relaxed">
-            <p>This section has {isQuant ? 21 : 23} questions and 45 minutes.</p>
+            <p>This section has {isDi ? 20 : isQuant ? 21 : 23} questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
             <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
@@ -311,11 +312,12 @@ export default function TestPlayer() {
 
   if (phase === "test") {
     const q = test.questions.find((x) => x.n === current) ?? test.questions[0];
-    const isQuantTest = test.id >= 100;
+    const isQuantTest = test.id >= 100 && test.id < 200;
+    const isDiTest = test.id >= 200;
     return (
       <div className="fixed inset-0 z-[200] flex flex-col overflow-hidden bg-canvas">
         {header(
-          isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
+          isDiTest ? "Data Insights" : isQuantTest ? "Quantitative Reasoning" : "Verbal Section",
           `Question ${current} of ${total} · ${answeredCount} answered`
         )}
         {fullscreenBanner}
@@ -511,6 +513,15 @@ function QuestionPanel({
         ) : null}
       </div>
       <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
+      {q.statements ? (
+        <div className="mt-4 flex flex-col gap-3">
+          {Object.entries(q.statements).map(([k, text]) => (
+            <p key={k} className="whitespace-pre-line leading-relaxed">
+              <span className="font-semibold">{k}</span> {text}
+            </p>
+          ))}
+        </div>
+      ) : null}
       <div className="mt-5 flex flex-col gap-2">
         {q.options.map((o) => {
           const sel = answer === o.key;

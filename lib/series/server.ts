@@ -4,6 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import { createServerSupabase } from "@/lib/supabase";
 import rawTests from "@/data/series/tests.json";
 import rawQaTests from "@/data/series/qa_tests.json";
+import rawDiTests from "@/data/series/di_tests.json";
 import type {
   Attempt,
   PublicQuestion,
@@ -22,6 +23,10 @@ export type FullTest = Omit<PublicTest, "questions"> & { questions: RawQuestion[
 const TESTS: FullTest[] = [
   ...(rawTests as unknown as { tests: FullTest[] }).tests,
   ...(rawQaTests as unknown as { tests: FullTest[] }).tests,
+  // Data Insights tests stay hidden until every question type is playable.
+  ...(process.env.DI_ENABLED === "true"
+    ? (rawDiTests as unknown as { tests: FullTest[] }).tests
+    : []),
 ];
 
 export function getFullTest(id: number): FullTest | null {

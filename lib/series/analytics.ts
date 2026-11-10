@@ -19,13 +19,13 @@ const avgSec = (a: Agg) => (a.timed ? Math.round(a.timeMs / a.timed / 100) / 10 
 
 export function computeAnalytics(attempts: AttemptRow[]) {
   const byType = new Map<string, Agg>();
-  const bySection = { CR: blank(), RC: blank(), QA: blank() };
+  const bySection = { CR: blank(), RC: blank(), QA: blank(), DI: blank() };
   const overall = blank();
   const timing = { under30s: blank(), s30to90: blank(), s90to180: blank(), over180s: blank() };
   const correctTime = blank();
   const wrongTime = blank();
   let unanswered = 0;
-  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC" | "QA"; stem: string; attempted: number; missed: number; attemptId: string }>();
+  const missMap = new Map<string, { testId: number; n: number; type: string; section: "CR" | "RC" | "QA" | "DI"; stem: string; attempted: number; missed: number; attemptId: string }>();
   const pacing: {
     attemptId: string;
     testId: number;
