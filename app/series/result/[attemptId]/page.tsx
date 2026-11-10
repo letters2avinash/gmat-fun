@@ -50,12 +50,13 @@ export default function ResultPage() {
   if (!data) return <p className="text-sm text-ink/60">Loading result…</p>;
 
   const { attempt, test, review } = data;
-  const bySec = (s: "CR" | "RC") => {
+  const bySec = (s: "CR" | "RC" | "QA") => {
     const rows = review.filter((r) => r.section === s);
     return { correct: rows.filter((r) => r.ok).length, total: rows.length };
   };
   const cr = bySec("CR");
   const rc = bySec("RC");
+  const qa = bySec("QA");
   const openQ = open !== null ? test.questions.find((q) => q.n === open) ?? null : null;
   const openReview = open !== null ? review.find((r) => r.n === open) ?? null : null;
 
@@ -70,7 +71,7 @@ export default function ResultPage() {
               <span className="ml-2 text-lg font-normal text-ink/50">/ 90</span>
             </p>
             <p className="text-sm text-ink/70">
-              CR {cr.total ? Math.round((cr.correct / cr.total) * 100) : 0}% · RC {rc.total ? Math.round((rc.correct / rc.total) * 100) : 0}%
+              {cr.total ? <>CR {Math.round((cr.correct / cr.total) * 100)}% · </> : null}{rc.total ? <>RC {Math.round((rc.correct / rc.total) * 100)}%</> : null}{qa.total ? <>QA {Math.round((qa.correct / qa.total) * 100)}%</> : null}
             </p>
             <p className="max-w-xs text-xs text-ink/50">{SCORE_NOTE}</p>
             <p className="text-sm text-ink/70">

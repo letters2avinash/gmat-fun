@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { fmtClock, seriesFetch } from "@/lib/series/client";
-import type { Attempt, PublicQuestion, PublicTest } from "@/lib/series/types";
+import { sectionLabel, type Attempt, type PublicQuestion, type PublicTest } from "@/lib/series/types";
 
 type Answers = Record<string, string | null>;
 type Times = Record<string, number>;
@@ -249,10 +249,10 @@ export default function TestPlayer() {
     return (
       <div className="fixed inset-0 z-[200] overflow-y-auto bg-canvas">
         <div className="mx-auto mt-12 max-w-xl rounded-xl2 border border-ink/10 bg-white p-8">
-          <p className="text-sm text-ink/60">GMAT Verbal Section</p>
-          <h1 className="mt-1 text-2xl font-semibold">Test {id}</h1>
+          <p className="text-sm text-ink/60">{(test?.id ?? 0) >= 100 ? "GMAT Quantitative Section" : "GMAT Verbal Section"}</p>
+          <h1 className="mt-1 text-2xl font-semibold">{(test?.id ?? 0) >= 100 ? `Quant ${(test?.id ?? 0) - 100}` : `Test ${id}`}</h1>
           <div className="mt-6 flex flex-col gap-3 text-[15px] leading-relaxed">
-            <p>This section has 23 questions and 45 minutes.</p>
+            <p>This section has {test?.questions.length ?? 0} questions and 45 minutes.</p>
             <p>You can only move forward. You cannot return to an earlier question during the section.</p>
             <p>You can flag any question. Flagged and unanswered questions are shown again on the review screen.</p>
             <p>When you reach the last question, you review every question. You can change up to three answers before you submit.</p>
@@ -478,9 +478,10 @@ function QuestionPanel({
     return (
       <section className="min-h-0 flex-1 overflow-y-auto border-b border-ink/10 bg-white p-6 md:border-b-0 md:border-r">
         <p className="mb-3 text-xs font-medium uppercase tracking-wide text-ink/50">
-          {q.section === "CR" ? "Critical Reasoning" : "Reading Comprehension"}
+          {sectionLabel(q.section)}
         </p>
         {shared ? <div className="whitespace-pre-line text-[15px] leading-relaxed">{shared}</div> : null}
+        {q.image ? <img src={q.image} alt={`Figure for question ${q.n}`} className="mt-2 max-w-full" /> : null}
       </section>
     );
   }

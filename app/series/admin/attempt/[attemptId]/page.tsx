@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fmtSec, seriesFetch } from "@/lib/series/client";
 import { scaledScore } from "@/lib/series/scoring";
+import { sectionLabel } from "@/lib/series/types";
 
 type ChatMsg = { n: number; role: "user" | "assistant"; content: string; created_at: string };
 
@@ -21,7 +22,7 @@ type Detail = {
   };
   questions: {
     n: number;
-    section: "CR" | "RC";
+    section: "CR" | "RC" | "QA";
     type: string;
     stem: string;
     options: { key: string; text: string }[];
@@ -69,7 +70,7 @@ export default function AdminAttemptPage() {
           <section key={q.n} className="rounded-xl2 border border-ink/10 bg-white p-5">
             <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
               <p className="font-medium">
-                Q{q.n} · {q.type} · {q.section === "CR" ? "Critical Reasoning" : "Reading Comprehension"}
+                Q{q.n} · {q.type} · {sectionLabel(q.section)}
               </p>
               <p className="text-ink/60">
                 {r?.ok ? "Correct" : r?.picked ? "Incorrect" : "Unanswered"} · picked {r?.picked ?? "–"} / answer {q.answer} · {fmtSec(Math.round((r?.timeMs ?? 0) / 1000))}

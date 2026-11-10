@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { createServerSupabase } from "@/lib/supabase";
 import rawTests from "@/data/series/tests.json";
+import rawQaTests from "@/data/series/qa_tests.json";
 import type {
   Attempt,
   PublicQuestion,
@@ -18,7 +19,10 @@ export const EXPIRY_GRACE_SEC = 30;
 type RawQuestion = PublicQuestion & { answer: string };
 export type FullTest = Omit<PublicTest, "questions"> & { questions: RawQuestion[] };
 
-const TESTS = (rawTests as unknown as { tests: FullTest[] }).tests;
+const TESTS: FullTest[] = [
+  ...(rawTests as unknown as { tests: FullTest[] }).tests,
+  ...(rawQaTests as unknown as { tests: FullTest[] }).tests,
+];
 
 export function getFullTest(id: number): FullTest | null {
   return TESTS.find((t) => t.id === id) ?? null;
