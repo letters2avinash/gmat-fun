@@ -45,8 +45,25 @@ export function toPublicTest(t: FullTest): PublicTest {
     name: t.name,
     durationMinutes: t.durationMinutes,
     passages: t.passages,
-    questions: t.questions.map(({ answer: _answer, ...q }) => q),
+    questions: t.questions.map(publicQuestion),
   };
+}
+
+// Strip every answer-bearing field before a question leaves the server.
+// Data Insights questions carry extra answer data (rows, dropdown keys, diAnswer).
+function publicQuestion(q: RawQuestion): PublicQuestion {
+  const {
+    answer: _answer,
+    diAnswer: _diAnswer,
+    tpaMap: _tpaMap,
+    gt: _gt,
+    rows: _rows,
+    answerSource: _answerSource,
+    answerStatus: _answerStatus,
+    answerNote: _answerNote,
+    ...rest
+  } = q as RawQuestion & Record<string, unknown>;
+  return rest as unknown as PublicQuestion;
 }
 
 // ---- auth ----------------------------------------------------------------
