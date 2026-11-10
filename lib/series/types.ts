@@ -11,6 +11,7 @@ export type PublicQuestion = {
   stem: string;
   options: Option[];
   image?: string | null;     // figure for quantitative questions (served from /public/series/qa)
+  images?: string[];        // Data Insights figures (served from /public/series/di/images)
   statements?: Record<string, string>; // Data Insights: numbered statements (1), (2)
   spec?: DiSpec;             // Data Insights: how the player should draw multi-part answers
 };

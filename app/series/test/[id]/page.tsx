@@ -547,6 +547,13 @@ function QuestionPanel({
       ) : (
         <p className="mt-3 whitespace-pre-line font-medium leading-relaxed">{q.stem}</p>
       )}
+      {q.images && q.images.length ? (
+        <div className="mt-4 flex flex-col gap-3">
+          {q.images.map((f) => (
+            <img key={f} src={`/series/di/images/${f}`} alt={`Figure for question ${q.n}`} className="max-w-full" />
+          ))}
+        </div>
+      ) : null}
       {q.statements ? (
         <div className="mt-4 flex flex-col gap-3">
           {Object.entries(q.statements).map(([k, text]) => (
