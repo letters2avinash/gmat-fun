@@ -24,10 +24,8 @@ export type FullTest = Omit<PublicTest, "questions"> & { questions: RawQuestion[
 const TESTS: FullTest[] = [
   ...(rawTests as unknown as { tests: FullTest[] }).tests,
   ...(rawQaTests as unknown as { tests: FullTest[] }).tests,
-  // Data Insights tests stay hidden until every question type is playable.
-  ...(process.env.DI_ENABLED === "true"
-    ? (rawDiTests as unknown as { tests: FullTest[] }).tests
-    : []),
+  // Data Insights tests: all question types are playable, so they are always on.
+  ...(rawDiTests as unknown as { tests: FullTest[] }).tests,
 ];
 
 export function getFullTest(id: number): FullTest | null {
